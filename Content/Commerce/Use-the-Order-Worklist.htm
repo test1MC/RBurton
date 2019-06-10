@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" description="Stores, suppliers/warehouses use this screen to view all open orders assigned to them for fulfillment. It shows items assigned to a supplier and in one of the configured order statuses on the Manage Status Types screen (OrderStatus.aspx) so that store associates can view and pick orders as quickly as possible.">
+    <head><title>Using the Order Worklist</title>
+        <meta name="description" content="Stores, suppliers/warehouses Use this screen to view all open orders assigned to them for fulfillment. It shows items assigned to a supplier and in one of the configured order statuses on the Manage Status Types screen (OrderStatus.aspx) so that store associates can view and pick orders as quickly as possible." />
+    </head>
+    <body>
+        <h1>Using the Order Worklist<MadCap:concept term="Commerce" /></h1>
+        <p>Stores, suppliers/warehouses use this screen to view all open orders assigned to them for fulfillment. It shows items assigned to a supplier and in one of the configured order statuses on the <b><MadCap:popup><MadCap:popupHead>Manage Status Types</MadCap:popupHead><MadCap:popupBody>OrderStatus.aspx</MadCap:popupBody></MadCap:popup></b> screen so that store associates can view and pick orders as quickly as possible.</p>
+        <p>In this screen, stores and warehouses can view all open orders assigned to them for fulfillment. The screen shows orders/items matching statuses configured in <b>Commerce</b> &gt; <b>Settings</b> &gt; <b>Manage Status Types</b>, then evaluates Pickup, Shipping, and Transfer filters. All orders matching the statuses selected in the filter are displayed at the shipping address level on the screen.</p>
+        <p>Suppliers can access this screen from <b>Supplier</b> &gt; <b>Supplier Shipping</b> &gt; <b>Order Worklist</b>. Because the functionality is based upon supplier permissions, the supplier view is limited when viewing the details of an order.</p>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="note">(for Suppliers):</span> When viewing this screen, only those orders containing items assigned to the logged in supplier are shown. If the supplier prints a pick-list from this screen, it will only contain items in the selected orders assigned to the logged in supplier. Suppliers can see only the <b>View Order</b> tab, the <b>Update Item Status</b> tab, and the <b>Ship Order</b> tab, and these will contain only  items assigned to the logged in supplier. Suppliers are not able to view the <b>Edit Order</b>, <b>Process Payment</b>, <b>Credit Order</b>, or <b>Send PO</b> tabs.</div>
+        <p>Information provided at the top of the screen includes:</p>
+        <ul>
+            <li><b>Total Unshipped Orders</b>—a count of all orders assigned to the supplier in statuses matching the statuses selected in the filters.</li>
+            <li><b>Total Orders Today</b>—all orders assigned to a supplier that were created today and in statuses matching the statuses selected in the filters.</li>
+        </ul>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">The <b>Exp.</b> column denotes expedited orders.<br /></div>
+        <p>
+            <img src="images/OrderWorklistNew.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To search orders</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In Commerce, select  <b>Orders</b> &gt; <b>Order Worklist</b>.</li>
+                    <li>Use the <b>Status</b> list to filter on the order status you want to see, or select <b>All Statuses</b>.</li>
+                    <li>Choose Item Type filters as needed:<ol><li><b>Pickup</b>—displays items being picked-up in store</li><li><b>Shipping</b>—displays all other shipping methods, except for local pickup.</li><li><b>Transfer</b>—displays items transferred from one location to another.</li><li><p>Selecting all three—the default selection—displays pickup, shipping, and transfer orders.</p></li></ol></li>
+                    <li>Select whether to show <b>Expedited Only</b> orders; if selected, only orders flagged as expedited are displayed.</li>
+                    <li>Click <b>Refresh</b>, and items matching your filter selections are displayed with the most recent information available.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To manage orders</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>To open the <b>Item Level Status</b> screen for an order, click on an <b>Order</b> number.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Using the Site Provisioner</title>
+        <meta name="description" content="Use the Site Provisioner to create a duplicate site of an existing parent site. In addition, if more than one site exists, you may also sync data between the parent and the secondary sites. Syncing data between a secondary site and the parent site eliminates the need to update each individual site manually." />
+    </head>
+    <body>
+        <h1>Using the Site Provisioner<MadCap:concept term="CP" /></h1>
+        <p>Use the Site Provisioner to create a duplicate site of an existing parent site. In addition, if more than one site exists, you may also sync data between the parent and the secondary sites. Syncing data between a secondary site and the parent site eliminates the need to update each individual site manually.</p>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Syncing data is currently only available for site folders and a handful of logic data sets. To learn what is on the Aptos Digital Commerce road map for future syncing capabilities, contact your Client Manager.</div>
+        <h2>To provision a site</h2>
+        <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;">When you provision a site, you are copying the exact database of the site you are currently in, including settings, product data, pages, and so on. Because of this, if you want to provision a responsive site, the base site you are provisioning from must also be a responsive site.</div>
+        <ol>
+            <li>Login to the site that you want to use as the base for the new site.</li>
+            <li>
+                <p>Go to <b>Content</b> &gt; <b>Tasks</b> &gt; <b>Site Provisioner</b>. Make sure the <b>Provision a Site</b> radio button is selected.</p>
+                <p>
+                    <img src="images/SiteProvisioner.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 360px;" />
+                </p>
+            </li>
+            <li>
+                <p>Configure options as needed:</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Site Provisioner options</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table class="TableStyle-PatternedRows" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 160px;" />
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Site Name</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Enter an identifiable website and database name. This is used only for internal use—the database and content folder. Use only letters and numbers—no spaces. The name cannot begin with a number or symbol.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Source Database Name</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	The source database name that will be used to generate the new site. Select from the drop-down menu.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Destination Parent Database</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	If you have a site that has multiple databases (multiple brands), associate it to a Parent which can be selected from the drop-down menu at the top right of the page.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Site URL</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	The URL for the new site. This is the site name you want your customers to use to open your site. (This can be different from what is displaying in the field. (Use lower case letters only.)</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Binding Protocol</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Using the drop-down menu, select both binding protocols, beginning with HTTP and then followed by HTTPS. This is a two-step process:</p>
+                                        <ol class="SubList">
+                                            <li>Select HTTP. The <b>Binding Port</b> (below) will automatically populate with 80. The <b>Binding URL</b> field (below) will auto-fill based upon your earlier entries. Click <b>Add</b> which will add it to the list under <b>Assigned Bindings</b>.</li>
+                                            <li>Select  HTTPS. The <b>Binding Port</b> (below) will automatically populate with 443. The <b>Binding URL</b> field (below) will auto-fill based upon your earlier entries. Click <b>Add</b> which will add it to the list under <b>Assigned Bindings</b>.</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Binding Port</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	Automatically populates based on the Binding Protocol selection (above). Assigned binding port (for example, http=80, https=443)</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Binding URL</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Auto-fills based on your earlier entries. Remember to click <b>Add</b> to add it to the list under Assigned Bindings. As explained earlier, this is where you will add the HTTP version and then go back and select HTTPS, and add that as well.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Assigned Bindings</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	List of assigned bindings. There should always be at a minimum of two entries which reflect http://sub.domain.com and https://sub.domain.com.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Notify Email Address(es)</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	List of email addresses that will be notified when the provisioning process is complete. If you provision a site, make certain your email address is in this list. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">OMS Site</td>
+                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">	Used for OMS sites only. If you are unsure, leave it unchecked.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <h2>Syncing data between sites</h2>
+        <div class="warning" MadCap:autonum="&lt;b&gt;Warning: &lt;/b&gt;">Any content synced from the parent site will completely overwrite existing data on the secondary site.</div>
+        <p>Note that syncing is only available for clients with more than one site. When only one site exists, the "Save" button will not be displayed. Instead, a note will display stating that "Data sync not available for current site."</p>
+        <ol>
+            <li>
+                <p>In <b>Content</b> &gt; <b>Tasks</b> &gt; <b>Site Provisioner</b>, select the <b>Sync Data Between Sites</b> radio button.</p>
+                <p>
+                    <img src="images/SiteProvisioner2.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 540px;" />
+                </p>
+            </li>
+            <li>
+                <p>Configure options as needed:</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Sync Data Between Sites options</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table class="TableStyle-PatternedRows" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 160px;" />
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Select Site to Sync Content From:</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Select the parent site that you would like to sync data from. (The site that you are currently logged into will be the destination site where the data will be imported.)</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Notify Email Address(es):</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Enter the email addresses that you would like to be notified when a site has been synced. (Delimited by commas or semi-colons).</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Schedule Sync for (CST):</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Schedule a date and time for a sync to occur. This will automate the syncing process and can be used to minimize disruption due to site data loading. Note that the time entered here will be recorded as CST - the timezone where the servers are located.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">Select Available Content to Sync:</td>
+                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">	Select the items that you would like the site to sync data. </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </li>
+            <li>Click the sync button to begin data synchronization.</li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <Page Name="First Right" Padding="20px" PageSize="Letter" PageType="firstright" PaddingLeft="1.5in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" Orientation="portrait" BackgroundType="Solid" BackgroundColor="transparent" BleedLeft="0.25in" BleedRight="0.25in" BleedTop="0.25in" BleedBottom="0.25in">
+        <Frame Flow="footer" Height="47px" Anchors="Left,Right,Bottom" Right="0px" Bottom="0px" X="85px" Y="817px" Width="491px" TextAlign="right" VerticalAlign="top">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:head>
+                    </xhtml:head>
+                    <xhtml:body>
+                        <xhtml:p>&#160;</xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame X="-403px" Y="391px" Width="741px" Height="119px" FlowIndex="10" Flow="body" Right="238px" Bottom="354px" Rotate="-90" Anchors="Left,Top,Bottom" BackgroundColor="transparent" BackgroundType="Solid" />
+        <Frame Flow="body" Y="217px" Bottom="72px" X="85px" Right="0px" ColumnCount="1" ColumnGap="30px" ColumnDivider="Solid 1px Red" Anchors="Left,Right,Bottom" Width="491px" Height="575px" FlowIndex="11">
+        </Frame>
+    </Page>
+    <Page Name="Left" Padding="20px" PageSize="Letter" PageType="left" PaddingLeft="1.5in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" Orientation="portrait" BackgroundType="Solid" BackgroundColor="transparent" BleedBottom="0.25in" BleedTop="0.25in" BleedRight="0.25in" BleedLeft="0.25in">
+        <Frame Flow="body" Y="48px" Bottom="72px" X="0px" Right="0px" ColumnCount="1" ColumnGap="30px" ColumnDivider="Solid 1px Red" Anchors="Left,Right,Top,Bottom" Width="576px" Height="744px">
+        </Frame>
+        <Frame Flow="footer" Height="47px" Anchors="Left,Right,Bottom" Right="0px" Bottom="0px" X="0px" Y="817px" Width="576px" TextAlign="left" VerticalAlign="top">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:head>
+                    </xhtml:head>
+                    <xhtml:body>
+                        <xhtml:p xhtml:class="FrameFooterText"><xhtml:span xhtml:style="color: #bad600;"> <xhtml:b>│</xhtml:b> </xhtml:span><MadCap:variable xhtml:name="System.PageNumber" />
+                        </xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+    </Page>
+    <Page Name="Right" Width="7in" Height="9in" Padding="20px" PageSize="Letter" PageType="right" PaddingLeft="1.5in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" Orientation="portrait" BackgroundType="Solid" BackgroundColor="transparent" BleedBottom="0.25in" BleedTop="0.25in" BleedRight="0.25in" BleedLeft="0.25in">
+        <Frame Flow="body" Y="48px" Bottom="72px" X="0px" Right="0px" ColumnCount="1" ColumnGap="30px" ColumnDivider="Solid 1px Red" Anchors="Left,Right,Top,Bottom" Width="576px" Height="744px">
+        </Frame>
+        <Frame Flow="footer" Height="47px" Anchors="Left,Right,Bottom" Right="0px" Bottom="0px" X="0px" Y="817px" Width="576px" TextAlign="right" VerticalAlign="top">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:head>
+                        <xhtml:link xhtml:href="../../TableStyles/Simple.css" xhtml:rel="stylesheet" MadCap:stylesheetType="table" />
+                    </xhtml:head>
+                    <xhtml:body>
+                        <xhtml:table xhtml:class="TableStyle-SimpleWithPadding" xhtml:style="mc-table-style: url('../../TableStyles/Simple.css');margin-left: 0;margin-right: auto;width: 100%;" xhtml:cellspacing="0">
+                            <xhtml:col xhtml:class="TableStyle-SimpleWithPadding-Column-Column1" />
+                            <xhtml:col xhtml:class="TableStyle-SimpleWithPadding-Column-Column1" />
+                            <xhtml:tbody>
+                                <xhtml:tr xhtml:class="TableStyle-SimpleWithPadding-Body-Row1">
+                                    <xhtml:td xhtml:class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">
+                                        <xhtml:p xhtml:class="FrameFooterText2">CONTENTS<xhtml:span xhtml:style="color: #bad600;"> <xhtml:b>│</xhtml:b> </xhtml:span><MadCap:variable xhtml:name="General.UserGuideTitle" /></xhtml:p>
+                                    </xhtml:td>
+                                    <xhtml:td xhtml:class="TableStyle-SimpleWithPadding-BodyA-Column1-Row1">
+                                        <xhtml:p xhtml:class="FrameFooterText2" xhtml:style="text-align: right;">&#160;</xhtml:p>
+                                    </xhtml:td>
+                                </xhtml:tr>
+                            </xhtml:tbody>
+                        </xhtml:table>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+    </Page>
+</PageStyles>

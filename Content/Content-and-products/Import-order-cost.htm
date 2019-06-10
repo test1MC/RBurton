@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="620" MadCap:lastWidth="859">
+    <head><title>Importing order cost</title>
+        <meta name="description" content="Use import order cost to import a revised cost directly into an order. This is useful if you need to make modifications to a customer order." />
+    </head>
+    <body>
+        <h1>Importing order cost<MadCap:concept term="CP" /></h1>
+        <p>Use import order cost to import a revised cost directly into an order. This is useful if you need to make modifications to a customer order.</p>
+        <p>The feature accepts an Excel spreadsheet with three columns of data:</p>
+        <ul>
+            <li>
+                <p><b>OrderNumber</b> – The order number representing the order to apply a revised cost.</p>
+            </li>
+            <li>
+                <p><b>Cost</b>  – The cost for the related orderNumber and SKU.</p>
+            </li>
+            <li>
+                <p><b>SKU</b>  – If specified, the cost supplied is applied to the item matching the given SKU. If <b>SKU</b> is left blank, the cost is distributed among each item equally in the order.</p>
+            </li>
+        </ul>
+        <p>
+            <img src="images/ImportOrderCostMain.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <h3>To import order cost</h3>
+        <ol>
+            <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Order Cost</b>.</li>
+            <li>Click <b>Browse</b>, find the Excel file you want to import, and click <b>Open</b>.</li>
+            <li>Click the <b>Import</b> button <img src="../Resources/Images/ImportButton.png" style="width: 19px;height: 17px;" />.</li>
+        </ol>
+    </body>
+</html>

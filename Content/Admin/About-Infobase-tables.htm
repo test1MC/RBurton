@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="674" MadCap:lastWidth="1021">
+    <head>
+        <link href="../Resources/TableStyles/Standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>About Infobase tables<MadCap:concept term="Admin" /></h1>
+        <p>Infobase is a transactional database used by Merchandising to process data. Infobase contains tables that store the results of activity from Merchandising transactions and sends this data to other Aptos applications and external systems.</p>
+        <h3>Infobase tables</h3>
+        <table style="width: 100%;mc-table-style: url('../Resources/TableStyles/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+            <col class="TableStyle-Standard-Column-Regular" />
+            <col class="TableStyle-Standard-Column-Regular" />
+            <tbody>
+                <tr class="TableStyle-Standard-Body-Row1">
+                    <td class="TableStyle-Standard-BodyE-Regular-Row1">On Order</td>
+                    <td class="TableStyle-Standard-BodyD-Regular-Row1">Purchase orders, receipts and price changes affecting units, cost and retail on order</td>
+                </tr>
+                <tr class="TableStyle-Standard-Body-Row1">
+                    <td class="TableStyle-Standard-BodyE-Regular-Row1">Inventory</td>
+                    <td class="TableStyle-Standard-BodyD-Regular-Row1">Transactions affecting units, cost and retail inventory. Inventory is tracked by transaction code for receipts and RTVs</td>
+                </tr>
+                <tr class="TableStyle-Standard-Body-Row1">
+                    <td class="TableStyle-Standard-BodyE-Regular-Row1">Prices</td>
+                    <td class="TableStyle-Standard-BodyD-Regular-Row1">Past, current and future prices and price statuses including any mix and match codes</td>
+                </tr>
+                <tr class="TableStyle-Standard-Body-Row1">
+                    <td class="TableStyle-Standard-BodyB-Regular-Row1">Allocated Quantities</td>
+                    <td class="TableStyle-Standard-BodyA-Regular-Row1">Transactions affecting allocated quantities of on order and/or on hand merchandise</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>An important system administration responsibility is to monitor the movement of data through <MadCap:variable name="DC.EOM long" /> to ensure that transactions are correctly processed, and that the correct values are stored in Infobase tables. Because Infobase doesn't have a user interface, you verify values  by comparing the expected result of a transaction with its actual outcome.</p>
+        <p>This section contains the information you need to calculate the expected result of a transaction. The <a href="Transaction table.htm">transaction table</a> shows how the transaction types update the Infobase tables.</p>
+    </body>
+</html>

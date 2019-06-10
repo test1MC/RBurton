@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="1479" MadCap:lastWidth="849">
+    <head><title>Using the credit card terminal</title>
+        <meta name="description" content="Use the credit card terminal to manually charge a customer's credit card and associate it with a specific order." />
+    </head>
+    <body>
+        <h1>Using the credit card terminal<MadCap:concept term="Commerce" /></h1>
+        <p>Use the credit card terminal to manually charge a customer's credit card and associate it with a specific order.</p>
+        <p>
+            <img src="images/CreditCardTerminal.png" style="mc-thumbnail: link;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <h3>To manually charge a customer's credit card</h3>
+        <ol>
+            <li>In <b>Commerce</b>, select <b>Orders</b> &gt; <b>Credit Card Terminal</b>.</li>
+            <li>
+                <p> Enter the <b>Order Number</b> and click <b>Search</b>.</p>
+                <p>You can also search by external order number. This order number is the unique number assigned to the order when the order is created outside of <MadCap:variable name="DC.EOM short" />.</p>
+            </li>
+            <li>
+                <p>Select the relevant <b>Transaction Type</b> from the list.</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Click here for descriptions of transaction types .</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ul>
+                            <li>
+                                <p><b>Authorize and Capture:</b> Authorizes and captures funds in one step. When completed successfully, funds have been obtained by the processor.</p>
+                            </li>
+                            <li>
+                                <p><b>Authorize Only:</b> The authorized amount temporarily affects the card limit; however if the transaction is not finalized no charge will appear on the customer's statement.</p>
+                            </li>
+                            <li>
+                                <p><b>Credit Transaction:</b> Works to refund or credit a cardholder's account.</p>
+                            </li>
+                            <li>
+                                <p><b>Void Transaction:</b> Eliminates the transaction; typically a void is only possible before a transaction has been settled.</p>
+                            </li>
+                            <li>
+                                <p><b>Capture Prior Authorization:</b> Captures the funds previously secured with an 'Authorize Only' transaction.</p>
+                            </li>
+                            <li>
+                                <p><b>Capture Only:</b> Immediately authorize then capture funds upon placement of order. This is the ideal choice if you have products on hand and ship orders within 48 to 72 hours of order placement.</p>
+                            </li>
+                        </ul>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </li>
+            <li>Enter the <b>Cardholder's Name</b>.</li>
+            <li>Enter the card's Expiration date (month and year).</li>
+            <li>In <b>Transaction Amount</b>, enter the amount of the order being charged to the credit card.</li>
+            <li>Enter the <b>Card Number</b> and the three-digit <b>Security Code</b> on the back of the credit card.</li>
+            <li>Enter additional information as needed:<ol><li><b>Only Required for Credit, Void, or Capture Prior Authorization</b>—Enter the Transaction ID in this field; only required for these transaction types.</li><li><b>Optional Fields</b>—Company name and address, email address, and shipping name and address are optional fields.</li><li><b>Description</b>.</li></ol></li>
+            <li>
+                <p>Click <b>Save</b> at the bottom of the page.</p>
+                <p>A successful authorization appears in a new window. If the credit card is not authorized, repeat the above steps or proceed to cancel the order.</p>
+            </li>
+        </ol>
+        <h3>Crediting charged amounts</h3>
+        <p>To credit charges through the Credit Card Terminal, you need to know the Transaction ID for the order you want to credit. This ensures the system processes the credit against the correct order / transaction.</p>
+    </body>
+</html>

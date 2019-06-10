@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Managing gift cards</title>
+        <meta name="description" content="Online gift cards offer many benefits for online retailers. For starters, they provide one more channel for retailers to generate business. Use the Gift Cards area to manage gift cards offered to customers from retailers." />
+    </head>
+    <body>
+        <h1>Managing gift cards<MadCap:concept term="Commerce" /></h1>
+        <p>Online gift cards offer many benefits for online retailers. For starters, they provide one more channel for retailers to generate business. Use the Gift Cards area to manage gift cards offered to customers from retailers.</p>
+        <p>
+            <img src="images/GiftCards.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <p>The <b>Gift Cards</b> page shows you a quick view of the status of your gift cards, providing information such as:</p>
+        <ul>
+            <li>Total Gift Cards</li>
+            <li>Total amount</li>
+            <li>Total used amount</li>
+            <li>Unused amount</li>
+        </ul>
+        <p><span class="note">Note: </span>If your business does not currently use gift cards and you wish to start, contact your Client Manager for details. If you want to use a third party gift card integrator for gift cards, it must be set up in <b>Users</b> &gt; <b>Website Settings</b> &gt; <b>Payments</b> &gt; <b>3rd Party Gift Card Settings</b>.</p>
+        <h2>About using multiple gift cards</h2>
+        <p>Checkout supports the ability for a customer to pay with multiple gift cards during the checkout process. If enabled in the Site Manager, when a customer pays either fully or partially with a gift card, they can enter the gift card number and PIN, if required. If the information is accepted, a row shows the customer the balance left on the gift card, how much the current transaction will use, and the last 4 digits of the gift card in use. If the customer changes their mind, the gift card can be removed.</p>
+        <p>Your customers can also enter a second gift card on an order if the balance of the first gift card does not cover the entire amount of the order (inclusive of taxes and shipping). When the order total is reached, the last gift card will show only the amount used up to the amount of the order and the <b>Apply</b> button will be disabled. This stops the customer from entering any other Gift Cards. If the balance of the gift cards is not equal to the entire order, the customer will be required to split payment and pay the balance with a credit card.</p>
+        <p>Say, for example, a customer has two Gift Cards: $100 and $50, totaling $150, and a total order of $120. After both cards are entered into the checkout page, the Gift Cards will show the balance as $100 and $50 with the second card showing that only $20 will actually be used from the $50 card. This functionality works whether it is the electronic gift card processing of the Aptos platform, or with a 3rd party integration.</p>
+        <h3>Multiple gift card processing</h3>
+        <p>You can sell gift cards in different amounts on your site. When a customer purchases a gift card, the platform will activate/issue the gift card number and amount via the Aptos activate gift card API. Once this occurs, the gift card is available for immediate use.</p>
+        <p>When a customer is paying with third party gift card during checkout, EOM preauthorizes for the amount paid on the gift card, and then uses “pre-authorize complete” as an order status when the order is shipped, similar to credit card capturing at shipment. A system balance inquiry to the third party gift card integrator does not hold the funds. If a customer is using two browsers attempting to use a gift card twice, the balance inquiry will work for both instances but the redemption call would only work for one of the orders. This is just a lookup, until "place order‟ when the pre-authorize is used. If the gift card pre-authorizes without any problem and subsequently the credit card fails, then the system will roll back the authorization on the gift card. When the system pre-authorizes the gift card, if the amount authorized is less than the amount requested, then the system will void the transaction and send an error message back to the customer.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Gift card screen options</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>&#160;</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 186px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Descrtiption</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Search</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	
+To search for a gift card, in the <b>Gift Card #</b> field, enter the gift card number and click the <b>Search</b> button. The search returns all orders with which the gift card was used to make a purchase.</p>
+                                <p>You can search for <b>All Gift Cards</b>, <b>Used Gift Cards</b>, <b>Not Used Gift Cards</b> and <b>Inactive Gift Cards</b> either by expiration or purchase date.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Edit</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	You can edit all possible gift card values. Click the Edit (pencil) icon to update any relevant Gift Card details.</p>
+                                <ul>
+                                    <li><b>Gift Card Number</b>: The gift card number is displayed at the top of the pop-up window.</li>
+                                    <li><b>Active</b>: If checked, denotes that the card is still active.</li>
+                                    <li><b>From Name</b>: The name of the person who purchased and sent the gift card.</li>
+                                    <li><b>To Email Address</b>: The name and email of the person who received the gift card.</li>
+                                    <li><b>To Name</b>: The name of the gift card recipient.</li>
+                                    <li><b>Expiration Date</b>: Details of the date and time that the card will expire.</li>
+                                    <li><b>Initial Amount</b>: The amount initially placed on the card.</li>
+                                    <li><b>Current Amount</b>: The balance left on the gift card.</li>
+                                    <li><b>Personal Message</b>: If the sender entered a message on the gift card, it appears in this field.</li>
+                                    <li><b>Save</b>: Click <b>Save</b> to save changes.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Orders</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	To view orders associated with a particular gift card, click on the <b>Order View</b> icon (binoculars) for that gift card. The <b>Gift Card Details</b> pop-up window opens showing the orders that the gift card was used for.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Resend</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	Sends an email to the recipient with the value left on the card, and the gift card number.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Active</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Active gift cards are checkmarked.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Gift Card #</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Displays the gift card number.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Expires</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">The expiration date of the gift card.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">From Name</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">The name of the person who purchased and sent the gift card.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Recipient (Name/Email)</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">The name and email of the gift card recipient.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Initial/Actual $</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+The amount initially placed on the card and the balance left on it.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Gift Message</td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Hover over the information icon to see how the Gift Card was created.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>To add a gift card</h2>
+        <ol>
+            <li> In <b>Commerce</b> &gt; <b>Orders</b> &gt; <b>Gift Cards</b>, click the <b>+</b>&#160;(add) button. This opens the <b>Create a New Gift Card</b> pop-up window.</li>
+            <li>
+                <p>Select the gift card you want to use.</p>
+            </li>
+            <li>
+                <p>Enter the amount, the recipient's email address and name. Enter the sender's name in the from field and add a personal message, if desired.</p>
+            </li>
+            <li>
+                <p>Select the <b>Send Email</b> checkbox if you want to notify the customer click <b>Save</b>. A new gift card is created.</p>
+            </li>
+        </ol>
+    </body>
+</html>

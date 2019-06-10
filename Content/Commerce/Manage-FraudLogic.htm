@@ -1,0 +1,1235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Managing FraudLogic</title>
+        <meta name="description" content="FraudLogic enables you to configure your site's fraud settings during the checkout process to allow for an automated reviewing process. This functionality will help to reduce the overall business risk associated with fraudulent transactions. With FraudLogic, rules can be set to mark only certain orders for review, eliminating the need to manually review all orders. In addition, you have available even more protection to prevent fraudulent orders from being fulfilled with Advanced Fraud Scoring." />
+    </head>
+    <body>
+        <h1>Managing FraudLogic<MadCap:concept term="Commerce" /></h1>
+        <p>FraudLogic enables you to configure your site's fraud settings during the checkout process to allow for an automated reviewing process. This functionality will help to reduce the overall business risk associated with fraudulent transactions. With FraudLogic, rules can be set to mark only certain orders for review, eliminating the need to manually review all orders. In addition, you have available even more protection to prevent fraudulent orders from being fulfilled with Advanced Fraud Scoring.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Advanced Fraud Scoring</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If your site does not use Advanced Fraud Scoring, skip to <a href="#Setting_up_FraudLogic_Basics">Setting up FraudLogic Basics</a> to learn about setting up FraudLogic. If you are interested in Advanced Fraud Scoring, review information presented here, or contact client services.</p>
+                <p>With our latest advancements in fraud scoring, you have the ability to score each order as it comes in from both credit cards and PayPal. This advanced fraud functionality gives you added protection from fraudulent activity on your website. You can effectively identify and review orders to make sure both you and your customers are protected.</p>
+                <div class="noteAlt">Advanced fraud scoring is available to all clients. However, the solution you choose may require additional set-up fees and monthly fees, plus any applicable vendor fees. For more information, contact client services. Advanced Fraud Scoring is enabled at <b>Users</b> &gt; <b>Website Settings</b> &gt; <b>General Settings</b> &gt; <b>Aptos Server Settings</b>.</div>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Handling more sophisticated fraud techniques</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>Unfortunately, card-not-present online fraud is becoming more prevalent. Traditional fraud screening tools can only determine if a credit card is legitimate or if the user-entered account information matches those on record. In fact, fraudsters can obtain personal credit card information, pose as the legitimate cardholder, and bypass standard fraud checks.</p>
+                        <p>By enabling advanced fraud scoring, the system examines an online transaction from all the necessary view points. Our tools verify both the authenticity of the credit card details used for the purchase, and whether the purchaser is the legitimate card holder. FraudLogic is able to identify traits and patterns that are associated with fraudulent orders. By asking the right questions, the system passes on the necessary information to detect fraudulent orders before the payment is processed.</p>
+                        <p>If Advanced Fraud Scoring has been set up at <b>Users</b> &gt; <b>Website Settings</b> &gt; <b>General Settings</b> &gt; <b>Aptos Server Settings</b>, there are three options you need to configure at FraudLogic Advanced Scoring.</p>
+                        <p>
+                            <img src="images/FraudLogic1.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 520px;" />
+                        </p>
+                        <table class="TableStyle-PatternedRows" style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css'); margin-left: 0; margin-right: auto;" cellspacing="0">
+                            <caption>FraudLogic Advanced Scoring settings</caption>
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">FraudScore Threshold</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Set  to the number required for your business needs. This number can be from 1 to 100. This number represents the estimated probability that the order is fraud, based on analysis of past transactions.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">Enable for orders over <i>x</i> Dollars</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>If you only want to trigger advanced fraud review for orders over a certain amount, set this value to the minimum triggering amount.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                        <p class="FieldName">Only score international transactions</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                        <p>	If you only want to use Advanced Fraud Scoring for international orders, select this check box.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>Viewing fraud score results</h3>
+                        <p>When set up, to help you further determine the actual fraud score threshold you want to use for your site, you can view the results on a per-order basis. Go to <b>Commerce</b> &gt; <b>Orders</b> &gt; <b>View</b> to view the order. In the <b>Order Notes</b> section, you'll see that all orders, regardless of threshold, store the fraud scoring results in the order notes.</p>
+                        <p>
+                            <img src="images/FraudLogic2.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                        </p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="Setting_up_FraudLogic_Basics"></a>Setting up FraudLogic Basics</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>There are several settings available in the FraudLogic Basics section of this page you will need to set up.</p>
+                <p>
+                    <img src="images/FraudLogic3.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+                <p>These settings are explained below.</p>
+                <table class="TableStyle-PatternedRows" style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css'); margin-left: 0; margin-right: auto;" cellspacing="0">
+                    <caption>FraudLogic Basics settings</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 157px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 633px;" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Credit Card Orders</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Enable the FraudLogic and AVS rules below if order total exceeds X dollars for Credit Card Orders</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">
+                                <p class="FieldName">Purchase Orders</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">
+                                <p>	Enable the FraudLogic rules below if order total exceeds X dollars for Purchase Order orders - You can enable set setting if you allow Purchase Orders as a possible payment type.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Define the rules below to change the order to Processed-Pending Review status.</p>
+                <table class="TableStyle-PatternedRows" style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css'); margin-left: 0; margin-right: auto;" cellspacing="0">
+                    <caption>FraudLogic Rules settings</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 115px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Rule number</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">1.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><b>Order Total is greater than or equal to X dollars, unless specified per Tier.</b> Set the value to the minimum amount you want to trigger the order for fraud review.</p>
+                                <p>To edit, click the <b>Tier Rules</b> link. When clicked, a pop-up window opens which allows for searching, editing, and importing and exporting of relevant tier override data. For this particular rule, the relevant column/field is the <b>$ Amount</b> field. This field overrides the default value above. Leave blank if there is to be no override.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">2.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p><b>Item Quantity is greater than or equal to X, unless specified per Tier.</b> Item Quantity is greater than or equal to X, unless specified per Tier.</p>
+                                <p>The values for the Amount and Quantity override the values configured for items #1 and #2 (respectively). If no value is entered for a Tier, the FraudLogic Basics value is applied to the Tier.</p>
+                                <p>This rule can also be overridden depending on the setting for the particular Tier Group that the customer is in. When the <b>Tier Rules</b> link is clicked, a pop-up window opens which allows for searching, editing, and importing and exporting of relevant tier override data. For this particular rule, the relevant column/field is the Quantity field. This field overrides the default value above. Leave blank if there is to be no override</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">3.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><b>Billing and Shipping addresses do not match.</b> Enable this function if you want to flag orders when the billing and shipping addresses are not the same.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">4.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p><b>Customer has previously declined orders.</b> On occasion, a customer might try multiple credit card numbers to get an order to process successfully. If they have had previously declined transactions, this will allow you to review their order. In the Order History area on the View Orders screen, text will appear indicating if a customer has had previously declined orders. To reach the View Orders, go to <b>Commerce</b> &gt; <b>Orders</b> &gt; <b>View</b>.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">5.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><b>Customer from Specified List.</b> You can identify and manage individual customers whose orders you want to review each time they place an order. To manually add or delete customers individually, click the <b>Customer List</b> link. If you have several customers to manage, they can also be imported and/or exported using the <b>Fraud by Customer</b> Excel spreadsheet.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">6.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p><b>Customer has previously charged back an order.</b> Set this to flag any customer who has previously been issued a chargeback against an order to automatically be placed on review. When an order is placed, it will be marked and the order will have a note explaining the reason the order was placed into the review queue.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">7.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><b>Customer has previously placed an order flagged as 'possible fraud'</b> This setting, if enabled, will flag all orders set to a "Possible Fraud" status on the Edit Order page of the Order Details window. This flag will place all future orders made by the customer into an automatic "Processed - Pending Review" state. This feature only affects the customer who placed the originial order set to "possible fraud." It will not flag order details such as shipping address, billing address, or recipient name.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">8.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p><b>Payment method consists of Aptos test data.</b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">9.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p style="font-weight: bold;">Shipping address is outside of the United States.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">10.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p><b>Customer is not assigned to a Tier.</b> If enabled, orders submitted by customers who do not belong to a Tier Group, will be placed in a status of Pending Review.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">11.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><b>Customer is assigned to a Tier in a specific Status.</b> If enabled, orders submitted by customers who belong to a Tier Group that is in a particular status, will be placed in a status of Pending Review. The FraudLogic <b>Tier Status</b> pop-up screen manages the Tier Group statuses that will be placed in Pending Review status. to manage these statuses use the <b>CRM</b> &gt; <b>Communications</b> &gt; <b>Listings</b> module. (Lookup type = tier Statuses.) Select the appropriate statuses and click to save.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Ignore order total for items 12-16.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p style="font-weight: bold;">This setting ignores the total cart threshold set to auto trigger fraud check for FraudLogic items numbers 12-16, described above.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">12.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><b>Expedited shipping method selected and Billing and Shipping addresses do not match.</b> When this setting is enabled, if expedited shipping is chosen and the billing and shipping address do not match, these orders will be flagged for review and FraudLogic verbiage will appear in the order history notes.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">13.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p><b>Order placed from specific IP Address.</b> You can specify IP Ranges for reviewing orders from specific IP addresses. This enables you to watch traffic where credit card fraud is suspected. Click the <b>IP Addresses</b> link to define the address and/or ranges.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">14.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><b>Order includes products from specific Sub-Category.</b> Enable this setting to check for fraud on certain products at the sub-category level, but also check the selected sub-category by a quantity in the cart.</p>
+                                <ol>
+                                    <li>To use this functionality,  enable fraud review.</li>
+                                    <li>Click the <b>Subcategory List</b> link to open the FraudLogic pop-up window.</li>
+                                    <li>
+                                        <p>The list of sub-categories appears in the details along with the name of each sub-category followed by the threshold quantity if it was set and saved. To mark a sub-category for fraud review, select it, enter the quantity you want to set to trigger review and save your changes.</p>
+                                        <p>
+                                            <img src="images/FraudLogic4.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 340px;" />
+                                        </p>
+                                    </li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">15.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p><b>Shipping Address contains specific zip codes.</b> Click the <b>Zip Code List</b> link to open the pop-up window. Enter the ZIP codes that are considered as high risk for fraud. Save your changes.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">16.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><b>Customer submits X orders within X minutes with same shipping address.</b> Enable this setting to flag a certain number of orders created within a specific period of time that have the same shipping address. If enabled, enter the number of orders and time period you want to flag for fraud.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">17.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p><b>Existing Customer returning as Guest.</b> If enabled, orders will be flagged if an existing customer returns as a guest customer.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">18.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><b>Order Total is less than or equal. to $0.00.</b> Enable this setting to flag orders that are placed with a total equal to or less than $0.00.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">19.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p><b>Billing or shipping address matches provided list.</b> Click the <b>Address List</b> link which opens a pop-up window. Enter any text you want to add to the list. Enter new street addresses in the field and click <b>+Add Address</b>. Any address containing the text you've entered will be flagged for fraud review.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="FieldName">20.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <p><b>Email address contains matching string to provided list.</b> Click the <b>Email String List</b> link which opens a pop-up window. Enter any text you wish to add to the list. Add each new string in the Add New String field and click the <b>+Add String</b> button. Any email address containing the text you've listed will be flagged for fraud review.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Order Status Settings and Fraud Review</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h3>Order Notes</h3>
+                <p>Order Notes are written for each fraudulent item within an order. This functionality checks for fraudulent items that may be associated to an order and outputs all items that are selected. Instead of checking for one and setting the order as fraudulent, the order will contain note(s) for all the reasons an order was flagged by FraudLogic. This enables you to be aware of all possible fraudulent issues that may be associated with a particular order.</p>
+                <h3>Fraud Review</h3>
+                <p>When you complete fraud review for an order with the status of "Processed - Pending Review" and determine that the order is valid and should be fulfilled, the order can be released into the normal workflow in one of two ways. To learn more about order statuses, go to <a href="Manage-existing orders.htm"><b>Commerce</b> &gt; <b>Orders</b> &gt; <b>Manage Existing</b></a>.</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>To release multiple orders,</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ul>
+                            <li>Select the order check boxes and select a value from the Batch Process Option drop-down menu at the bottom of the <b>Commerce</b> &gt; <b>Orders</b> &gt; <b>Manage Existing</b> page. This will allow for automated processes, Quick Ship, and other activities to commence by selecting one of these options in the batch processing setting for all checked orders.</li>
+                        </ul>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>To release an individual order,</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ul>
+                            <li>
+                                <p>Click <b>Remove Fraud Hold</b> on the <b>View Order</b> tab in the order details window accessible on the <b>Commerce</b> &gt; <b>Orders</b> &gt; <b>Manage Existing</b> page, illustrated directly below. The resulting order status will be determined based on the order status selected from the <b>Order Status Settings</b> drop-down menu on the FraudLogic screen.</p>
+                                <p>
+                                    <img src="images/FraudLogic5.png" />
+                                </p>
+                                <p>
+                                    <img src="images/FraudLogic6.jpg" style="mc-thumbnail: hover;mc-thumbnail-max-width: 660px;" />
+                                </p>
+                            </li>
+                        </ul>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>CVV Security Code Settings</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>EOM allows for specifications on how you would like to process credit card transactions when the <MadCap:popup><MadCap:popupHead>CVV</MadCap:popupHead><MadCap:popupBody>Card Verification Value</MadCap:popupBody></MadCap:popup> Code entered by a customer during checkout is not correct. The credit card payment processors will generally return a Match/No Match response based upon the CVV Code entered.</p>
+                <p>Select the <b>Fail transactions during checkout that have a CVV Code Mismatch</b> box to enable this functionality. If the gateway returns back a 'No Match' response, the system can void the transaction and return a friendly message to the customer allowing them to retry within the given number of retries allowed. Please note that the response check does require a full authorization to be completed and then voided.</p>
+                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">This feature is currently only available for First Data, CyberSource, and Authorize.net. If you have further questions, please contact client services.</div>
+                <p>
+                    <img src="images/FraudLogic7.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 520px;">
+                    </img>
+                </p>
+                <h3>Additional Validation</h3>
+                <p>The additional credit card validation available on the checkout page prior to authorization includes:</p>
+                <ul>
+                    <li>Prompts the customer to correct entry in the event of a check digit error or card type mismatch.</li>
+                    <li>CVV length mismatch (4 for American Express, and 3 for all others).</li>
+                    <li>Invalid expiration date handling if the selected expiration date is in the past.</li>
+                </ul>
+                <p>There is further validation on the checkout page to ensure that the credit card information entered by the customer in the checkout is accurate before the form is submitted.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>AVS settings</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <MadCap:popup>
+                        <MadCap:popupHead>AVS</MadCap:popupHead>
+                        <MadCap:popupBody>Address Verification System</MadCap:popupBody>
+                    </MadCap:popup> can be your first line of defense against fraudulent transactions. To make the most of this system it is important to understand how it works.</p>
+                <p>AVS attempts to match the billing address entered as part of ordering process against the address listed on the credit card statement, as recorded by the Visa/MC Interchanges. To overcome the problems with abbreviations, misspelling, etc., the AVS strips away all letters and attempts to match only the numbers in the street addresses and the zip code. No street names or the name of the state are checked during this process.</p>
+                <p>The AVS information is only obtained back from the processor after an authorization is performed. If you wish to reject those transactions which fail to meet the desired AVS matching level, then the system will perform an immediate void of the transaction, inform the customer that their address did not match, and allow the customer to enter a new address. Since an authorization has already occurred, most payment processors will assess their per transaction fee for this authorization even though the transaction was voided.</p>
+                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Because AVS information is only available on credit cards issued through US banks, if you wish to accept international orders, you must select a less stringent matching rule for these orders or the international orders will be rejected.</div>
+                <h3>AVS Response Codes</h3>
+                <p>You can customize the AVS settings on your site for each of the major credit cards. You can get very specific when enabling these settings. You can choose from multiple options for each card on items such as: zip code does not match the address, no data from issuer/BankNet switch, ZIP code matches but the address does not, and so on. Also, this is a good way to enable even more strict settings when accepting international orders.</p>
+                <p>Fraud codes are configurable based upon the payment processor that is selected. The settings for the AVS Response Codes are pulled from the listing tables fully configurable at <a href="../Customers/Listings.htm"><b>CRM</b> &gt; <b>Communications</b> &gt; <b>Listings</b></a>.</p>
+                <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;">The settings for the AVS Response Codes are pulled from the listing tables that are fully configurable. Go to <a href="../Customers/Listings.htm"><b>CRM</b> &gt; <b>Communications</b> &gt; <b>Listings</b></a> to learn more.</div>
+                <p>You can enable the settings shown below for these cards in the site manager:</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>VISA AVS response codes</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table class="TableStyle-PatternedRows" style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">AVS&#160;response</th>
+                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">A</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Address matches, ZIP code does not.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">B</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Street address match for international transaction; postal code not verified.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">C</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Street &amp; postal code not verified for international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">D</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Street &amp; Postal codes match for international transaction</p>
+                                        <p>Both the five-digit postal zip code as well as the first five numerical characters contained in the address match for the international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">E</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Transaction is ineligible for address verification</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">F</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Street address &amp; postal codes match for international transaction. (UK Only)</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">G</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	AVS not performed because the international issuer does not support AVS.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">L</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Address information not verified for international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">M</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Street address &amp; postal codes match for international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">N</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Neither the ZIP nor the address matches.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">P</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Postal codes match for international transaction; street address not verified.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">S</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	AVS not supported at this time.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">R</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Issuer's authorization system is unavailable, try again later.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">U</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Unable to perform address verification because either address information is unavailable or the Issuer does not support AVS</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">W</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Nine-digit ZIP match, address does not.</p>
+                                        <p>The nine-digit postal ZIP code matches that stored at the VIC or card issuer's center. However, the first five numerical characters contained in the address do not match.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">X</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Exact match (nine-digit ZIP and address).</p>
+                                        <p>Both the nine-digit postal ZIP code as well as the first five numerical characters contained in the address match.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">Y</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Address &amp; 5-digit or 9-digit ZIP match.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">Z</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Either 5-digit or 9-digit ZIP matches, address does not</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">0 [zero]</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Service Not Allowed.</p>
+                                        <p>Generally associated with credit cards that are either not allowed to be used for any online transactions or are not allowed to be used for a specific classification of company.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">A</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Address matches, ZIP code does not.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">B</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Street address match for international transaction; postal code not verified.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">C</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Street &amp; postal code not verified for international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">D</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Street &amp; Postal codes match for international transaction</p>
+                                        <p>Both the five-digit postal ZIP code as well as the first five numerical characters contained in the address match for the international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">E</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Transaction is ineligible for address verification</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">F</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Street address &amp; postal codes match for international transaction. (UK Only)</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">G</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	AVS not performed because the international issuer does not support AVS.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">L</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Address information not verified for international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">M</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Street address &amp; postal codes match for international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">N</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Neither the ZIP nor the address matches.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">P</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Postal codes match for international transaction; street address not verified.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">S</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	AVS not supported at this time.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">R</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Issuer's authorization system is unavailable, try again later.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">U</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Unable to perform address verification because either address information is unavailable or the Issuer does not support AVS.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">W</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Nine-digit ZIP match, address does not.</p>
+                                        <p>The nine-digit postal ZIP code matches that stored at the VIC or card issuer's center. However, the first five numerical characters contained in the address do not match.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">X</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Exact match (nine-digit ZIP and address).</p>
+                                        <p>Both the nine-digit postal ZIP code as well as the first five numerical characters contained in the address match.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">Y</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Address &amp; 5-digit or 9-digit ZIP match.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">Z</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Either 5-digit or 9-digit ZIP matches, address does not</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">
+                                        <p class="FieldName">0 [zero]</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">
+                                        <p>	Service Not Allowed.</p>
+                                        <p>Generally associated with credit cards that are either not allowed to be used for any online transactions or are not allowed to be used for a specific classification of company.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Mastercard AVS response codes</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table class="TableStyle-PatternedRows" style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">AVS&#160;Response</th>
+                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">A</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Address matches, ZIP code does not.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">B</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Street address match for international transaction; postal code not verified.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">C</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Street &amp; postal code not verified for international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">D</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Street &amp; Postal codes match for international transaction</p>
+                                        <p>Both the five-digit postal ZIP code as well as the first five numerical characters contained in the address match for the international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">E</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Ineligible transaction.</p>
+                                        <p>Address verification not allowed for card type.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">F</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Street address &amp; postal codes match for international transaction. (UK Only)</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">G</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	International Address information unavailable.</p>
+                                        <p>The international address information was not available at the VIC or issuer's center.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">L</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Address information not verified for international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">M</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Street address &amp; postal codes match for international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">N</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Neither the ZIP nor the address matches.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">P</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Postal codes match for international transaction; street address not verified.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">S</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	AVS not supported at this time.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">R</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>Retry, system unable to process.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">U</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>No data from issuer/BankNet switch.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">W</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	9-digit ZIP code matches, but address does not.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">X</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Exact, all digits match, 9-digit ZIP code.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">Y</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Exact, all digits match, 5-digit ZIP code.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">
+                                        <p class="FieldName">Z</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">
+                                        <p>5-digit ZIP code matches, but address does not.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>American Express AVS Response Codes</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table class="TableStyle-PatternedRows" style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">AVS&#160;Response</th>
+                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">A</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Address only is correct.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">B</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Street address match for international transaction; postal code not verified.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">C</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Street &amp; postal code not verified for international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">D</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Street &amp; Postal codes match for international transaction</p>
+                                        <p>Both the five-digit postal ZIP code as well as the first five numerical characters contained in the address match for the international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">E</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Ineligible transaction.</p>
+                                        <p>Address verification not allowed for card type.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">F</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Street address &amp; postal codes match for international transaction. (UK Only).</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">G</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	International Address information unavailable.</p>
+                                        <p>The international address information was not available at the VIC or issuer's center.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">L</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Address information not verified for international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">M</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Street address &amp; postal codes match for international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">N</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Neither the ZIP nor the address matches.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">P</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Postal codes match for international transaction; street address not verified.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">S</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	AVS not supported at this time.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">R</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>Issuer's authorization system is unavailable, try again later.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">U</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>The necessary information is not available, account number is neither U.S. nor Canadian.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">W</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Nine-digit ZIP match, address does not.</p>
+                                        <p>The nine-digit postal ZIP code matches that stored at the VIC or card issuer's center. However, the first five numerical characters contained in the address do not match.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">X</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Exact match (nine-digit ZIP and address).</p>
+                                        <p>Both the nine-digit postal ZIP code as well as the first five numerical characters contained in the address match.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">Y</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Yes, address and ZIP code are both correct.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">
+                                        <p class="FieldName">Z</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">
+                                        <p>ZIP code only is correct.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Discover AVS Response Codes</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table class="TableStyle-PatternedRows" style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">AVS&#160;Response</th>
+                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">A</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Address and 5-digit Zip Code Match.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">B</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Street address match for international transaction; postal code not verified.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">C</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Street &amp; postal code not verified for international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">D</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Street &amp; Postal codes match for international transaction</p>
+                                        <p>Both the five-digit postal ZIP code as well as the first five numerical characters contained in the address match for the international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">E</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>Transaction is ineligible for address verification.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">F</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Street address &amp; postal codes match for international transaction. (UK Only)</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">G</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>AVS not performed because the international issuer does not support AVS.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">L</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Address information not verified for international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">M</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Street address &amp; postal codes match for international transaction.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">N</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Neither the ZIP nor the address matches.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">P</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Postal codes match for international transaction; street address not verified.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">S</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	AVS not supported at this time.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">R</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>Issuer's authorization system is unavailable, try again later.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">U</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>Unable to perform address verification because either address information is unavailable or the Issuer does not support AVS.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">W</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Nine-digit ZIP match, address does not.</p>
+                                        <p>The nine-digit postal ZIP code matches that stored at the VIC or card issuer's center. However, the first five numerical characters contained in the address do not match.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">X</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Exact match (nine-digit ZIP and address).</p>
+                                        <p>Both the nine-digit postal ZIP code as well as the first five numerical characters contained in the address match.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">Y</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>	Address &amp; 5-digit or 9-digit ZIP match.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p class="FieldName">Z</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>Either 5-digit or 9-digit ZIP matches, address does not.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                        <p class="FieldName">0 [zero]</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                        <p>	Service Not Allowed.</p>
+                                        <p>Generally associated with credit cards that are either not allowed to be used for any online transactions or are not allowed to be used for a specific classification of company.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

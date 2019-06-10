@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="Analytics"
+    ReplaceMergeNode="true"
+    Link="/Content/Analytics/About-Digital-Commerce-analytics.htm">
+    <TocEntry
+      Title="Order reports"
+      Link="/Content/Analytics/About-Order-reports.htm">
+      <TocEntry
+        Title="Creating Custom Order reports"
+        Link="/Content/Analytics/Create-custom-order-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Daily Trends reports"
+        Link="/Content/Analytics/Create-Daily-Trends-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating European Order reports"
+        Link="/Content/Analytics/Create-European-Orders-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Hourly Trends reports"
+        Link="/Content/Analytics/Create-Hourly-Trends-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Monthly Comparison reports"
+        Link="/Content/Analytics/Create-Monthly-Comparison-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Order Notes reports"
+        Link="/Content/Analytics/Create-order-notes-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Payment Plan reports"
+        Link="/Content/Analytics/Create-Payment-Plan-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Payment Types reports"
+        Link="/Content/Analytics/Create-Payment-Types-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Returns Without Credit reports"
+        Link="/Content/Analytics/Create-return-without-credit-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Sales Tax reports"
+        Link="/Content/Analytics/Create-sale- tax-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Sales Trends reports"
+        Link="/Content/Analytics/Create-sales-trends-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Shipping Latency reports"
+        Link="/Content/Analytics/Create-shipping-latency-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Order Status reports"
+        Link="/Content/Analytics/Create-status-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Subscriptions reports"
+        Link="/Content/Analytics/Create-subscriptions-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Transaction History reports"
+        Link="/Content/Analytics/Create-transaction-history-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating US States reports"
+        Link="/Content/Analytics/Create-US-States-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Saved Orders reports"
+        Link="/Content/Analytics/Create-saved-orders-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Customer reports"
+      Link="/Content/Analytics/About-customer-reports.htm">
+      <TocEntry
+        Title="Creating New Buyers reports"
+        Link="/Content/Analytics/Create-New-Buyers-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Repeat Purchase Advanced reports"
+        Link="/Content/Analytics/Create-Repeat-Purchase-Advanced-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Repeat Purchase Detailed reports"
+        Link="/Content/Analytics/Create-Repeat-Purchase-Detailed-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Repeat Purchases reports"
+        Link="/Content/Analytics/Create-Repeat-Purchases-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Top Customers reports"
+        Link="/Content/Analytics/Create-Top-Customers-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Product reports"
+      Link="/Content/Analytics/About-product-reports.htm">
+      <TocEntry
+        Title="Creating Backordered Product reports"
+        Link="/Content/Analytics/Create-backordered-product-reports.htm" />
+      <TocEntry
+        Title="Creating Cost Trend Analysis reports"
+        Link="/Content/Analytics/Create-cost-trend-analysis-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Cross-sell Performance reports"
+        Link="/Content/Analytics/Create-cross-sell-performance-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        ReplaceMergeNode="false" />
+      <TocEntry
+        Title="Customizing Product reports"
+        Link="/Content/Analytics/Customize product reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Detailed reports"
+        Link="/Content/Analytics/Create-detailed-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Forecast Sales reports"
+        Link="/Content/Analytics/Create-forecast-sales-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        ReplaceMergeNode="false" />
+      <TocEntry
+        Title="Creating Inventory On Hand reports"
+        Link="/Content/Analytics/Create-inventory-on-hand-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Inventory Sell Through reports"
+        Link="/Content/Analytics/Create-inventory-sell-through-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Inventory Velocity Reports"
+        Link="/Content/Analytics/Create-inventory-velocity-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Profit Margin reports"
+        Link="/Content/Analytics/Create-profit-margin-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Shipping Cost reports"
+        Link="/Content/Analytics/Create-shipping-cost-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Taxonomy Details reports"
+        Link="/Content/Analytics/Create-taxonomy-details-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Top Products reports"
+        Link="/Content/Analytics/Create-top-products-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Top Sub-categories reports"
+        Link="/Content/Analytics/Create-top-sub-categories-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating No Stock reports"
+        Link="/Content/Analytics/Create-no-stock-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Traffic reports"
+      Link="/Content/Analytics/About-traffic-reports.htm">
+      <TocEntry
+        Title="Creating 404/Detailed traffic reports"
+        Link="/Content/Analytics/Create-404-detailed-traffic-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating By Location reports"
+        Link="/Content/Analytics/Create-by-location-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Cart Conversion reports"
+        Link="/Content/Analytics/Create-cart-conversion-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Heard From reports"
+        Link="/Content/Analytics/Create-heard-from-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Multivariate A/B reports"
+        Link="/Content/Analytics/Create-multivariate-A_B-reporting.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating SEO reports"
+        Link="/Content/Analytics/Create-SEO-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Traffic Summary reports"
+        Link="/Content/Analytics/Create-traffic-summary-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Top Page Views reports"
+        Link="/Content/Analytics/Create-top-page-views-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Trends reports"
+        Link="/Content/Analytics/Create-trends-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Wish List reports"
+        Link="/Content/Analytics/Create-wish-list-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Channel reports"
+      Link="/Content/Analytics/About-channel-reports.htm">
+      <TocEntry
+        Title="Creating Affiliate Sales reports"
+        Link="/Content/Analytics/Create-affiliate-sales-reports.htm" />
+      <TocEntry
+        Title="Creating Amazon reports"
+        Link="/Content/Analytics/Create-Amazon-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Fulfillment Settlement reports"
+        Link="/Content/Analytics/Create-fulfillment-settlement-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Create Historical Affiliate Tracking reports"
+        Link="/Content/Analytics/Create-historical-affiliate-tracking-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Promo Code (Detailed) reports"
+        Link="/Content/Analytics/Create-promo-code-(detailed)-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Promo Code (Summary) reports"
+        Link="/Content/Analytics/Create-promo-code-(summary)-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="User reports"
+      Link="/Content/Analytics/About-user-reports.htm">
+      <TocEntry
+        Title="Creating API Responses reports"
+        Link="/Content/Analytics/Create-API-responses-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        ReplaceMergeNode="false" />
+      <TocEntry
+        Title="Creating Commission reports"
+        Link="/Content/Analytics/Create-commission-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Credit/Refund reports"
+        Link="/Content/Analytics/Create-credit-refund-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Sales By User reports"
+        Link="/Content/Analytics/Create-sales-by-user-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Permissions reports"
+        Link="/Content/Analytics/Create-permissions-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Usage reports"
+        Link="/Content/Analytics/Create-usage-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating Scheduled reports"
+        Link="/Content/Analytics/Create-scheduled-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Enhanced reports"
+      Link="/Content/Analytics/About-enhanced-reports.htm">
+      <TocEntry
+        Title="Creating Enhanced reports"
+        Link="/Content/Analytics/Create-enhanced-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Creating California EWaste reports"
+        Link="/Content/Analytics/Create-California-eWaste-reports.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+  </TocEntry>
+</CatapultToc>

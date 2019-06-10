@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2604" MadCap:lastWidth="964">
+    <head><title>Creating Repeat Purchases reports</title>
+        <meta name="description" content="" />
+    </head>
+    <body>
+        <h1>Creating Repeat Purchases reports<MadCap:concept term="analy" /></h1>
+        <p>Use the Repeat Purchases report so see the number of repeat purchases based on time period, states, countries, and more.</p>
+        <p>The report displays data in a bar chart, pie charts and data tables showing repeat customer information, showing you who your best repeat customers are. Data is arranged in separate charts:</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Revenue by New/Existing Monthly</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This bar chart shows the revenue from new customers and existing customers for the past 12 months. Hover over any of the bars in the chart to see the month and the revenue figures.</p>
+                <p>
+                    <img src="images/RepeatPurchasesNewMonthly.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Repeat vs. New Customers</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This pie chart shows the number of new customer orders compared with repeat customer orders. Hover over each chart segment to see the percentage of the order total for these types of customers. Click on a segment to separate it from the main chart. Click it again to move it back into position.</p>
+                <p>
+                    <img src="images/RepeatPurchasesNewRepeatVsNew.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Purchases Within Time Period, by Country, by State (More Than 1 Purchase)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This report section contains three separate charts:</p>
+                <ul>
+                    <li>
+                        <p>​Purchases within Time Period (More than 1 purchase)</p>
+                        <p>
+                            <img src="images/RepeatPurchasesTimePeriod.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Purchases By Country (More than 1 purchase)</p>
+                        <p>
+                            <img src="images/RepeatPurchasesByCountry.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>​Purchases by State (More than 1 purchase)</p>
+                        <p>
+                            <img src="images/RepeatPurchasesByState.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                        </p>
+                    </li>
+                </ul>
+                <p>The bar graphs show the number of repeat purchases made during the filtered date range, and show the exact number of repeat purchases and the number of customers who made additional purchases. Hover over each bar in the chart for more details.</p>
+                <p>The data table displays the number of purchases along with the instances and the total order value of those repeat purchases. In each chart, <b>Instances</b> refers to the number of customers who had "X" <b>Number of Purchases</b>.</p>
+                <div class="example-skinny">For example, if the chart has the number <b>2</b> under the <b>Instances</b> column, and shows <b>5</b> listed under <b>Number of Purchases</b>, it signifies that 2 of your customers made 5 repeat purchases on your site during the date range you specified. Note that repeat purchases means that a customer bought products more than once on your site, but it doesn’t necessarily mean that they ordered the same product more than once.</div>
+                <p><span class="note">Note:</span> For the Purchases by Country and Purchases by State bar charts, states and countries can be listed more than once. This is by design. The report doesn't show only repeated orders by state/country, but reflects the repeat purchasing habits for customers in that state/country.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h3>To create a Repeat Purchases report</h3>
+        <ol>
+            <li>In <b>Analytics</b>, select  <b>Customer Reports</b> &gt; <b>Repeat Purchases</b>.</li>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/Select date range.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/Select tier group.flsnp" />
+            </li>
+            <li>Select the <b>Order Status</b> of orders to include in the report.</li>
+            <li>Click the <b>Search</b> button.</li>
+            <li>To export a section of the report to an Excel spreadsheet for reporting or printing, click its Export To Excel button <img src="images/ExportToExcelButton.png" style="max-height: 20px;" />.</li>
+        </ol>
+    </body>
+</html>

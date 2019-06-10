@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Importing and exporting product bundles</title>
+        <meta name="description" content="You can import and export product bundles by an Excel spreadsheet. You can either export all current product bundles, or you can export a spreadsheet to use as a template when importing product bundles." />
+    </head>
+    <body>
+        <h1>Importing and exporting product bundles<MadCap:concept term="CP" /></h1>
+        <p>You can import and export product bundles by an Excel spreadsheet. You can either export all current product bundles, or you can export a spreadsheet to use as a template when importing product bundles.</p>
+        <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;"> When updating by spreadsheet, you should always export first to ensure you are using the most recent spreadsheet version. This will also guide you on the proper format for each column and row as well as which fields are required.</div>
+        <p>
+            <img src="images/ImportExportProductBundlesMain.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Be sure your browser is set up to allow pop-ups from the site manager.</div>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To export product bundles</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Product Bundles</b>.</li>
+                    <li>Choose to export either current bundles, or a blank template:<ol><li>To export a spreadsheet with your current product bundles, click the <b>Export Current Bundles to Excel</b> button. This generates an Excel spreadsheet, and a link to it at the bottom of the page. Click this link to open, modify, and or save it to your hard drive. See <b>Product bundles spreadsheet fields</b> for field descriptions.</li><li>To export a spreadsheet you can use as a template, click the <b>Export Empty Template to Excel</b> button. This generates a template with sample records for the first 10,000 products in <MadCap:variable name="DC.EOM short" /> to allow for a quick setup of product bundles.</li></ol><table class="TableStyle-PatternedRows" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0"><caption style="font-weight: bold;">Product bundles spreadsheet fields </caption><col class="TableStyle-PatternedRows-Column-Regular" /><col class="TableStyle-PatternedRows-Column-Regular" /><thead><tr class="TableStyle-PatternedRows-Head-Header1"><th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Field</th><th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th></tr></thead><tbody><tr class="TableStyle-PatternedRows-Body-LightRows"><td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"> product_id</td><td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">System Generated. Leave blank if you are entering a new product bundle. If you are updating a product bundle, enter the pre-defined system generated Brand_Id. </td></tr><tr class="TableStyle-PatternedRows-Body-DarkRows"><td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">DisplayName</td><td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"><p>Read-only; provided as reference.</p></td></tr><tr class="TableStyle-PatternedRows-Body-LightRows"><td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">SKU</td><td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Read-only; provided as reference.</td></tr><tr class="TableStyle-PatternedRows-Body-DarkRows"><td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Bundle SKU</td><td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The SKU or Part # of the Bundled Item. Read-only; provided as reference. </td></tr><tr class="TableStyle-PatternedRows-Body-LightRows"><td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">MainProduct</td><td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> True or False; indicates whether this is the main product of the bundle. </td></tr><tr class="TableStyle-PatternedRows-Body-DarkRows"><td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Bundle_ID</td><td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The product id of the item to be bundled. </td></tr><tr class="TableStyle-PatternedRows-Body-LightRows"><td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Quantity</td><td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The quantity the customer receives when this bundle is purchased. For example, a gamer's pack bundle might contain two game controllers. </td></tr><tr class="TableStyle-PatternedRows-Body-DarkRows"><td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">Bundle Display Name</td><td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows"> The display name of the product being bundled. Read-only; provided as reference. </td></tr></tbody></table></li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To import product bundles</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Product Bundles</b>.</li>
+                    <li>Click <b>Browse</b>, find the Excel spreadsheet you want to import, and click <b>Open</b>.</li>
+                    <li>
+                        <p>Click the <b>Import</b> button <img src="../Resources/Images/ImportButton.png" style="width: 19px;height: 17px;" />.</p>
+                        <p>Product bundles are automatically uploaded to the server, and each new product bundle is assigned a bundle ID used to identify it in the database.</p>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Import notes</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ul>
+                    <li>Each <b>product_id</b> can be listed more than once—once per bundled item in the bundle.</li>
+                    <li>If <b>product_id</b> is invalid, then <MadCap:variable name="DC.EOM short" /> ignores it, and displays an error message at the end of processing.</li>
+                    <li>If <b>Bundle_Id</b> is invalid, then <MadCap:variable name="DC.EOM short" /> ignores it, and displays an error message at the end of processing.</li>
+                    <li>
+                        <p>If a specific row fails to import, it is skipped and an error message describes the failure reason.</p>
+                    </li>
+                    <li>During the import, read-only fields will be ignored, as they are not required.</li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

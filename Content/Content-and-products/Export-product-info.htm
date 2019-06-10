@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Exporting product information</title>
+        <meta name="description" content="You can export and import products to a spreadsheet for mass updates of existing products or bulk uploads of new products. Nearly every attribute of a product can be manipulated using this spreadsheet." />
+    </head>
+    <body>
+        <h1>Exporting product information<MadCap:concept term="CP" /></h1>
+        <p>You can export and import products to a spreadsheet for mass updates of existing products or bulk uploads of new products. Nearly every attribute of a product can be manipulated using this spreadsheet.</p>
+        <p><MadCap:variable name="DC.EOM short" /> has two distinct types of products: Products with Options and Products without options. All products can be exported by using <b>Product Export</b>, but the export will contain only the information that is pertinent to the Parent level product. All option-level information must be updated using <b>Import/Export</b> &gt; <b>Product With Options</b> </p>
+        <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;"> When updating by spreadsheet, you should always export first to ensure you are using the most recent spreadsheet version. This will also guide you on the proper format for each column and row as well as which fields are required.</div>
+        <p>
+            <img src="images/ExportProducInfoMain.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;"> Be sure your browser is setup to allow pop-ups from the site manager.</div>
+        <h3>To export product information</h3>
+        <ol>
+            <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Product Export</b>.</li>
+            <li>Choose whether to <b>Export Products By</b> either individual <b>Sub-Categories</b> or <b>Brands</b> using the list.</li>
+            <li>Select the brands or categories for which you want to export product information. Select more than one by holding down the Ctrl key. You can also use the <b>Select All</b> and <b>Clear All</b> links.</li>
+            <li>Use the check boxes labeled <b>Include</b> to select what to include in the file:<ol><li><p>products in shared sub-categories</p></li><li><p>deleted products</p></li><li>inactive products</li><li><p>inventory only</p></li></ol></li>
+            <li>
+                <p>Click the <b>Export to Excel</b> button <img src="../Resources/Images/ExportToExcelButton.png" style="width: 22px;height: 22px;" />.</p>
+                <p>A pop-up window opens showing details of the scheduled export.</p>
+                <p>
+                    <img src="images/ExportProductInfoSchdulePopup.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+            </li>
+            <li>
+                <p>Make any changes needed to the export schedule date and time, and notification email address if needed, and click <b>Save</b>.</p>
+                <p>After the export has run and completed, a link to it appears at the bottom of the main screen.</p>
+                <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;">You may need to refresh your browser window for the link to appear.</div>
+            </li>
+            <li>
+                <p><MadCap:variable name="DC.EOM short" /> creates an Excel spreadsheet and a link to it at the bottom of the page. Click this link to open, modify, and or save it.  Product information spreadsheet fields you can modify are:</p>
+                <table class="TableStyle-PatternedRows" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <caption>Export product information field descriptions</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 171px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 532px;" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Field</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Site_ID</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Default value is 1. Will be different if more than one site is sharing pricing/product information. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Sub-Category</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The name of the sub-category in which to place this product; you can only have one sub-category per line. In order to have a product in more than one sub-category, you must use the Shared_Sub_Categories column. The sub-category names must exactly match how they are entered in the site manager. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Shared_Sub_Categories</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p> The name of the sub-category in which you would like to share this product. The sub-category names must exactly match how they are entered in the Site Manager, and delimited by a pipe | character.</p>
+                                <div class="example" MadCap:autonum="&lt;b&gt;Example: &lt;/b&gt;">Fashion Forward Casual|Traditional Classic Uptown|Animal Motifs|Rich Prints.</div>
+                                <p>Required. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Brand</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The name of the brand in which to associate with this product. Note, that if the brand is not found, is automatically created and associated with the product. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Brand_Desc</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Overriding description of the brand. This field is only used if the brand was not found, and is created for the first time. In this case, this description will be used when creating the brand. Brand descriptions are essential to good <MadCap:popup><MadCap:popupHead>SEO</MadCap:popupHead><MadCap:popupBody>search engine optimization</MadCap:popupBody></MadCap:popup>. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">SubBrand</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The name of the sub-brand in which to associate with this product. Used rarely. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Product_ID</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The system generated ID number of the current product.  This ID # tells <MadCap:variable name="DC.EOM short" /> that this is an update to an existing record already present. If blank, it creates an entirely new record. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">DisplayName</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The front end display name of the product. The display name should be specific, descriptive, and succinct. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Product_Created</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Automatically populated by <MadCap:variable name="DC.EOM short" /> signifying when a product was created. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Product_Modified</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Automatically populated by <MadCap:variable name="DC.EOM short" /> signifying when a product was modified. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">part_no</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The manufacturer’s part #, Internal Stock #, style # or any other uniquely identifying # for this product. For your internal use. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Alternate_Part_No</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Another identifying manufacturer’s part #, Internal Stock #, style # or any other uniquely identifying # for this product. For your internal use. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Bin_Number</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Can be used if you warehouse your items and want to offer a more convenient way for your warehouse team to locate the product. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">ImagePath</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p> The name of the actual image to use on the FTP server.</p>
+                                <p> For new products, you can upload a file called for example, sampleFileName.jpg.  This field would state sampleFileName.jpg.  Once this file is processed, the jpg is copied to the new name automatically.  If the same is used for multiple products, that image will be pulled for each of them, so only one image would be required.</p>
+                                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;"> The naming convention for the files must be alpha-numeric, with no spaces. </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ProductStatus</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p> Can be one of :</p>
+                                <ul>
+                                    <li>Archived Product,</li>
+                                    <li>Discontinued Product,</li>
+                                    <li>Incomplete Product</li>
+                                    <li>Live Product.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Classifications</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p> To enter your classification, type the classification name=attribute, and separate classifications by a pipe character (which appears as |). </p>
+                                <div class="example" MadCap:autonum="&lt;b&gt;Example: &lt;/b&gt;">ItemType=plant-growing-ballast-assemblies|ProductType=SeedsAndPlants.</div>
+                                <p> If the classifications are not found, an error report will generate during import with which ones had a problem. </p>
+                                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">No spaces in between the piping. </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ComparableSpecs</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Comma separated list of comparable spec names and values.  For example, length=50,width=100. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">ShortDescription</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Description of the product typically used at the sub-category level and search results level, based on the wiring of your site.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">LongDescription</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Product Details or Features.  Typically displayed on the product page, but can appear elsewhere depending on wiring, and should be a grammatically correct product description. To optimize your search performance, it is recommended that you freely use descriptive keywords and phrases.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">CustomDescription</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Optional. Similar to Short and Long Descriptions, and based on site wiring.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ExtraDescription</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Optional. Similar to Short and Long Descriptions, and based on site wiring.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Weight</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>  Weight of the product in pounds or kilograms—you can set your default weight settings in the <b>Users</b> &gt; <b>Settings</b> area in the <b>Weight Measurement</b> field. You can select <b>US Measurements</b> or <b>Metric Measurements</b>.</p>
+                                <p>If not relevant, enter <b>0.00</b>. Required.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">SubWeight</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>  Sub weight of the product in ounces or grams—you can set your default weight settings in the <b>Users</b> &gt; <b>Settings</b> area in the <b>Weight Measurement</b> field. You can select <b>US Measurements</b> or <b>Metric Measurements</b>.</p>
+                                <p>If not relevant, enter <b>0.00</b>. Required.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">GiftCard</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">true/false; product is a gift card if set to <b>true</b>. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Quantity</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">  Quantity on hand of the given product. If not relevant, enter <b>0</b>. <b>Quantity</b> must be at least <b>1</b> to display in the shopping cart. If your site is set to deduct inventory at checkout, make sure that your <b>Quantity</b> field is regularly updated. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Quantity_threshold_low</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If you use drop-ship purchase order capability, you define your low threshold in this column. If not relevant, enter <b>0</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Quantity_threshold_high</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> If you use drop-ship purchase order capability, you define your high threshold in this column. If not relevant, enter <b>0</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">OptionQuantityThresholdLow</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If you use drop-ship purchase order capability, defines your low threshold for the product option. If not relevant, enter <b>0</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">OptionQuantityThresholdHigh</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> If you use drop-ship purchase order capability, defines your high threshold for the product option . If not relevant, enter <b>0</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Option_WholesaleMarkup</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If you want the option wholesale price  to have a mark-up or mark-down, enter the dollar amount. This can be a “+” or a “-“.  </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Option_Markup</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> If you want this option to have a mark-up or mark-down, enter the dollar amount. This can be a “+” or a “-“. For example, if you have shirts in a number of sizes, you might want to mark up a large size because of your added costs. This mark-up is in addition to the product-level price. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">AllowBackorder</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> To enable this product-level setting, select <b>Defined at product level</b> for the <b>Allow backorder</b> website setting in <b>Users</b> &gt; <b>Website Settings</b> &gt; <b>Site Layout</b> &gt; <b>Shopping Cart Settings</b>. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">freight</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">  Only used in custom freight situations. If relevant, enter the number associated with the custom freight setting, as defined by the site manager. If not relevant, enter <b>0</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">inStockDate</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">  Date the item is expected to be in stock or the date in which it became in stock. If not relevant, enter <b>1/1/1900 12:00:00 AM</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">StockStatus</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Enter relevant/predefined Stock Status. Example: <b>IN STOCK!</b> Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">UPCCode</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Optional - UPC from barcode. Mandatory if you are integrating Amazon Seller Central with Aptos <MadCap:variable name="DC.EOM short" />. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">MSRP</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">  Manufacturer suggested retail pricing for the product. Where this appears depends on the wiring and design of your site. If not relevant, enter <b>0.00</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">MSRP_Max</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If relevant, enter in the maximum price that a manufacturer will allow their product to be sold for. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">SellsFor</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The price your product sells for when no special conditions exist. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Wholesale</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If you are a product manufacturer such as in the case of B2B sales, enter in your product's wholesale price here. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Sale</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p> The price for which the product sells.  Where this appears depends on the wiring and design of your site. If not relevant, enter <b>0.00</b>.</p>
+                                <p>Define what actions take place with products having a value of $0 in the <b>Users</b> &gt; <b>Settings</b> area. Required. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">OnSale</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If you are having a sale, you can enter the On Sale price in this field. Where and how this depends on the wiring and design of your site. Typically, the Sale price appears with a strike-through, and the On Sale price appears next to it. If not relevant, enter <b>0.00</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">SaleStartDateTime</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The start date and time for a product on sale. The onSale price will only be relevant after this date/time. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">SaleEndDateTime</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">The end date and time for a product on sale. The onSale price will no longer be relevant after this date/time. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">BestOffer</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Not typically used. If your site is wired for BestOffer, enter the Best Offer price in this field. If not relevant, enter <b>0.00</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Cost</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Your product cost. This helps you to report on profit margins for your products. If not relevant, enter <b>0.00</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">MAP</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Minimum advertised pricing for the product. Where and how this appears depends on the wiring and design of your site. Typically, the MAP price appears with a strike-through, and the MAP price appears in the shopping cart. If not relevant, enter <b>0.00</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">CallSale</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">An internal price for a product that a logged-in user sees when placing orders directly into <MadCap:variable name="DC.EOM short" />. Depending on the wiring of your site, you can use this to have an internal price view for customer service reps or salespeople. If not relevant, enter <b>0.00</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">breakQuantity</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The number of units a customer needs to purchase to trigger a price break. If not relevant, enter <b>0</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">sale_breakPrice</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The new price if the break quantity threshold is met. If there are multiple break quantities, use the <a href="Import-export-price-breaks.htm">Price Breaks Import/Export</a> spreadsheet.
+ If not relevant, enter <b>0.00</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">EditorsChoice</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">  True or False. If wired accordingly, <b>True</b> indicates this as an editor’s choice or featured product. If not relevant, enter <b>False</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">FreeShipping</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">True or False. <b>True</b> qualifies this product for free shipping. If not relevant, enter <b>False</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">FreeConditionalShipping</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">True or False. If <b>True</b>, this product is eligible for Free Shipping if the      <b>Enable Conditional Free Shipping</b> box is checked in the <b>Shipping</b> &gt; <b>Settings</b> area, and the <b>Shopping Cart Value</b> is exceeded. If not relevant, enter <b>False</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Stock_Override</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">True or False. For automated inventory purposes only.  If <b>True</b>, the quantity will not adjust when found during inventory automation. If not relevant, enter <b>False</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Price_Override</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">True or False. For automated inventory purposes only.  If set to <b>True</b>, the price will not adjust when found during inventory automation. If not relevant, enter <b>False</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">New</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">True or False. If your site is wired accordingly, <b>True</b> indicates that a New icon indicating this is a new product should appear. If not relevant, enter <b>False</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Special</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">True or False. If your site is wired accordingly, <b>True</b> indicates to mark this product on Special and show the Special icon. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">preorder</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">True or False. If your site is wired accordingly, <b>True</b> allows the cart to accept pre-orders for this product so that you can take orders ahead of it being available. If not relevant, enter <b>False</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">localSales</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">True or False. If your site is wired accordingly, <b>True</b> indicates that this product is only available for local pickup in your showroom/warehouse. If not relevant, enter <b>False</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">New_Exp</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The expiration date of the New icon. Date should be entered in the format 1/1/1900 12:00:00 AM. If not relevant, enter <b>1/1/1900 12:00:00 AM</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Special_Exp</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The expiration date of the Special icon. Date should be entered in the format 1/1/1900 12:00:00 AM. If not relevant, enter <b>1/1/1900 12:00:00 AM</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Notes</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Internal Product Notes. Appears on customer invoice unless otherwise indicated in wiring. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">catalogBookNumber</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> If your business has a print catalog, you can enter the Catalog Book Number in this field, and associate this at the product level. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">catalogPageNumber</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">  If your business has a print catalog, you can enter the Catalog Page Number in this field, and associate this at the product level. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Product_Order</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">The order in which the product should appear within the master sub-category to which it is associated. Your site must be wired to accommodate Product Order. If not relevant, enter <b>0</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Active</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">True or False. If <b>True</b>, the item is set to Active. If set to <b>False</b>, the item is listed as Inactive. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Deleted</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">True or. If <b>True</b>, the item will be deleted in the Site Manager. If set to <b>False</b>, the item is listed as active. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">TaxExempt</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">True or False. <b>True</b> indicates that this item is Tax Exempt. If not relevant, enter <b>False</b>. Required. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Tags</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Add comma separated internal search terms, or tags to help customers locate products. Tag terms also help to populate Product Tag Cloud, if relevant. Tags also aid in your site <MadCap:popup><MadCap:popupHead>SEO</MadCap:popupHead><MadCap:popupBody>search engine optimization</MadCap:popupBody></MadCap:popup>. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">MetaTitle</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> To over-write system generated meta content, add comma or piping separated keywords and phrases aid in your site <MadCap:popup><MadCap:popupHead>SEO</MadCap:popupHead><MadCap:popupBody>search engine optimization</MadCap:popupBody></MadCap:popup>. Typically five to seven keywords and phrases. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">MetaKeywords</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> To over-write system generated meta content, add comma separated keywords and phrases aid in your site <MadCap:popup><MadCap:popupHead>SEO</MadCap:popupHead><MadCap:popupBody>search engine optimization</MadCap:popupBody></MadCap:popup>. Typically 10 to 20 keywords and phrases. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">MetaDescription</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Enter marketing-rich sentences to describe the product. This aids in <MadCap:popup><MadCap:popupHead>SEO</MadCap:popupHead><MadCap:popupBody>search engine optimization</MadCap:popupBody></MadCap:popup>, and may appear in search engine results. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">AmazonExistingSKU</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> If selling on Amazon and integrating with the site manager, enter existing Amazon product SKU. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">ShopDotComSku</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If selling on Shop.com and integrating with the site manager, enter Shop.com SKU. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">NexTagSku</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> If selling on NexTag and integrating with the site manager, enter NexTag SKU. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">SearsSku</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If selling on Sears and integrating with the site manager, enter Sears SKU. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ASIN</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> If selling on Amazon and integrating with the Site Manager, enter existing ASIN. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">ManufacturedCountry</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If selling on Amazon, or for another appropriated purpose, enter the country within which the product is manufactured. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">HSCode</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> If relevant, enter Harmonized System Codes (HS Code). </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Xtra1 through Xtra10</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Depending upon the wiring of your site, the Xtra1 through Xtra5 may or may not be used. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ProductHeight</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> If relevant, oversized box height for the product. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">ProductWidth</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If relevant, oversized box width for the product. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ProductLength</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> If relevant, oversized box length for the product. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">MarkUp</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Inventory Mark-Up percentage. Not relevant to many users. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Shipping_Latency</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The default latency used in product shipment to determine lead time between placing an order and shipment. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">eWaste</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If applicable, the eWaste cost to pass on to the consumer. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">RMAable</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">True or False. <b>True</b> means a product is available for returns. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Recycled</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">True or False. <b>True</b> identifies a product made from recycled materials. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">domesticShippingOverride</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Enter a value to include a domestic fixed shipping rate at the product level. Overrides any domestic fixed rates set up in the Shipping Settings area of the site manager. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">internationalShippingOverride</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Enter a value to include an international fixed shipping rate at the product level. Overrides any international fixed shipping rates set up in the Shipping Settings area of the site manager. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ProductSized</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> True or False. <b>True</b> indicates a product shipping in its own box. If enabled, be sure to enter in the new Length, Width, and Height fields so that they will be used in calculating shipping rates. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">buydotcomListingID</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If selling products on Buy.com (now known as Rakuten), enter your Rakuten Listing ID in this field. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">buydotcomsku</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> If selling products on Buy.com (now known as Rakuten), enter your product's Rakuten SKU in this field. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">StandardFreight</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">True or False; indicates if a product will be shipped via freight. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">StandardFreightClass</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> If a product ships via freight, this value is used as the freight class instead of the default freight class. for example 75, 80, 125, 300 and so on. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">MapTwo</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> True or False; indicates  the use of a secondary minimum advertised price. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ProductShippingAddOnAmt</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> To pass on an additional charge for shipping to the customer, enter the amount of that charge in this field. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">DisplayOnMobile</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> True or False; <b>True</b> allows a product to be displayed mobile devices. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Digital Good</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> True or False; <b>True</b>  indicates a product is a Digital Good. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Warranty_Length</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If you provide warranty terms for your product, enter in the length of the warranty here. For display purposes only. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ReturnProtection</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">True or False; <b>True</b> indicates a product as available for return protection. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">ExcludedFromGooglecheckout</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> True or False; if selling products through Google, set to <b>True</b> in order to exclude the product from the Google Products feed. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">disallowGiftWrap</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">True or False; set to <b>True</b> to make gift wrapping unavailable for a product. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">One Per Household</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> True or False; set to <b>True</b> to limit quantities of this product to one per household. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Open Box Description</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Enter in information if you want to describe the product as an open box sale. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">ExpirationDate</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Puts an expiration date on the product after which it will not be available for sale. This field is represented as a drop-down calendar on the general tab of the details window. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">GiftCard_ValidForDays</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Limits the amount of time a gift card is available for use to a specific number of days. This is represented by a radio button and field in the gift card settings window. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">GiftCard_ExpiresOn</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Puts an expiration date on the usage of a gift card. This is represented by a radio button and drop-down calendar in the gift card settings window. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ProductIsAmazonFBA</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">True or False. <b>True</b> indicates this product is part of Fulfillment by Amazon. This field is represented as a check box in the options area of the General Tab of the details window. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">ProductAmazonFBASKU</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If the product is going through Fulfillment by Amazon, include the Amazon FBA SKU in this column. This field is located in the center section in the General Tab of the details window. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">nonDiscountable</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">True or False; <b>True</b> indicates that this product cannot be discounted. This field is represented as a check box in the options area of the General Tab of the details window. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">wholesaleOnSale</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If you use wholesale pricing on your site, you can use the wholesale on sale cost to indicate a different sale price for a product. This is represented by a field on the pricing tab of the details window. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">wholesaleOnSaleStartDate</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p> If your wholesale product will be on sale, you can use the WholesaleOnSaleStartDateTime field to define when the wholesale onSale price will begin and be valid. This is represented by a calendar and time fields on the pricing tab of the details window. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">wholesaleOnSaleEndDate</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If your wholesale product will be on sale, you can use the WholesaleOnSaleEndDateTime field to define when the wholesale onSale price will end. This is represented by a calendar and time fields on the pricing tab of the details window.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">BundleItemsShipTogether</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> True or False. With this rule in place, if even one item in the bundle is on backorder, all items in the bundle will be placed in the backordered status until all items are available to ship. This rule applies to both product bundles and cross-sell groups set to 'Must Ship Together'. <b>True</b> sets the 'Must Ship Together' flag. <b>False</b> removes the flag. By default, or if the column is blank or NULL, the column will be set to False. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">ProductIsDonation</td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">
+                                <p>True or False. <MadCap:variable name="DC.EOM short" /> gives you the ability to take donations from your customers for various causes at checkout. This is a digital good which appears on the Place Order tab of checkout. In addition to configuring charities at <b>Content</b> &gt; <b>Products</b> &gt; <b>Add/Edit</b>, donation products can be configured here. Your customers will be given the ability to donate a specific amount or round their order up to the nearest dollar. You can also display multiple charities at checkout.
+ If your site is wired for donation products, you can set a donation product via the product import and see which products are donation products on the product export.</p>
+                                <p> <b>True</b> sets the 'ProductisDonation' flag. <b>False</b> removes the flag. By default, if the column is blank or NULL, column will be set to False. </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ol>
+    </body>
+</html>

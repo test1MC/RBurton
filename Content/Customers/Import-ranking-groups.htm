@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="1604" MadCap:lastWidth="970">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Importing ranking groups<MadCap:concept term="Customers" /></h1>
+        <ol>
+            <li>Create a tab-delimited text file that conforms to the <a href="#Import_file_format">file layout</a>. The import also supports a comma-delimited text file and an XML file. Contact Aptos Client Care for details about these options.</li>
+            <li>Initiate the import from the A&amp;R Table Maintenance for Ranking Groups. The import can be done on-line or scheduled. <br />If scheduled, set up the schedule in A&amp;R and then define the import job from Services Administration. For information about scheduling jobs, see Scheduling in Allocation &amp; Replenishment and the Job Management Reference.</li>
+        </ol>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="Import_file_format"></a>File layout</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-PatternedRows" style="width: 889px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col width="65px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="120px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="58px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="82px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="70px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="494px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Field #</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Name</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Data Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Mand </p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Valid Values</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadD-Regular-Header1">&#160;</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">1</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Ranking group code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">&#160;</td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">&#160;</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">User defined name that identifies the ranking which can be based on a lists of styles, list of classes, and so on. In this case, the ranking is NOT linked to any specific merchandise group or style.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">2</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Merchandise group code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">&#160;</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Mandatory if creating a ranking group for a merchandise group. </p>
+                                <p class="TableText">Indicates a ranking group will be created for specific merchandise group from the main merchandise hierarchy.</p>
+                                <p class="TableText">Must adhere to the merchandise group mask defined in Product.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">3</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Style code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Mandatory if creating a ranking group for a style.</p>
+                                <p class="TableText">Indicates a ranking group will be created for specific style.</p>
+                                <p class="TableText">Must adhere to style code mask defined in EDM parameters.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">4</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Grade code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">10 AN</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Grade code assigned to the ranking group.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">5</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Minimum</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Numeric value &gt;=0</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Defaults to 0 if not provided.</p>
+                                <p class="TableText">The Minimum unit value associated to each Grade for the designated Ranking Group. The Minimum value can be used by the distribution tools to assign units to a location. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">6</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Maximum</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Numeric value &gt;=0</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Defaults to 0 if not provided.</p>
+                                <p class="TableText">The Maximum unit value associated to each Grade for the designated Ranking Group. The Maximum value can be used by the distribution tools to assign units to a location. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">7</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Weight</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Decimal (4,2)</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&gt;=0.00</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Defaults to 0.00 if not provided.</p>
+                                <p class="TableText">The weight factor value associated to each Grade for the designated Ranking Group. The weight factor can be used by the distribution tools to assign units to a location. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="FieldName">8</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">Location code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                <p class="TableText">Location assigned to each grade in that ranking group. </p>
+                                <p class="TableText">Must adhere to the location code mask defined in EDM parameters.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

@@ -1,0 +1,874 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Editing email masters and content</title>
+        <meta name="description" content="There are several points in Aptos EOM and the commerce process in which automated emails are sent to your customers. The content of many of these emails includes comprehensive templates which do not require any customization. However, if you wish to create more brand-centric, customized messages to your customers, you can edit the content in our standard emails." />
+    </head>
+    <body>
+        <h1>Editing automated email masters and content<MadCap:concept term="CP" /></h1>
+        <p>There are several instances in Aptos EOM and the commerce process in which automated emails are sent to your customers. </p>
+        <p>
+            <img src="images/ContentPagesEmailMain.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <h2>About email masters</h2>
+        <p>The content of many of these emails do not require any customization. However, you can edit the content within these standard emails to create more customized messaging.</p>
+        <div class="noteAlt"><b>Important!</b> If your site is hosted on Amazon Web Services (AWS), when you enter or change the "send from" email address for site emails such as order confirmations, you will receive a verification email from AWS. Follow the instructions from AWS to complete the setup to ensure your emails will work properly.</div>
+        <p>For each standard email, you can customize :</p>
+        <ul>
+            <li>Subject: Update the subject line for the email</li>
+            <li>From: Update the from field</li>
+            <li>cc: Update the cc field (use semi-colons ; to separate email addresses)</li>
+            <li>bcc: Update the bcc field (use a semi-colons to separate email addresses)</li>
+            <li>Third Party List ID: Leave this field blank if Aptos should deliver this email. Alternatively, you may enter a value in this field to indicate that a third party email provider should deliver this email. This value will be passed to the third party email provider. These settings are configured in <b>Users</b> &gt; <b>Website Settings</b> &gt; <b>General</b> &gt; <b>Email Address Settings</b>.</li>
+            <li>
+                <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;">There are tokens available for each email. Click on the Description and Tokens to open the email body and view the tokens that you can include in the subject or body of the email. For example, the token [SITENAME] automatically pulls the name of your site if the token is relevant for that email.</div>
+            </li>
+        </ul>
+        <p>Email Masters Guide &amp; Token Definitions</p>
+        <p>For a full explanation of all the email masters and a definition of all tokens, see the <a href="../Resources/PDFs/Email-Masters-and-Tokens.pdf" target="_blank">Email Masters Guide &amp; Token Definitions</a>.</p>
+        <h2>About affiliate specific emails</h2>
+        <p>When you create new email templates for affiliates, you can send a test to ensure it is working properly.</p>
+        <h3>To test affiliate specific emails</h3>
+        <ol>
+            <li>In <b>Content</b>, select <b>Pages</b> &gt; <b>Emails</b>.</li>
+            <li>Open any applicable email template.</li>
+            <li>
+                <p>Click on the <b>Affiliate Specific Email</b> button <img src="images/AffiliateSpecificEmailButton.png" style="width: 20px;height: 16px;" /></p>
+                <p>An <b>Affiliate Specific Email</b> pop-up window opens.</p>
+                <div class="noteAlt">For affiliate specific tokens to be used when sending transactional emails, <b>Overwrite Customer Notification</b> must be selected for each affiliate. Do this by selecting the affiliates at <b>Marketing</b> &gt; <b>Affiliates</b> &gt; <b>Add/Edit</b>. When selected, the [SITENAME] / [AFFILIATENAME] token will pull in the affiliate name when used in the body of the email only. The [SITENAME] / [AFFILIATENAME] token in the subject line of the email overrides the affiliate logic and prefills with your site name.</div>
+                <p>
+                    <img src="images/AffiliateEmail1.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 620px;" />
+                </p>
+            </li>
+            <li>
+                <p>Edit this template as needed for a specific affiliate.</p>
+            </li>
+            <li>Click the Email button <img src="../Resources/Images/EmailButton.png" /> and send the preview to your, or an admin's, email address.</li>
+            <li>When received, you can see how the finished email will look to your customers. You can edit and resend it as many times as you need to.</li>
+            <li> When you are satisfied with your edits, click <b>Save</b>.</li>
+        </ol>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Tokens used in <MadCap:variable name="DC.EOM short" /></MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>All tokens used in <MadCap:variable name="DC.EOM short" /> and their definitions are listed here.</p>
+                <div class="noteAlt">Not all tokens are available for use with every email master template. Because tokens change from time to time, always check for the available tokens in each email master <b>Description and Tokens</b> panel.</div>
+                <table class="TableStyle-PatternedRows" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Token name</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[ACTIVATION STATUS]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Activation status of a product requiring third-party activation services.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[AFFILIATEADDRESS]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Affiliate's address.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[AFFILIATECITY]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Affiliate's city.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[AFFILIATECONTACT]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Affiliate's contact name.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[AFFILIATEEMAIL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Affiliate's email address.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[AFFILIATEFAX]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Affiliate's fax number.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[AFFILIATEID]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Affiliate ID.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[AFFILIATELOGOURL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Affiliate's logo.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[AFFILIATENAME]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+An affiliate's company name.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[AFFILIATEPHONE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Affiliate's phone number.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[AFFILIATESTATE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+
+Affiliate's state.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[AFFILIATEURL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Affiliate's URL.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[AFFILIATEZIP]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Affiliate's zip code.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[ANSWER]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+The answer in the “Your question has been answered” email.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[AVAIL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Availability of product (stock status). This is only used within item start and item end in master.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[BILLNAME]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+The customer's billing address. When adding tokens in an email, you must add the [BILLNAME] token within the email. If the [BILLNAME] token is not present, <MadCap:variable name="DC.EOM short" /> uses the default email and no changes to the email will take place.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[BILLCOMPANY]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Customer’s company billing name, if applicable.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[BILLSTREET]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Customer’s billing street address.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[BILLCITY]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Customer’s billing city.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[BILLSTATE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Customer’s billing state.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[BILLZIP]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Customer’s billing address zipcode.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[BILLCOUNTRY]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Customer’s billing country.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[BILLPHONE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Customer’s first choice billing phone number.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[BILLPHONE2]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Customer’s secondary phone number.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[BILLFAX]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Customer’s fax number.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[BLOGURL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+The blog URL.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[CREDIT]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Credit amount.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[CREDITCARDNUMBER]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Customer’s credit card number.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[COMMENTS]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+The order comments the customer has entered.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[COMPANYPHONE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Your company’s contact phone number.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[CONDITIONAL_FIELDS]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Reflects the gift wrapping cost (if any), the coupon amount (if any), and the gift card amount (if any).
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[CONTACTNAME]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+This is the customer’s contact name.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[CUSTOMERNAME]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Don’t use this token.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[CUSTOMERNAME_EMAIL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Customer’s email address.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[CUSTOMERNAME_FIRSTNAME]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+The customer’s first name (defaults to full name if either first or last does not exist).
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[CUSTOMERNAME_LASTNAME]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+The customer’s last name (defaults to full name if either first or last does not exist).</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[CUSTOMERNAME_PASSWORD]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+The customer’s password ; may be encrypted.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[DATE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+The date the email was sent.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[DISCOUNT]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">The coupon amount of the order.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[EBAYAUCTIONLINK]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Link to item auction.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[EBAYAUCTIONNUMBER]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Auction ID.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[EBAYBUYERID]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Customer ID.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[EBAYFEEDBACKLINK]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Link back for feedback.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[EBAYSELLERID]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Set up in Users Settings.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[EMAIL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Customer’s email.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[EVENTCITY]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+City location used in Event Reminder email.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[EVENTCODE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Code number of event used in Event Reminder email.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[EVENTCONFIRMATIONNUMBER]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Confirmation number of event used in Event Reminder email.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[EVENTDESCRIPTION]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Description of event used in Event Reminder email.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[EVENTDETAILS]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Details of event used in Event Reminder email.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[EVENTENDDATE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Event end date used in Event Reminder email.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[EVENTENDTIME]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Event end time used in Event Reminder email.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[EVENTLOCATION]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Event location used in Event Reminder email.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[EVENTNAME]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Name of event used in Event Reminder email.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[EVENTROOM]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Room number of scheduled event used in Event Reminder email.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[EVENTSTARTDATE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Event start date used in Event Reminder email.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[EVENTSTARTTIME]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Event start time used in Event Reminder email.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[EXPIRATIONDATE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Expiration date of customer’s credit card.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[FAILUREREASON]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Failure reason for a declined subscription notice.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[FORGOTURL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Used in the "Create Account Welcome Message" email master; allows customers created using the <MadCap:popup><MadCap:popupHead>API</MadCap:popupHead><MadCap:popupBody>application program interface</MadCap:popupBody></MadCap:popup> (by a salesperson) to easily reset their password. The SubmitNewCustomer API uses the "Send Welcome Email when account is created while placing an order" website setting to determine if the Welcome Email should be generated upon creating a new customer.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[FROMEMAIL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Indicates who the email is from.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[FROMNAME]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Indicates the name of the person the email is from.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[GIFTCARDAMOUNT]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+The dollar amount of a gift card.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[GIFTCARDEXP]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Expiration date of a gift card.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[GIFTCARDFROM]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+The name of the person who sent the gift card.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[GIFTCARDMESSAGE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Message sent with the gift card.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[GIFTCARDNUMBER]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+The identification number of the gift card.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[GIFTCARDORDERDATE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+The date the gift card was ordered.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[GIFTCARDTO]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+The name of the person who is receiving the gift card.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[GIFTWRAPPINGMESSAGE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Message on the wrapping of the gift card.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[GRAND]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Grand total.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[HOWSHIP]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Name of shipper. For example: UPS, FedEx, USPS, and so on.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[INQUIRYDATE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Date customer inquired about order.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[ITEM_END]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Last item in an order. (This is built into the table.)</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[ITEMIMAGE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Placeholder for product images in the In-Stock Notification email template.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[ITEM_OPTION_START]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Starts the Option Block area. The tokens supported in the block are: [OPTION_GROUP_ALIAS], [OPTION_TEXT], [OPTION_SKU].</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[ITEM_OPTION_END]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Ends the Option Block area. Used when an Option Block area is configured.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[ITEM_START]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Confirmation email. First item in an order.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[INTERVAL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Subscription interval.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[LOGINLINK]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Link to login page.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[LOGOURL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Affiliate logo URL (logo.gif file). Shows an image of the logo.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[MESSAGE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Can contain the reason a payment was denied. In the “Email to a Friend” page, it will contain the actual text of the message.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[OPTION_GROUP_ALIAS]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+The option group alias. Supported within the start of the option block, [ITEM_OPTION_START] and the end, [ITEM_OPTION_END].</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[OPTION_TEXT]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+The text for an option group. Supported within the start of the option block, [ITEM_OPTION_START] and the end, [ITEM_OPTION_END].</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[OPTION_SKU]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+The option group SKU. Supported within the start of the option block, [ITEM_OPTION_START] and the end, [ITEM_OPTION_END].</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[ORDER_CARRIERID]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">&lt;br&gt;separated list of "Track Here" links.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[ORDERNUMBER]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+The customer’s order number.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[ORDERQTY]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+The quantity of the item(s) included in an order.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[ORDER_SHIPPINGDATE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Shipping date (date email is sent [m/d/yyyy]).
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[ORDER_TRACKINGNUMBER]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+&lt;br&gt;-separated list of tracking numbers.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[PASSWORD]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Customer password (may be encrypted).</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[PAYMENTTYPE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Payment type used for an order.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[PRICE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Price of the order.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[PROD]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Can be populated with either the product code or the product code with available options.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[PROD SKU]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+SKU#.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[PROD NAME]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Name of the product included in an order.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[PRODUCT]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Populated with product code.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[PRODUCTBRAND]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Brand name of the product.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[PRODUCTNAME]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Name of the product included in an order.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[PRODUCTURL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Link back to product page.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[PROMODESCRIPTION]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Description of a promotional item.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[PROMOEXPIRES]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Expiration date of a promotion.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[PROMONAME]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Name of a promotion.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[PROMOTYPE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Type of promotion.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[PROMOVALUE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Value of a promotion.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[QTY]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Quantity of items.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[QUESTION]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+If someone submits a question, can add along with answer.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[RANNUMBER]
+</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Return authorization number.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[RMAINFO]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+When a customer requests an RMA from the Members Area, this token pulls from the “Anything else we need to know? field. The customer uses this field to add additional information about the return request.
+This information is included in the Ticket Email and Returned Request Email via this token that can be included in the body of the email master.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[SALESPERSON]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Name of internal salesperson.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[SECUREURL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">A secure https website.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[SerialNumber]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+The Serial Number for a digital good or service that has a serial number assigned to it. The token will populate order confirmation emails with the [SerialNumber] token needed by the customer in order to download the product. Works in conjunction with the [SerialUrl] token.
+Serial numbers and the URL that will need to be downloaded by the customer are set up at <b>Content</b> &gt; <b>Import/Export</b> &gt; <b>Serial Numbers</b>. You may use the token where ever you desire in the order confirmation email. If a product's Digital Good checkbox is checked (true), upon order completion the system will assign the next available serial number based on Product_ID to the order.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[SerialUrl]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Works in conjunction with the [SerialNumber] token. The [SerialUrl] token will populate order confirmation emails with the URL needed by the customer to download the product.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[SHIPCOMPANY]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Your company’s name.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[SHIPCITY]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+The address of the shipping city.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[SHIPCOUNTRY]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+The address of the shipping country.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[SHIPDATE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+The shipping date.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[SHIPFAX]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+The shipping fax number.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[SHIPNAME]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Name of the shipper.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[SHIPPHONE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Shipper’s phone number.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[SHIPPING]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Total dollar amount for shipping.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[SHIPSTATE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+The address of the shipping state.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[SHIPSTREET]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+The shipping street address.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[SHIPQTY]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Quantity of items shipped.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[SHIPZIP]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Shipping zip code.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[SITEADDRESS]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Affiliate address.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[SITECITY]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Affiliate city.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[SITEFAX]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Affiliate fax number.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[SITEEMAIL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Settings for general site email.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[SITELOGO]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Same as logo.url.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[SITENAME]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+This is the affiliate name (company). It can be used in subject.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[SITEPHONE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Affiliate phone number.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[SITESTATE]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Affiliate state.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[SITEURL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+URL of the site.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[SITEZIP]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Affiliate zip code.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[SUBTOTAL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Subtotal of items in an order.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">[TAX]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Shows the total taxes on an order.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">[TOEMAIL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Indicates who an email is sent to.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[TONAME]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Indicates the name of the person the email is addressed to.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[TOTAL]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Total dollar amount for an order.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+[TRACKING#]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+Shipping tracking number.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+[UNSUBSCRIBELINK]</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Link to enable someone to unsubscribe from emails.
+</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">[URL]</td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+Site link.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

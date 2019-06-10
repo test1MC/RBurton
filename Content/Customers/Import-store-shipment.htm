@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="3936" MadCap:lastWidth="972">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/Standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Importing store shipments<MadCap:concept term="Customers" /></h1>
+        <ol>
+            <li>Create an XML text file that conforms to the <a href="#File_layout">file layout</a>. </li>
+            <li>Run the Merchandising.Import XML Documents Services Administration job. For information on running jobs, see the Job Management Reference.</li>
+        </ol>
+        <h3><a name="File_layout"></a>File layout</h3>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>XSD definition</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The XSD file is installed with Merchandising and is called Store Shipment Import.xsd.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>File structure definition</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-Standard" style="mc-table-style: url('../Resources/TableStyles/Standard.css');caption-side: top;" cellspacing="0">
+                    <col class="TableStyle-Standard-Column-Regular" />
+                    <tbody>
+                        <tr class="TableStyle-Standard-Body-Row1">
+                            <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">&lt;StoreShipment&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">	header elements…</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">	&lt;SKUs&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">		&lt;SKU&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">			detail elements...</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">		&lt;/SKU&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">	&lt;/SKUs&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">&lt;/StoreShipment&gt;</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Header</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-PatternedRows" style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');caption-side: top;" cellspacing="0">
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Name</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Data Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                <p class="TableHeading">Notes</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Action</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Attribute</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Required. </p>
+                                <p class="TableText">“add” creates a new document.</p>
+                                <p class="TableText">If action = add and no entity action is specified, the store shipment will be created in the Sent status if the receiving location’s flag for auto-receive shipments is set to False. If the receiving location’s auto-receive shipment flag is set to True then the store shipment is created in the Received status.</p>
+                                <p class="TableText">“update” edits a document. When update is used, you must provide the document number.</p>
+                                <p class="TableText">“delete” deletes a document. When delete is used, you must provide the document number.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">EntityAction</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Attribute</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">"Receive" can only be used against the update action. </p>
+                                <p class="TableText">Receive along with the update action will update the document’s status from Sent to Received. </p>
+                                <p class="TableText">Only provide this field for location’s who flag for auto-receive shipments is set to False.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">CompanyId</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Attribute</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Required. Company number that the document resides. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">DocumentNo</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Required. Store shipment number.</p>
+                                <p class="TableText">For an add action, this is not mandatory as the system will generate the document number if one is not provided. </p>
+                                <p class="TableText">Mandatory if action is update or delete.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">ReceiveDate</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Datetime</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">The actual date the receiving location received the merchandise. This can only be sent with a receive transaction. Format: yyyy-MMddTHH:mm</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">ShipDate</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Datetime</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Required. Date the shipping location shipped the merchandise. Format: yyyy-MMddTHH:mm</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">ExpectedReceiptDate</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Datetime</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Required. Date the merchandise is expected to arrive at the receiving location. Format: yyyy-MMddTHH:mm</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">PerformedBy</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 60</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Name of the user who shipped the merchandise.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">ExternalSystemName</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Name of the system that created the store shipment.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">Weight</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Double (15,3)</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">The weight of the shipped merchandise.</p>
+                                <p class="TableText">Mandatory if the unit weight code has been provided.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">UnitWeightCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 10</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Mandatory if the weight has been provided.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">UnitWeightId</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Byte</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Database reference to the unit weight code.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">ToLocationCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Required. Location that the merchandise is being shipped to.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">ToLocationId</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Short</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Database reference to a location.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">FromLocationCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Required. Location (warehouse) the merchandise is being shipped from.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="FieldName">FromLocationId</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">Short</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                <p class="TableText">Database reference to a location.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>SKU details</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-PatternedRows" style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');caption-side: top;" cellspacing="0">
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Name</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Data Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                <p class="TableHeading">Notes</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Action</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Attribute</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Required.</p>
+                                <p class="TableText">“add” will add a new detail line to existing document.</p>
+                                <p class="TableText">“update” will modify an existing detail line of a document.</p>
+                                <p class="TableText">“delete” will remove a detail line from a document.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">UnitsReceived</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Long</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Number of units received by the receiving store. Mandatory if the entityaction is receive. Must be &gt;=0.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">UnitsSent</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Long</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Required. Number of units shipped to a receiving location. Must be &gt;=0.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">CartonNo</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Not applicable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">DistributionNo</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Required. Distribution for which the store shipment was created for.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">SKUId</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Decimal</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Database reference to a style/color/size.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">UPCNo</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 14</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Required if style is not provided.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">StyleCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Required if UPC code is not provided.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">ColorCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String3</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Required if style code is provided and style is colored.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">PrimarySizeLabel</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 8</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Required if style code is provided and style is sized.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="FieldName">SecondarySizeLabel </p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">String 8</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <p class="TableText">Required if style code is provided and style is 2-dim sized.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h3>XML examples</h3>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To create and send a store shipment</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-Standard" style="mc-table-style: url('../Resources/TableStyles/Standard.css');caption-side: top;" cellspacing="0">
+                    <col class="TableStyle-Standard-Column-Regular" />
+                    <tbody>
+                        <tr class="TableStyle-Standard-Body-Row1">
+                            <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">&lt;?xml version="1.0" ?&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">&lt;StoreShipment CompanyId="15" Action="add"&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">&lt;ShipDate&gt;2010-08-16T00:00:00&lt;/ShipDate&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">&lt;ExpectedReceiptDate&gt;2010-08-16T00:00:00&lt;/ExpectedReceiptDate&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">&lt;FromLocationCode&gt;0012&lt;/FromLocationCode&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">&lt;ToLocationCode&gt;0011&lt;/ToLocationCode&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">&lt;SKUs&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">	&lt;SKU Action="add"&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">		&lt;SKUId&gt;15600087&lt;/SKUId&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">		&lt;DistributionNo&gt;004441&lt;/DistributionNo&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">		&lt;UnitsSent&gt;10&lt;/UnitsSent&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">	&lt;/SKU&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">&lt;/SKUs&gt;</p>
+                                <p style="margin-top: 0pt;margin-bottom: 0pt;font-family: 'Courier New';font-weight: normal;font-style: normal;font-size: 9pt;letter-spacing: 0em;color: #000000;text-decoration: none;">&lt;/StoreShipment&gt;</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To receive a store shipment</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-Standard" style="width: 889px;caption-side: top;mc-table-style: url('../Resources/TableStyles/Standard.css');" cellspacing="0">
+                    <col width="889px" class="TableStyle-Standard-Column-Regular" />
+                    <tbody>
+                        <tr class="TableStyle-Standard-Body-Row1">
+                            <td class="TableStyle-Standard-BodyA-Regular-Row1">&lt;?xml version="1.0" ?&gt;&lt;StoreShipment CompanyId="15" Action="update" EntityAction = "Receive"&gt;&lt;DocumentNo&gt;0000000907&lt;/DocumentNo&gt;&lt;ReceiveDate&gt;2010-08-17T00:00:00&lt;/ReceiveDate&gt;	&lt;SKUs&gt;		&lt;SKU Action="update"&gt;			&lt;UPCNo&gt;400000029719&lt;/UPCNo&gt;			&lt;UnitsReceived&gt;5&lt;/UnitsReceived&gt;		&lt;/SKU&gt;	&lt;/SKUs&gt;&lt;/StoreShipment&gt;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To modify a store shipment</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Only received units can be modified.</p>
+                <table class="TableStyle-Standard" style="width: 889px;caption-side: top;mc-table-style: url('../Resources/TableStyles/Standard.css');" cellspacing="0">
+                    <col width="889px" class="TableStyle-Standard-Column-Regular" />
+                    <tbody>
+                        <tr class="TableStyle-Standard-Body-Row1">
+                            <td class="TableStyle-Standard-BodyA-Regular-Row1">&lt;?xml version="1.0" ?&gt;&lt;StoreShipment CompanyId="15" Action="update"&gt;&lt;DocumentNo&gt;0000000908&lt;/DocumentNo&gt;	&lt;SKUs&gt;		&lt;SKU Action="update"&gt;			&lt;UPCNo&gt;400000029719&lt;/UPCNo&gt;			&lt;UnitsReceived&gt;3&lt;/UnitsReceived&gt;		&lt;/SKU&gt;	&lt;/SKUs&gt;&lt;/StoreShipment&gt;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

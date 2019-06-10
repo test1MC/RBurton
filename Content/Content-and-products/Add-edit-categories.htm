@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Adding and editing categories</title>
+        <meta name="description" content="Use the Add/Edit page to add or edit categories individually, or import an Excel spreadsheet to create or update multiple categories at a time." />
+    </head>
+    <body>
+        <h1>Adding and editing categories<MadCap:concept term="CP" /></h1>
+        <p>Use the <b>Add/Edit</b> page to add or edit categories.</p>
+        <p>
+            <img src="images/AddEditCategories.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <p>You can add categories individually, or if you have many categories to add, you can upload them using a spreadsheet. The spreadsheet lets you create new categories, determine the order in which they should appear, assign an image if applicable, include a category page heading, and add meta content for your category.</p>
+        <p>If importing categories from a spreadsheet, you typically export currently used categories to a spreadsheet first, modify it, then import this back into <MadCap:variable name="DC.EOM short" />. This ensures you are using the most recent information as a base line. It also guides you on the proper format for each column and row, and shows which fields are required.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To manually add categories</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Categories</b> &gt; <b>Add/Edit</b>.</li>
+                    <li>
+                        <p>Click <b>Add</b> (+) at the bottom of the current list of categories.</p>
+                        <p>This adds a new row to the top of the list with editable fields you can use to define category information. Each new row is automatically assigned a List ID number <MadCap:variable name="DC.EOM short" />uses to identify a specific category.</p>
+                    </li>
+                    <li>Add information which defines the category as appropriate; see the <b>New category field and element descriptions</b> table for details.</li>
+                    <li>Scroll to the bottom of the screen if necessary, and click <b>Save</b>.</li>
+                </ol>
+                <table class="TableStyle-PatternedRows" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <caption>New category field and element descriptions</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Field or element</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Delete</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Click to delete this category.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">List ID</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Automatically generated when creating a category; used by <MadCap:variable name="DC.EOM short" />to identify the specific category. Do not modify when making edits to a category.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Category Name</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Enter the name of the new category. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Translate</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Click the speech bubble <img src="images/TranslateBubble.png" /> to configure the name of your category to display in different languages. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Order</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> You can assign the order in which you want your categories to display depending on how your site is wired. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Hidden</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p> 
+Whether this category is displayed or not; checked is hidden. 
+The checkbox's true/false value is written to the new Hidden database field for the selected Categories.</p>
+                                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Depending on the settings of your site, this feature may require additional wiring. Contact your Client Manager for more information. </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Display on Mobile</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Used to limit which categories are made available to mobile device users. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Image</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> 
+If your category is wired to associate an image with it, click the icon in the Image column and the Image modal window will open. Click the Browse button to select the appropriate image from a local source. Click the <b>Save</b> button to save the selected image. An image will now be associated with the Category.
+ </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">SC Image</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Used in place of the main image if your site is wired to display products on a social commerce site. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Meta &amp; Heading</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Use to enter your meta title, meta keywords, meta description and heading in the corresponding fields. More information about meta content and Category Headings can be found in <a href="http://static.googleusercontent.com/media/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf">Google’s SEO guide</a>. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Sub-Categories</td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <p>Click the folder icon  
+to assign previously-created sub-categories to their corresponding categories.</p>
+                                <p>Select the related Sub-Categories. After a sub-category has been assigned to a category, the check box becomes grayed out. As before, remember to <b>Save</b> when you have completed making your selections.
+ </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To import or export categories</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol MadCap:continue="true">
+                    <li>
+                        <p>In <b>Content</b>, select <b>Categories</b> &gt; <b>Add/Edit</b>.</p>
+                    </li>
+                    <li>
+                        <p>Click the <b>Import/Export Categories</b> menu bar.</p>
+                        <p>The page expands to show the <b>Import/Export Categories</b> area.</p>
+                        <p>
+                            <img src="images/ImportCategories.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                        </p>
+                    </li>
+                    <li>To export and edit categories:<ol MadCap:continue="true"><li><p>click the <b>Export to Excel</b> icon. This creates an Excel spreadsheet and a link to it beneath the <b>Import</b>/<b>Export</b> buttons.</p><p><span class="note">Tip:</span> You should always export first to ensure you are using the most recent spreadsheet version. This will also guide you on the proper format for each column and row as well as which fields are required.</p></li><li><p>Click the spreadsheet link, add or update category information in it, and save the spreadsheet to a local drive.</p></li></ol></li>
+                    <li>To import categories,<ol MadCap:continue="true"><li><p>Go back to the site manager and click the <b>Excel File</b> field's <b>Browse</b> button.</p></li><li>Browse to and choose the Excel file you edited and click <b>Open</b>.</li><li>When the name of the file you chose appears in the <b>Excel file</b> address field, click the <b>Import</b> button to upload new category information in the spreadsheet.</li></ol></li>
+                    <li>Click <b>Save</b>.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

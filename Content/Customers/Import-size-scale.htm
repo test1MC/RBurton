@@ -1,0 +1,829 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="4122" MadCap:lastWidth="970">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Importing size scale information<MadCap:concept term="Customers" /></h1>
+        <ol>
+            <li>Create a comma or tab-delimited text file that conforms to the <a href="#File_layout">file layout</a>.</li>
+            <li>Run the <i>AR.Size Scale Import</i> Services Administration job. For information on running jobs, see the Job Management Reference.</li>
+        </ol>
+        <div class="note">
+            <p>Notes</p>
+            <p>Create the input files in the order they need to be processed. The import sorts and processes the files in a folder based on the file creation date. Using the creation date lets the import job control the sequencing and avoid timing errors. </p>
+            <p>If <b>generate level = merchandise group</b>, provide a scale value for each size code assigned to the size category. If not provided, the scale value is 0 for any size not provided.</p>
+            <p>If generate level= style, provide a scale value for each size code assigned to the style. If not provided, the scale value is 0 for any size not provided.</p>
+            <p>If <b>generate level= color/size</b>, provide a scale value for each color/size assigned to the style. If not provided, the scale value is 0 for any color/size not provided.</p>
+            <p>If importing a record that already exists, then existing record is overwritten with the new imported record.</p>
+            <p>The file layout must include two row types: Header and Detail. The user will provide one Header record for each distinct size scale. Each Header record contains 1 to many detail records.</p>
+        </div>
+        <h3><a name="File_layout"></a>File layout</h3>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Header</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The user will provide one Header record for each size scale.</p>
+                <table class="TableStyle-PatternedRows" style="width: 889px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col width="65px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="120px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="58px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="70px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="82px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="494px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Field #</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Name</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Data Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Valid Values</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Mand</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadD-Regular-Header1">&#160;</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">1</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Record type </p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">1 AN </p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">H</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Header record.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">2</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Merchandise generate level</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Text</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Merchandise group</p>
+                                <p class="TableText">Style</p>
+                                <p class="TableText">Color/size</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Whether size scale is created for merchandise group, style (size only) or style (color/size breakdown).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">3</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Location generate level</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Text</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Chain</p>
+                                <p class="TableText">Location</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Whether the size scale is created for a location or at the chain level.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">4</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Merchandise group code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">20 AN</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Mandatory if merchandise generate level = merchandise group. Ignored if merchandise generate level is style or color/size. Must be a merchandise group code from the main merchandise hierarchy. Must adhere to merchandise group code mask defined in Product.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">5</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Style code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">20 AN</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Mandatory if merchandise generate level = style or color/size. Ignored if merchandise generate level is merchandise group.Must adhere to the style code mask defined in EDM parameters.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">6</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Size category code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">3 AN </p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Mandatory if merchandise generate level = merchandise group. Ignored if merchandise generate level is style or color/size. Size category code must be predefined in Product.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">7</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Location code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">20 AN</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Mandatory if location generate level = location. Ignored if location generate level = chain.Must adhere to the location code mask defined in EDM parameters. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">8</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Scale Indicator</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Text</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Ratio</p>
+                                <p class="TableText">Percent</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Whether the size scale value is a ratio i.e. 1-2-1 or a percent <br />33.33-33.33-33.34.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">9</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Allow System Override</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Text</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">True</p>
+                                <p class="TableText">False</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Whether a manually created scale can be re-calculated whenever the A&amp;R scheduler executes the process job “generate scales”.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="FieldName">10</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">Generate for Application</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">Text</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">A&amp;R</p>
+                                <p class="TableText">AP</p>
+                                <p class="TableText">Both</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                <p class="TableText">Mandatory if AP is installed and AP flag for maintain separate size <span class="_Override" style="font-size: 9pt;line-height: 11pt;">scales </span>for AP and<span class="_Override" style="font-size: 9pt;line-height: 11pt;"> A&amp;R </span>= True. </p>
+                                <p class="TableText">If AP is <span class="CharGUI">not</span> installed, then this field is not applicable. Validation on this field is bypassed. (i.e. you can have garbage in it but it will not reject because of it). In this case size scale is only created in A&amp;R.</p>
+                                <p class="TableText">If AP is installed <span class="CharGUI">but</span> the AP parameter for maintain separate size scales for AP and A&amp;R = False, then this field is not applicable. Validation on this field is bypassed. (i.e. you can have garbage in it but it will not reject because of it). In this case size scale is <span class="_Override" style="font-size: 9pt;line-height: 11pt;">only</span> created in A&amp;R.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Detail record</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>At least one detail record must exist for a header record. Each Header record will contain 1 to many detail records. The detail records have to be sequenced to follow the Header record.</p>
+                <table class="TableStyle-PatternedRows" style="width: 889px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col width="65px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="120px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="58px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="70px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="82px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="494px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Field #</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Name</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Data Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Valid Values</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Required</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadD-Regular-Header1">&#160;</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">1</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Record type </p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">1 AN</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">D</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Detail record.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">2</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Size code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">17 AN</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">&#160;</td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">For 2-dim styles, this is the concatenation of the primary and secondary size. </p>
+                                <p class="TableText">If generate level = style or color/size, must be a size code assigned to the header record’s style code.</p>
+                                <p class="TableText">If generate level = merchandise group, must be a size code assigned to the header record’s size category code. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">3</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Color code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">3 AN</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">&#160;</td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">&#160;</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Mandatory if merchandise generate level = Color/Size.</p>
+                                <p class="TableText">If generate level = color/size, then must be set to a color code assigned to the header record’s style code.</p>
+                                <p class="TableText">Field is ignored (not applicable) if merchandise generate level = Merchandise Group or Style.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="FieldName">4</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">Scale Quantity/Value</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">Decimal</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">Ratio or Percent; See comments.</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                <p class="TableText">Mandatory for all generate levels.</p>
+                                <p class="TableText">If scale indicator = Ratio, then must be &gt;=0.</p>
+                                <p class="TableText">If scale indicator = Percent, then must be &gt;=0.00 and &lt;=100.00.</p>
+                                <p class="TableText">If Percent, then the sum of percent value for the merchandise group/location or style/location must be = 100%.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Sample file</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-PatternedRows" style="width: 682px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col width="48px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="72px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="106px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="83px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="104px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="48px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="48px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="77px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="48px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="48px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">01</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">02</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">03</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">04</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">05</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">06</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">07</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">08</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">09</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                <p class="TableHeading">10</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">H</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Style</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Location</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">100000009</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">0077</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">PERCENT</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">TRUE</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">A&amp;R</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">D</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">XS</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">27.90</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">D</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">XXS</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">72.10</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">H</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Style</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Location</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">100000011</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">0077</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Percent</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">TRUE</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">AP</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">D</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">XS</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">40.00</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">D</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">XXS</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">60.00</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">H</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Style</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Location</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">100000013</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">0077</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">PERCENT</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">False</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">A&amp;R</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">D</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">30</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">51.50</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">D</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">31</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">48.50</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">H</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Style</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Location</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">100000016</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">0077</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">PERCENT</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">TRUE</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">A&amp;R</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">D</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">30</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">56.27</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="FieldName">D</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">31</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">43.73</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

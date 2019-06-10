@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc>
+  <TocEntry
+    Title="Content and products"
+    ReplaceMergeNode="true"
+    Link="/Content/Content-and-products/About-content-and-products.htm">
+    <TocEntry
+      Title="Categories"
+      Link="/Content/Content-and-products/About-categories.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+      <TocEntry
+        Title="Adding and editing categories"
+        Link="/Content/Content-and-products/Add-edit-categories.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Managing the multi level tree"
+        Link="/Content/Content-and-products/Manage-multi-level-tree.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Sub-categories"
+      Link="/Content/Content-and-products/About-sub-categories.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+      <TocEntry
+        Title="Adding and editing sub-categories"
+        Link="/Content/Content-and-products/Add-edit-sub-categories.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Manage cross-sell up-sell items"
+        Link="/Content/Content-and-products/Manage-cross-sell up-sell items.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Brands"
+      Link="/Content/Content-and-products/About-brands.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+      <TocEntry
+        Title="Adding and editing brands"
+        Link="/Content/Content-and-products/Add-edit-brands.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Content-and-products/Manage-sub-brands.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Import/Export"
+      Link="/Content/Content-and-products/About-import-export.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+      <TocEntry
+        Title="Importing and exporting Amazon inventory"
+        Link="/Content/Content-and-products/Import-export-amazon.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting brands"
+        Link="/Content/Content-and-products/Import-export-brands.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting categories"
+        Link="/Content/Content-and-products/Import-export-categories.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting sub-categories"
+        Link="/Content/Content-and-products/Import-export-sub-categories.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting customer information"
+        Link="/Content/Content-and-products/Import-export-customers.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting images"
+        Link="/Content/Content-and-products/Import-export-images.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting locations"
+        Link="/Content/Content-and-products/Import-export-locations.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing order cost"
+        Link="/Content/Content-and-products/Import-order-cost.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing order notes"
+        Link="/Content/Content-and-products/Import-order-notes.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Exporting orders"
+        Link="/Content/Content-and-products/Export-orders.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting price breaks"
+        Link="/Content/Content-and-products/Import-export-price-breaks.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting pricing tiers"
+        Link="/Content/Content-and-products/Import-export-price-tiers.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting  product review articles"
+        Link="/Content/Content-and-products/Import-export-product-articles.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting product bundles"
+        Link="/Content/Content-and-products/Import-export-product-bundles.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Exporting product information"
+        Link="/Content/Content-and-products/Export-product-info.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing product information"
+        Link="/Content/Content-and-products/Import-product-info.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Exporting products with options"
+        Link="/Content/Content-and-products/Export-products-with-options.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing products with options"
+        Link="/Content/Content-and-products/Import products with options.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting promotions"
+        Link="/Content/Content-and-products/Import-export-promos.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting questions and answers"
+        Link="/Content/Content-and-products/Import-export-QandA.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting QuickSheet data"
+        Link="/Content/Content-and-products/Import-export-quicksheet.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting subscriptions"
+        Link="/Content/Content-and-products/Import-export-subscriptions.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Content-and-products/Import-export-suppliers.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting tier group rules"
+        Link="/Content/Content-and-products/Import-export-tier-group-rules.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting URL re-writes"
+        Link="/Content/Content-and-products/Import-export-URL-rewrite.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Importing and exporting videos"
+        Link="/Content/Content-and-products/Import-export-videos.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Products"
+      Link="/Content/Content-and-products/About-products.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+      <TocEntry
+        Title="Adding and editing products"
+        Link="/Content/Content-and-products/Add-edit-products.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Adding and editing product options and product groups"
+        Link="/Content/Content-and-products/Add-product-options.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Content-and-products/Manage-product-personalization.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Pages"
+      Link="/Content/Content-and-products/About-pages.htm">
+      <TocEntry
+        Title="Editing automated email masters and content"
+        Link="/Content/Content-and-products/Edit-email-masters.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Managing master pages"
+        Link="/Content/Content-and-products/Manage-master-pages.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Content-and-products/About-customers.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Content-and-products/Tier-groups.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="International"
+      Link="/Content/Content-and-products/About-international.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+      <TocEntry
+        Title="Setting up languages displayed on your site"
+        Link="/Content/Content-and-products/Languages.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Translating phrases"
+        Link="/Content/Content-and-products/Translate-phrases.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Tasks"
+      Link="/Content/Content-and-products/About-tasks.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Content-and-products/FTP-hosts.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Content-and-products/Job-scheduler.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Content-and-products/Auto-Credit.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Content-and-products/Google-Trusted-Store.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Content-and-products/Salsify-Jobs.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      </TocEntry>
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Content-and-products/Site-Provisioner.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Content-and-products/Add-product-rules.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+  </TocEntry>
+</CatapultToc>

@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Importing and exporting customers</title>
+        <meta name="description" content="Use the Customers Import/Export feature to import customer information into the site manager and export customer information to an Excel Spreadsheet. You can also create a Password Reset email and file." />
+    </head>
+    <body>
+        <h1>Importing and exporting customers<MadCap:concept term="CP" /></h1>
+        <p>Use Customer Import/Export to import customer information into the site manager and export customer information to an Excel spreadsheet. You can also create a password reset email and file here.</p>
+        <p>
+            <img src="images/ImportExportCustomersMain.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <p>Importing customer information automatically updates the customer database with updated information, and creates additional records for new customers. If you prefer to do this manually, you can add customers one by one on the <b>CRM</b> &gt; <b>Customers</b> &gt; <b>Add/Edit</b> page.</p>
+        <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;"> You should always export first to ensure you are using the most recent spreadsheet version. This will also guide you on the proper format for each column and row as well as which fields are required.</div>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To export customer information</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Customers</b>.</li>
+                    <li>Select whether to filter customers by <b>Create Date</b> or <b>Modified Date</b>.</li>
+                    <li>
+                        <MadCap:snippetText src="../Resources/Snippets/Select date range.flsnp" /> Customer information added outside of this date range will not be pulled into the spreadsheet.</li>
+                    <li>Select other export options as needed:<ol><li><p><b>Create Email/Password Reset File</b> – Useful when importing customers from another database. After customer information has been imported, select this option to export the customer list. This creates a file containing email addresses and encrypted unique URLs for each individual customer. The "Reset URL" strings can be used to invite your customers to reset their passwords on your new site. Additional wiring is required.</p></li><li><p><b>Include Account Questions</b> – Populates the Excel spreadsheet with two new fields: <b>Q_Text</b> and <b>Answer_Text</b>. To learn more about account questions, see the knowledge base article #1793. This a custom feature. Additional wiring is required.</p></li><li><p><b>Include Address Book Entries</b>  – Adds a new row in the spreadsheet for each unique address in the address book. If there is more than one row for a particular customer, the first row is from their record (billing), and the rest of the information is from the address table. This includes all of each customer's addresses, including the billing and shipping addresses. If you don't select this option, only the billing address is returned.</p></li></ol><div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;">To export all customers with no address book entries—no duplicate customer information—make certain no check boxes are marked.</div><div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">When exporting in order to generate an import template, it is recommended that you select both <b>Include Account Questions</b> and <b>Include Address Book Entries</b> check boxes. This way all possible fields will be included when importing and eliminate potential discrepancies.</div></li>
+                    <li>
+                        <p>Click the <b>Export</b> button <img src="../Resources/Images/ExportToExcelButton.png" style="width: 19px;height: 19px;" />.</p>
+                        <p>A link to the spreadsheet appears in the <b>Report</b> section beneath the <b>Available Exports to Download</b> area.</p>
+                        <p>
+                            <img src="images/ImportExportCustomers2.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                        </p>
+                    </li>
+                    <li>Click the spreadsheet link to download and open the file containing the customer data. Make modifications as needed, and save it to your computer. Customer spreadsheet fields are:</li>
+                </ol>
+                <table class="TableStyle-PatternedRows" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Field</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Customer_ID</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> A unique number generated for each added customer to the platform; used internally to identify a customer record and associated information. This field should be left blank when adding a new customer. Should not be modified.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">First</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Customer's first name. Required field.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Last</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Customer's last name. Required field.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Company</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">The name of the business or company if a customer is associated with one . Required field.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Email</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p> The email address used for customer correspondence for order receipts, <MadCap:popup><MadCap:popupHead>RMAs</MadCap:popupHead><MadCap:popupBody>returned merchandise authorization</MadCap:popupBody></MadCap:popup>, promotions, and other sales initiatives; the default email address for customer account login. Required field.</p>
+                                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">An email address is the primary identifier of a customer. If a customer is in the file multiple times with the same email address, the additional records are checked to determine their additional available addresses.</div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Password</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Only used when importing new customers, or if there is a reason to set a temporary password for the customer. Blank when running an export. Required field.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Street1</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The  customer's street number and name; used for billing purposes. Required field.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Street2</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Additional address information such as suite, apartment, or P.O.Box; used for billing purposes. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">City</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Customer's city of residence; used for billing purposes. Required field.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">State</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Customer's state of residence; used for billing purposes. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Zip</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Customer's zip code of residence; used for billing purposes. Required field.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Country</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Customer's country of residence; used for billing purposes. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Phone</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Phone number associated with the customer for billing purposes. Required field.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Phone_Other</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Additional phone number for contact. (Evening Phone). </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Phone_Mobile</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Customer's mobile phone number. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Fax</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Customer's fax number. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">resalecertificate</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Used to import a customer resale certificate number, if applicable, for customers in the states of California, Illinois, and North Carolina. This field is located in the site manager in the Billing Address section of the retail order screen. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">customerNotes</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Contains any notes added to the customer's account file. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">create_date</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">The date the customer account was created; should not be modified.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">PlainText</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Accepts only <b>True</b> or <b>False</b> values:</p>
+                                <ul>
+                                    <li><b>True</b> – email correspondence to the customer will be sent in plain text only format.</li>
+                                    <li><b>False</b> – email correspondence to the customer will be sent in html format.</li>
+                                    <li> If field is blank, emails will be sent as plain text by default. </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">SendPromo</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Accepts only <b>True</b> or <b>False</b> values:</p>
+                                <ul>
+                                    <li><b>True</b> –  the opt-in to the mailing list for special offers and promotions check box on the <b>CRM</b> &gt; <b>Customers</b> &gt; <b>Add/Edit</b> page will be selected.</li>
+                                    <li><b>False</b> –  the opt-in to the mailing list for special offers and promotions check box is not selected. </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">SendCatalog</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p> Accepts only <b>True</b> or <b>False</b> values:</p>
+                                <ul>
+                                    <li><b>True</b> – and you have setup physical catalogs on your site, the customer will be sent a catalog to the address on file.</li>
+                                    <li><b>False</b> – the customer will not be sent a catalog.  If the field is left blank and you have setup physical catalogs on your site, then the customer will be sent a catalog to the address on file. </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">SendSMS</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p> Accepts only <b>True</b> or <b>False</b> values:</p>
+                                <ul>
+                                    <li><b>True</b> – <MadCap:popup><MadCap:popupHead>SMS</MadCap:popupHead><MadCap:popupBody>short message service</MadCap:popupBody></MadCap:popup> correspondence will be sent to the customer's mobile number.</li>
+                                    <li><b>False</b> – SMS correspondence will not be sent to the customer's mobile number.</li>
+                                    <li> If the field is blank, SMS correspondence will be sent to the customer's mobile number by default. </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Q_Text</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Contains questions set up for customer emails. Each question is displayed in a separate row. (Custom)</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Answer_Text</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Contains responses to questions submitted by email. Each answer is displayed in a separate row. (Custom)</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Address_ID</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Important to the import process. If left blank and the email address provided is not found, the process assumes that a new customer record is being added to the system. If left blank and the email address provided is found, the process assumes that an existing customer record is to be updated.</p>
+                                <ul>
+                                    <li>If the value in the Address_ID field reads "NEW" the process will assume that this is a new address book entry for the specified customer.</li>
+                                    <li>If the value in the Address_ID field is a numeric value (provided by the export) then the process will assume that this is an existing address book entry for the specified customer and will attempt to update. </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">AVSMemberID</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The ID used to identify a customer record in with a valid address verification listing.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">ExternalCustomerID</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Used if linking a customer account from an external source outside of Aptos <MadCap:variable name="DC.EOM short" />. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">DateOfBirth</td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows"> The customer's date of birth; used for age verification and for birthday-related promotions.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To import customer information</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Customers</b>.</li>
+                    <li>In the <b>Import Customers</b> area of the screen, click <b>Browse</b> and navigate to the Excel file containing the customer information you want to upload.</li>
+                    <li>
+                        <p>Click the <b>Import</b> button <img src="../Resources/Images/ImportButton.png" /> to upload the file information into the site manager.</p>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

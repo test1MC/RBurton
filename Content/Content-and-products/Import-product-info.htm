@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" description="Product  imports by spreadsheet are submitted to and processed by Aptos EOM. Imports may be scheduled for immediate processing or for future date processing up to a 90-days in advance.">
+    <head><title>Importing product information</title>
+    </head>
+    <body>
+        <h1>Importing product information<MadCap:concept term="CP" /></h1>
+        <p>This feature allows you to bulk import products without options, or edit existing ones, using the Aptos pre-formatted spreadsheet.</p>
+        <p>Product and pricing spreadsheets are processed by Aptos <MadCap:variable name="DC.EOM short" />. They can be scheduled for processing in advance by up to 90 days. All columns are defined in <a href="Export-product-info.htm">Exporting product information</a>.</p>
+        <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;"> When updating by spreadsheet, you should always export first to ensure you are using the most recent spreadsheet version. This will also guide you on the proper format for each column and row as well as which fields are required.</div>
+        <h2>About pending tasks and history</h2>
+        <p>The screen contains two areas of information.</p>
+        <ul>
+            <li><b>Pending Product Imports</b> spreadsheet(s).</li>
+            <li>The <b>Product Import History (past 90 days)</b> worth of imports that have been processed.</li>
+        </ul>
+        <p>If a pending import has not been processed or is not currently in process, you can cancel it here.</p>
+        <p>
+            <img src="images/ImportProductInfoMain.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;"> When performing a product import and you analyze the data first, it is important to know that the amount of products in the spreadsheet cannot exceed 5,000 items.</div>
+        <h3>To cancel an import</h3>
+        <p>Click the <b>Delete</b> button corresponding to the import file you want to cancel. You will be asked to confirm your action and the task will be canceled, if desired.</p>
+        <h3>To import product information</h3>
+        <ol>
+            <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Import Product</b>.</li>
+            <li>Click <b>Browse</b>, find the Excel spreadsheet you want to import, and click <b>Open</b>.</li>
+            <li>
+                <p>If you are importing an inventory only spreadsheet, then click on the <b>Inventory Update Only</b> button, and go to step 7.</p>
+                <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;">This type of spreadsheet can be generated on the <b>Product Export</b> menu .</div>
+            </li>
+            <li>
+                <p>To review the products on the screen before importing them, click <b>Analyze Import</b>. Remember, there is a 5,000 item limit when importing from a spreadsheet.</p>
+                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">If you are an expert Aptos spreadsheet user, you may opt to <b>Import without Analysis</b> but this is not recommended.</div>
+            </li>
+            <li>
+                <p>When analyzing the imported spreadsheet, if <MadCap:variable name="DC.EOM short" /> finds that the <b>ImagePath</b> field for any record contains "http://" ,  it prompts with the  question:</p>
+                <p>How should we handle ImagePath values that contain a URL?</p>
+                <ol>
+                    <li>Download images from the remote server and store them on the Aptos server</li>
+                    <li>Always display the image hosted at the remote location</li>
+                </ol>
+                <p>By default, the <b>Download images...</b> radio button is selected.</p>
+                <p>If you select <b>Always display...</b>, <MadCap:variable name="DC.EOM short" /> stores the URL as the <b>ImagePath</b> value. The standard pages will be updated to include logic to display the product image from a remote server as needed.</p>
+            </li>
+            <li>When the analysis is done, you are presented with the results. After your products are displayed on the screen, you may manually adjust the sub-category to which the product belongs, correcting any misspellings. You can also see if your images' paths are correct.</li>
+            <li>
+                <p>Click the <b>Import</b> button after all products load.</p>
+                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">The larger the spreadsheet, the longer it will take for this screen to load.</div>
+            </li>
+            <li>
+                <p>Make any changes needed to the export schedule date and time, and notification email address if needed, and click <b>Save</b>.</p>
+                <p>
+                    <img src="images/ImportProductSchedule.jpg" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />​</p>
+                <p>The file is uploaded and renamed with a unique name, is scheduled for processing, and appears as a pending import in the <b>Pending Product Imports</b> area of the main screen.</p>
+            </li>
+            <li>
+                <p>When the job is complete, the update appears in the <b>Product Import History</b> area of the main screen. ​Click the <b>Details</b> link in the <b>Status</b> column to view the <b>Job Status</b> details.</p>
+                <p>
+                    <img src="images/ImportProductJobStatus.jpg" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+                <p>The job history page indicates the import status from the email subject: OK, OK (WITH ERRORS), or ERROR. The data logs the row count successes and failures along with detailed logging information.</p>
+            </li>
+        </ol>
+        <h2>Sub-Category auto-generation</h2>
+        <ul>
+            <li>When a conflict exists where the sub-category in the spreadsheet does not exist in the database, the import (just like brands currently works), will creates the sub-category on the fly and the product auto-associated to it. The wording on the screen in the drop down box makes this more evident by saying Create Sub-Category.</li>
+            <li>
+                <p>If the sub-category contains a /, it will be replaced with a hyphen during import.</p>
+                <p>
+                    <img src="images/ImportProductSubCatAutoCreate.jpg" />
+                </p>
+            </li>
+        </ul>
+        <h2>Product UPC</h2>
+        <p>You can use <b>Product With Options Import and Export</b> to define both the product-level and option-level UPC values in the spreadsheet.</p>
+        <ul>
+            <li>ProductUPCCode - This new column in the spreadsheet, correlates to the product-level UPC Code field.</li>
+            <li>
+                <p>UPCCode - This existing column correlates to the option-level UPC field.</p>
+                <p>
+                    <img src="images/ImportProduct3.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+                <p>
+                    <img src="images/ImportProduct5.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+            </li>
+        </ul>
+    </body>
+</html>

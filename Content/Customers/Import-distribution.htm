@@ -1,0 +1,2008 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="13637" MadCap:lastWidth="1024">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/Standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Importing distributions<MadCap:concept term="Customers" /></h1>
+        <ol>
+            <li>Create an XML text file that conforms to the <a href="#File_format">file layout</a>. </li>
+            <li>Run the Merchandising.Import XML Documents Services Administration job. For information on running jobs, see the Job Management Reference.</li>
+        </ol>
+        <h3><a name="File_format"></a>File layout</h3>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>XSD Definition</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The XSD file is installed with Merchandising and is called Distribution Import.xsd.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>File structure definition</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-Standard" style="width: 889px;caption-side: top;mc-table-style: url('../Resources/TableStyles/Standard.css');" cellspacing="0">
+                    <col width="889px" class="TableStyle-Standard-Column-Regular" />
+                    <tbody>
+                        <tr class="TableStyle-Standard-Body-Row1">
+                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                <p>&lt;Distributions&gt;</p>
+                                <p>&lt;Distribution&gt;</p>
+                                <p>		header elements…</p>
+                                <p>			&lt;DistributionMessages&gt;</p>
+                                <p>				&lt;DistributionMessage&gt;</p>
+                                <p>					Distribution message elements…</p>
+                                <p>				&lt;/DistributionMessage&gt;</p>
+                                <p>			&lt;/DistributionMessages&gt;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Row1">
+                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                <p>			&lt;DistributionAttributesSets&gt;</p>
+                                <p>				&lt;DistributionAttributesSet&gt;</p>
+                                <p>					Distribution attribute set elements…</p>
+                                <p>				&lt;/DistributionAttributesSet&gt;</p>
+                                <p>			&lt;/DistributionAttributesSets&gt;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Row1">
+                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                <p>			&lt;DistributionCustomProperties&gt;</p>
+                                <p>				&lt;DistributionCustomProperty&gt;</p>
+                                <p>					Distribution custom property elements…</p>
+                                <p>				&lt;/DistributionCustomProperty&gt;</p>
+                                <p>			&lt;/DistributionCustomProperties&gt;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Row1">
+                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                <p>			&lt;DistributionLines&gt;</p>
+                                <p>				&lt;DistributionLine&gt;</p>
+                                <p>					Distribution Line elements…</p>
+                                <p>				&lt;/DistributionLine&gt;</p>
+                                <p>			&lt;/DistributionLines&gt;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Row1">
+                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                <p>			&lt;DistributionLocations&gt;</p>
+                                <p>				&lt;DistributionLocation&gt;</p>
+                                <p>					Distribution Location elements…</p>
+                                <p>				&lt;/DistributionLocation&gt;</p>
+                                <p>			&lt;/DistributionLocations&gt;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Row1">
+                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                <p>				&lt;DistributionDetails&gt;</p>
+                                <p>					&lt;DistributionDetail&gt;</p>
+                                <p>						Distribution Detail elements…</p>
+                                <p>					&lt;/DistributionDetail&gt;</p>
+                                <p>				&lt;/DistributionDetails&gt;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Row1">
+                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                <p>				&lt;DistributionPackDetails&gt;</p>
+                                <p>					&lt;DistributionPaCKDetail&gt;</p>
+                                <p>						Distribution pack detail elements…</p>
+                                <p>					&lt;/DistributionPackDetail&gt;</p>
+                                <p>				&lt;/DistributionPackDetails&gt;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Standard-Body-Row1">
+                            <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                <p>	&lt;/Distribution&gt;</p>
+                                <p>&lt;/Distributions&gt;</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Header</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-PatternedRows" style="width: 890px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col width="156px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="73px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="66px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="109px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="53px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="433px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Name</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Data Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Valid</p>
+                                <p class="TableHeading">Values</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Mand</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                <p class="TableHeading">Notes</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Action</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Attribute</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">“add”</p>
+                                <p class="TableText">“update”</p>
+                                <p class="TableText"> “delete”</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">“add” will create a new document.</p>
+                                <p class="TableText">“update” will modify an existing document.</p>
+                                <p class="TableText">“delete” will remove a document.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">EntityAction</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Attribute</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText"> “Freeze"</p>
+                                <p class="TableText">“FreezeHeader” “Unfreeze"</p>
+                                <p class="TableText">“Modify”</p>
+                                <p class="TableText">"Complete"</p>
+                                <p class="TableText">"Cancel"</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">"Freeze" is issued by WM to take over control of a distribution. This will either freeze entire document or just some of the distribution lines.</p>
+                                <p class="TableText">“FreezeHeader” is issued by WM and it will only freeze the distribution header while leaving all distribution lines in an unfrozen status, WM uses this action to alert the allocator that WM picking will begin soon but has not happen yet.</p>
+                                <p class="TableText">"Unfreeze" is issued by WM to release the distribution back to A&amp;R as an allocator needs to adjust the quantities within A&amp;R.</p>
+                                <p class="TableText">“Modify” is issued by WM when it adjusts the distribution quantities.</p>
+                                <p class="TableText">"Complete" is issued by WM when shipping against the distribution or a distribution line has been completed. </p>
+                                <p class="TableText">"Freeze", "Unfreeze" and "Complete" can be applied against individual lines or for the entire distribution.</p>
+                                <p class="TableText">"Cancel" is issued by WM when it needs to cancel an entire distribution document. Outstanding allocated quantities will be backed out from Infobase.</p>
+                                <p class="TableText">Create, Submit, Approve, Reject, Release and Reinstate are also valid import actions but they typically happen within the A&amp;R application and are not applicable for import integration purposes (unless the distribution was created outside of A&amp;R).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">CompanyId</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Attribute</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">&#160;</td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">The company number that the document resides. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">Number</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">&#160;</td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Distribution document number.</p>
+                                <p class="TableText">Mandatory if importing a distribution modify (action =  update or delete).</p>
+                                <p class="TableText">Not mandatory if importing a distribution create (Action = add). For a Distribution Add, the system will generate the distribution number if not provided.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Description</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 60</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Applicable only if importing a distribution create (action = add).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">CreateDate</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Datetime</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Applicable only if importing a distribution create (action = add).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Status</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Short</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">1 thru 10</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Indicates the status of the document.</p>
+                                <p class="TableText">Applicable only if importing a distribution create (action = add) </p>
+                                <p class="TableText">New = 1, Preliminary = 2, Pending =3, Rejected = 4, Open = 5, Released = 6, Frozen = 7, Completed = 8, Cancelled = 9, Deleted = 10</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">DocumentSource</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">“ExternalSource"</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Mandatory if importing a distribution create (action = add). It can only be set to ExternalSource.</p>
+                                <p class="TableText">Non mandatory (not applicable) if importing a distribution update/delete and should not be provided.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">ReleaseDate</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Datetime</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Applicable only if importing a distribution create (action = add).</p>
+                                <p class="TableText">The date the distribution was released to WM.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">ExpectedReceiptDate</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Datetime</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Applicable only if importing a distribution create (action = add).</p>
+                                <p class="TableText">The date the ordered items are expected to be received into the warehouse.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">PositionCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Applicable only if importing a distribution create (action = add).</p>
+                                <p class="TableText">The user’s position that created the distribution document.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">VendorCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Applicable only if importing a distribution create (action = add) </p>
+                                <p class="TableText">Mandatory if DocumentSource is Vendor Order.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">WarehouseLocationCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">The warehouse the items are to be received in or shipped from.</p>
+                                <p class="TableText">Mandatory if importing a distribution create (action = add) .</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="FieldName">ReserveLocationCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                <p class="TableText">The warehouse that the items are to be putaway as reserve.</p>
+                                <p class="TableText">Applicable only if importing a distribution create (action = add) and if the reserve differs from the WarehouseLocationCode.</p>
+                                <p class="TableText">The warehouse that the items are to be putaway as reserve.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Distribution lines</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A distribution line can be identified by Vendor Style and Color Code OR Style and Color Code OR by Pack Code. A distribution line is mandatory when importing any action that needs to be applied at the line level and/or detail level and/or pack detail level.</p>
+                <table class="TableStyle-PatternedRows" style="width: 890px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col width="156px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="73px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="66px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="109px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="53px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="433px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Name</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Data Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Valid</p>
+                                <p class="TableHeading">Values</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Mand</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                <p class="TableHeading">Notes</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Action</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Attribute</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">“add”</p>
+                                <p class="TableText">“update”</p>
+                                <p class="TableText"> “delete”</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Use "add" to add a new detail to a document, "update" to modify an existing detail of the document and "delete" to remove a detail from the document. Actions are case-sensitive.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">VendorStyle</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 40</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Required if neither style nor pack code is provided.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">VendorCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText"><span class="_Override" style="letter-spacing: -0.005em;">T</span>he<span class="_Override" style="letter-spacing: -0.01em;"> </span>c<span class="_Override" style="letter-spacing: 0.005em;">o</span>de<span class="_Override" style="letter-spacing: -0.02em;"> </span>assigned<span class="_Override" style="letter-spacing: -0.04em;"> </span>to<span class="_Override" style="letter-spacing: -0.01em;"> </span>the <span class="_Override" style="letter-spacing: 0.005em;">v</span>e<span class="_Override" style="letter-spacing: 0.005em;">n</span>d<span class="_Override" style="letter-spacing: 0.005em;">o</span>r<span class="_Override" style="letter-spacing: -0.025em;"> </span>who<span class="_Override" style="letter-spacing: -0.01em;"> </span>wi<span class="_Override" style="letter-spacing: 0.005em;">l</span>l<span class="_Override" style="letter-spacing: -0.015em;"> </span><span class="_Override" style="letter-spacing: -0.005em;">p</span>r<span class="_Override" style="letter-spacing: 0.005em;">ov</span>i<span class="_Override" style="letter-spacing: 0.005em;">d</span>e<span class="_Override" style="letter-spacing: -0.03em;"> </span><span class="_Override" style="letter-spacing: 0.005em;">the </span>merchandise<span class="_Override" style="letter-spacing: -0.05em;"> </span>on<span class="_Override" style="letter-spacing: -0.01em;"> </span>the<span class="_Override" style="letter-spacing: -0.01em;"> </span>PO.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">StyleCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">&#160;</td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Required if neither vendor style nor pack code is provided.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">ColorCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 3</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Required if vendor style or style is provided. If style is no color type, then must provide 000 as the color value.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="FieldName">PackCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                <p class="TableText">Required if neither vendor style nor style code is provided.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Distribution locations</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A distribution location is mandatory when importing any action that needs to be applied at the detail level and/or pack detail level. </p>
+                <table class="TableStyle-PatternedRows" style="width: 890px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col width="156px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="73px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="66px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="109px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="53px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="433px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Name</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Data Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Valid</p>
+                                <p class="TableHeading">Values</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Mand</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                <p class="TableHeading">Notes</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Action</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Attribute</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">“add”</p>
+                                <p class="TableText">“update”</p>
+                                <p class="TableText">“delete”</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Use "add" to add a new detail to a document, "update" to modify an existing detail of the document and "delete" to remove a detail from the document. Actions are case-sensitive.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">LocationCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">The location for which quantities are being allocated for.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">SuggestedQuantity</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&gt;=0</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Number of suggested packs to distribute to the target location.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">ExpectedReceiptDate</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Date</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">The date the ordered items are expected to be received into the warehouse.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Instruction</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Short</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">The distribution instruction for a location.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">Value</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Short</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">The instruction value for a location.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">FilterFlag</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Boolean</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Not applicable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">PriorDistributionFlag</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Boolean</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Whether this style/color (or style/pack) received quantities of merchandise on one of the selected prior distributions.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Eligibility</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Short</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Set to eligible if all SKUs are eligible for the location; set to Ineligible if no SKUs are eligible for the location; set to Partially eligible if some SKUs are eligible and some are not. If packs are being distributed, the eligibility is based on all SKUs in the pack.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">EffectiveInventory</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Not applicable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">HistEffectiveInventory</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Not applicable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">UnitSales</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Not applicable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">HistUnitSales</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Not applicable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">RetailSales</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Not applicable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">HistRetailSales</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Not applicable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">OnHand</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Not applicable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">HistOnHand</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Not applicable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">NumberWeeksSales</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Double</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Not applicable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">RemainingSales</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">The remaining units in the sales plan for a location.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">DesiredQuantity</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">The raw suggested quantity for a location, before volume grades min/max or distribution multiple constraints have been applied, or before percent need has been equalized to reach the distribution’s target percent need.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="FieldName">OTSFlag</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">Boolean</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <p class="TableText">Not applicable.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Distribution details</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-PatternedRows" style="width: 890px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col width="156px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="73px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="66px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="109px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="53px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="433px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Name</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Data Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Valid</p>
+                                <p class="TableHeading">Values</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Mand</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                <p class="TableHeading">Notes</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Action</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Attribute</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">“Add”</p>
+                                <p class="TableText">“Update”</p>
+                                <p class="TableText"> “Delete”</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Use "add" to add a new detail to a document, "update" to modify an existing detail of the document and "delete" to remove a detail from the document. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">UPCNumber </p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 14</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Required if neither style, vendor style nor pack is provided.</p>
+                                <p class="TableText">The style and color of the SKU specified by the UPC number must match what was entered for the distribution line.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">LocationCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">The location for which quantities are being allocated for. </p>
+                                <p class="TableText">Links the distribution detail record to the correct distribution location record.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">Quantity</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&gt;=0</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Number of SKUs or packs to distribute to the target location.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">SuggestedQuantity</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&gt;=0</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Number of suggested packs to distribute to the target location.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">VendorStyle</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 40</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Required if neither style, UPC nor pack is provided.</p>
+                                <p class="TableText">Specified only if the matching line’s type is Vendor Style Color</p>
+                                <p class="TableText">Links the distribution detail record to the correct distribution line record.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">StyleCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Required if neither vendor style, UPC nor pack is provided.</p>
+                                <p class="TableText">Specified only if the matching line’s type is Style Color.</p>
+                                <p class="TableText">Links the distribution detail record to the correct distribution line record.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">ColorCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 3</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Required if Style or Vendor Style was provided. If style is no color type, then must provide 000 as the value.</p>
+                                <p class="TableText">Specified only if the matching line’s type is Style Color or Vendor Style Color.</p>
+                                <p class="TableText">Links the distribution detail record to the correct distribution line record.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">SizeCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 17</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Required if Style or Vendor Style was provided. If style is no size type, then must provide NoSz as the value.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">PackCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">*</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Required if neither style, vendor style nor UPC is provided.</p>
+                                <p class="TableText">Specified only if the matching line’s type is Pack. </p>
+                                <p class="TableText">Links the distribution detail record to the correct distribution line record.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">PrimarySizeCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 18</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Not applicable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">ComparableSetName</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Not applicable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="FieldName">SkippedReason</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <p class="TableText">Not applicable.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Distribution pack details</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-PatternedRows" style="width: 890px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col width="156px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="73px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="66px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="109px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="53px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="433px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Name</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Data Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Valid</p>
+                                <p class="TableHeading">Values</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Mand</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                <p class="TableHeading">Notes</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Action</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Attribute</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">“Add”</p>
+                                <p class="TableText">“Update”</p>
+                                <p class="TableText"> “Delete”</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Use "add" to add a new detail to a document, "update" to modify an existing detail of the document and "delete" to remove a detail from the document. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">LocationCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">The location for which pack quantities are being allocated for. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">PackCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">The pack code that is being distributed to the target location.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">SuggestedQuantity</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&gt;=0</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Number of suggested packs to distribute to the target location.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="FieldName">Quantity</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">Integer</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">&gt;=0</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <p class="TableText">Number of packs to distribute to the target location.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Distribution messages</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-PatternedRows" style="width: 890px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col width="156px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="73px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="66px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="109px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="53px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="433px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Name</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Data Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Valid</p>
+                                <p class="TableHeading">Values</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Mand</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                <p class="TableHeading">Notes</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Action</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Attribute</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">“add”</p>
+                                <p class="TableText">“update”</p>
+                                <p class="TableText"> “delete”</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">"add" will add a new message to a document.</p>
+                                <p class="TableText"> "update" will modify an existing document message.</p>
+                                <p class="TableText">"delete" will remove a message from the document. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">Text</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 255</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">MessageTypeDescription</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Must be an ‘Allocation &amp; Replenishment’ transaction type. If the message type is exclusive, then it must be unique within the Distribution document.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="FieldName">OldMessageTypeDescription</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">String 20</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">&#160;</td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Distribution attributes</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-PatternedRows" style="width: 890px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col width="156px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="73px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="66px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="109px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="53px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="433px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Name</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Data Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Valid</p>
+                                <p class="TableHeading">Values</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Mand</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                <p class="TableHeading">Notes</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Action</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Attribute</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">“add”</p>
+                                <p class="TableText">“update”</p>
+                                <p class="TableText"> “delete”</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">"add" will add a new attribute to a document.</p>
+                                <p class="TableText"> "update" will modify an existing document attribute.</p>
+                                <p class="TableText">"delete" will remove a attribute from the document. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">AttributeSetCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 6</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Must be an ‘A&amp;R’ attribute type. If the attribute is exclusive, then it must be unique within the Distribution document.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="FieldName">OldAttributeSetCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">String 6</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Distribution custom properties</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-PatternedRows" style="width: 890px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col width="156px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="73px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="66px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="109px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="53px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="433px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Name</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Tag Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Data Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Valid</p>
+                                <p class="TableHeading">Values</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Mand</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                <p class="TableHeading">Notes</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Action</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Attribute</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">“add”</p>
+                                <p class="TableText">“update”</p>
+                                <p class="TableText"> “delete”</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">"add" will add a new custom property to a document.</p>
+                                <p class="TableText"> "update" will modify an existing custom property.</p>
+                                <p class="TableText">"delete" will remove a custom property from the document. </p>
+                                <p class="TableText">Actions are case-sensitive.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">CustomPropertyCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">String 6</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Yes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Must be an ‘A&amp;R’ custom property type.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">CustomPropertyValue</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">String 30</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">The value will be validated against the custom property’s data type. If alphanumeric type then the value must be alphanumeric, if numeric type then the value must be numeric, if date type then the value must be a valid date provided with element CustomPropertyDateValue.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">CustomPropertyDateValue</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">DateTime</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">yyyy-MMddTHH:mm</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">If custom property’s data type is a date type then the value must be a valid date provided.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="FieldName">OldCustomPropertyCode</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">Element</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">6</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="TableText">No</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <p class="TableText">&#160;</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h3>XML examples</h3>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To freeze the document</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Works the same way for a document complete, cancel or unfreeze.</p>
+                <table class="TableStyle-Standard" style="width: 888px;caption-side: top;mc-table-style: url('../Resources/TableStyles/Standard.css');" cellspacing="0">
+                    <col width="888px" class="TableStyle-Standard-Column-Regular" />
+                    <tbody>
+                        <tr class="TableStyle-Standard-Body-Row1">
+                            <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                <p>&lt;?xml version="1.0"?&gt;</p>
+                                <p>&lt;Distributions&gt;</p>
+                                <p>&lt;Distribution CompanyId="1" EntityAction="Freeze" action="update"&gt;</p>
+                                <p>	&lt;Number&gt;001271&lt;/Number&gt;</p>
+                                <p>&lt;/Distribution&gt;</p>
+                                <p>&lt;/Distributions&gt;</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To freeze a distribution line</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Works the same way for a document complete, cancel or unfreeze.</p>
+                <table class="TableStyle-Standard" style="width: 888px;caption-side: top;mc-table-style: url('../Resources/TableStyles/Standard.css');" cellspacing="0">
+                    <col width="888px" class="TableStyle-Standard-Column-Regular" />
+                    <tbody>
+                        <tr class="TableStyle-Standard-Body-Row1">
+                            <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                <p>&lt;?xml version="1.0"?&gt;</p>
+                                <p>&lt;Distributions&gt;</p>
+                                <p>&lt;Distribution CompanyId="1" EntityAction="Freeze" action="update"&gt;</p>
+                                <p>	&lt;Number&gt;001271&lt;/Number&gt;</p>
+                                <p>	&lt;DistributionLines&gt;</p>
+                                <p>		&lt;DistributionLine action="update"&gt;</p>
+                                <p>			&lt;StyleCode&gt;100000079&lt;/StyleCode&gt;</p>
+                                <p>			&lt;ColorCode&gt;030&lt;/ColorCode&gt;</p>
+                                <p>		&lt;/DistributionLine&gt;</p>
+                                <p>	&lt;/DistributionLines&gt;</p>
+                                <p>&lt;/Distribution&gt;</p>
+                                <p>&lt;/Distributions&gt;</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To freeze a distribution header</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Works the same way for a line unfreeze, line complete.</p>
+                <table class="TableStyle-Standard" style="width: 889px;caption-side: top;mc-table-style: url('../Resources/TableStyles/Standard.css');" cellspacing="0">
+                    <col width="889px" class="TableStyle-Standard-Column-Regular" />
+                    <tbody>
+                        <tr class="TableStyle-Standard-Body-Row1">
+                            <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                <p>&lt;?xml version="1.0"?&gt;</p>
+                                <p>&lt;Distributions&gt;</p>
+                                <p>	&lt;Distribution CompanyId="111" EntityAction="FreezeHeader" action="update"&gt;</p>
+                                <p>		&lt;Number&gt;006905&lt;/Number&gt;</p>
+                                <p>	&lt;/Distribution&gt;</p>
+                                <p>&lt;/Distributions&gt;</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To adjust distributed quantities</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-Standard" style="width: 888px;caption-side: top;mc-table-style: url('../Resources/TableStyles/Standard.css');" cellspacing="0">
+                    <col width="888px" class="TableStyle-Standard-Column-Regular" />
+                    <tbody>
+                        <tr class="TableStyle-Standard-Body-Row1">
+                            <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                <p>&lt;?xml version="1.0"?&gt;</p>
+                                <p>&lt;Distributions&gt;</p>
+                                <p>&lt;Distribution CompanyId="1" EntityAction="Modify" action="update"&gt;</p>
+                                <p>	&lt;Number&gt;001271&lt;/Number&gt;</p>
+                                <p>	&lt;DistributionDetails&gt;</p>
+                                <p>		&lt;DistributionDetail action="update"&gt;</p>
+                                <p>			&lt;Quantity&gt;30&lt;/Quantity&gt;</p>
+                                <p>			&lt;LocationCode&gt;1100&lt;/LocationCode&gt;</p>
+                                <p>			&lt;PackCode /&gt;</p>
+                                <p>			&lt;StyleCode&gt;100000079&lt;/StyleCode&gt;</p>
+                                <p>			&lt;ColorCode&gt;030&lt;/ColorCode&gt;</p>
+                                <p>			&lt;UPCNumber&gt;400000004853&lt;/UPCNumber&gt;</p>
+                                <p>		&lt;/DistributionDetail&gt;</p>
+                                <p>	&lt;/DistributionDetails&gt;</p>
+                                <p>&lt;/Distribution&gt;</p>
+                                <p>&lt;/Distributions&gt;</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Job scheduler</title>
+        <meta name="description" content="Use the Job Scheduler to view the recurring jobs configured for your site (such as imports and exports) and modify the schedule for those jobs. You can use this service to update job schedules and frequencies without the need for Aptos support." />
+    </head>
+    <body>
+        <h1>Using the Job Scheduler<MadCap:concept term="CP" /></h1>
+        <p>Use the Job Scheduler to view the recurring jobs configured for your site (such as imports and exports) and modify the schedule for those jobs. You can use this service to update job schedules and frequencies without the need for Aptos support.</p>
+        <p>Custom jobs are scheduled at <b>Content</b> &gt; <b>Tasks</b> &gt; <b>Job Scheduler</b>.</p>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Not all recurring jobs use the Job Scheduler service. Engage with your Project Manager, Account Manager or Client Care to implement any jobs with the job scheduler.</div>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Managing scheduled jobs</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Scheduled jobs are listed in the window's <b>Manage Existing Scheduled Jobs</b> section. The schedule settings for each job are controlled in this area. Click <b>More Details</b> ... next to the job to see most of these options and settings.</p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>Job scheduler interface</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 103px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Element</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Job ID</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	The ID automatically assigned in the database when a scheduled job is created.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Job Name</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">The name of the job.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Active</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Whether the job is enabled to run.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Description</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">What the job does.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Triggered by</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Select the "schedule" trigger from the drop-down menu. See <a href="#Scheduling_jobs">Scheduling jobs</a> below for more information.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Email on Error</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	If enabled, sends email when an error occurs. Emails are set up by Aptos only in the detailed Job Steps and can be configured to go to clients, Aptos staff and Aptos technical support.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Abort on Schedule Miss</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Whether to abort the job if the schedule was missed. Take for example, a job scheduled to run every hour on the hour, and so runs at 12 PM. If the job is still running at 1 PM, it will not run again at 1 PM. Instead, the job will try to run at 2 PM, as long as the previous job is complete.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Abort on Error</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	Select to abort the job in case of an error.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Job Scheduler Environment</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Jobs are often configured in the Job Scheduler's staging database before they are set to run in the production database. To view the jobs configured in one database instead of the other, select the <b>Staging</b> or <b>Production</b> radio button.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Copy Job</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	Click to copy an existing job. This is helpful if you are making minor changes when scheduling a new job.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Move Job to Different Environment</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Click to move a job from the Job Scheduler's staging database to the Job Scheduler's production database.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">View Job History</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	View the Job History by step, when it last ran, the date it was created, and the results. You can filter by date range and job step.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">View Detailed Logs</td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <p>	View the Detailed Logs by job step and by log file.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>When the job is set up, click to <b>Save</b> the new job.</p>
+                <p>
+                    <img src="images/JobSchedulerNew.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="Scheduling_jobs"></a>Scheduling jobs</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Click on the <b>Edit</b> <img src="../Resources/Images/pencil.png" />button to schedule a job; the <b>Job Schedule</b> pop-up window opens.</p>
+                <p>
+                    <img src="images/JobScheduling1.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 520px;" />
+                </p>
+                <p>The scheduling settings are:</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Schedule Type:</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ul>
+                            <li><b>One Time Only</b>—Choose this option, and select a date and time, to run the job only once; select a date and time.</li>
+                            <li><b>Recurring</b>—Choose Recurring from the drop-down menu to configure these additional settings for recurring jobs in the pop-up window.</li>
+                        </ul>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Recurring Occurrence</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p><b>Recurs</b>: Choose whether you want to schedule the job to run daily, weekly, or monthly.</p>
+                        <ul>
+                            <li><b>Daily</b> - Select the day(s) of the week you want the job to run.</li>
+                            <li><b>Weekly</b> - Enter the number of weeks and choose the day(s) in which you want the job to run.</li>
+                            <li><b>Monthly</b> - There are two options with this choice. You can select the date(s) on which you want to schedule the job. Or, you can choose the radio button and select the first, second, third, fourth, or last (day of your choice) of the month.</li>
+                        </ul>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Times</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>There are two options for choosing daily frequency:</p>
+                        <ul>
+                            <li><b>Occurs once per day</b>: Enter the exact time you want the job to run; click the alarm clock icon to choose a time.</li>
+                            <li><b>Occurs every</b>: Sets the daily frequency to occur every X minutes depending upon the number entered in the field. In addition, set a starting at time and an ending at time.</li>
+                        </ul>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Duration</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>Set the Start Date and an End Date. You can also choose to set No end date.</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <p>Save the scheduled settings and close the pop-up window.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Creating a job from a template</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Select the site you want to work with from the drop-down menu—these may be Development, Staging, Production, or a Site Manager Task—then proceed.</p>
+                <ol>
+                    <li>Select the <b>Create Job from Template</b> button located at the bottom of the page. A pop-up window opens.</li>
+                    <li>From the form located in the pop-up window, select the template from which you want to create the job and then <b>Save</b>. This creates an inactive job based on the template selected.</li>
+                    <li>Close the pop-up window and the newly created job is displayed on the page. Modify and schedule the job as necessary and activate it when needed.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Importing and exporting pricing tiers</title>
+        <meta name="description" content="Use this feature to import and export tiered prices using an Excel spreadsheet." />
+    </head>
+    <body>
+        <h1>Importing and exporting pricing tiers<MadCap:concept term="CP" /></h1>
+        <p>Use this feature to import and export tiered prices using an Excel spreadsheet.</p>
+        <p>You can export a spreadsheet with all current price tiers, or to a blank spreadsheet to use as a template when importing.</p>
+        <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;"> When updating by spreadsheet, you should always export first to ensure you are using the most recent spreadsheet version. This will also guide you on the proper format for each column and row as well as which fields are required.</div>
+        <p>
+            <img src="images/ImportExportPriceTierMain.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Be sure your browser is set up to allow pop-ups from the site manager.</div>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To export pricing tiers</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Price Tiers</b>.</li>
+                    <li>Choose to export either current tiers, or a blank template:<ol><li>To export a spreadsheet with your current tiers, click the <b>Export Current Tiers to Excel</b> button. This generates an Excel spreadsheet, and a link to it. Click this link to open, modify, and or save it to your hard drive. See <b>Price tiers spreadsheet fields</b> for field descriptions.</li><li>To export a spreadsheet you can use as a template, click the <b>Export Template File To Build Your Pricing Tiers</b> button. This generates a sample record for the first 10,000 products in <MadCap:variable name="DC.EOM short" /> under a simulated tier called ‘Sample’ and a tier price=the actual price.</li></ol><table class="TableStyle-PatternedRows" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0"><caption style="font-weight: bold;">Price tiers spreadsheet fields </caption><col class="TableStyle-PatternedRows-Column-Regular" /><col class="TableStyle-PatternedRows-Column-Regular" /><thead><tr class="TableStyle-PatternedRows-Head-Header1"><th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Field</th><th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th></tr></thead><tbody><tr class="TableStyle-PatternedRows-Body-LightRows"><td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"> product_id</td><td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> System Generated. Leave blank if you are entering a new price tier. If you are updating a price tier, enter the pre-defined system generated Price ID.</td></tr><tr class="TableStyle-PatternedRows-Body-DarkRows"><td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows"> DisplayName</td><td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"><p> Read only; provided as reference.</p></td></tr><tr class="TableStyle-PatternedRows-Body-LightRows"><td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">SKU</td><td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Read only; provided as reference.</td></tr><tr class="TableStyle-PatternedRows-Body-DarkRows"><td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Price</td><td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Read only; provided as reference.</td></tr><tr class="TableStyle-PatternedRows-Body-LightRows"><td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Cost</td><td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Read only; provided as reference.</td></tr><tr class="TableStyle-PatternedRows-Body-DarkRows"><td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Tier</td><td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The name of the tier to set the price for. </td></tr><tr class="TableStyle-PatternedRows-Body-LightRows"><td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Tier Price</td><td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The price of the product in this tier. </td></tr><tr class="TableStyle-PatternedRows-Body-DarkRows"><td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Tier Group</td><td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The name of the tier group that the tier price belongs to. </td></tr><tr class="TableStyle-PatternedRows-Body-LightRows"><td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Start Date</td><td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The date you would like a tier price to become valid. </td></tr><tr class="TableStyle-PatternedRows-Body-DarkRows"><td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">End Date</td><td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The date you would like a tier price to no longer be valid. </td></tr><tr class="TableStyle-PatternedRows-Body-LightRows"><td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Price ID</td><td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">System generated ID that will be used to identify the tier price in the database. </td></tr></tbody></table></li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To import pricing tiers</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Price Tiers</b>.</li>
+                </ol>
+                <ol MadCap:continue="true">
+                    <li>Click <b>Browse</b>, find the Excel spreadsheet you want to import, and click <b>Open</b>.</li>
+                    <li>Click the <b>Import</b> button <img src="../Resources/Images/ImportButton.png" style="width: 19px;height: 17px;"></img>.<p>Pricing tiers are automatically uploaded to the server, and each new price tier is assigned a price ID used to identify it in the database.</p></li>
+                </ol>
+                <h3>Import notes</h3>
+                <ul>
+                    <li>Each <b>Product_Id</b> can be listed more than once—once per each tier of price the product has. If <b>Product_Id</b> is invalid, then <MadCap:variable name="DC.EOM short" /> ignores it and displays an error message at the end of processing.</li>
+                    <li>If the Tier is invalid, then <MadCap:variable name="DC.EOM short" /> ignores it, and displays an error message at the end of processing.</li>
+                    <li>Importing does not allow for adding Tiered Groups from this screen; you must pre-add the Tier Groups before importing the spreadsheet.</li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

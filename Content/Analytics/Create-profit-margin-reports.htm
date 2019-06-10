@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="1298" MadCap:lastWidth="638">
+    <head>
+        <link href="../Resources/TableStyles/Standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Creating profit margin reports</title>
+        <meta name="description" content="If you enter cost at the product level, you can use the Profit Margin Report to measure the profit from your sales over a specified period of time.  Use the Profit Margin Report to measure profit, not just base revenue, from your sales over a specified period of time. This report allows you to break the profit margin down to affiliate campaigns." />
+    </head>
+    <body>
+        <h1>Creating Profit Margin reports<MadCap:concept term="analy" /></h1>
+        <p>If you enter cost at the product level, you can use the Profit Margin Report to measure the profit from your sales over a specified period of time.  Use the Profit Margin Report to measure profit, not just base revenue, from your sales over a specified period of time. This report allows you to break the profit margin down to affiliate campaigns.</p>
+        <h3>To create a Profit Margin report to measure profit over a specified time period</h3>
+        <ol>
+            <li>In <b>Analytics</b>, select  <b>Product Reports</b> &gt; <b>Profit Margin</b>.</li>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/Select date range.flsnp" />
+            </li>
+            <li>&#160;Click the <b>Affiliate</b> list to choose either all affiliates, or a specific individual affiliate or customer.</li>
+            <li>From the <b>Order Filter</b> list, choose to create your report based on:<ol><li>All Orders</li><li>Only Completed Orders</li><li>Shipped and Completed Orders.</li></ol></li>
+            <li>Select the payment type from the <b>Payment Type</b> drop-down.</li>
+            <li>Click <b>Search</b>.</li>
+            <li>To export the report to Excel, click the <b>Export to Excel</b> button at the bottom of the screen.</li>
+        </ol>
+        <p>Details for report columns are:</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/Standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+            <col class="TableStyle-Standard-Column-Regular" />
+            <col class="TableStyle-Standard-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-Standard-Head-Header1">
+                    <th class="TableStyle-Standard-HeadE-Regular-Header1">Column</th>
+                    <th class="TableStyle-Standard-HeadD-Regular-Header1">Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Standard-Body-Row1">
+                    <td class="TableStyle-Standard-BodyE-Regular-Row1">Total Cost</td>
+                    <td class="TableStyle-Standard-BodyD-Regular-Row1">The cost stored in the system at the time of the order * total units for the specified line item.</td>
+                </tr>
+                <tr class="TableStyle-Standard-Body-Row1">
+                    <td class="TableStyle-Standard-BodyE-Regular-Row1">Total Gross</td>
+                    <td class="TableStyle-Standard-BodyD-Regular-Row1">The selling price this customer paid for the specified line item * total units purchased of this line item.</td>
+                </tr>
+                <tr class="TableStyle-Standard-Body-Row1">
+                    <td class="TableStyle-Standard-BodyE-Regular-Row1">Item Coupon Total </td>
+                    <td class="TableStyle-Standard-BodyD-Regular-Row1">The prorated amount of the promotion code value against the line item, since we store promo amounts at the order level.</td>
+                </tr>
+                <tr class="TableStyle-Standard-Body-Row1">
+                    <td class="TableStyle-Standard-BodyE-Regular-Row1">Order Coupon Total</td>
+                    <td class="TableStyle-Standard-BodyD-Regular-Row1">The total order level coupon amount. (If there was a discount/promo during that time period, this area calculates the total promotional discount within the date range.)</td>
+                </tr>
+                <tr class="TableStyle-Standard-Body-Row1">
+                    <td class="TableStyle-Standard-BodyE-Regular-Row1">Tax</td>
+                    <td class="TableStyle-Standard-BodyD-Regular-Row1">Item level tax</td>
+                </tr>
+                <tr class="TableStyle-Standard-Body-Row1">
+                    <td class="TableStyle-Standard-BodyE-Regular-Row1">Shipping</td>
+                    <td class="TableStyle-Standard-BodyD-Regular-Row1">Item level shipping</td>
+                </tr>
+                <tr class="TableStyle-Standard-Body-Row1">
+                    <td class="TableStyle-Standard-BodyE-Regular-Row1">Total Price</td>
+                    <td class="TableStyle-Standard-BodyD-Regular-Row1">Total of item * qty + shipping/tax for this line item.</td>
+                </tr>
+                <tr class="TableStyle-Standard-Body-Row1">
+                    <td class="TableStyle-Standard-BodyE-Regular-Row1">Total Net</td>
+                    <td class="TableStyle-Standard-BodyD-Regular-Row1">Total Gross minus Total Cost</td>
+                </tr>
+                <tr class="TableStyle-Standard-Body-Row1">
+                    <td class="TableStyle-Standard-BodyB-Regular-Row1">Total Margin</td>
+                    <td class="TableStyle-Standard-BodyA-Regular-Row1">The percentage of cost compared with gross.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Importing and exporting Amazon inventory</title>
+        <meta name="description" content="Aptos has created a valuable import spreadsheet that allows clients to enter Amazon ASIN or SKU numbers. When the spreadsheet is imported, EOM accesses the Amazon database, and pulls in product information. This allows a more efficient product import process for clients who have access to either generic Amazon ASIN numbers, or ASIN numbers that they use while selling on Amazon." />
+    </head>
+    <body>
+        <h1>Importing Amazon inventory<MadCap:concept term="CP" /></h1>
+        <p>Aptos has created an import spreadsheet that allows clients to enter <MadCap:popup><MadCap:popupHead>ASIN</MadCap:popupHead><MadCap:popupBody>Amazon Standard Identification Number; a 10-character alphanumeric unique identifier assigned by Amazon.com and its partners for product identification within the Amazon organization.</MadCap:popupBody></MadCap:popup> or SKU numbers. When the spreadsheet is imported, <MadCap:variable name="DC.EOM short" /> accesses the Amazon database, and pulls in product information. This allows a more efficient product import process for clients who have access to either generic Amazon ASIN numbers, or ASIN numbers that they use while selling on Amazon.</p>
+        <p>
+            <img src="images/ImportExportAmazon.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <p>It is important to note that the ASIN Import is a one way communication. Aptos <MadCap:variable name="DC.EOM short" /> imports information from Amazon. To export data to Amazon, you must enable the Amazon Channel. Talk to your Client Manager or Technical Project Manager to learn more about how to sell your products on Amazon.</p>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Only the first 250 ASIN/EISBN/ISBN/EANs will be processed due to Amazon constraints. The Product Advertising API supports ItemLookup batch requests only when the ItemType is an <MadCap:popup><MadCap:popupHead>EAN</MadCap:popupHead><MadCap:popupBody>European Article Number</MadCap:popupBody></MadCap:popup> , <MadCap:popup><MadCap:popupHead>ISBN</MadCap:popupHead><MadCap:popupBody>International Standard Book Number</MadCap:popupBody></MadCap:popup>, <MadCap:popup><MadCap:popupHead>EISBN</MadCap:popupHead><MadCap:popupBody>Electronic International Standard Book Number</MadCap:popupBody></MadCap:popup>, or <MadCap:popup><MadCap:popupHead>ASIN</MadCap:popupHead><MadCap:popupBody>Amazon Standard Item Number</MadCap:popupBody></MadCap:popup>.</div>
+        <h3>To import Amazon inventory from an Excel spreadsheet</h3>
+        <ol>
+            <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Amazon Inventory</b>.</li>
+            <li>Click <b>Browse</b> to select the local source where your import Excel spreadsheet resides.</li>
+            <li>Select whether to <b>Import products as inactive</b>.</li>
+            <li>Then click the <b>Import</b> button <img src="../Resources/Images/ImportButton.png" style="width: 19px;height: 17px;" />.</li>
+        </ol>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Clients are responsible for reviewing all content, including pricing and options, after import is complete.</div>
+        <h2>About Question and Answers spreadsheet fields</h2>
+        <p>This is the information mapped from Amazon to the Aptos Digital Commerce platform upon import:</p>
+        <table class="TableStyle-PatternedRows" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Information</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Mapping</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Primary Product Image</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> <MadCap:variable name="DC.EOM short" /> pulls the primary product image, and associates it with the Main Product Image.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Amazon SKU   </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Maps to <b>Part Number</b>.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Amazon <i>Product Group</i></td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">  Maps to <b>Sub Category</b>.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Amazon <i>Manufacturer</i></td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Maps to <b>Brand</b>.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Amazon <i>Brand</i></td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Maps to <b>Brand</b> if <i>Manufacturer</i> is empty.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Amazon <i>Width</i>, <i>Length</i>, and <i>Height</i></td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Added to the <b>Product Details</b> Width, Length, and Height.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Amazon <i>Weight</i></td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">  Mapped to the <b>Shipping Weight </b>.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Amazon <i>Merchant item attributes description</i></td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Maps to <b>Short Description</b>.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Amazon <i>Title</i></td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Maps to <b>Display Name</b>; <MadCap:variable name="DC.EOM short" /> strips the brand off of the Amazon Title.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Amazon <i>Low Price</i></td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Maps to <b>Sells For price</b>.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Amazon <i>Features</i></td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">  Features map to the field <b>Xtra5</b> in the product spreadsheet.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">Amazon <i>Tags</i></td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">  Map to <b>Tags</b>, and are entered comma delimited.</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">For Parent ASIN IDs, Aptos also pulls in the options associated with the Child products.</div>
+        <ul>
+            <li>For Product Option prices/mark-ups in the Site Manager, <MadCap:variable name="DC.EOM short" /> deducts the Child product price from the Parent product price, and uses this value as the Option mark-up.</li>
+            <li>
+                <MadCap:popup>
+                    <MadCap:popupHead>Amazon Part Number</MadCap:popupHead>
+                    <MadCap:popupBody>if no Part Number, then Amazon Display Name</MadCap:popupBody>
+                </MadCap:popup> maps to the option Group Name and Group Alias.</li>
+        </ul>
+    </body>
+</html>

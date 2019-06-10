@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Adding and editing FTP hosts</title>
+        <meta name="description" content="Use this area to setup 3rd party FTP hosts that can be used to exchange site files between a dedicated server and Aptos for use in scheduling jobs. If a job step needs to connect to an external FTP server to import or export a file, the credentials can be modified here." />
+    </head>
+    <body>
+        <h1>Adding and editing FTP hosts<MadCap:concept term="CP" /></h1>
+        <p>Use this area to setup 3rd party FTP hosts that can be used to exchange site files between a dedicated server and Aptos for use in scheduling jobs. If a job step needs to connect to an external FTP server to import or export a file, the credentials can be modified here.</p>
+        <p>
+            <img src="images/ftphosts.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 360px;" />
+        </p>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">For older recurring jobs that do not use the Job Scheduler service, the FTP credentials may be stored in the import/export code. If this is the case, you will need to contact Aptos to modify the FTP credentials.</div>
+        <h2>To add an FTP host</h2>
+        <ol>
+            <li>From <b>Content</b> &gt; <b>Tasks</b> &gt; <b>FTP Hosts</b>, click the <b>Add FTP&#160;Host</b> link. A new window opens.</li>
+            <li>
+                <p>Configure options as needed:</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Add new FTP host options</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table class="TableStyle-PatternedRows" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Description</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	A brief description of the FTP client being added.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Host Name</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>	Name or IP address assigned by the FTP client provider.</p>
+                                        <div class="example" MadCap:autonum="&lt;b&gt;Example: &lt;/b&gt;">ftp://ftp.my-best-domain.com or ftp://68.128.255.1</div>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Change Directory</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Enter the file path that will be used to transfer files.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">User Name</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	Assigned username provided by the FTP client provider.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Password</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Assigned password provided by the FTP client provider.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Port</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	By default, the port is set to 21, but if the FTP server uses a different port, specify it here.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Secure</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Select if using a FTPS protocol to encrypt username, password, and content during transmission.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Passive</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	Leave un-selected if the FTP server is set to actively listen for a dynamic port to be sent by the user client. Select if the FTP server is set to passively listen for a dynamic port after sending the source port and IP using the PASV command.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Delete Source File</td>
+                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">	Select if you want the source file to be deleted.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <h2>About notifications</h2>
+        <p>If a connection fails, you will receive an email indicating that Aptos was unable to connect to the "Host" FTP server. In the event you receive this email, log into the site manager and confirm that your credentials are correct. You can test these credentials using another FTP client, such as FileZilla. Contact the host to confirm that their FTP server is online.</p>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">If you are unable to resolve any FTP connection issues, contact your Client Manager.</div>
+    </body>
+</html>

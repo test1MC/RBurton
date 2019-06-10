@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Importing and exporting subscriptions</title>
+        <meta name="description" content="Use  Subscriptions Import/Export to quickly set up multiple subscriptions at the same time. On this page, you can not only export and modify existing subscription properties, you can also set up new subscriptions." />
+    </head>
+    <body>
+        <h1>Importing and exporting subscriptions<MadCap:concept term="CP" /></h1>
+        <p>Use  Subscriptions Import/Export to quickly set up multiple subscriptions at the same time. On this page, you can export and modify existing subscription properties, and set up new subscriptions.</p>
+        <p>
+            <img src="images/ImportExportSubscriptions.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;"> When updating by spreadsheet, you should always export first to ensure you are using the most recent spreadsheet version. This will also guide you on the proper format for each column and row as well as which fields are required.</div>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Exporting subscriptions</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Subscriptions</b>.</li>
+                    <li>Use the <b>Export By</b> lists to select to filter by:<ol><li><b>Sub-Categories</b> or <b>Brands</b>, and</li><li><b>All Available Products</b> or <b>Only Products With Subscriptions</b>.</li></ol></li>
+                    <li>Select whether to export <b>Deleted Products</b> and <b>Inactive Products</b> using the check boxes.</li>
+                    <li>Select categories or brands from the list on the right. To select more than one, hold down the Ctrl key. You can also click <b>Select All</b> to select all listed here.</li>
+                    <li>
+                        <p>Click the <b>Export to Excel</b> button <img src="../Resources/Images/ExportToExcelButton.png" style="width: 16px;height: 16px;" />.</p>
+                        <p>This creates an Excel spreadsheet and a link to it at the bottom of the window.</p>
+                    </li>
+                    <li>
+                        <p>Click the spreadsheet link, add or update subscription information in it, and save the spreadsheet to a local drive. Spreadsheet field descriptions are:</p>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                            <caption><b>Subscriptions spreadsheet fields</b>
+                            </caption>
+                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 72px;" />
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Field</th>
+                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Sub-Category</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> Sub-category of the current product. Read only, meant for viewing and filtering.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Brand</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p> The brand of the current product. Read only, meant for viewing and filtering.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Product_ID</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> If blank, "Part_No" will be used. Not required when importing the spreadsheet.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Part_No</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>Only used if <b>Product_ID</b> is blank. The SKU or Part Number of the current product. Read only, meant for viewing and filtering.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Selling Price</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> The current selling price of the product. If the merchant is setting up only one subscription value, this can be copied into the <b>Subscription_Price</b> field. Read only, meant for viewing and filtering.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">On Sale Price</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>  If the current product is on sale, this price is reflected here. Read only, meant for viewing and filtering.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Next Purchase On</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>  The next purchase period for the product. If the default for a purchase is to be re-bought every 30 days, then <b>30</b> would go in here.</p>
+                                        <p>(Integer) The number indicates when the next purchase is set to occur. (Days = 0, Weeks = 1, Months = 2 or Years = 3). Another way to put this is: 0-Daily, 1-Weekly, 2-Monthly, 3-Annually.</p>
+                                        <p>Required Field.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Next Purchase On Period</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>The next purchase will occur in how many months?</p>
+                                        <p>For example, for 12 months, this number would be <b>12</b>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Next Select List</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>  Comma delimited list of intervals a customer can select. If customer can choose to buy in 30, 60, or 90 days, this would be 30,60,90. The <b>NextPurchaseOnPeriod</b> must be within this list. These intervals appear on the cart page only if a site is using the subscription cart. In other cases, sites display these intervals on the product detail page instead.</p>
+                                        <p>Required.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Subscription Quantity</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>Quantity of the product to be purchased. Indicates how many units the customer will receive. Required.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Subscription Price</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>  The price that will be paid by the customer for the product when the subscription runs. Required.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">Subscription Count</td>
+                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">
+                                        <p>Every "X" subscriptions, the customer will get the following quantity and price of this product. Defaults to 1 for each subscription. Required.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ol>
+                <h3>Renewals and price breaks example</h3>
+                <p>If a product price and quantity will never change regardless of how frequently the subscription renews, you simply would have a single row with <b>Subscription_Quantity</b> of <i>x</i>, <b>Subscription_Price</b> of <i>y</i> and <b>Subscription_Count</b> of <b>1</b>.</p>
+                <p>If however, you want offer a price incentive based on the number of times a subscription renews—for example, every other purchase is 50% off, or every third purchase is free—then you would set up a row per-order interval, and set the price accordingly. For example, here's what that portion of the spreadsheet might look like if every third renewal is free.</p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 190px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Subscription_Quantity</th>
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #ffffff;">Subscription_Price</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Subscription_Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1</td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">22.00</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">1</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">1</td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">22.00</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">2</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">1</td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">0</td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Importing subscriptions</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Subscriptions</b>.</li>
+                </ol>
+                <ol MadCap:continue="true">
+                    <li>Click <b>Browse</b>, find the Excel spreadsheet you want to import, and click <b>Open</b>.</li>
+                    <li>Click the <b>Import</b> button <img src="../Resources/Images/ImportButton.png" style="width: 19px;height: 17px;"></img>.<p>Subscriptions are automatically uploaded to the server.</p></li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

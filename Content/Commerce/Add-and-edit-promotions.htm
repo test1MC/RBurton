@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Adding and editing promotions</title>
+        <meta name="description" content="Learn how to create and manage promotion codes and campaigns here." />
+    </head>
+    <body>
+        <h1>Adding and editing stackable promotions<MadCap:concept term="Commerce" /></h1>
+        <p>EOM gives you the ability to add, edit, review or discontinue current site promotions. Here you'll learn how to create and manage stackable promotion codes and campaigns.</p>
+        <p>You add edit and manage stackable promotions in <b>Commerce</b> &gt; <b>Promotions</b> &gt; <b>Add/Edit</b></p>
+        <p>
+            <img src="images/AddEditPromo.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <h3>To search for current promotions</h3>
+        <p>To search for and find promotions, you can filter by the promo name, promo type, deleted promos hidden promos, and by auto triggers. Select search options to refine your search if needed, and click the <b>Search</b> button <img src="../Resources/Images/SearchButton.png" />. <b>Current Promotion Codes</b>, if any, will be displayed.</p>
+        <p>
+            <img src="images/SearchPromos.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 560px;" />
+        </p>
+        <table style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+            <caption>Search promotions options</caption>
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Promotion Name</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Promotion name is another way of saying promotion code. This will either be custom created or automatically generated. (for example, 10OFFALL or 272dW7e)</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Promotion Type</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	To filter by a promotion type, select it from the drop-down menu.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Show Deleted</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Searches for a deleted promotion; you can then restore it, if needed.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">Auto Triggers</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">Searches for promotions that auto-trigger in the cart rather than requiring the customer to enter the promo code.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Current promotion codes</h3>
+        <p>The Current Promotion Codes area displays the codes that have already been configured. The columns display:</p>
+        <ul>
+            <li><b>Promotion Type</b> – The type of promotion used along with the code name of the promotion.</li>
+            <li><b>Dates</b> – The date the promotion was created, the beginning date and the expiration date.</li>
+        </ul>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Some of the columns displayed do not function with stackable promotion codes. Only the columns described here work with stackable promotion codes.</div>
+        <h2>Creating promotions and promotion codes</h2>
+        <ol>
+            <li>From <b>Commerce</b> &gt; <b>Promotions</b> &gt; <b>Add/Edit</b>, click the “+” (Add) button. The <b>Add New Promotion Code</b> window opens.</li>
+            <li>Create unique promotion codes and set the parameters of a new promotion here. There are six different stackable promotion types to choose from. These are:<ol><li><p><b>Item Dollar</b> – Gives dollar discount off an item. (Item level.)</p></li><li><p><b>Item Percentage</b> – Gives percentage discount off an item. (Item level.)</p></li><li><p><b>Order Percentage</b> – Gives percent discount off an order total. (Order level.)</p></li><li><p><b>Gift with Purchase</b> – Gift for orders over a set dollar amount. (Order level.)</p></li><li><p><b>Free shipping</b> – Gives free shipping on orders over a dollar amount. (Shipping level.)</p></li><li><p><b>Subcategory BOGO Percentage</b> – Buy one of an item and get percentage off second item. (Item level.)</p><p>Each of these and their settings is described below.</p></li></ol></li>
+            <li>
+                <p>When configured, click <b>Save</b>. This new promotion code will be displayed on the <b>Current Promotion Codes</b> area of the page.</p>
+            </li>
+        </ol>
+        <h2>Promotion types</h2>
+        <p>Available promotion types and their settings are:</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Item dollar item-level promotion</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Use this item-level promotion type to apply a specific dollar amount discount to selected items, using the product ID/SKU.</p>
+                <table class="TableStyle-PatternedRows" style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css'); margin-left: 0; margin-right: auto;" cellspacing="0">
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Setting</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Promotion Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Select the <b>Item Dollar</b> promotion type from the list.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Promotion Code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Give the promotion code a unique name or click the <b>Generate Code</b> link and one will be automatically generated.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Promotion Short Description</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>It helps to have a description of the promotion, especially for  <MadCap:popup><MadCap:popupHead>CSR</MadCap:popupHead><MadCap:popupBody>Customer Service Representative</MadCap:popupBody></MadCap:popup> information. (For example, Free Silk Dress with Purchase over $250).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Dollar Discount Amount</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Enter the dollar discount amount in this field. For example, enter 10.00 to give a $10 discount off the price of the items.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Valid Between</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><b>Start</b>: Enter the start date and time manually or by clicking on the calendar and time picker icons.</p>
+                                <p><b>End</b>: Enter the end date and time manually or by clicking on the calendar and time picker icons.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Items Receiving Promotion</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Select the Get Item link to make your selections for the items you want to receive the promotion. This will open a dialog box. You can search for and select products by sub-category, brand or product name. Select the products you want, and click <b>(+ Add Select Products)</b> at the bottom of the dialog box to save the settings. The choices you make here are automatically populated in <b>Items Receiving Promotion</b> field.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p>How does this promotion trigger?</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <p>Use the radio buttons to select one of these options.</p>
+                                <ul>
+                                    <li><b>Auto-triggers in cart</b>. This promotion code will automatically trigger and display in the shopping cart.</li>
+                                    <li><b>User must enter promotion code</b>. Requires the customer to know and enter the promotion code manually in the shopping cart.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="noteAlt">Only one item level promotion can be applied at the same time. If more than one promotion applies, the promotion with the earliest start date will be used. If the promotion start dates are the same, the one with the newest create date will be used. If the create dates are the same, the lowest promotion ID will be used. If a manual promotion code is applied to the cart but one or many items it applies to have an automatic promotion, the manual promotion will be honored over the automatic promotion.</div>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Item percentage item-level promotion</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Use this item-level promotion type to apply a specific percentage discount to selected items, using the product ID/SKU.</p>
+                <table class="TableStyle-PatternedRows" style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css'); margin-left: 0; margin-right: auto;" cellspacing="0">
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Setting</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Promotion Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Select the <b>Item Percentage</b> promotion type from the list.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Promotion Code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Give the promotion code a unique name or click the <b>Generate Code</b> link and one will be automatically generated.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Promotion Short Description</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>It helps to have a description of the promotion, especially for <MadCap:popup><MadCap:popupHead>CSR</MadCap:popupHead><MadCap:popupBody>Customer Service Representative</MadCap:popupBody></MadCap:popup> information. (For example, Free Silk Dress with Purchase over $250).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Percentage Discount</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Enter the percentage discount amount in this field. For example, enter 20 to give a 20% discount off the price of the items. This is a good way to apply a specific discount for a new category of products.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Valid Between</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><b>Start</b>: Enter the start date and time manually or by clicking on the calendar and time picker icons.</p>
+                                <p><b>End</b>: Enter the end date and time manually or by clicking on the calendar and time picker icons.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Items Receiving Promotion</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Select the <b>Get Item</b> link to make your selections for the items you want to receive the promotion; this opens a dialog box. You can search for and select products by sub-category, brand or product name. Select the products you want, and click <b>(+ Add Select Products)</b> at the bottom of the dialog box to save the settings. The choices you make here are automatically populated in <b>Items Receiving Promotion</b> field.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p>How does this promotion trigger?</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <p>Use the radio buttons to select one of these options.</p>
+                                <ul>
+                                    <li><b>Auto-triggers in cart</b>. This promotion code will automatically trigger and display in the shopping cart.</li>
+                                    <li><b>User must enter promotion code</b>. Requires the customer to know and enter the promotion code manually in the shopping cart.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="noteAlt">Only one item level promotion can be applied at the same time. If more than one promotion applies, the promotion with the earliest start date will be used. If the promotion start dates are the same, the one with the newest create date will be used. If the create dates are the same, the lowest promotion ID will be used. If a manual promotion code is applied to the cart but one or many items it applies to have an automatic promotion, the manual promotion will be honored over the automatic promotion.</div>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Order percentage order-level promotion</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Use this order-level promotion type to apply a specific percentage discount to a qualifying cart total for a specified period of time.</p>
+                <table class="TableStyle-PatternedRows" style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css'); margin-left: 0; margin-right: auto;" cellspacing="0">
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 184px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Promotion Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Select the <b>Order Percentage</b> promotion type from the list.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Promotion Code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Give the promotion code a unique name or click the <b>Generate Code</b> link and one will be automatically generated.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Promotion Short Description</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>It helps to have a description of the promotion, especially for <MadCap:popup><MadCap:popupHead>CSR</MadCap:popupHead><MadCap:popupBody>Customer Service Representative</MadCap:popupBody></MadCap:popup> information. (For example, Free Silk Dress with Purchase over $250).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Percentage Discount</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Enter the percentage discount amount in this field. For example, enter 20 to give a 20% discount off the price of the items.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Valid Between</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><b>Start</b>: Enter the start date and time manually or by clicking on the calendar and time picker icons.</p>
+                                <p><b>End</b>: Enter the end date and time manually or by clicking on the calendar and time picker icons.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Items Receiving Promotion</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Select the <b>Get Item</b> link to make your selections for the items you want to receive the promotion; this opens a dialog box. You can search for and select products by sub-category, brand or product name. Select the products you want, and click <b>(+ Add Select Products)</b> at the bottom of the dialog box to save the settings. The choices you make here are automatically populated in <b>Items Receiving Promotion</b> field.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Promotion is valid for carts totaling more than $X:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Enter the dollar amount of the cart total that will be needed to trigger the promotion. For example, allow for the discount on all orders over $50.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">
+                                <p>How does this promotion trigger?</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">
+                                <p>Use the radio buttons to select one of these options.</p>
+                                <ul>
+                                    <li><b>Auto-triggers in cart</b>. This promotion code will automatically trigger and display in the shopping cart.</li>
+                                    <li><b>User must enter promotion code</b>. Requires the customer to know and enter the promotion code manually in the shopping cart.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="noteAlt">More than one order level promotion can be applied to an order at the same time.</div>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Free shipping, shipping-level promotion</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This shipping-level promotion type allows you to apply free shipping to orders over a specified dollar amount.</p>
+                <table class="TableStyle-PatternedRows" style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css'); margin-left: 0; margin-right: auto;" cellspacing="0">
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 184px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Promotion Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Select the <b>Free Shipping</b> promotion type from the list.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Promotion Code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Give the promotion code a unique name or click the <b>Generate Code</b> link and one will be automatically generated.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Promotion Short Description</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>It helps to have a description of the promotion, especially for <MadCap:popup><MadCap:popupHead>CSR</MadCap:popupHead><MadCap:popupBody>Customer Service Representative</MadCap:popupBody></MadCap:popup> information. (For example, Free shipping with Purchase over $50).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Valid Between</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p><b>Start</b>: Enter the start date and time manually or by clicking on the calendar and time picker icons.</p>
+                                <p><b>End</b>: Enter the end date and time manually or by clicking on the calendar and time picker icons.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Promotion is valid for carts totaling more than $X:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Enter the dollar amount of the cart total that will be needed to trigger the promotion. For example, allow for the discount on all orders over $50.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">
+                                <p>How does this promotion trigger?</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">
+                                <p>Use the radio buttons to select one of these options.</p>
+                                <ul>
+                                    <li><b>Auto-triggers in cart</b>. This promotion code will automatically trigger and display in the shopping cart.</li>
+                                    <li><b>User must enter promotion code</b>. Requires the customer to know and enter the promotion code manually in the shopping cart.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="noteAlt">Shipping promotions can be applied on top of an item promotion code, and then any order level promotion code. The order that promotion codes will be applied is: item-level promotions, order-level promotions, and then shipping-level promotions.<br /><br />Only one free shipping method can be displayed per order.</div>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Subcategory BOGO percentage item-level promotion</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This item-level promotion type allows you to apply a specific percent discount amount to all valid items in a cart in selected sub-categories if all conditions are met.</p>
+                <p>This promotion is triggered by configuring sub-categories. So, if the customer’s cart contains valid products from the chosen sub-categories, the promo will be triggered and they will receive the discount.</p>
+                <table class="TableStyle-PatternedRows" style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css'); margin-left: 0; margin-right: auto;" cellspacing="0">
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 184px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Promotion Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Select the <b>Subcategory BOGO Percentage</b> promotion type from the list.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Promotion Code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Give the promotion code a unique name or click the <b>Generate Code</b> link and one will be automatically generated.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Promotion Short Description</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>It helps to have a description of the promotion, especially for <MadCap:popup><MadCap:popupHead>CSR</MadCap:popupHead><MadCap:popupBody>Customer Service Representative</MadCap:popupBody></MadCap:popup> information.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Valid Between</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p><b>Start</b>: Enter the start date and time manually or by clicking on the calendar and time picker icons.</p>
+                                <p><b>End</b>: Enter the end date and time manually or by clicking on the calendar and time picker icons.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Percentage Discount</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Enter the percentage discount amount in this field. For example, enter 50 to give a 50% discount off the price of the BOGO items.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Trigger Subcategory</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>In the first menu, select the number and type of items  that need to be included from a subcategory to trigger the promotion. The item can be either a member of a subcategory or shared into that subcategory to trigger the promotion.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p>How does this promotion trigger?</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <p>Use the radio buttons to select one of these options.</p>
+                                <ul>
+                                    <li><b>Auto-triggers in cart</b>. This promotion code will automatically trigger and display in the shopping cart.</li>
+                                    <li><b>User must enter promotion code</b>. Requires the customer to know and enter the promotion code manually in the shopping cart.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="noteAlt">Only one item level promotion can be applied at the same time. If more than one promotion applies, the promotion with the earliest start date will be used. If the promotion start dates are the same, the one with the newest create date will be used. If the create dates are the same, the lowest promotion ID will be used. If a manual promotion code is applied to the cart but one or many items it applies to have an automatic promotion, the manual promotion will be honored over the automatic promotion.</div>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Gift with purchase order-level promotion</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This order-level promotion type allows you to apply a free gift with orders over a certain dollar amount. When the cart total reaches a set amount, the configured items can be given for free with purchase. You can select one or many different gift items to add when the promotion applies.</p>
+                <table class="TableStyle-PatternedRows" style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css'); margin-left: 0; margin-right: auto;" cellspacing="0">
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 184px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Promotion Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Select the <b>Gift with Purchase</b> promotion type from the list.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Promotion Code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Give the promotion code a unique name or click the <b>Generate Code</b> link and one will be automatically generated.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Promotion Short Description</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>It helps to have a description of the promotion, especially for <MadCap:popup><MadCap:popupHead>CSR</MadCap:popupHead><MadCap:popupBody>Customer Service Representative</MadCap:popupBody></MadCap:popup> information.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Valid Between</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p><b>Start</b>: Enter the start date and time manually or by clicking on the calendar and time picker icons.</p>
+                                <p><b>End</b>: Enter the end date and time manually or by clicking on the calendar and time picker icons.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Gift Items:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Select the <b>Get Item</b> link to make your selections for the items you want to use in the promotion. This opens a dialog box. You can search for and select products by sub-category, brand or product name. Select products, and click <b>(+ Add Select Products)</b> at the bottom of the dialog box to save the settings. The choices you make here are automatically populated in <b>Gift Items</b> field. You can select one or many different gift items to add when the promotion applies. There is no choice between gifts. The promotion can trigger one or many items to be added to the cart.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Promotion is valid for carts totaling more than $X:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Enter the dollar amount of the cart total that will be needed to trigger the promotion. For example, allow for the free gift on all orders over $100.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p>How does this promotion trigger?</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <p>Use the radio buttons to select one of these options.</p>
+                                <ul>
+                                    <li><b>Auto-triggers in cart</b>. This promotion code will automatically trigger and display in the shopping cart.</li>
+                                    <li><b>User must enter promotion code</b>. Requires the customer to know and enter the promotion code manually in the shopping cart.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="noteAlt">More than one order level promotion can be applied to an order at the same time.</div>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h3>Editing promotions</h3>
+        <p>Once created, you can edit the promotion as needed.</p>
+    </body>
+</html>

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Importing and exporting price breaks</title>
+        <meta name="description" content="A great way to encourage customers to purchase more of your products is to offer Price Breaks. This allows you slightly lower profit margins per product, but a greater overall gross." />
+    </head>
+    <body>
+        <h1>Importing and exporting price breaks<MadCap:concept term="CP" /></h1>
+        <p>You can enter a single price break either directly in the site manager, or through the Product Import/Export spreadsheet. However, if you have multiple Price Break tiers, you need to use the Price Break spreadsheet.</p>
+        <p>Price Breaks can also be entered directly into <MadCap:variable name="DC.EOM short" /> at the Product Level Details.</p>
+        <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;"> When updating by spreadsheet, you should always export first to ensure you are using the most recent spreadsheet version. This will also guide you on the proper format for each column and row as well as which fields are required.</div>
+        <p>
+            <img src="images/ImportExportPriceBreaksMain.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To export price breaks</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Price Breaks</b>.</li>
+                    <li>Choose whether to <b>Export Products</b> price breaks by <b>Sub-Categories</b> or <b>Brands</b> using the list.</li>
+                    <li>Select the brands or categories for which you want to export price breaks. Select more than one by holding down the Ctrl key. You can also use the <b>Select All</b> and <b>Clear All</b> links.</li>
+                    <li>Select whether to <b>Export in Pipe Delimited format</b>.</li>
+                    <li>
+                        <p>Click the <b>Export to Excel</b> button <img src="../Resources/Images/ExportToExcelButton.png" style="width: 22px;height: 22px;" />.</p>
+                        <p>This creates an Excel spreadsheet and a link to it at the bottom of the page. Click this link to open, modify, and or save it. Be sure your browser is setup to allow pop-ups from the site manager. Price break spreadsheet fields you can modify are:</p>
+                        <table class="TableStyle-PatternedRows" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Field</th>
+                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">product_id</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The system generated ID number of the current product.. When present, this ID # tells <MadCap:variable name="DC.EOM short" /> that this is an update to an existing record already present.  If it is blank, it will create an entirely new record. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">DisplayName</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The front end pre-defined display name of the product. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">PartNumber</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The pre-defined manufacturer’s part #, Internal Stock #, style # or any other uniquely identifying # for this product. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">BreakQuantity</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The quantity threshold a customer must reach to achieve the discounted rate.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">BreakLevel</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> Price breaks may be set up at the sub-category, product, and product option level. Because this spreadsheet can update price breaks on each level, you must designate at which level the break applies in this field. Enter:</p>
+                                        <ul>
+                                            <li> "S" for a sub-category,</li>
+                                            <li>"P" for a product,</li>
+                                            <li>"O" for option level. </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">BreakPrice</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The new price for the product that the customer will pay when in this tier. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">BreakType</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> The type of price break can be set as a Set Price, Fixed Adjustment, or Percentage.</p>
+                                        <ul>
+                                            <li>For a Set Price, the value entered replaces the Sell For price of the product.</li>
+                                            <li>The Fixed Adjustment type allows you to enter a value that will either markup or markdown the Sell For price. </li>
+                                            <li>A percentage value offers a percentage discount off of the product's Sell For price.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">GroupName</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Price breaks may be made available to specific tier groups (optional). Enter in the name of the tier group for the tier group you wish to make a price break available (can be overridden by the "Apply to All Shoppers" check box in Products &gt; Add/Edit &gt; Details &gt; Pricing &gt; Price Break Details). </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Delete</td>
+                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">True or False field. Enter <b>True</b> in this column if you want to delete the price break.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To import price breaks</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Price Breaks</b>.</li>
+                </ol>
+                <ol MadCap:continue="true">
+                    <li>Click <b>Browse</b>, find the Excel spreadsheet you want to import, and click <b>Open</b>.</li>
+                    <li>Click the <b>Import</b> button <img src="../Resources/Images/ImportButton.png" style="width: 19px;height: 17px;" />.<p>Price breaks are automatically uploaded to the server.</p></li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

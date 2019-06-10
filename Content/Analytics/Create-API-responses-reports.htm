@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1972" MadCap:lastWidth="740">
+    <head><title>Creating API responses reports</title>
+        <meta name="description" content="The Aptos API responses report captures all information pertaining to each request made through the API. This allows Aptos to more easily troubleshoot issues as they arise as well as to better monitor the overall performance of the API." />
+    </head>
+    <body>
+        <h1>Creating API Responses reports<MadCap:concept term="analy" /></h1>
+        <p>The <MadCap:popup><MadCap:popupHead>API</MadCap:popupHead><MadCap:popupBody>application programming interface</MadCap:popupBody></MadCap:popup> Responses report captures all information pertaining to each request made through the API. This allows Aptos to more easily troubleshoot issues as they arise as well as to better monitor the overall performance of the API.</p>
+        <p>You can filter the report based on the different API methods being used, and the report shows those API methods used rather than all of the available API responses.</p>
+        <h3>To create an API Responses report</h3>
+        <ol>
+            <li>In <b>Analytics</b>, select <b>User Reports</b> &gt; <b>API&#160;Responses</b>.</li>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/Select date range.flsnp" />
+            </li>
+            <li>Optionally, choose an API method from the <b>API Method</b> list.</li>
+            <li>Click <b>Search</b>.</li>
+            <li>Click on any <a href="#About">report table</a> column header to sort information in that column: IP Address, Submit and Response Times, the API Service/Method used, and the Response.</li>
+        </ol>
+        <h2>Using the API Responses report</h2>
+        <p>The report contains three graphs and as a table complete with summary information</p>
+        <h3>About report graphs</h3>
+        <p>The report includes three graphs:</p>
+        <ul>
+            <li>a pie chart on the left shows  each request made to the API for the specified time frame. It is divided into sections representing percentages of the actual API method called.</li>
+            <li>a pie chart on the right shows the percentage breakdown of errors compared with successful responses.</li>
+            <li>a graph below the charts displays a line for each method called, along with the number of seconds that each request takes. This shows how frequently the API methods are used, and helps to identify performance issues that may exist.</li>
+        </ul>
+        <p>
+            <img src="images/APIreponsesReport1.png" style="mc-thumbnail: hover;" />
+        </p>
+        <h3><a name="About"></a>About the report table</h3>
+        <p>A table displayed below the graphs shows the start and end times of each request, the elapsed time of the request, whether it was successful, and what method was actually called. Click the <b>Details</b> icon to see the request made along with its corresponding response.</p>
+        <p>
+            <img src="images/APIreponsesReport2.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 740px;" />
+        </p>
+        <p>
+            <img src="images/APIreponsesReport3.png" style="mc-thumbnail: hover;" />
+        </p>
+        <p>The detailed response of the API helps your partners or technologists to determine what might be wrong with their request. For example, if the XML is malformed or cased incorrectly, this will be easy to see. This also helps Aptos support staff to replicate each request in the event that there is a problem with the API itself.</p>
+    </body>
+</html>

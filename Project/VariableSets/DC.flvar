@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Comment=""
+    Name="CompanyName"
+    EvaluatedDefinition="Aptos">Aptos</Variable>
+  <Variable
+    Comment=""
+    Name="PhoneNumber">858 123 4567</Variable>
+  <Variable
+    Name="EOM long"
+    Comment=""
+    EvaluatedDefinition="Enterprise Order Management">Enterprise Order Management</Variable>
+  <Variable
+    Name="EOM short"
+    Comment=""
+    EvaluatedDefinition="EOM">EOM</Variable>
+</CatapultVariableSet>

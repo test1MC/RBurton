@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Configuring regional shipping tiers</title>
+        <meta name="description" content="Regions are configured here so they can be selected for Fixed Shipping Tiers by state/province or country. You can assign different shipping rates to different shipping regions. This also gives you the ability to define which states/provinces or countries are assigned to each region. Regions are only configurable for Fixed Shipping Tiers and if you use this functionality for a region, all regions must be set up." />
+    </head>
+    <body>
+        <h1>Configuring regional shipping tiers<MadCap:concept term="Commerce" /></h1>
+        <p>You configure regions so they can be selected for Fixed Shipping Tiers by state/province or country. You can assign different shipping rates to different shipping regions. This also gives you the ability to define which states/provinces or countries are assigned to each region. Regions are only configurable for Fixed Shipping Tiers and if you use this functionality for a region, all regions must be set up.</p>
+        <p>Fixed Shipping Tier regions can be defined by state/province or country. Region settings are useful when defining shipping rates to APO/FPO addresses, Alaska, Hawaii, and other countries.</p>
+        <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;">UPS Ground shipping does not return rates for APO/FPO addresses and some territories. Because of this, you should set up USPS for APO/FPO, and assign it to its own region. Make certain you set it to use USPS rates.</div>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;"> If you use this functionality to assign a region to a shipping rate, all regions must then be configured. For example, if you assign separate shipping regions for Alaska and Hawaii, you must then assign a shipping region for the other 48 states.</div>
+        <p>
+            <img src="images/RegionalShippingTiers1.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <p>​After regions added, assign shipping rates in <a href="Manage-shipping-settings.htm"><b>Commerce</b> &gt; <b>Shipping</b> &gt; <b>Settings</b></a>.</p>
+        <h3>Adding and managing regions</h3>
+        <ol>
+            <li>In <b>Commerce</b>, select <b>Shipping</b> &gt; <b>Regions</b>.</li>
+            <li>To add a new shipping region to the list, click the (+) <b>Add</b> button. A <b>New Region</b> is added to the page.</li>
+            <li>To configure the new region, or edit an existing one, click its <b>Manage Region</b> icon<img src="../Resources/Images/pencil.png" style="width: 21px;height: 21px;" />.<ol><li><p>Edit the <b>Region Name</b>.</p></li></ol><ol><li>If you like, use the <b>Region Covers</b> list to display options in just the area you need.</li><li>Select the state, province, or country to add to the region.</li><li><p>Click <b>Save</b>, and close the window.</p><p><img src="images/RegionalShippingTiers2.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" /></p></li></ol></li>
+            <li>To delete a shipping region, click its <b>Delete</b> icon.</li>
+        </ol>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Make certain that when setting up shipping regions to various countries, the countries can receive the shipping type you have configured. For example, if you set up a country with an economy shipping type, there will be an error if the shipper does not allow economy shipping to that country. See the <a href="../Resources/PDFs/CountriesServed_IF_IP_IE.pdf">FedEx International Express Countries Served</a> via US export and US import. For UPS, do not use UPS Standard for regions. Refer to this <a href="https://www.ups.com/ee/en/shipping/international/services/standard.page">UPS Standard Shipping article</a> for more information.</div>
+    </body>
+</html>

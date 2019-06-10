@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1842" MadCap:lastWidth="664">
+    <head><title>Creating transaction history reports</title>
+        <meta name="description" content="Use this report to reconcile your order transactions against the transaction history information provided by the payment processor. This allows you to verify that you have been paid on each transaction." />
+    </head>
+    <body>
+        <h1>Creating Transaction History reports<MadCap:concept term="analy" /></h1>
+        <p>Use this report to reconcile your order transactions against the transaction history information provided by the payment processor. This allows you to verify that you have been paid on each transaction. If a transaction has been voided and/or credited, these orders are displayed, and are associated with a negative dollar amount. You can also use the report to <a href="#Settling">settle or synchronize Authorize.net orders</a>.</p>
+        <p>
+            <img src="images/TransactionHistory.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <h3>To create a Transaction History report</h3>
+        <ol>
+            <li>In <b>Analytics</b>, select <b>Order Reports</b> &gt; <b>Transaction History</b>.</li>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/Select date range.flsnp" />
+            </li>
+            <li>Click the clock icons to choose a time frame for the report.</li>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/Select tier group.flsnp" />
+            </li>
+            <li>From the <b>Transaction Type</b> list, select the type of transactions you want to see (settled, credit, and so on).</li>
+            <li>Click the <b>Search</b> button.</li>
+            <li>To export the report to Excel for reporting or printing, scroll to the bottom of the report, and click the <b>Export to Excel</b> button <img src="images/ExportToExcelButton.png" /> .</li>
+        </ol>
+        <h2><a name="Settling"></a>Settling or synchronizing Authorize.net orders</h2>
+        <p>Use can use the transaction history report to search for credit card transactions. It shows all transactions that occurred with the credit card processor for the orders found within the selected date range. Note that:</p>
+        <ul>
+            <li>It provides a unique line displays for authorizations, captures, credits and settlements.</li>
+            <li>Settlements are currently only available for Authorize.net. When you import an Authorize.net end of day settlement report, you can easily reconcile all settled transactions against those transactions still waiting to be settled.</li>
+            <li>This enhancement will help accounting departments more easily close their books at end of month.</li>
+        </ul>
+        <h3>To upload the Authorize.net settlement report</h3>
+        <ol>
+            <li>
+                <p>Scroll to the bottom of the transaction history report, and click the <b>Import Settlement File</b> button.</p>
+                <p>
+                    <img src="images/ImportSettlementFile.png" />
+                </p>
+            </li>
+            <li>
+                <p>Select the file, and click the <b>Save</b> button.</p>
+                <p>
+                    <img src="images/ImportSettlementFile2.png" style="width: 423px;height: 144px;" />
+                </p>
+            </li>
+            <li>
+                <p>Run the report and it shows all orders over the specified date range.</p>
+                <p>The <b>Transaction Type</b> column indicates what type of transaction is indicated in the row. There are four options:</p>
+                <ol>
+                    <li>Authorized</li>
+                    <li>Captured</li>
+                    <li>Settled</li>
+                    <li>Credited</li>
+                </ol>
+            </li>
+        </ol>
+    </body>
+</html>

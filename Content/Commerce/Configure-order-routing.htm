@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Configuring fulfillment rules</title>
+        <meta name="description" content="This design and functionality gives you the ability to easily control the order of priority for suppliers that fulfill orders." />
+    </head>
+    <body>
+        <h1>Configuring fulfillment rules</h1>
+        <p>Use order routing to easily control the order of priority for suppliers who fulfill orders.</p>
+        <h2>Understanding and applying order routing</h2>
+        <p>Configure order routing to prioritize the rules applied to all suppliers when fulfilling orders. The higher in the order a rule is set, the more weight it receives when the system determines which supplier will receive the order.</p>
+        <p>While the actions of each rule can't be edited, you can drag and drop rules to enable them or deactivate them. You can also arrange the order in which you want the rules to be applied.</p>
+        <p>
+            <img src="images/OrderRouting.gif" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" />
+        </p>
+        <p>You can set the maximum number of supplier splits that can occur on any one order using Order Routing, which can give you more control over your shipping costs. This is set up in the <b>Order Routing</b> job, Custom4 (see <b>Content</b> &gt; <b>Tasks</b> &gt; <b>Job Scheduler</b>).</p>
+        <ul>
+            <li>A setting of '0' means the entire order must be fulfilled by one supplier.</li>
+            <li>'1' means the order can have one supplier split, and so on. If the Order Routing job Custom4 field is left blank, unlimited supplier splitting is allowed.</li>
+        </ul>
+        <p>When order routing cannot be completed within the allowed number of supplier splits, all items in the order are unable to be fulfilled and an order note will indicate "Unable to Fulfill - Cannot fill order within maximum allowed number of splits".</p>
+        <p><span class="note">Note about Stores:</span> Individual store locations are treated as Suppliers for order fulfillment. Stores are treated as Affiliates for order origination, and as Locations for store locator pages.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Set up suppliers before configuring your fulfillment rules. Suppliers are configured at <b>Commerce</b> &gt; <b>Suppliers</b> &gt; <b>Add/Edit</b>. After fulfillment rules are configured here, you must set up a Toro job at <b>Content</b> &gt; <b>Tasks</b> &gt; <b>Job Scheduler</b> to enable the functionality</p>
+        <h3>To configure fulfillment rules</h3>
+        <ol>
+            <li>
+                <p>In <b>Commerce</b>, select <b>Suppliers</b> &gt; <b>Order Routing</b>.</p>
+                <p>All <b>Available Rules</b> are displayed in the left column.</p>
+            </li>
+            <li> Drag and drop rules into the <b>Applied Rules</b> column. You can move items back and forth between columns as needed. You can adjust the priority in which a rule is applied by dragging it up or down in the <b>Applied Rules</b> column.</li>
+            <li>Some rules require that you set parameters for them after you add them to the <b>Applied Rules</b> column. For example, when you add the <b>Distance</b> rule, a <b>Distance</b> parameters item is added to the <b>Rule Settings</b> column on the right in which you can add <b>Distance Ranges</b>.</li>
+            <li>Click <b>Save</b> to apply the settings.</li>
+        </ol>
+        <table style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+            <caption>Order routing rules</caption>
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Category</th>
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Title</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Priority</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Suppliers have a priority value. By default, this is the top rule.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">&#160;</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Payment Terms</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">The payment terms between your company and the supplier.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Order Queue</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">How many pending orders each supplier has.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Dropship</td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Shipping Cost</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">The cost of shipping an order.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" rowspan="4">Inventory<p class="FieldName">&#160;</p></td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Left Over Inventory</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">How many items are still in the supplier's inventory after an order is completed.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Order Volume</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">The total volume going to each store.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                        <p>Rank</p>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Based upon the total number of items in each order. The system looks at the inventory of each supplier. For example, if an order contains 5 items, all suppliers that can fulfill the entire order will get a value of 5. Suppliers who can partially fulfill the order, will get ranked according to how many items in the order they can ship. Note that the ranking changes for each order depending upon how many items are in the order.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows" style="text-align: left;">
+                        <p class="FieldName" style="text-align: left;">Sku Velocity</p>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                        <p>How many of each SKU a supplier has entered within a given timeframe. Available via a spreadsheet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" rowspan="3">
+                        <p class="FieldName">Shipping</p>
+                        <p class="FieldName">&#160;</p>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="text-align: left;">
+                        <p class="FieldName" style="text-align: left;">Distance</p>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                        <p>The distance of the supplier from an order. When Distance is moved from the <b>Available Rules</b> column to the <b>Applied Rules</b> column, the <b>Rules Settings</b> column is displayed in which you can enter configurable ranges for distance.</p>
+                        <p>When configured, the system treats all suppliers within a distance range as equal. for example, if the first distance range is from 0-50 miles, then any suppliers that are 0-50 miles away from the ship-to address are treated equally and given first priority. You can configure up to 10 ranges. Click the +Add Range button to add more fields. The high value is not required on the last range configured.</p>
+                        <p>All suppliers in the same distance bucket are treated equally. For example, if the rules are set in this order on your site: Priority, Rank, Distance, Left Over, Order Volume, and SKU Velocity, the suppliers will be sorted by Priority first (note all suppliers with priority = 1 listed first), Rank second (all suppliers with an equal priority will then be sorted by rank), Distance third (all suppliers with equal rank will then be sorted by distance bucket value), then by left over inventory fourth (all suppliers with the same distance bucket value will then be sorted by left over inventory (which sorts description), and so on.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows" style="text-align: left;">
+                        <p class="FieldName" style="text-align: left;">Groups</p>
+                    </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                        <p class="FieldName" style="text-align: left;">Coming soon.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">UPS Zoning</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Coming soon.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The Order Routing job uses the client-prioritized fulfillment rules to sort the suppliers who are eligible to fulfill each order and then assigns suppliers to each item based on the resulting sort order.</p>
+        <p>Find more order routing information in this <a href="http://svcorp.shopvisible.com/fuze/SiteManager/Commerce/Suppliers/Fulfillment/OrderRoutingFAQ/interaction_html5.html">FAQ</a>.</p>
+    </body>
+</html>

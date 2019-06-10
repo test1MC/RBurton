@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" description="Use this EOM feature to export order information from a specified date range.">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Exporting orders</title>
+    </head>
+    <body>
+        <h1>Exporting orders<MadCap:concept term="CP" /></h1>
+        <p>You can export  all of your customer orders created between a specified date range to a spreadsheet.</p>
+        <p>Click on the Export button at the bottom of the page to export the file. The Excel file will be created and a link will appear in the Report column. Click on the link to open the Excel file.</p>
+        <p>
+            <img src="images/ExportOrdersMain.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <h3>To export orders</h3>
+        <ol>
+            <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Orders</b>.</li>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/Select date range.flsnp" />
+            </li>
+            <li>
+                <p>Click the <b>Export to Excel</b> button <img src="../Resources/Images/ExportToExcelButton.png" style="width: 22px;height: 22px;" />.</p>
+                <p>This creates an Excel spreadsheet and a link to it beneath the <b>Import</b>/<b>Export</b> buttons.</p>
+            </li>
+            <li>
+                <p>Click the spreadsheet link, add or update category information in it, and save the spreadsheet to a local drive.</p>
+                <p>Possible values and meanings for spreadsheet columns are:</p>
+            </li>
+        </ol>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+            <caption><b>Orders spreadsheet fields</b>
+            </caption>
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 13px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Spreadsheet column</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Possible values and meanings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Payment Type (AC)</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                        <p>1  -  Credit Card</p>
+                        <p> 2  -  Cash, Check, Wire or Money Order
+</p>
+                        <p>3  -  Corporate Purchase Order</p>
+                        <p>4  -  In Person Payment</p>
+                        <p>5  -  Private Label Credit Card</p>
+                        <p>6  -  Amazon</p>
+                        <p>7  -  Paypal</p>
+                        <p> 8  -  Google Checkout</p>
+                        <p>9  -  COD</p>
+                        <p>10 - Electronic Check</p>
+                        <p> 11 - Overstock</p>
+                        <p>12 - Bill Me Later</p>
+                        <p> 13 - eBillme</p>
+                        <p>14 - Buy.com</p>
+                        <p>15 - Wells Fargo</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Order Status (AD)</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                        <p>1  -  Partially Complete - Out Of Stock</p>
+                        <p> 4  -  Ordered</p>
+                        <p>6  -  Order Complete</p>
+                        <p>7  -  Order Declined</p>
+                        <p>8  -  Partially Complete - Backorder</p>
+                        <p>9  -  Return Requested</p>
+                        <p>10 - Returned</p>
+                        <p>11 - Order Cancelled</p>
+                        <p>12 - Processed - Shipping Pending</p>
+                        <p>14 - Partially Complete - Pre-Order</p>
+                        <p>15 - Processed - Shipped / Destination City:</p>
+                        <p> 16 - Possible Fraud</p>
+                        <p> 19 - Payment Denied</p>
+                        <p>20 - Ordered, Payment Authorized</p>
+                        <p>21 - Processed - Sent For Fulfillment</p>
+                        <p>22 - Processed, Fulfillment Delay</p>
+                        <p>25 - Awaiting Payment</p>
+                        <p>31 - Partially Complete - Shipping Pending</p>
+                        <p>34 - Partially Complete - Cancelled Item(s)</p>
+                        <p>35 - Processed - Pending Review</p>
+                        <p>36 - Local Pickup
+</p>
+                        <p>37 - Order Chargeback </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Item Status</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                        <p>1 Partially Complete - Out Of Stock</p>
+                        <p>4 Ordered</p>
+                        <p>6 Order Complete</p>
+                        <p>7 Order Declined</p>
+                        <p>8 Partially Complete - Backorder</p>
+                        <p>
+9 Return Requested</p>
+                        <p>10 - Returned</p>
+                        <p>11 - Order Cancelled</p>
+                        <p>12 - Processed - Shipping Pending</p>
+                        <p>13 - Item Shipped - Waiting for Tracking</p>
+                        <p>14 - Partially Complete - Pre-Order</p>
+                        <p>15 - Processed - Shipped / Destination City:</p>
+                        <p>16 - Possible Fraud</p>
+                        <p>17 - Item Shipped - Tracking Sent</p>
+                        <p>18 - Adjusted Item</p>
+                        <p>19 - Payment Denied</p>
+                        <p>20 - Ordered, Payment Authorized</p>
+                        <p>21 - Processed - Sent For Fulfillment</p>
+                        <p>22 - Processed, Fulfillment Delay</p>
+                        <p>23 - Item Processed - Shipping Pending</p>
+                        <p>24 - Item Return Received</p>
+                        <p>25 - Awaiting Payment</p>
+                        <p>26 - Out of Stock</p>
+                        <p>28 - Pre-Order</p>
+                        <p>29 - Cancelled</p>
+                        <p>30 - BackOrdered</p>
+                        <p>31 - Partially Complete - Shipping Pending</p>
+                        <p>32 - Item Return Requested</p>
+                        <p>33 - Item Return Approved</p>
+                        <p>34 - Partially Complete - Cancelled Item(s)</p>
+                        <p>35 - Processed - Pending Review</p>
+                        <p>36 - Local Pickup</p>
+                        <p>37 - Order Chargeback</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows" rowspan="4" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #ffffff;">Item Tracking item_shipping_id </td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                        <p><span class="Highlight">FedEx
+</span>
+                        </p>
+                        <p>7  -  Ground Home Delivery
+</p>
+                        <p>6  -  Ground Shipping</p>
+                        <p> 1  -  3 Business Days</p>
+                        <p> 2  -  2 Business Days
+</p>
+                        <p>3  -  Standard Overnight</p>
+                        <p> 4  -  Priority Overnight
+</p>
+                        <p>5  -  First Overnight
+</p>
+                        <p>10 - International Economy
+</p>
+                        <p>8  -  International First
+</p>
+                        <p>9  -  International Priority
+</p>
+                        <p>11 - International Ground
+
+ </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                        <p><span class="Highlight">UPS
+</span>
+                        </p>
+                        <p>6  -  Ground Shipping
+</p>
+                        <p>1  -  3 Business Days
+</p>
+                        <p>2  -  2 Business Days
+</p>
+                        <p>3  -  Standard Overnight</p>
+                        <p> 4  -  Priority Overnight
+</p>
+                        <p>5  -  First Overnight</p>
+                        <p> 14 - UPS Standard
+</p>
+                        <p>15 - UPS World Wide Express
+</p>
+                        <p>16 - UPS World Wide Expedited
+</p>
+                        <p>17 - UPS World Wide Saver
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                        <p><span class="Highlight">USPS</span>
+                        </p>
+                        <p>7  -  Media Mail</p>
+                        <p> 6  -  Parcel Post</p>
+                        <p> 4  -  Priority Mail</p>
+                        <p>5  -  Express Mail
+</p>
+                        <p>10 - Global Express Guaranteed (GXG)**
+</p>
+                        <p>9  -  Express Mail International
+</p>
+                        <p>8  -  Priority Mail International
+</p>
+                        <p>11 - Priority Mail Small Flat Rate Box
+</p>
+                        <p>12 - Priority Mail Medium Flat Rate Box
+</p>
+                        <p>13 - Priority Mail Large Flat Rate Box
+</p>
+                        <p>18 - Priority Mail International Small Flat Rate Box**</p>
+                        <p> 19 - Priority Mail International Medium Flat Rate Box
+</p>
+                        <p>20 - Priority Mail International Large Flat Rate Box
+</p>
+                        <p>21 - First-Class Mail Package
+</p>
+                        <p>22 - First-Class Mail International Package**
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                        <p><![CDATA[
+ ]]><span class="Highlight">Carriers:</span></p>
+                        <p> 1 - Fedex</p>
+                        <p> 2 - UPS</p>
+                        <p> 3 - USPS</p>
+                        <p> 4 - DHL</p>
+                        <p> 5 - Local Pickup</p>
+                        <p> 6 - Pitney Bowes</p>
+                        <p> 7 - Mail Innovations</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

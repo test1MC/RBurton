@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2728" MadCap:lastWidth="677">
+    <head><title>Creating sales tax reports</title>
+        <meta name="description" content="This report captures sales taxes, credit cards, and sales; use it for tax reporting and credit card reconciliation." />
+    </head>
+    <body>
+        <h1>Creating Sales Tax reports<MadCap:concept term="analy" /></h1>
+        <p>Use this report for tax reporting and credit card reconciliation. It filters sales data using either the order date or the credit card capture date. It only returns data on shipped items with the item status of "Item Shipped - Tracking Sent" and "Item Shipped - Waiting for Tracking."</p>
+        <p>Report results do not change based on a return order unless the return occurred in the same month, because it uses the return dates for refunds on credit cards.</p>
+        <p>For example, if sales for January were $300,000 with $20,000 worth of returns for orders taken in January, this report would show $280,000 in sales for January and would not change past the month closing. Also, if a return took place in January for a December order, the return date refund on the credit card would be for January and not December.</p>
+        <p>
+            <img src="images/SalesTax.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <h2><a name="Information_provided_in_reports_by_type"></a>Information provided in reports by type</h2>
+        <p>You can create four kinds of report; types and the information they contain are:</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Detailed</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ul>
+                    <li>Order Number</li>
+                    <li>Payment Type</li>
+                    <li>Name</li>
+                    <li>Date</li>
+                    <li>State</li>
+                    <li>County</li>
+                    <li>Zip</li>
+                    <li>Authorized</li>
+                    <li>Product</li>
+                    <li>Unit Price</li>
+                    <li>Qty</li>
+                    <li>Shipping</li>
+                    <li>Item Tax</li>
+                    <li>Order Tax</li>
+                    <li>Total</li>
+                    <li>Tax Credit Amount</li>
+                    <li>Total Order Credit</li>
+                    <li>Net Tax</li>
+                    <li>Coupon Name</li>
+                    <li>Coupon Amount</li>
+                </ul>
+                <p><span class="note">Note:</span> 
+The Detailed Report displays the column totals at the bottom of the page.
+</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Summary </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ul>
+                    <li>Tax State</li>
+                    <li>Total Items</li>
+                    <li>Item Price</li>
+                    <li>Tax</li>
+                    <li>Shipping</li>
+                    <li>Total
+</li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>By Country</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ul>
+                    <li>Tax State</li>
+                    <li>
+Total Items
+</li>
+                    <li>Item Price
+</li>
+                    <li>Tax
+</li>
+                    <li>Shipping</li>
+                    <li>
+Total
+</li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>By Country &amp; Rate</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ul>
+                    <li>County Name</li>
+                    <li>Rate</li>
+                    <li>Taxable Items</li>
+                    <li>Non Taxable Items</li>
+                    <li>Taxable Item Price</li>
+                    <li>Non Taxable Item Price</li>
+                    <li>Tax</li>
+                    <li>Shipping</li>
+                    <li>Total</li>
+                    <li>Shipping Taxed</li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h3>To create a Sales Tax report</h3>
+        <ol>
+            <li>In <b>Analytics</b>, select <b>Order Reports</b> &gt; <b>Sales Tax</b>.</li>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/Select date range.flsnp" />
+            </li>
+            <li>If <b>Tier Groups</b> are set up on your site, you can select to filter your search by specific group, all groups, all customers, and so on.</li>
+            <li>&#160;Choose an <b>Affiliate</b> if applicable for your site.</li>
+            <li>Select&#160;a&#160;<b>Payment Type</b> on which to filter, or choose nothing to report all.</li>
+            <li>Select a <b>State</b>; you can select all states, or the default state for your shipments.</li>
+            <li>Select a <b><a href="#Information_provided_in_reports_by_type">Report Type</a></b>.</li>
+            <li>From the <b>Date to Use</b> list, select to filter on either the Order Date or Capture Date.</li>
+            <li>Click the <b>Search</b> button.</li>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/Export report to excel.flsnp" />
+            </li>
+        </ol>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

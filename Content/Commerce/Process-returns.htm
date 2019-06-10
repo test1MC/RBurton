@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Processing returns</title>
+        <meta name="description" content="After returns are processed using Return Merchandise Authorization (RMA) requests, they appear on the Returns page. You can also process returns without RMAs and view orders from this page. This keeps a record of the items customers have sent back." />
+    </head>
+    <body>
+        <h1>Processing returns<MadCap:concept term="Commerce" /></h1>
+        <p>After returns are processed using <MadCap:popup><MadCap:popupHead>RMA</MadCap:popupHead><MadCap:popupBody>return merchandise authorization </MadCap:popupBody></MadCap:popup> requests, they appear on the <b>Returns</b> page. You can also process returns without RMAs and view orders from this page. This keeps a record of the items customers have sent back.</p>
+        <p>You can view all orders and RMAs on the <b>Returns</b> page.</p>
+        <h2>Allowing for returns on your site</h2>
+        <p>By default, all products on your site are returnable. However, there are several settings you must enable to allow for processing of returns and creation of RMAs. After these settings are enabled, you can customize how you want to process returns.</p>
+        <div class="note"><b>Warning:</b> Make certain your site is set up to create RMAs and process returns before continuing. Returns and RMAs must be configured properly before they can be used on your site. Refer to knowledge base article #2201, <i>Setting up Your Site to Process RMAs and Returns</i>.</div>
+        <h2>Managing returns</h2>
+        <h3>Filter and search for orders</h3>
+        <p>You can filter and search for orders by order number, text, and/or date range. When searching for returns by order numbers that do not have a previous RMA associated with them, the order appears regardless of the date range, making it easy to find the order. You can also search by external order number. This order number is the unique number assigned to the order when the order is created outside of the OMS.</p>
+        <p>You can also filter and search by:</p>
+        <ul>
+            <li><b>Date Type</b>: Whether it be an RMA date or an order date, you can filter by date type.</li>
+            <li><b>Return Reason</b>: You can filter by return reasons, if needed. These return reasons (types) are configured at CRM &gt; Communications &gt; Listings. In addition, the Aptos platform allows you to control which return reasons are applicable to online RMA generation. See <a href="../Customers/Listings.htm">Managing listings</a> to learn more about return types.</li>
+            <li><b>Sort by</b>: There are also filters for various sort options in this list menu such as: order number, order date, contact name, order total and salesperson.</li>
+        </ul>
+        <p>
+            <img src="images/Returns1a.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <p>You can process returns on this page in one of two ways.</p>
+        <ul>
+            <li>Orders without Existing RMAs - When a customer returns merchandise to you without first obtaining an RMA, you can start and complete the return process here.</li>
+            <li>Items with Existing RMA - Items for which an RMA has been created, are displayed in this panel. RMAs are created at <b>Commerce</b> &gt; <b>Orders</b> &gt; <b>Manage</b>.</li>
+        </ul>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To process returns without an RMA</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Commerce</b>, select <b>Orders</b> &gt; <b>Returns</b>.</li>
+                    <li>Click <b>Orders Without Existing RMAs</b> to expand that area of the screen.</li>
+                    <li>
+                        <p>In the search area above this, enter criteria in the fields, and click <b>Search</b>.</p>
+                        <p>Orders without existing RMAs matching your search criteria appear in the list.</p>
+                    </li>
+                    <li>
+                        <p>Find the order you're looking for, and In the <b>Options</b> column, click its <b>Process Return</b> link.</p>
+                        <p>
+                            <img src="images/ProcessReturnLink.png" />
+                        </p>
+                        <p>A window opens, showing the number of items in the order, and indicates how many items in the order are available for return.</p>
+                        <p><span class="note">Note:</span> You can control whether or not you want products to be returnable at <b>Content</b> &gt; <b>Products</b> &gt; A<b>dd/Edit</b> &gt; <b>Details</b> &gt; <b>General</b> &gt; <b>Options</b> &gt; <b>Can RMA</b>. Learn more about product settings.</p>
+                        <ul>
+                            <li><b>Select Option to Return Item</b>: Select the reason the merchandise is being returned. The return types that appear in this drop-down menu are configured at <b>CRM</b> &gt; <b>Communications</b> &gt; <b>Listings</b>.</li>
+                            <li>
+                                <p><b>Qty to Return</b>: Indicate the quantity of each applicable line item to return.</p>
+                            </li>
+                            <li>
+                                <p><b>Send Email to Customer</b>: Select to generate an email to the customer. EOM will check the return reason to see if it has a custom email configured. If one exists, it will be sent. Otherwise, the system will send the "Returned Item Pending Inspection" email to the customer.</p>
+                            </li>
+                            <li>
+                                <p><b>Notify Pending Credit</b>:</p>
+                            </li>
+                            <li>
+                                <p><b>Credit Order</b>: Select if you want to credit the order at this time. If this option is chosen, the <b>Credit Order</b> window opens when this return is saved.</p>
+                            </li>
+                            <li>
+                                <p><b>Additional Notes to Customer</b>: If needed, record order notes here. The notes will appear in the order history when viewing the order.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>In the <b>Credit Order</b> area of this window:<ol><li>Select <b>Credit Order</b> if you want to credit the order at this time. If you choose this option, the Credit Order window opens when you save this return.</li><li>Select whether this is an <b>Offline Credit</b>.</li><li>Select whether to issue <b>Store Credit</b> for this return.</li></ol></li>
+                    <li>
+                        <p>In the <b>Item</b> area, for each item being returned, select the <b>Return Reason</b>.</p>
+                        <p><span class="note">Note:</span> The return types that appear in this list are configured at <b>CRM</b> &gt; <b>Communications</b> &gt; <b>Listings</b>.</p>
+                    </li>
+                    <li>Enter the <b>Number of items to return</b>.</li>
+                    <li>
+                        <p>Select whether to <b>Send Email to Customer</b>.</p>
+                        <p><MadCap:variable name="DC.EOM short" />checks the return reason to see if a custom email is configured. If one exists, it will be sent. Otherwise, the <MadCap:variable name="DC.EOM short" />sends the "Returned Item Pending Inspection" email to the customer.</p>
+                    </li>
+                    <li>
+                        <p>Select whether to <b>Notify Pending Credit</b>.</p>
+                    </li>
+                    <li>Optionally, add any <b>Additional Notes to Customer</b>. Notes you enter here appear in the order history when viewing the order.</li>
+                    <li>
+                        <p>Click <b>Save</b> to process the return. The order status is updated to <b>Returned</b>.</p>
+                    </li>
+                </ol>
+                <p><span class="note">Note:</span> <MadCap:variable name="DC.EOM short" />applies the appropriate credit amounts for a returned item through the use of the API. These fields are populated in the 'ConfirmShippedOrder' API method located at: https://api.Aptos.com/wiki/Order ConfirmShippedOrder.aspx. For more information, please contact your Client Manager.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To process returns with an RMA</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Commerce</b>, select <b>Orders</b> &gt; <b>Returns</b>.</li>
+                    <li>Click <b>Orders With Existing RMAs</b> to expand that area of the screen.</li>
+                    <li>In the search area above this, enter criteria in the fields, and click <b>Search</b>.</li>
+                    <li>Find the RMA you want to process, and from the <b>Select Option</b> list, select the appropriate action.<ol><li><b>Cancel Return</b> - Cancels return.</li><li><b>Create Return Printout</b> - Creates printed copy of order notes; opens a pop-up window containing the five most recent order notes. In the <b>Add Condition/New Note</b> field, you can add notes. Click <b>+</b> (Add) to add the notes to the order history. Click <b>Print Now</b> to print a copy of the return history.</li><li><b>Process Received Item</b> - Select this option to process the returned item.</li><li><b>View Order Notes</b> - Opens <b>Order History</b> window; make changes as needed.</li></ol><p>When the item has arrived back at your warehouse, you can process the RMA and complete the return. Select <b>Process Received Item</b> from the list to process the return and close the RMA.</p></li>
+                    <li>
+                        <p>Edit information and settings as needed.</p>
+                        <ol>
+                            <li>
+                                <p><b>Change Return Reason</b> - The return reason default is the initial setting defined for the RMA. If needed, you can change it.</p>
+                            </li>
+                            <li>
+                                <p><b>Send Email to Customer</b> - If the return reason does not change, the customer receives the default email <MadCap:popup><MadCap:popupHead>configured</MadCap:popupHead><MadCap:popupBody>This is set up at Content &gt; Pages &gt; &gt; Returned Item updated Reason Code</MadCap:popupBody></MadCap:popup> for the screen. If the updated return reason does not have an overriding email, the customer will get the default email.</p>
+                            </li>
+                            <li>
+                                <p><b>Notify Pending Credit</b> - Notifies the customer in the email of the credit applied, if applicable.</p>
+                            </li>
+                            <li>
+                                <p><b>Add to Inventory</b> - Places the item back into your inventory.</p>
+                            </li>
+                            <li>
+                                <p><b>Credit Order</b> - Allows for the order to be credited. If checked, upon saving this page, the Credit Order screen opens.</p>
+                            </li>
+                            <li>
+                                <p>​<b>Additional Notes to Customer</b> - Place additional order notes here, if needed.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>Click <b>Save</b> to process the return.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Crediting orders</h2>
+        <p>After you select items for return, and saved, <MadCap:variable name="DC.EOM short" />automatically looks for three fields for each returned item, and opens and pre-populate the <b>Credit Order</b> window with those amounts. These fields are:</p>
+        <ul>
+            <li>returnable credit amount (located in the credit column)</li>
+            <li>Shipping Credit</li>
+            <li>Tax Credit</li>
+        </ul>
+        <p>These fields are populated via the 'ConfirmShippedOrder' API method located at: https://api.Aptos.com/wiki/Order ConfirmShippedOrder.aspx.</p>
+        <p>After processing the credit for the return, <MadCap:variable name="DC.EOM short" />places the "return reason" selected in the <b>Reason for Credit</b> field and ignores the value from the "Credit Reason" selection if your site uses the GetOrderCredits API call to get the actual return reason when a credit is applied.</p>
+        <p>
+            <img src="images/returns5.jpg" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <p>If the items being returned have not had a returnable credit amount specified, a message is displayed at the top of the Credit Order window stating,</p>
+        <div class="quotation">The items being returned have not had a returnable credit amount specified and the credit cannot be applied automatically. Please manually apply a detailed level credit/refund.</div>
+        <p>This means that the credit cannot be applied automatically because the 'returnable credit field' has not been populated. This happens for any orders that do not have this field populated or if your site is not using the API. When this is the case, you will need to go to <b>Commerce</b> &gt; <b>Orders</b> &gt; <b>View</b> &gt; <b>Options</b> &gt; <b>Credit Order</b> and manually apply a detailed credit/refund.</p>
+        <p>The <b>Credit Order</b> page defaults to the 'Detailed Credit' view and only shows those items that are being returned. This helps to reduce user error when an order is credited. See <a href="Use-the-view-order-window.htm">Using the View Order window</a> to learn more about crediting orders .</p>
+    </body>
+</html>

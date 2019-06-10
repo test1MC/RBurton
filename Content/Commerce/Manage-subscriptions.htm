@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="3117" MadCap:lastWidth="849">
+    <head><title>Managing subscriptions</title>
+        <meta name="description" content="Subscriptions are a great way to encourage customer loyalty by making it easy to re-order products at a specified interval. Credit Cards, Cash/Check/Money Order, and PayPal are the only valid payment methods for subscriptions." />
+    </head>
+    <body>
+        <h1>Managing subscriptions<MadCap:concept term="Commerce" /></h1>
+        <p>Subscriptions are a great way to encourage customer loyalty by making it easy to re-order products at a specified interval. Credit Cards, Cash/Check/Money Order, and PayPal are the only valid payment methods for subscriptions.</p>
+        <p><span class="note">Note:</span> ​If you do not have subscription functionality enabled on your site and want to implement it, submit a support ticket or contact your Client Manager. This displays automatically if you have PayPal enabled as a payment option; then set up a subscription product.</p>
+        <p>The customer's <b>Manage my Subscriptions</b> page can handle multiple subscriptions, and customers can modify their own subscription parameters here. They can update the next ship date, the current schedule and the promo code for each subscription. Customers can also have various subscriptions shipping to different addresses, and different subscriptions can be paid for with different credit cards.</p>
+        <p>Customers can select the delivery frequency and enter a subscription name for each product on the product page and enter or modify subscriptions on the cart page. If a customer places an order with items having different frequencies or subscription names, then one order is created and multiple subscriptions are created and placed with their own IDs into the schedule table. One shopping cart can hold products with different frequencies and subscription names.</p>
+        <p>
+            <img src="images/subscription-member.jpg" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <p>Auto notification emails are included in subscription management. If changes occur in the recurring order: pricing changes, or product availability, <MadCap:variable name="DC.EOM short" />can generate an <MadCap:popup><MadCap:popupHead>email</MadCap:popupHead><MadCap:popupBody> Email masters can be set up for subscription management at Content &gt; Pages &gt; Emails &gt; Subscriptions.</MadCap:popupBody></MadCap:popup> and automatically send to the customer.</p>
+        <p>​In addition, you can add any type of <MadCap:popup><MadCap:popupHead>information or disclaimer</MadCap:popupHead><MadCap:popupBody> You can edit the text that appears here at Content&gt; Pages &gt; Masters &gt; Subscriptions &gt; Subscription Disclaimer.</MadCap:popupBody></MadCap:popup> to the bottom of this screen.</p>
+        <h2>Setting up subscriptions</h2>
+        <p>Before you get started managing subscriptions, you first need to set up subscriptions on the <b>Product Details</b> page at <b>Content</b> &gt; <b>Products</b> &gt; <b>Add/Edit</b>.</p>
+        <h3>To define subscription settings</h3>
+        <p>There are several website settings that control how subscriptions will work on your site that need to be configured. Set these up at <b>Users</b> &gt; <b>Website Settings</b> &gt; <b>Payments</b> &gt; <b>Subscription Settings</b>.</p>
+        <h3>About subscription emails</h3>
+        <p>If subscription notifications are identified in <b>Users</b> &gt; <b>Website Settings</b>, an email can be sent to your customers for all found subscriptions notifying them of their upcoming subscription. Edit the <b>Upcoming Subscription Notification</b> email master at <b>Content</b> &gt; <b>Pages</b> &gt; <b>Emails</b> &gt; <b>Subscriptions</b>.</p>
+        <p><MadCap:variable name="DC.EOM short" />checks credit card expiration dates. If the credit card expiration date will occur before the next ship date, the <MadCap:variable name="DC.EOM short" />places a note with the date on customer record. The note content indicates “CC Expiration Date is before Next Ship Date”. This note is included in the email described above. The email defined in <b>Content</b> &gt; <b>Pages</b> &gt; <b>Emails</b> &gt; <b>Subscriptions</b> &gt; <b>Subscription CC Expiration</b> will be sent to the customer when applicable.</p>
+        <h3>To manage subscriptions</h3>
+        <p>After subscription products are set up, the website settings are enabled, and the emails are configured, use <MadCap:variable name="DC.EOM short" /> to manage all of your subscription-based orders on the subscriptions page.</p>
+        <p><span class="note">Note:</span> ​You need to set up subscriptions on the <b>Product Details</b> page at <b>Content</b> &gt; <b>Products</b> &gt; <b>Add/Edit</b>. In addition, there are several website settings that must be set up at <b>Users</b> &gt; <b>Website Settings</b> &gt; <b>Payments</b> &gt; <b>Subscription Settings</b> before using this feature.</p>
+        <p>
+            <img src="images/ManageSubscriptions2.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <ol>
+            <li>​In <b>Commerce</b>, select  <b>Orders</b> &gt; <b>Subscriptions</b>.</li>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/Select date range.flsnp" />
+            </li>
+            <li>Choose whether to search by <b>Requested Date</b>, <b>Scheduled Date</b>, or the <b>Completed Date</b>.</li>
+            <li>Refine your search by entering more search information in any of the additional search fields:<ol><li><b>Customer Name</b> and/or <b><MadCap:popup><MadCap:popupHead>Order #</MadCap:popupHead><MadCap:popupBody>In addition to searching on the EOM order number, you can also search by external order number—this is the unique number assigned to the order when the order is created outside of EOM. This is the unique number assigned to the order when it is created outside of EOM.</MadCap:popupBody></MadCap:popup></b>,</li><li><b>Customer Email</b>,</li><li><b>Customer Phone</b>,</li><li> <b><MadCap:popup><MadCap:popupHead>Status </MadCap:popupHead><MadCap:popupBody>Subscription statuses are managed at CRM&gt; Communications&gt; Manage Listings.</MadCap:popupBody></MadCap:popup></b></li><li>You can also select to <b>Sort By</b> the next date or the subscription ID and the order, old to new or new to old.</li></ol></li>
+            <li>
+                <p>Click <b>Search</b>.</p>
+            </li>
+            <li>You can no manage several aspects of the list of subscriptions that appears:<ol><li><p>Click the customer name to go to the <b>CRM</b> &gt; <b>Customers</b> &gt; <b>Add/Edit</b> screen if you need to edit customer details.</p></li><li><p>Click <b>CHANGE</b> under <b>Next Ship Date</b> to edit the next scheduled date . A pop-up a calendar will open in which you can change the date of the next subscription. In addition, the interval between shipments can be adjusted by selecting the Overwrite Renewal Interval. This allows you to change how frequently the particular order will auto-ship. Click save to update the changes.</p></li><li><p>Click the product to view product details.</p></li><li>You can add or replace products in the subscription. See <a href="#To">To add or edit subscriptions</a>.</li></ol></li>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/Export report to excel.flsnp" />
+            </li>
+            <li>
+                <p>To cancel or re-run subscriptions, use the <b>Select Batch Option</b> list.</p>
+                <p>
+                    <img src="images/ManageSubscriptions3.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+                <ol>
+                    <li>Select the subscriptions you want to cancel or re-run using the check boxes in the <b>Nickname</b> column.</li>
+                    <li>Click the <b>Batch Process Items</b> list, and select the appropriate cancellation/re-run reason.</li>
+                    <li>Click <b>Save</b>.</li>
+                </ol>
+            </li>
+        </ol>
+        <h3><a name="To"></a>To add or edit subscriptions</h3>
+        <ol>
+            <li>
+                <p>Click the <b>CHANGE</b> link under the product name in the <b>Product</b> column.</p>
+                <p> A pop-up window filtered for this product opens.</p>
+            </li>
+            <li>To add products to a subscription:<ol><li><p>Search for and select the product(s) you wish to add to the subscription.</p></li><li>Select <b>Add to Subscription</b>, any product you select from the list is added to this subscription.</li></ol></li>
+            <li>To replace products in a subscription:<ol><li>Ensure <b>Add to Subscription</b> is <i>not</i> selected.</li><li>Search for and select products you wish to replace in the subscription.</li></ol></li>
+            <li>Scroll to the bottom of the window, and click (&gt;) <b>Continue</b> to save your changes.</li>
+        </ol>
+    </body>
+</html>

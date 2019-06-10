@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="User Administration"
+    ReplaceMergeNode="true"
+    Link="/Content/Admin/About-user-admin.htm">
+    <TocEntry
+      Title="Adding a new user"
+      Link="/Content/Admin/Add-user.htm" />
+    <TocEntry
+      Title="Editing a user's information"
+      Link="/Content/Admin/Edit-user.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Importing and exporting user accounts"
+      Link="/Content/Admin/Import-export-user-accounts.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Managing user permissions"
+      Link="/Content/Admin/Manage-user-permissions.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+</CatapultToc>

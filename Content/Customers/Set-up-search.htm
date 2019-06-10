@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Setting-up in-site search</title>
+        <meta name="description" content="To increase speed on in-site search and to help reduce the load on the database, a search implementation using the Apache LuceneTM text-based search engine is integrated within the Site Manager. When fully implemented on your site, it enables your customers to more easily and quickly find what they are looking for." />
+    </head>
+    <body>
+        <h1>Setting-up in-site search<MadCap:concept term="Customers" /></h1>
+        <p>The customer search functionality in Site Manager uses Apache LuceneTM which is a high-performance, full-featured text search engine library written entirely in Java. LuceneTM offers powerful features through a simple <MadCap:popup><MadCap:popupHead>API</MadCap:popupHead><MadCap:popupBody>application program interface</MadCap:popupBody></MadCap:popup>.</p>
+        <p><span class="note">Note:</span> While this feature is available on all sites, to get the full benefits of search additional wiring is required. The wiring requirements are noted in the lists below. For more information, please contact your Client Manager.</p>
+        <p>
+            <img src="Images/SetUpSearch.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>About the benefits of setting-up in-site search</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Some of the benefits of fully implementing in-site search on your site, include:</p>
+                <ul>
+                    <li>Ranked searching – best results returned first.</li>
+                    <li>Many powerful query types: phrase queries, wildcard queries, proximity queries, range queries and more.</li>
+                    <li>Fielded searching—for example, title, author, contents—and date-range searching.</li>
+                    <li>Searches that return a single product result automatically take the user to that product rather than forcing them to make an additional click.</li>
+                    <li>For products with options, if a search uniquely identifies a particular option—for example, by UPC— the customer can be automatically taken to the product with that option pre-selected.This requires additional front-end wiring.</li>
+                    <li>In addition to field-level weighting, you can specify product-level weights based on data. For example, you could deem that products be given additional weight in search results based on newness, rating, brand name, the sub-category, or any number of other factors.​ To specify this data, contact your Client Manager to have them put in place. Currently, this cannot be controlled within the Site Manager. However, you will be able to change these fields in a later release date.</li>
+                    <li>In addition to filtering by sub-category, brand, attribute, and price; filtering is also available by category, rating, and product expiration date. Additional wiring will be necessary to add these filters to the search sidebar.</li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>About product-level weighting</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>You can affect the search rankings of products based on the values of other data fields. For example, you may want products with 5-star ratings to appear before comparable products with lower ratings, or choose to spotlight products from a particular brand by giving them preferential ranking.</p>
+                <p><span class="note">Note:</span>  At this time, you must notify Aptos with your requirements, as these weights are controlled by an external XML file. Contact your Client Manager for more information.</p>
+                <p>There are three types of weighting criteria that can be specified:</p>
+                <ul>
+                    <li><b>Equal-To</b>: means that if the field is equal to the specified value, the product's ranking is weighted. ◦Example: if brand name is "Singer", then weight by 2.</li>
+                    <li><b>Not-Equal-To</b>: means that if the field is not​ equal to the specified value, the product's ranking is weighted. ◦Example: if product image name is not blank, then weight by 2.</li>
+                    <li>
+                        <p><b>Normalized</b>: means that when the field value falls within a specified range, the product is weighted by a value relative to that range.</p>
+                        <p>Example: if average product rating is between 3 and 5 stars, then weight between 1.5 and 2.5. (If average rating = 3, weight by 1.5; if average rating = 3.5, weight by 1.75; if average rating = 4, weight by 2, and so on.)</p>
+                    </li>
+                </ul>
+                <p>This does not mean that products weighted in the ways described above automatically bubble to the top. It simply means that the internally calculated relevance score for each matching product is augmented by these values when the criteria are true. In other words, for otherwise equally-ranked products, this will cause the weighted product to appear somewhere earlier in the results listing than the similar unweighted product.</p>
+                <p><span class="note">Note:</span>  Additional wiring is required to enable pre-selection of option drop-downs when a product option result is returned, or to add filtering by category, rating, or product expiration date to the left sidebar on the search results page. For more information, contact your Client Manager.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Managing search functionality</h2>
+        <p>Configure search functionality for your site at <b>Content</b> &gt; <b>Customers</b> &gt; <b>Searches</b>. Here, you can control:</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Overriding search term rankings</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>You can associate specific products to a search term so these selected products will be shown before other products are returned from a search. The order of the products in the search is also configurable. This feature is useful to target certain products so they'll show up at the beginning of a chosen search term. This is a good way to call extra attention to certain products.</p>
+                <p>
+                    <img src="Images/SearchTermOverride.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+                <h3>To override search term rankings</h3>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Customers</b> &gt; <b>Searches</b>.</li>
+                    <li>In the <b>Search Terms Override Rankings</b> area, click <b>Show Details</b> if necessary to expand it.</li>
+                    <li>Select a search term from the drop-down menu to view the products associated with it. In the example above, the keyword selected has three products associated with it.</li>
+                    <li>To add new search keywords and associated products, or to edit products associated with existing search keywords:<ol><li>Click the <b>Add</b>  + button and the <b>Add Products to Search Keyword</b> pop-up window opens.</li><li>Enter a new keyword in the field at the bottom of the window, search for product(s) you want to be associated with this search term, and select those products.</li><li>Click <b>Save</b> and close the pop-up window.</li></ol><p>New search keywords you added appear in the drop-down menu and the products added/edited are displayed in the <b>Search Term Override Rankings</b> area. You can change the <b>Display Order</b> of the products with this keyword.</p></li>
+                    <li>To remove a product from this search term:<ol><li> click its <b>Delete</b>  button <img src="../Resources/Images/DeleteButton.png" />.</li><li>Scroll to the bottom of the page and Save your edits before continuing.</li></ol></li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Scheduling the search index</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>You can schedule how frequently you want the search index to refresh in the Search Index Scheduling panel. The index can be scheduled to refresh in 1 hour increments between 1 and 24 times per day.</p>
+                <p>
+                    <img src="Images/SearchIndexSchedule.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+                <h3>To schedule search engine indexing</h3>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Customers</b> &gt; <b>Searches</b>.</li>
+                    <li>In the <b>Search Index Scheduling</b> area, click <b>Show Details</b> if necessary to expand it.</li>
+                    <li>From the <b>Run Every x hours</b> list, select the number of hours between runs for each 24 hour period. The number you select will be the number of hours between updates of the full Lucene index.</li>
+                    <li>In the <b>Start at (CST)</b> field, choose the start time of day you want the index to refresh.</li>
+                    <li>In the <b>Page</b> column, select the pages you want to be cleared with each index completion. Each time a full index is completed, changes will only clear specific sub-category/product content.</li>
+                    <li>In the <b>Field</b> column, select the fields that you want to be updated hourly. The changes will only run if a product field for one of the flagged fields has been updated in the site manager within the past hour. They are not automatically updated.</li>
+                    <li>Click <b>Save</b>.</li>
+                </ol>
+                <p>The panel also displays the time of the last refresh and when the index is next scheduled to run. If you need to perform a manual refresh, you can do so at any time by clicking the <b>Refresh Index Right Now!</b> button <img src="../Resources/Images/RefreshButton.png" />.</p>
+                <p>You can also select to auto purge the cache when the Lucene index has completed. Select any or all of the pages to be cleared upon index completion. The clearing of those pages is done after the Lucene index finishes running, either based on the existing schedule or if it is being forced. Clicking Save or the Refresh Index Right Now! button doesn't clear at that time.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Adding custom content on the search results page</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>There are three ways to customize content in the Site Manager for customer search results.</p>
+                <p>
+                    <img src="Images/SearchCustomContent.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>To  select products that will display (upsell) when a customer's search reaches an empty search results page</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ol>
+                            <li>In <b>Content</b>, select <b>Customers</b> &gt; <b>Searches</b>.</li>
+                            <li>In the <b>Search Results Custom Content</b> area, click <b>Show Details</b> if necessary to expand it.</li>
+                            <li>Click on the link to open the Featured Products for Empty Search Results pop-up window.</li>
+                            <li>Filter to find the products you want to enable.</li>
+                            <li>When the results are returned, select the products you want to appear for empty search results.</li>
+                            <li>
+                                <p>Click <b>Save</b>.</p>
+                                <p><span class="note">Note:</span> If your site was built using raptor templates, note that your search results page must be wired for this functionality in order to take advantage of this feature.</p>
+                            </li>
+                        </ol>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>To create a custom 301 redirect</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>For example, to send the search phrase 'chair' to a specific product, you can set the URL <b>/searchresults.aspx?tSearch=chair</b> to the specific product detail page. This is set up in <b>Content</b> &gt; <b>Import/Export</b> &gt; <b>301 Redirects</b>; the link brings you to this page. This feature can also be used to send a customer to any kind of landing page, such as a sub-category page or <MadCap:popup><MadCap:popupHead>CYO</MadCap:popupHead><MadCap:popupBody>create your own</MadCap:popupBody></MadCap:popup> page.</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>To display search-term-specific content</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>The search results page can display search term-specific content if your site is using Lucene search. This is done at <b>Content</b> &gt; <b>Pages</b> &gt; <b>Featured Content</b>; the link brings you to this page.</p>
+                        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">If your site was built using raptor templates, note that your search results page must be wired for this functionality in order to take advantage of this feature.</div>
+                        <ol>
+                            <li>In <b>Content</b>, select <b>Pages</b> &gt; <b>Featured Content</b>, or use the link provided in <b>Content</b> &gt; <b>Customers</b> &gt; <b>Searches</b> &gt; <b>Search Results Custom Content area</b>.</li>
+                            <li>
+                                <p>Create a <b>Featured Content Group</b> for this custom content and assign a GeoTargetID that matches the desired search term by clicking the "Geo-Target Content" button.</p>
+                                <p>The <b>Featured Content Group</b> name can be anything, but we recommend including the search term for easier maintenance.</p>
+                            </li>
+                            <li>Within the Featured Content Group (above), create one or two <b>Featured Content</b> blocks:<ol><li>Title: LeftSearchNav: Content will display below the left navigation on the search results page</li><li>Title: TopSearchNav: Content will display above the search results on the search results page</li></ol></li>
+                            <li><b>Save</b>.</li>
+                        </ol>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Managing global synonyms</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Global synonyms allow your site to set keywords that search for more than just the term entered. For example, you might set up a search for "shirt" with the keywords shirt, blouse, and pullover, or "pants" could use the keywords pants, slacks, and trousers.</p>
+                <p>
+                    <img src="Images/GlobalSynonyms.png" />
+                </p>
+                <h3>To manage global synonyms</h3>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Customers</b> &gt; <b>Searches</b>.</li>
+                    <li>In the <b>Manage Global Synonyms</b> area, click <b>Show Details</b> if necessary to expand it.</li>
+                    <li>In the <b>Synonym List</b> field, type each unique search parameter, separated by commas.</li>
+                    <li>Click the <b>Add Synonym</b> + button. Each synonym search parameter will be added to the list on the page.</li>
+                    <li>Click <b>Save</b> at the bottom of the page.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Ranking search fields</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>You can give weight to search fields by ranking them accordingly.</p>
+                <p>
+                    <img src="Images/SearchFieldRankings.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+                <h3>To enable search fields you want to be active</h3>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Customers</b> &gt; <b>Searches</b>.</li>
+                    <li>In the <b>Search Field Rankings</b> area, click <b>Show Details</b> if necessary to expand it.</li>
+                    <li>Select the fields you want active by selecting their check boxes.</li>
+                    <li>Add numeric values to the  <b>Search Ranking</b> fields for each <b>Field Description</b>.</li>
+                    <li>Click <b>Save</b>.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Configuring and customizing your site's search page</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Define searchable fields and related weights in the Search Page Configuration area. </p>
+                <p>
+                    <img src="Images/CustomizingSearchPage.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To configure and customize the search page</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Customers</b> &gt; <b>Searches</b>.</li>
+                    <li>In the <b>Search Page Configuration</b> area, click <b>Show Details</b> if necessary to expand it.</li>
+                    <li>Select the search results options you want.</li>
+                    <li>Click <b>Save</b>.</li>
+                </ol>
+                <p>Search page configuration option details are:</p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Search results per page:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">  Choose the number of search results per page as either 12, 24, 36, or 48. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Hide "Sort By" options:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">  If selected, the <b>Sort By</b> drop-down menu will not appear on your site. The search options in the <b>Sort By</b> menu are: relevance, quantity, best selling, name (ascending and descending), and price (ascending and descending). </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Hide Category filter:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Removes the <b>Filter By Category</b> filter search on your site. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Enable partial word search:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Off by default, as it slows search down. However, if enabled, it is useful when a customer is unsure of a product's name. For example, if your product is called "Better Mousetrap," and a customer searches for "mouse" the product would be returned with the search.</p>
+                                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;"><b>Note:</b> The <b>Use AND logic instead of OR logic</b> (below) must be disabled (unchecked) for this feature to function properly. Using OR logic is required when using the partial word search. </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Hide Brand filter:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> When selected, the Filter by Brand name filter is not displayed on your site. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Hide Price filter:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Hides the <b>Filter by Price</b> filter on your site. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Only display unique products:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> If selected, only unique products will be returned with a customer's search results. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Show search relevance:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Displays the search relevance of results to a customers' search terms. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Show out-of-stock products in search results:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> If selected, out-of-stock products are displayed in customer search results. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Use AND logic instead of OR logic:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">  By default, "or" logic is used in search functionality; that is, a product is matched if ANY word in the search term is found. If selected, the search function uses "and" logic; that is, a product will only be matched if ALL words in the search term are found. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Display Order:</td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <p> 
+Use this drop-down menu to define the logic to be used to return results when a customer searches for a product.</p>
+                                <ul>
+                                    <li>Product Relevance</li>
+                                    <li>Product Page Views</li>
+                                    <li>Product Purchases
+ </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Seeing the results customer searches</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>You can search for terms that customers are using to search on your site in the Keyword Filter field. This area displays the search phrase, date of the most recent search for this phrase, and the number of results found.</p>
+                <p>
+                    <img src="Images/CustomerSearchResults.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+                <h3>To see customer search results data</h3>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Customers</b> &gt; <b>Searches</b>.</li>
+                    <li>In the <b>Results for Performed Searches</b> area, click <b>Show Details</b> if necessary to expand it.</li>
+                    <li>
+                        <p>Choose a date range and click the <b>Search</b> button.</p>
+                        <p>The search results appear below. You can:</p>
+                        <ol>
+                            <li><b>Select All</b> search terms</li>
+                            <li><b>Clear All</b> checked boxes</li>
+                            <li><b>Export</b> results to an Excel spreadsheet <img src="../Resources/Images/ExportToExcelButton.png" style="width: 20px;height: 20px;" /></li>
+                        </ol>
+                    </li>
+                    <li>To control brand image and customer experience, you can delete search terms and phrases as needed. Select the phrases you want to delete and click the <b>Delete</b> button .</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

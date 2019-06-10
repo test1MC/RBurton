@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Managing tax categories</title>
+        <meta name="description" content="This topic explains how to manage tax categories in the Site Manager. EOM allows you to select from three options for your site's sales tax settings. You can choose to use Aptos's tax rules, Avalara for address verification (AVS), or fully integrate with Avalara's AvaTax™ service." />
+    </head>
+    <body>
+        <h1>Managing tax categories<MadCap:concept term="Commerce" /></h1>
+        <p>Tax Categories are the highest level of tax data, which indicate the broad categories that each product will fall under. You can select from three options for your site's sales tax settings. You can use Aptos's tax rules, Avalara for address verification (AVS), or fully integrate with Avalara's AvaTax™ service which enables you to manage rules and sales tax codes for address verification and/or tax calculations. Learn more at Users &gt; Website Settings &gt; Payments.</p>
+        <p>This page in the Site Manager allows you to manage two tax functions: Tax Categories and Tax Category State Details rates respectively.</p>
+        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">To use this functionality, you must first ensure that the tax settings are enabled. To do so, go to <b>Users</b> &gt; <b>Website Settings</b> &gt; <b>Payments</b> and select <b>Calculate Sales Tax at Zip/Postal Code Level</b> and <b>Override Zip/Postal Code Tax Lookup with Category Tax</b>.</div>
+        <h2>To add a tax category</h2>
+        <ol>
+            <li>In <b>Commerce</b> &gt; <b>Settings</b> &gt; <b>Tax Categories</b>, click the <b>Add Tax Category</b> link to add a new tax category, and provide details for it:<ol><li><b>Category Name</b> - Enter the name of the tax category.</li><li><b>Category Code</b> - Enter the shortened code name of the tax category.</li></ol></li>
+            <li>Click the <b>Save</b> button at the bottom of the page. A confirmation message appears after the update has it has been successfully saved.</li>
+            <li>
+                <p>You can continue to add as many tax categories as needed for your site. You can also modify and delete tax categories as needed.</p>
+                <p>
+                    <img src="images/TaxCategories1.png" style="mc-thumbnail: hover; mc-thumbnail-max-width: 550px; mc-redacted: redacted;" />
+                </p>
+            </li>
+        </ol>
+        <h3>Examples</h3>
+        <p>These are some examples of tax categories that you might need to set up on your site.</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 290px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 235px;" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Category Name (examples)</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                        <p>Category Code (examples)</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Merchandise</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="text-align: center;">MERCH</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Clothing</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" style="text-align: center;">CLOTH</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Supplements</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" style="text-align: center;">FOOD1</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">Nutrition</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows" style="text-align: center;">FOOD2</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Note that if there are state tax categories for a particular tax category, you cannot delete the associated Tax Category.</p>
+        <h2>About tax category state details</h2>
+        <p>Use this functionality to edit sales tax percentages for the states in which you must collect sales tax. When using Aptos tax rules, the system will calculate sales tax based upon ZIP codes. Sales tax tables from Tax Data Systems are updated on a monthly basis. To use this feature, go to <b>Users</b> &gt; <b>Website Settings</b> &gt; <b>Payments</b> and select <b>Calculate Sales Tax at Zip/Postal Code Level</b> and <b>Override Zip/Postal Code Tax Lookup with Category Tax</b>.</p>
+        <p>Tax Category State Details rates section is where you set up US States per tax category, with the accompanying tax rate and whether shipping and/or handling need to be taxed for each state.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To add new state detail tax rates (one at a time)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Commerce</b> &gt; <b>Settings</b> &gt; <b>Tax Categories</b>, <b>Tax Category State Details</b>, use the drop-down menus to select the state and tax category (set up in the section above). Select the tax rate by using the up and down arrows highlighted in the illustration below. Choose whether or not shipping and handling will be taxed.</li>
+                    <li>Click the <b>+</b> Add button. The state and the settings will appear in the table below.</li>
+                    <li>
+                        <p><b>Save</b> the setting. Repeat for each state you set up, saving each state's settings before setting up the next state.</p>
+                        <p>
+                            <img src="images/TaxCategories2.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 520px;" />
+                        </p>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Importing / exporting Excel files</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>To import an Excel file in the Tax Category State details section, the file must be correctly formatted. Aptos recommends that you first export the spreadsheet to ensure you are using the most recent version before editing and importing the file.</p>
+                <p>The first row column headers are:</p>
+                <ul>
+                    <li><b>Category Name</b> - The tax category name. When creating a file, it is important to include this header row in the file.</li>
+                    <li><b>State Code</b> - US State Code (2 characters)</li>
+                    <li><b>Tax Rate</b> - Decimal rate representing the tax rate for that State/ Tax Category</li>
+                    <li><b>Shipping Taxed Y/N</b> - 1 character, Y or N</li>
+                    <li><b>Handling Taxed Y/N</b> - 1 character , Y or N</li>
+                    <li><b>Delete (Blank/True/False)</b> - Indicates whether or not to delete the record. Leave blank for no change.</li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h3>About product tax category administration</h3>
+        <p>After tax categories have been set up, you can proceed to assign individual products to their particular Tax Category for specific states if needed. Certain products may be taxed differently in various states. If the product is not assigned to a Tax Category, the product will not be taxed in that particular state. You will want to edit the information here for a specific product. If, for example, a state charges different rates for food vs. clothing; and you sell t-shirts and candy bars, you can edit the tax information for different products at <b>Content</b> &gt; <b>Product</b> &gt; <b>Add/Edit</b> &gt; <b>[product] Details</b> &gt; <b>Attributes</b> &gt; <b>Tax Category Management</b>.</p>
+        <p>To set up tax codes at the product level, work with your Client Manager to dedicate a field for storing tax codes. When you have finished, click to save your changes.</p>
+    </body>
+</html>

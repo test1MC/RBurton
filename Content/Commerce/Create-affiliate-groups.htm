@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Creating Affiliate Groups</title>
+        <meta name="description" content="Use this page to manage affiliate groups." />
+    </head>
+    <body>
+        <h1>Creating affiliate groups<MadCap:concept term="Commerce" /></h1>
+        <p>Use this page to manage affiliate groups. Each EOM instance has one default set of fulfillment rules, with priority values set at the supplier level. You can create a unique set of fulfillment rules for each affiliate group that overrides these default rules. Every order has one affiliate, and every affiliate belongs to one affiliate group so each order follows fulfillment rules for their group. There can only be one set of fulfillment rules per affiliate group. More than one affiliate group can be defined on the same EOM instance.</p>
+        <p>
+            <img src="images/AffiliateGroupsMain.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;">After defining an Affiliate group on the Affiliate Groups page, remember to set up Affiliate emails in <a href="../Content-and-products/Edit-email-masters.htm">Content &gt; Pages &gt; Emails</a>.</div>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Adding an affiliate group</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Commerce</b> &gt; <b>Affiliates</b> &gt; <b>Groups</b>, click the <b>Add New Group</b> button that appears below any other groups already defined.<p><img src="images/NewGroupGeneral.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" /></p></li>
+                    <li>Provide group information as needed:<ol><li>Affiliate group <b>Name</b>; required.</li><li><b>Brand</b> name (the Affiliate Group's chain) as used by this group if any. Not the same as 'brand' currently defined on a product.</li><li><b>Language</b> to be used with this group if different from the default; for cases where language is not identified on the order.</li><li><b>Currency</b> if different from the default; for cases where currency is not identified on the order.</li><li>Select <b>Disallow Discount Recalculation</b> to disallow discounts if the order originated from this affiliate group. Orders from the affiliate group will not use the EOM promotion engine to recalculate discounts—the discount amount from a 3rd party is maintained.</li><li>Select <b>Tax Inclusive Pricing</b> if this group’s product pricing includes <MadCap:popup><MadCap:popupHead>VAT</MadCap:popupHead><MadCap:popupBody>value added tax</MadCap:popupBody></MadCap:popup>.</li></ol></li>
+                    <li>
+                        <p>When done, click <b>Save</b>.</p>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Linking supplier groups to an affiliate group</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Commerce</b> &gt; <b>Affiliates</b> &gt; <b>Groups</b>, select the group to which you want to link one or more supplier groups.</li>
+                    <li>
+                        <p>Click <b>Supplier Groups</b>.</p>
+                        <p>
+                            <img src="images/LinkSuppliers.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                        </p>
+                    </li>
+                    <li>To link one or more new supplier groups, click the <b>Link Supplier Group</b> button, and select the groups you want to add.</li>
+                    <li>To remove a supplier group, click its red and white minus icon (-).</li>
+                    <li>To assign group priority, either enter a  priority number for a group in the field provided, or hover in it and click the up/down arrows that appear.</li>
+                    <li>
+                        <p>To see the list of suppliers and their priorities within that Supplier Group, click the group’s name next to the Group Priority ranking.</p>
+                        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Set up suppliers and priorities in <a href="Add-and-edit-suppliers.htm"><b>Commerce</b> &gt; <b>Suppliers</b> &gt; <b>Add/Edit</b></a>.</div>
+                    </li>
+                    <li>Click <b>Save</b> when done.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Defining custom fulfillment rules for an affiliate group</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Affiliate group fulfillment rules are used by EOM to choose one or more best suppliers for a specific order. For example, if the rules are set in this order for an affiliate group:</p>
+                <ol>
+                    <li>Priority</li>
+                    <li>Rank</li>
+                    <li>Distance</li>
+                    <li>Left Over</li>
+                    <li>Order Volume</li>
+                    <li>SKU Velocity</li>
+                </ol>
+                <p>suppliers within the group will be sorted by:</p>
+                <ul>
+                    <li>Priority first (note all suppliers with priority = 1 listed first),</li>
+                    <li>Rank second (all suppliers with an equal priority will then be sorted by rank),</li>
+                    <li>Distance third (all suppliers with equal rank will then be sorted by distance bucket value),</li>
+                    <li>Then by left over inventory fourth (all suppliers with the same distance bucket value will then be sorted by left over inventory (which sorts description), and so on.</li>
+                </ul>
+                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">A group uses the default global fulfillment rules unless you define at least one rule for the group. Note that “Priority” need not be the first rule. See <a href="#Fulfillm">Fulfillment rule descriptions</a> below for basic rule definitions.</div>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>To define custom fulfillment rules</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ol>
+                            <li>
+                                <p>In <b>Commerce</b> &gt; <b>Affiliates</b> &gt; <b>Groups</b>, select the group you want to edit.</p>
+                                <p>
+                                    <img src="images/FulfillmentRules1.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                                </p>
+                            </li>
+                            <li>
+                                <p>Click <b>Fulfillment Rules</b>.</p>
+                            </li>
+                            <li>To add one or more rules:<ol><li>Click the <b>Add Rule</b> button.</li><li>Select the rules you want to use from the list presented.</li><li><p>Click <b>Add</b>.</p><p><img src="images/FulfillmentRules2.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 220px;" /></p></li></ol></li>
+                            <li>
+                                <p>Re-order rules in the list by dragging-and dropping.</p>
+                                <p>
+                                    <img src="images/DragRules.gif" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" />
+                                </p>
+                            </li>
+                            <li>To remove a rule, click its red and white minus icon (-).</li>
+                            <li>Click <b>Save</b> when finished.</li>
+                        </ol>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                            <caption><a name="Fulfillm"></a>Fulfillment rule descriptions</caption>
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Rule</th>
+                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Distance</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> 
+Takes distance of the supplier from an order into account. All suppliers in the same distance bucket are treated equally.
+ </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Left Over Inventory</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Considers quantity of items remaining in the supplier's inventory after an order is completed. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Order Volume</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The total volume going to each store. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Priority </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Takes suppliers’ priority values into account. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Rank </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Based upon the total number of items in each order. EOM looks at the inventory of each supplier. For example, if an order contains 5 items, all suppliers that can fulfill the entire order will get a value of 5. Suppliers who can partially fulfill the order, will be ranked according to how many items in the order they can ship. Note that the ranking changes for each order depending upon how many items are in it. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">SKU Velocity </td>
+                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">Takes into account the quantity of each SKU a supplier has entered within a given time frame. </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Configuring a credit card processor</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <div class="warning" MadCap:autonum="&lt;b&gt;Warning: &lt;/b&gt;">Defining a credit card processor, or settings for it here, overrides any setting already set up for your website.</div>
+                <ol>
+                    <li>
+                        <p>In <b>Commerce</b> &gt; <b>Affiliates</b> &gt; <b>Groups</b>, select the group you want to edit.</p>
+                        <p>
+                            <img src="images/CreditCards.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                        </p>
+                    </li>
+                    <li>Click <b>Credit Card</b>.</li>
+                    <li>From the <b>Provider</b> list, select the Credit Card provider to use for this affiliate group.<div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Information required differs depending on the provider you select.</div></li>
+                    <li>Provide information required for the provider selected, and click <b>Save</b>.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Configuring PayPal for an affiliate group</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>
+                        <p>In <b>Commerce</b> &gt; <b>Affiliates</b> &gt; <b>Groups</b>, select the group you want to define PayPal <MadCap:popup><MadCap:popupHead>API</MadCap:popupHead><MadCap:popupBody>application programming interface</MadCap:popupBody></MadCap:popup> settings and credentials for.</p>
+                        <p>
+                            <img src="images/AffGroupPayPal.png" style="mc-thumbnail: hover;mc-thumbnail-max-height: auto;mc-thumbnail-max-width: 440px;" />
+                        </p>
+                    </li>
+                    <li>Click <b>PayPal</b>, and click the <b>Use Affiliate Group Settings</b> toggle to reveal the PayPal settings you can define for this group.<ol><li><p><b>Environment</b>; select if more than one environment in your organization.</p></li><li><p><b>API Username</b>; login name for the API; supplied by PayPal.</p></li><li><p><b>API Password / Confirm Password</b>; login password for the username supplied.</p></li><li><b>API Signature</b>; both the username and signature are provided by PayPal.</li></ol></li>
+                    <li>In the <b>Integration</b> area, choose whether funds are already captured, or will be captured on shipment.</li>
+                    <li><b>Save</b>.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Defining a different return address for an affiliate group</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>For affiliate groups, use this area if the return address and shipping service information for returns needs to be a location that's different than the origin store. This is the address that will be used on return labels if they’re generated and printed.</p>
+                <ol>
+                    <li>In <b>Commerce</b> &gt; <b>Affiliates</b> &gt; <b>Groups</b>, select the group you want to define a default return address for.</li>
+                    <li>
+                        <p>Click <b>Returns</b>.</p>
+                        <p>
+                            <img src="images/GroupAffReturn.png" style="mc-thumbnail: hover;mc-thumbnail-max-height: auto;mc-thumbnail-max-width: 550px;" />
+                        </p>
+                    </li>
+                    <li>Click the <b>Select Return Location</b> button, and search for and select the appropriate returns address for this group.</li>
+                    <li>In the <b>Default Shipping Method for Returns</b> area, select the appropriate <b>Carrier</b> and <b>Service</b> option.</li>
+                    <li><b>Save</b>.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

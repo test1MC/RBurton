@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="5012" MadCap:lastWidth="970">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Preparing for inventory counts<MadCap:concept term="Admin" /></h1>
+        <h3>Gather this information</h3>
+        <p>To prepare for an inventory count, find out these details:</p>
+        <ul style="list-style-type: circle;">
+            <li>merchandise to count</li>
+            <li>locations where the count will occur</li>
+            <li>valuation date</li>
+            <li>count date</li>
+            <li>count update type</li>
+            <li>formats to use for importing count files.</li>
+        </ul>
+        <p>You require this information to create inventory control documents (ICDs) in Inventory Management. See  for more about ICDs.</p>
+        <h3>Updates to styles and current retail</h3>
+        <p>Any styles that are to be counted must be included in the merchandise hierarchy on or before the count date.</p>
+        <p>Make sure that any permanent retail price changes to be in effect on or before the count date are in effect on or before the effective date.</p>
+        <p>You add and update styles in Product Management. See .</p>
+        <h3>Physical movement of inventory</h3>
+        <p>In Inventory Management verify these items so that the book inventory is as accurate as possible before you calculate and evaluate shrinkage.</p>
+        <p><span class="_Override" style="font-family: Tahoma;font-weight: bold;font-size: 9pt;line-height: 11pt;">PO and Unsolicited Receipts</span>
+        </p>
+        <p>If the status of these is Received, no action is required. The items have updated on hand quantities and can be included in the count. If goods have arrived in the warehouse or receiving store and are to be counted, change their status to Received so that they are not double counted.</p>
+        <p><span class="_Override" style="font-family: Tahoma;font-weight: bold;font-size: 9pt;line-height: 11pt;">Store Shipments</span>
+        </p>
+        <p>If the status is Sent because the goods have not yet arrived in the receiving store, no action is necessary. If goods have arrived in the receiving store and will be counted, change their status to Received so that they are not double counted.</p>
+        <p><span class="_Override" style="font-family: Tahoma;font-weight: bold;font-size: 9pt;line-height: 11pt;">RTVs</span>
+        </p>
+        <p>If the status is Returned, no action is necessary. If the status is Requested because authorization has not yet come from the vendor, include these units in the count file or adjust the count before you run a preliminary shrink report.</p>
+        <p><span class="_Override" style="font-family: Tahoma;font-weight: bold;font-size: 9pt;line-height: 11pt;">Shrinkage and User-Defined Adjustments</span>
+        </p>
+        <p>If the status is Submitted, no action is required. If the status is Preliminary, do not include them.</p>
+        <p><span class="_Override" style="font-family: Tahoma;font-weight: bold;font-size: 9pt;line-height: 11pt;">Transfers</span>
+        </p>
+        <p>If the status is Received, no action is necessary. If the status is Sent because the goods have not yet arrived in the receiving store, no action is necessary. However, if the goods arrive in the receiving store prior to the inventory date, do not be count them until they are received in Inventory Management.</p>
+        <p>See the relevant chapters in <span class="_Override" style="font-style: italic;">Inventory Management User Guide</span> for detailed information about these documents.</p>
+        <h3><a name="On_hand_inventory_report"></a>On hand inventory report</h3>
+        <p>Create a view in Query Designer that shows on hand inventory by status. This captures pre-count values that would otherwise be lost, and helps find areas where inventory might be overlooked or adjustments need to be made. Posting the count clears Unavailable – Discrepancy and Unavailable – Pending Shrink. The report retains a record of these values.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Posting the count does not clear user defined Unavailable statuses.</p>
+        <p>Prior to the count and or after posting, some user-defined Unavailable inventory statuses can require adjustment to prevent them resulting in a negative number of units with Available status. The report helps find these potential adjustments. See  for an example of this kind of adjustment.</p>
+        <p>If unavailable goods are physically absent from a count location, they can still be part of its inventory. For example, items with the status Unavailable – Out for Repair must be included in the count even though they are in a repair shop. The report helps you  identify such items.</p>
+        <h3>Count import definitions</h3>
+        <p>If your company uses a third party to count merchandise, they can use different formats for count files. In that case, you create or modify count import definitions before you import count information into the system.</p>
+        <p>File formats for importing inventory counts are defined in Enterprise Data Management. A file format identifies the fields in the file and the order in which they appear. There are two file formats, fixed and delimited.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>About fixed formats</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A fixed format means that fields in the file are in a specific order and that each field occupies a fixed number of positions in the record. For example, the location code can always be in positions 1 to 4 of a record, UPC is always in positions 5 to 18, and units counted of the UPC will are in positions 19 to 23.</p>
+                <table class="TableStyle-PatternedRows" style="width: 552px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col width="118px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="434px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Field</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                <p class="TableHeading">Description</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Required. An identifier assigned to the definition. Alphanumeric, can be up to 8 characters.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">Description</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Text describing the format so that a user knows which one to select.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Import type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Fixed or Delimited, as selected when creating the count import definition.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">Active</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Indicates that this entry is active. Selected by default.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">The field whose location within the record is being specified. Fields are entered in the order they appear in the file. Options are:</p>
+                                <p>Cost: For regular styles, the cost per unit counted. For pseudo styles, the total cost counted.</p>
+                                <p>Location: Location code of the store or warehouse the count is being done for.</p>
+                                <p>Retail: For regular styles, the retail per unit counted. For pseudo styles, the total retail counted.</p>
+                                <p>UPC: numeric code that uniquely identifies the merchandise at the style/color/size level.</p>
+                                <p>Units: Number of units counted of the UPC at the location.</p>
+                                <p>Zone: Area in the location being counted, such as front of store, window display, or stockroom. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">Start Position</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Position number of the first character of the associated field.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="FieldName">Length</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <p class="TableText">Number of characters the field will take in the record.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>To define a fixed file format</h3>
+                <ol>
+                    <li>In <b>Enterprise Data Management</b> select <b>General</b> &gt; <b>Inventory</b> &gt; <b>Count Import</b>.</li>
+                    <li>Click <b>Document</b> &gt; <b>New</b>.</li>
+                    <li>In <b>Import type</b> select <b>Fixed</b> &gt; <b>OK</b>.</li>
+                    <li>Enter a reference <b>Code</b> and <b>Description</b> for the file format.</li>
+                    <li>In <b>Type</b> select the first field that will appear in the record, and enter its <b>Start Position</b> and <b>Length</b>.</li>
+                    <li>Repeat for each field in the record.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>About delimited formats</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A delimited format means that the fields in the file are in a specific order but each field can be a different length in each record. To separate fields without knowing how long each field will be, you specify a delimiter, such as a comma, to signify the end of the field.</p>
+                <p class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">If a location code contains leading zeros (such as the 5&#8209;digit code 00237), the leading zeros must be included in both the field and the import definition.</p>
+                <table class="TableStyle-PatternedRows" style="width: 552px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col width="118px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <col width="434px" class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <td class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                <p class="TableHeading">Field</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                <p class="TableHeading">Description</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Required. An identifier assigned to the definition. Alphanumeric, can be up to 8 characters.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">Description</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Text describing the format so that a user knows which one to select.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Import type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p class="TableText">Fixed or Delimited, as selected when creating the count import definition.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p class="FieldName">Active</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p class="TableText">Indicates that this entry is active. Selected by default.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p class="FieldName">Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <p class="TableText">The field whose location within the record is being specified. Fields are entered in the order they appear in the file. Options are:</p>
+                                <p>Cost: For regular styles, the cost per unit counted. For pseudo styles, the total cost counted.</p>
+                                <p>Location: Location code of the store or warehouse the count is being done for.</p>
+                                <p>Retail: For regular styles, the retail per unit counted. For pseudo styles, the total retail counted.</p>
+                                <p>UPC: numeric code that uniquely identifies the merchandise at the style/color/size level.</p>
+                                <p>Units: Number of units counted of the UPC at the location.</p>
+                                <p>Zone: Area in the location being counted, such as front of store, window display, or stockroom. </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>To define a delimited file format</h3>
+                <p>In <span class="CharGUI">Enterprise Data Management</span>, select <span class="CharGUI">General</span>, <span class="CharGUI">Inventory</span>, <span class="CharGUI">Count Import</span>.</p>
+                <p>Click <span class="CharGUI">Document</span> &gt; <span class="CharGUI">New</span>.</p>
+                <p>In <span class="CharGUI">Import type</span>, select <span class="CharGUI">Delimited</span><span class="_Override" style="font-family: Tahoma;font-weight: bold;font-size: 9pt;line-height: 11pt;">&gt;</span><span class="CharGUI">OK</span>.</p>
+                <p>Enter a reference <span class="CharGUI">Code</span> and <span class="CharGUI">Description</span> for this file format.</p>
+                <p>Select a <span class="CharGUI">Delimiter</span> to use as a separator between fields in each record.</p>
+                <p>For <span class="CharGUI">Type</span>, select the fields in the order in which they will appear in the record.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

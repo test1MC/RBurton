@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="14129" MadCap:lastWidth="936">
+    <head>
+        <link href="../Resources/TableStyles/Simple.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Transaction scenarios<MadCap:concept term="Admin" /></h1>
+        <p>Transaction scenarios show where and how the movement of data affects values in <MadCap:popup><MadCap:popupHead>Infobase</MadCap:popupHead><MadCap:popupBody>Infobase, the Aptos transactional database, is a collection of tables that stores the results of merchandising transactions.</MadCap:popupBody></MadCap:popup>. Some scenarios show the effects of different parameter settings on data flow. The <a href="Transaction table.htm">transaction table</a> shows how the transaction types update the Infobase tables.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="Average_cost_calculation"></a>Average cost calculation</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Average cost is determined by dividing the total on hand cost by the total on hand units.</p>
+                <p>If calculating the average cost at the style level, then the on-hand cost and units for all SKUs belonging to a style are totaled at either the location, jurisdiction or chain level. In this case, all SKUs belonging to that style are posted with the same average cost.</p>
+                <p>If calculating the average cost at the SKU level, then the system will only total the on-hand cost and units for a SKU, resulting in a different average cost by SKU. As is the case with the style average cost, it will total the SKU on-hand cost and units at the location, jurisdiction or chain level.</p>
+                <h3><a name="Average_cost_levels"></a>Average cost levels</h3>
+                <p>Depending on the system parameters for average cost levels, average cost can be calculated at these levels:</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Style/chain</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>The style/chain average cost is determined by dividing the style/chain  total on hand cost by the style/chain total on hand units.  The on-hand cost and on-hand units for all locations  across the chain (and across all jurisdictions) are summed up by style. Chain average costs are calculated in the home currency using home costs and are converted to location currency when posting to location costs using the domestic equivalent rate of the location currency</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Style/jurisdiction</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>The style/jurisdiction average cost is determined by dividing the style's total on-hand cost by the style's total on-hand units for the jurisdiction. The on-hand cost and on-hand units for all locations that belong to the jurisdiction are summed up by style.</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Style/location</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>The style/location average cost is determined by dividing the style's total OH cost by the style total OH units for the location. The on-hand cost and on-hand units for only the location are summed up by style.</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>SKU/jurisdiction</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>The SKU/jurisdiction average cost is determined by dividing the SKU's total on-hand cost by the SKU's total on-hand units for the jurisdiction. The on-hand cost and on-hand units for all locations that belong to the jurisdiction are summed up by SKU.</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>SKU/location</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>The SKU/location average cost is determined by dividing the SKU's total OH cost by the SKU total OH units for the location. The on-hand cost and on-hand units for only the location are summed up by SKU.</p>
+                        <p>If SKU average cost cannot be calculated for the reasons listed below, then the style's average cost will be used.</p>
+                        <p>Either or both the total OH cost or total OH units for the SKU is negative</p>
+                        <p>There are no transactions in IB Inventory for that SKU in the entire chain (i.e. style has not been received in the chain). </p>
+                        <p>There are no transactions in IB Inventory for that SKU and for the jurisdiction that the average cost is needed for (i.e. style has not been received in that jurisdiction). Applicable only when average cost location level parameter is Jurisdiction.</p>
+                        <p>There are no transactions in IB Inventory for that SKU and for the location that the average cost is needed for  (i.e. style has not been received in that location). Applicable only when average cost location level parameter is location.</p>
+                        <p>If the style/location average cost cannot be calculated for the reasons listed below, then the style's last net final cost will be used as the average cost</p>
+                        <p>Either or both the total OH cost or total OH units for the style is negative</p>
+                        <p>There are no transactions in IB Inventory for that style in the entire chain (i.e. style has not been received in the chain).</p>
+                        <p>There are no transactions in IB Inventory for that style and for the jurisdiction that the average cost is needed for (i.e. style has not been received in that jurisdiction). Applicable only when average cost location level parameter is Jurisdiction.</p>
+                        <p>There are no transactions in IB Inventory for that style and for the location that the average cost is needed for (i.e. style has not been received in that location). Applicable only when average cost location level parameter is location.</p>
+                        <p>If the style average cost (regardless of the location level) cannot be calculated for the reasons listed above and that style does not have a last net final cost, then the style's goal IMU% (from its merchandise group characteristics) will be used as the average cost.</p>
+                        <p>Rounding takes place on the result of the average cost calculation. It is rounded to two decimal places; values greater than or equal to 0.995 are rounded up to 1.00, and values less than 0.995 are rounded down to 0.99.</p>
+                        <p>The formula for calculating average cost is:</p>
+                        <table class="TableStyle-SimpleWithPadding" style="width: 192px;caption-side: top;mc-table-style: url('../Resources/TableStyles/Simple.css');" cellspacing="0">
+                            <col width="36px" class="TableStyle-SimpleWithPadding-Column-Column1" />
+                            <col width="120px" class="TableStyle-SimpleWithPadding-Column-Column1" />
+                            <col width="36px" class="TableStyle-SimpleWithPadding-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                                    <td rowspan="2" class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">
+                                        <p class="Body_Text" style="text-align: left;font-family: Symbol;font-weight: normal;font-style: normal;font-size: 12pt;letter-spacing: 0em;color: #000000;mc-hyphenate: never;text-decoration: none;">(</p>
+                                    </td>
+                                    <td class="TableStyle-SimpleWithPadding-BodyE-Column1-Row1">
+                                        <p>On Hand Cost</p>
+                                    </td>
+                                    <td rowspan="2" class="TableStyle-SimpleWithPadding-BodyD-Column1-Row1">
+                                        <p class="Body_Text" style="margin-top: 0pt;font-family: Symbol;font-weight: normal;font-style: normal;font-size: 12pt;letter-spacing: 0em;color: #000000;text-decoration: none;">)</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-SimpleWithPadding-Body-Row1">
+                                    <td class="TableStyle-SimpleWithPadding-BodyB-Column1-Row1">
+                                        <p>On Hand Units</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Transfers</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: left;">
+                    <img src="Images/Transfer Calc.png" style="width: 822.8573px;height: 365.713px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 0.9791565px;" />
+                </p>
+                <p style="text-align: left;">
+                    <img src="Images/Transfer Calc _1.png" style="width: 822.8573px;height: 564.1143px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 1.002197px;" />
+                </p>
+                <p style="text-align: left;">
+                    <img src="Images/Transfer Calc _2.png" style="width: 822.8573px;height: 531.1987px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 0.9928589px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Store shipments</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: left;">
+                    <img src="Images/Store Shipments.png" style="width: 822.8573px;height: 448.9133px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 1.00296px;" />
+                </p>
+                <p style="text-align: left;">
+                    <img src="Images/Store Shipments _1.png" style="width: 822.8573px;height: 466.2845px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 1.006561px;" />
+                </p>
+                <p style="text-align: left;">
+                    <img src="Images/Store Shipments _2.png" style="width: 822.8573px;height: 448.9133px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 1.00296px;" />
+                </p>
+                <p style="text-align: left;">
+                    <img src="Images/Store Shipments _3.png" style="width: 822.8573px;height: 225.8275px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 0.9893036px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Price changes</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: left;">
+                    <img src="Images/Price Changes.png" style="width: 822.8573px;height: 459.8851px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 0.9820557px;" />
+                </p>
+                <p style="text-align: left;">
+                    <img src="Images/Price Changes _1.png" style="width: 822.8573px;height: 528.457px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 1.033203px;" />
+                </p>
+                <p style="text-align: left;">
+                    <img src="Images/Price Changes _2.png" style="width: 822.8573px;height: 584.2281px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 0.9647827px;" />
+                </p>
+                <p style="text-align: left;">
+                    <img src="Images/Price Changes _3.png" style="width: 822.8573px;height: 514.7415px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 1.023834px;" />
+                </p>
+                <p style="text-align: left;">
+                    <img src="Images/Price Changes _4.png" style="width: 822.8573px;height: 531.1987px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 0.9928589px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Receipts</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: left;">
+                    <img src="Images/Receipts.png" style="width: 822.8573px;height: 436.1136px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 1.026703px;" />
+                </p>
+                <p style="text-align: left;">
+                    <img src="Images/Receipts _1.png" style="width: 838.8566px;height: 544.9709px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 1.00946px;margin-bottom: 1.031738px;" />
+                </p>
+                <p style="text-align: left;">
+                    <img src="Images/Receipts _2.png" style="width: 822.8573px;height: 173.713px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 0.9792175px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Adjustments</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: left;">
+                    <img src="Images/Adjustments.png" style="width: 822.8573px;height: 498.2861px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9993896px;margin-bottom: 0.9993286px;" />
+                </p>
+                <p style="text-align: left;">&#160;</p>
+                <p style="text-align: left;">
+                    <img src="Images/Adjustments _2.png" style="width: 822.8573px;height: 459.8851px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 0.9820557px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Purchase orders</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: left;">
+                    <img src="Images/Purchase Orders.png" style="width: 822.8573px;height: 462.6288px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 1.012329px;" />
+                </p>
+                <p style="text-align: left;">
+                    <img src="Images/Purchase Orders _1.png" style="width: 822.8573px;height: 590.6276px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 0.9892578px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Allocations</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: left;">&#160;</p>
+                <p style="text-align: left;">
+                    <img src="Images/Allocations _1.png" style="width: 822.8573px;height: 341.9415px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 1.023804px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Sales, returns and discounts</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: left;">
+                    <img src="Images/Sales Returns &amp; Discounts.png" style="width: 835.8566px;height: 475.4285px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 1.027466px;margin-bottom: 0.9885254px;" />
+                </p>
+                <p style="text-align: left;">
+                    <img src="Images/Sales Returns &amp; Discounts _1.png" style="width: 832.8566px;height: 470.856px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9735107px;margin-bottom: 1.033905px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Returns to vendor</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: left;">
+                    <img src="Images/RTV.png" style="width: 822.8573px;height: 481.8279px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 1.013031px;" />
+                </p>
+                <p style="text-align: left;">
+                    <img src="Images/RTV _1.png" style="width: 822.8573px;height: 379.4285px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 0.9885559px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Physical inventory</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: left;">
+                    <img src="Images/Physical Inventory.png" style="width: 822.8573px;height: 492.7997px;margin-left: 1.00008px;margin-top: 1.00008px;margin-right: 0.9849854px;margin-bottom: 0.9921265px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

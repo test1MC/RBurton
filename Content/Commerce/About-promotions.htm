@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>About promotions</title>
+        <meta name="description" content="Using the Aptos EOM site manager you can create and manage your own stackable promotion codes and campaigns. Create promotions to reward customer loyalty or encourage new customers." />
+    </head>
+    <body>
+        <h1>About stackable promotions</h1>
+        <p>Using the Aptos EOM site manager you can create and manage your own stackable promotion codes and campaigns. Create promotions to reward customer loyalty or encourage new customers.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Configuring promotion code settings</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Before you get started setting up promotions, there are website settings that need to be configured by a site administrator.</p>
+                <p><b>Users</b> &gt; <b>Website Settings</b> &gt; <b>Site Layout</b> &gt; <b>Website Settings</b> &gt; <b>Promotions and Discounts</b></p>
+                <ul>
+                    <li><b>Use new promotion engine</b>. This setting will override the existing promotion code engine. You’ll notice that the Old promotion engine settings will be inaccessible.</li>
+                    <li><b>Allow promotion input on the checkout page (panel checkout only).</b> Enabling this functionality will allow your customers to enter a promo code on the checkout page. If not enabled, your customers will only be able to enter a promo code on the cart page and on some pop-up carts.</li>
+                </ul>
+                <ul>
+                    <li><b>Skip re-entering shipping information after applying promotion during checkout.</b> When a promo code is added to an order, the system brings you back to the <b>Shipping</b> tab of the order. When this setting is enabled, you are not returned to the <b>Shipping</b> tab of the order.</li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Stackable promotion rules</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Only one item level promotion can be applied at the same time.</p>
+                <ul>
+                    <li>If more than one promotion applies, the promotion with the earliest start date will be used.<ul><li>If the promotion start dates are the same, the one with the newest create date will be used.</li><li>If the create dates are the same, the lowest promotion ID will be used.</li></ul></li>
+                    <li>If a manual promotion code is applied to the cart but one or many items it applies to have an automatic promotion, the manual promotion will be honored over the automatic promotion.</li>
+                    <li>More than one order level promotion can be applied to an order at the same time.</li>
+                    <li>Shipping promotions can be applied on top of an item promotion code, and then any order level promotion code. Free shipping promotions cannot be enabled in other promotion types. For example, if you configure 10% off orders more than $50, you cannot add free shipping promotion to the same promotion type. The free shipping promotion will need to be configured separately.</li>
+                    <li>
+                        <p>The order that promotion codes are applied is:</p>
+                        <p>1. item-level promotions</p>
+                        <p>2. order-level promotions</p>
+                        <p>3. shipping-level promotions.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Only one free shipping method can be displayed per order.</li>
+                </ul>
+                <p>Automatic promotions are not removable by customers or CSR’s from the shopping cart, checkout or retail order screen.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

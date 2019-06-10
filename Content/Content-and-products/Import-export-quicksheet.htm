@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Importing and exporting Quicksheet data</title>
+        <meta name="description" content="Use the QuickSheet to quickly update the specified products with options fields available based on a given key field. This is a great way to quickly make a few updates without the need to re-import an entire spreadsheet." />
+    </head>
+    <body>
+        <h1>Importing and exporting QuickSheet data<MadCap:concept term="CP" /></h1>
+        <p>Use the QuickSheet to quickly update the specified products with options fields available based on a given key field. With the QuickSheet you can specify a key field along with other fields to update. The QuickSheet focuses especially on inventory and pricing, but it can be used for several functions. This is a great way to quickly update fields in the platform via a spreadsheet without the need to re-import the entire product or product with options spreadsheet. To learn more about the products product with options spreadsheet, the document <a href="../Resources/PDFs/Products-with-Options-Guide.pdf" target="_blank">Using the Products with Options Spreadsheet</a>. This guide defines all the columns in the spreadsheet, identifies required fields and explains the information needed for each field.</p>
+        <p>Use QuickSheet to update existing products but not to import new products.</p>
+        <p>
+            <img src="images/ImportExportQuickSheet.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <h2>About the Select Key</h2>
+        <p><MadCap:variable name="DC.EOM short" /> updates any item at both product and option level that matches the key field. There are three available keys that can be used. These are:</p>
+        <ul>
+            <li>Product/Option SKU</li>
+            <li>Alternate SKU</li>
+            <li>Product/Option UPC Code</li>
+        </ul>
+        <h3>To import/export data using QuickSheet</h3>
+        <ol>
+            <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>QuickSheet</b>.</li>
+            <li>Select the key to use from the list.</li>
+            <li>Select the <b>Fields to Update</b>; hold down the Ctrl key to select more than one.</li>
+            <li>
+                <p>In the <b>Spreadsheet Row Size</b> field, enter the number of records you plan to import and/or update.</p>
+                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;"> This number is necessary only if you are planning on manual data entry, with the default of 500 rows.</div>
+            </li>
+            <li>
+                <p>Click the <b>Download Spreadsheet Template</b> button <img src="images/GenerateTemplateButton.png" style="width: 29px;height: 17px;" />.</p>
+                <p>The spreadsheet opens in the bottom of the window, and the <b>Import</b>, <b>Export</b> and <b>Paste</b> functions become available.</p>
+            </li>
+            <li>
+                <p>Use the appropriate update method; it is similar in concept to that of Google Docs:</p>
+                <ol>
+                    <li>
+                        <p><b>Paste (with Internet Explorer)</b>link – Use <b>Paste from Excel</b> to copy and paste rows and columns directly from an Excel spreadsheet into the spreadsheet in the Site Manager. The paste functionality only works with Internet Explorer  To do this, click in the starting cell and click the <b>Paste from Excel (IE Only)</b> link, and the page reloads the spreadsheet with the pasted content.</p>
+                    </li>
+                    <li>
+                        <p><b>Export template</b>button – When you have determined the fields you want to update, you can export the template you created, complete with the column headings. When saved successfully, you will see a message that the QuickSheet has been created successfully. You can use template can be used to make edits and import it back into the system.</p>
+                    </li>
+                    <li>
+                        <p><b>Import</b> button – When your spreadsheet is set up on the screen with both the key and selected fields you want to update, you can import an Excel spreadsheet into <MadCap:variable name="DC.EOM short" />. Click the <b>Browse</b> button, find the file, and import it. The file must be in .xls format and the first sheet must be named <b>Sheet1</b>. After importing the file, it will re-load the grid with the saved content.</p>
+                    </li>
+                    <li>
+                        <p>Manual data entry – You can quickly enter the in the Key and Update Fields and <MadCap:variable name="DC.EOM short" /> allow you to update the database accordingly. If you make manual entries, note that Google Chrome and Firefox do not allow for single cell updates without posting data back and re-loading.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>Click <b>Save</b> when done.</li>
+        </ol>
+        <table class="TableStyle-PatternedRows" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+            <caption><b>QuickSheet spreadsheet fields</b>
+            </caption>
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Field</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Active</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Exists at both the product and product option level. When added to the spreadsheet, just as with the other existing fields such as quantity<MadCap:variable name="DC.EOM short" /> checks against the key field at both product and option level to update. Valid values for this field include 0/1 or true/false. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Deleted</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Exists at only the product level. Valid values for this field include 0/1 or true/false.
+ </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Bin Number</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Exists at product and product option level. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Classificiations/ Attributes</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                        <p> Exists at product and product option level. For Classification/Attributes, match the format used in spreadsheet importing</p>
+                        <div class="example" MadCap:autonum="&lt;b&gt;Example: &lt;/b&gt;">Color=Black,Grey|Features=Impact Resistant,Water Resistant</div>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Cost</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Exists at product and product option level. Valid values for these fields are numerical. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Display Order</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Used to view, add, or change the display order of products and/or products with options. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Expiration Date</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Exists at product level. Valid values for these fields are numerical. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Long Description</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Product details or features. Exists at product level. Valid values for these fields is text. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">MAP Price</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Exists at product level. Valid values for these fields are numerical. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Meta Description</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Exists at product level. Valid values for these fields is text. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Meta Keywords</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Exists at product level. Valid values for these fields is text. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Meta Title</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Exists at product level. Valid values for these fields is text. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">MSRP</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Exists at product level. Valid values for these fields are numerical. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">MSRP Max</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Exists at product level. Valid values for these fields are numerical. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">On Sale Price</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Exists at product and product option level. Valid values for these fields are numerical. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Selling Price</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Exists at product and product option level. Valid values for these fields are numerical. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Shipping Add-On Amount</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Exists at only the product level. Valid values for this field include any decimal amount up to 2 places (for example, 99.50). </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Quantity</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Exists at product and product option level. Valid values for these fields are numerical. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Tier Group ID</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Used to update Tier Pricing for products. When you put a product in a Tier Group, the tier price is required.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Tier Price</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Exists at product level. Valid values for these fields are numerical. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Extra 1 - Extra 10</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> Exists at product level and product option level depending upon how they are used. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Display Name</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">  Used to edit or change the front end display name of products. In addition, a 301 redirect will be automatically created. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Editors Choice</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> When <b>true</b>, and your site is wired accordingly, the product shows as an editor's choice or featured product. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Image Name</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The name of the image file you would like to display.  Enter a file path if necessary. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">BundleItemsShipTogether</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> With this rule in place, if any item in the bundle is on backorder, all items in the bundle will be placed in backordered status until all items are available to ship. This rule applies to both product bundles and cross-sell groups set to 'Must Ship Together'. A <b>true</b> value sets the 'Must Ship Together' flag. A <b>false</b> value removes the flag. By default, or if column is blank or NULL, column will be set to <b>false</b>. </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">ProductIsDonation</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                        <p>  You can take donations from your customers for various causes at checkout. This is a digital good which appears on the <b>Place Order</b> tab of checkout. In addition to configuring charities at <b>Content</b> &gt; <b>Products</b> &gt; <b>Add/Edit</b>, donation products can be configured here. Your customers will be given the ability to donate a specific amount or round their order up to the nearest dollar. You can also display multiple charities at checkout.</p>
+                        <p><b>True</b> sets the 'ProductisDonation' flag. <b>False</b> removes the flag. By default, if the column is blank or NULL, it is set <b>false</b>. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">DonationAmtSelectedAtCheckout</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                        <p>    Your customers can be given the ability to donate a specific amount or round their order up to the nearest dollar.</p>
+                        <p><b>True</b> sets the 'DonationAmtSelectedAtCheckout' flag. <b>False</b> removes the flag. By default, if the column is blank or NULL, column will be set to <b>false</b>. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

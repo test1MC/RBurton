@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Adding and editing product rules</title>
+        <meta name="description" content="Use the Product Rules to define specific rules for products based on a set of conditions. Creating a product rule automatically creates an associated job in the site manager. Product rules can replace many manual tasks by allowing you to create functions (rules) for repetitive tasks. Once set up, these tasks can be configured to automatically repeat as often as needed." />
+    </head>
+    <body>
+        <h1>Adding product rules<MadCap:concept term="CP" /></h1>
+        <p>The <b>Product Rules</b> area of the site manager gives site administrators the ability to define specific rules for products based on a set of conditions. For example, you can schedule a product rule to help manage inventory by placing items on sale that meet the criteria you select. So, if a product sale price is greater than 30% of the product price, the product will sell in the sale sub-category.</p>
+        <p>Another use is to set up rules when adding new products to your site. You can set up a product rule to make certain a product is ready to be published to your site. For example, if a product contains items you specify such as: title, product description, product image, pricing, etc, it will be flagged and automatically be changed from inactive to active when the product rule runs.</p>
+        <p>Other uses are setting up automated categorization and automated badging.</p>
+        <h2>Understanding the Product Rules page</h2>
+        <p>The Product Rules page is where you can create, manage and view product rules.</p>
+        <p>
+            <img src="images/product-rules.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 580px;" />
+        </p>
+        <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;">For the best results and to ensure accuracy, it is recommended that you create rules on your staging site first to test, and then recreate the tested rule on your live site.</div>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Searching for existing rules</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>To find current and past rules that have already been configured in the system, use the search functionality.</p>
+                <ul>
+                    <li><b>Rule Name</b> — If known, search by the name of the rule.</li>
+                    <li><b>Rule Type</b> — The rule type.</li>
+                    <li><b>Rule Category</b> — These categories are created when a product rule is set up.</li>
+                    <li><b>Include Inactive Rules</b> — If selected, the search results will include current and inactive rules. Inactive rules are rules that have already run.</li>
+                </ul>
+                <p>Click the <b>Search</b> button. The search results will be displayed on the page.</p>
+                <p>In addition to the items defined above, you will also see two other columns displayed in the table. The information displayed here will help you see at-a-glance the last action of a job and the last time a particular rule ran. This gives you more visibility before clicking into a rule.</p>
+                <ul>
+                    <li><b>Action</b> — This column will populate with either Update or Report based on what is selected for each rule.</li>
+                    <li><b>Last Run</b> — This column will display the last time the job that runs the rule was actually run.</li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Editing rules</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Click the <b>Edit</b> button to edit a rule. You can edit the rule search, actions, and the rule schedule. You can also reschedule an inactive rule.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Adding new product rules</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>From <b>Content</b> &gt; <b>Tasks</b> &gt; <b>Product Rules</b>, click the <b>Add New Rule</b> button. This opens a new page.</p>
+                <p>Rule conditions are comprised of two parts, a search and an action. Searches and actions are composed of three parts: field, operation, and value.</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Search area</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>In the <b>Search</b> area, configure the triggers for the rule.</p>
+                        <p>
+                            <img src="images/ProductRules2.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 560px;" />
+                        </p>
+                        <p style="font-weight: bold;">Rule Type</p>
+                        <p>Select the <b>Rule Type</b> you want to configure. (Product type is currently the only active rule type.)</p>
+                        <p><b>AND/OR</b> — Select either And/Or for the operations. You can only choose one for each rule.</p>
+                        <p style="font-weight: bold;">Add Group</p>
+                        <p>Select <b>Add Group</b> to further configure your rule. You must choose either And or Or for the operation. You can add more group rules by selecting the (+) icon to add another row.</p>
+                        <p>The <b>Search</b> fields define the set of conditions that need to be returned in order to run the rule. You can set any number of search conditions, but be sure that the logic makes sense to eliminate the possibility for conflicts. You will also want to make sure the applied conditions for the Product Rule Job does not conflict with any other jobs that have been scheduled to run.</p>
+                        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Search and Action fields are configured at <a href="../Customers/Listings.htm"><b>CRM</b> &gt; <b>Communications</b> &gt; <b>Listings</b></a>.</div>
+                        <ul>
+                            <li><b>Column #1 (Field)</b>: The first field column will populate a dropdown list of all possible database values that can be set as a rule trigger. For instance, the Display Name will tell the rule to check the value of a product's display name.</li>
+                            <li><b>Column #2 (Operation)</b>: The second column will populate a dropdown list of the possible boolean and non-boolean operations that you can choose based on the database field selected. For instance, if you choose the Equal To operation, then the rule will check whether or not a product's display name is equal to a certain value.</li>
+                            <li><b>Column #3 (Value)</b>: The last column will either provide a free-entry text box  or a drop-down menu where you can enter the value you want to check against when running the rule. For instance, if you enter a value of Plaid Vest, then the rule will make a database check saying that if a product's display name is equal to Plaid Vest, then apply the defined target updates.</li>
+                        </ul>
+                        <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;">The <b>Value</b> field is case sensitive so always be sure to verify the accuracy of your entry so that the expected result is produced.</div>
+                        <p>If you want to add additional search criteria, select the (<b>+</b>) icon. This will create a new row where you can edit the field, the operation, and value. Continue making your selections. Select the (-) minus icon if you want to remove a row.</p>
+                        <p style="font-weight: bold;">Building Formulas</p>
+                        <p>The built-in calculator can be used to create a date or price formula. It can be used to compare one field to another. Formulas are especially useful when setting up repetitive tasks. You can use this to create ranges without the need to create multiple rules.</p>
+                        <div class="example" MadCap:autonum="&lt;b&gt;Example: &lt;/b&gt;">You could use a formula to build a job to find all products created in the previous 10 days.<br /><br />The [Product Created] is [Less Than or Equal To] [Today] -10D.</div>
+                        <p style="font-weight: bold;font-style: italic;">To build a formula:</p>
+                        <ol>
+                            <li>Select a field you want to add to the formula from the drop-down menu.</li>
+                            <li>Click the (<b>+</b>) button and the token will be added to the formula field below.</li>
+                            <li>Add the function you want to use for this formula.<br />There are four allowed characters: +, -, %, and $.</li>
+                            <li>
+                                <p>Click <b>Done</b> to add the formula to the search.</p>
+                                <p>
+                                    <img src="images/5-prod-rules.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 540px;" />
+                                </p>
+                            </li>
+                        </ol>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Actions area</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>Each rule can either be updated or have a report generated for it.</p>
+                        <p>
+                            <img src="images/4-prod-rules.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 560px;" />
+                        </p>
+                        <p><b>Update</b>
+                        </p>
+                        <p>An update updates all fields to the next field.</p>
+                        <ul>
+                            <li><b>Column #1 (Field)</b>: The field column will populate a dropdown list of all possible database values that can be set as a rule action. For instance, selecting Cost will tell the rule to change the value of a product's cost.</li>
+                            <li><b>Column #2 (Operation)</b>: The operation column will populate a dropdown list of the possible boolean and non-boolean operations that you can choose based on the database field selected. For instance, if you choose the Update To operation, then the rule will update a product's cost to a new defined value.</li>
+                            <li><b>Column #3 (Value)</b>: The value column provides a free-entry text box or drop-down menu where you can enter a new database value for the target field. For instance, if you enter a value of 20, then the rule will lookup the Cost field for the trigger field and update the cost value to 20.</li>
+                        </ul>
+                        <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;">The <b>Value</b> field is case sensitive so always be sure to verify the accuracy of your entry so that the expected result is produced.</div>
+                        <p>If you want to add more updates, click the (<b>+</b>) icon. This creates a new row where you can edit the field, operation, and value. Continue making your selections.</p>
+                        <p><b>Report</b>
+                        </p>
+                        <p>The report action generates a file of all products that meet the criteria.</p>
+                        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">It is recommended that you always pull a report first, before scheduling an update of the rules. This will ensure all the fields you have identified are functioning properly.</div>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Scheduling a Rule Job</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Use the <b>Schedule</b> area to set when the rule will run. Rules can be run one time, or set up to repeat as often as needed. The product rule job will automatically pull in the product rule ID into the <b>Custom 1</b> field of the job step so that it knows what checks to make when the job is run. Bear in mind that the rule will only apply if all trigger conditions are met. The possible scheduling settings are listed in the table below.</p>
+                <p>
+                    <img src="images/3-prod-rules.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 560px;" />
+                </p>
+                <table class="TableStyle-PatternedRows" style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css'); margin-left: 0; margin-right: auto;" cellspacing="0">
+                    <caption>Schedule settings</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1" colspan="2">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Active</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>To schedule the product rule job, make sure the job is set to Active.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Rule Name</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Give the rule a unique name.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" rowspan="2">
+                                <p>Rule Category</p>
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p style="font-style: italic;">Existing Categories</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Select one of the <b>Existing Categories</b> from the menu.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p style="font-style: italic;">New Category</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Select <b>New Category</b> from the drop-down menu and a new field will be displayed. Enter the new <b>Category Name</b> here.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" rowspan="2">
+                                <p class="FieldName">Schedule Type</p>
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName" style="font-style: italic;">One-Time Only</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>		Choose the <b>One Time Only</b> radio button. When you choose this option, the job will only run one time.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName" style="font-style: italic;">Repeats</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	More scheduling options will be displayed if the <b>Repeats</b> radio button is selected.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" rowspan="4">
+                                <p>Repeats</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Configure these additional settings for repeating jobs. Displays if the <b>Repeats</b> radio button (above) is selected.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName" style="font-style: italic;">Daily	</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Select the days of the week and the exact time you want the job to run.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName" style="font-style: italic;">Weekly	</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Enter the number of weeks and choose the time you want the job to run.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName" style="font-style: italic;">Monthly	</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Select the exact time you want the job to run each month.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" rowspan="2">
+                                <p class="FieldName">Time	</p>
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName" style="font-style: italic;">Once	</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>For jobs running one time, select the Once radio button and choose the time.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName" style="font-style: italic;">Repeats</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	The daily frequency will occur every X minutes depending upon the number entered in the field. In addition, set a <b>Daily Start</b> time and a <b>Daily End</b> time.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Starts on</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Set the start date here.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">
+                                <p class="FieldName">Ends</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">
+                                <p>Displays only if the schedule is repeating. Set the end date here.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><b>Save</b> the scheduled settings.</p>
+                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">While you can schedule jobs according to your local time set in <b>Users</b> &gt; <b>Website Settings</b>, keep in mind that the Aptos servers are on Central Time.</div>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

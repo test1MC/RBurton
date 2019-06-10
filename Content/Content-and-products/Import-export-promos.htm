@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Importing and exporting promotions</title>
+        <meta name="description" content="Use this spreadsheet to import and export all promotion codes on your site. You can export all deleted promo codes by themselves or include all deleted promo codes when exporting a file." />
+    </head>
+    <body>
+        <h1>Importing and exporting promotions<MadCap:concept term="CP" /></h1>
+        <p>Use this spreadsheet to import and export all promotion codes on your site. You can export all deleted promo codes by themselves or include all deleted promo codes when exporting a file.</p>
+        <p>
+            <img src="images/ImportExportPromosMain.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;"> When updating by spreadsheet, you should always export first to ensure you are using the most recent spreadsheet version. This will also guide you on the proper format for each column and row as well as which fields are required.</div>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To export promotions</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Promotions</b>.</li>
+                    <li>Use the check boxes to select whether to:<ol><li><b>Export </b><MadCap:popup><MadCap:popupHead>ROS</MadCap:popupHead><MadCap:popupBody>run on station</MadCap:popupBody></MadCap:popup> <b>hidden promos only</b></li><li><b>Include deleted promos</b>.</li></ol></li>
+                    <li>
+                        <p>Click the <b>Export to Excel</b> button <img src="../Resources/Images/ExportToExcelButton.png" style="width: 22px;height: 22px;" />.</p>
+                        <p>This creates an Excel spreadsheet and a link to it in a green success banner at the top of the window.</p>
+                    </li>
+                    <li>
+                        <p>Click the spreadsheet link, add or update category information in it, and save the spreadsheet to a local drive.</p>
+                        <p>Possible values and explanations for spreadsheet columns are:</p>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                            <caption><b>Promotions spreadsheet fields</b>
+                            </caption>
+                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 13px;" />
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Spreadsheet column</th>
+                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Possible values and meanings</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">CouponType</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> The Type of Promotion you are running. This list can be found when adding a new promotion in the site manager.Required.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">CouponName</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p> A unique name for the promotion. If this is an update to an existing promotion, it updates the existing record.Required.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Deleted</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> True or False; indicates whether the promotion is still active. Required.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">CouponDesc</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p> XML for the existing promotion. To view the XML format, by edit a promotion of this type in the site manager. Required.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">AutoTrigger</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> True or False; indicates whether this promotion is auto-triggered in the shopping cart. Required.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">beginDate</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p> The starting date of the promotion. The time can be included for a flash sale starting at a certain time. Format is MM/DD/YYYY HH:MM AM/PM. Required.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">HideInPromoLists</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> True or False; if f <b>true</b>, this promo will not show in the promotion code lists. If you are importing a large promotion code list and the call center will not be using these, set to <b>true</b> to avoid performance issues. Required.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Affiliate</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p> Comma separated list of affiliate codes if restricting by affiliate, otherwise leave this blank.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">excludeAffiliate</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> True or False; required only if affiliate is specified. If blank, it is treated as <b>false</b>. If <b>true</b>, this applies the promotion to all affiliates EXCEPT those in the affiliate list.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Default_Coupon</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p> True or False; only one promotion code can be set to <b>true</b> at a time. If <b>true</b>, the Order Review email uses this promotion code as the baseline for generating unique one-time use codes.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">oneTimeCoupon</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> True or False; indicates whether this is a one time use promotion code. If blank, it defaults to <b>false</b>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">ignoreAffiliateforAutoTrigger</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p> True or False; override affiliate constraint if typed in during shopping cart. If blank, it defaults to <b>false</b>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">publicCoupon</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> True or False; indicates whether this promotion code will show up as a public promotion if an affiliate logs in to the affiliate section. If blank, it defaults to <b>false</b>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">CouponShortDesc</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p> Short description for the promotion. For <MadCap:popup><MadCap:popupHead>BOGO</MadCap:popupHead><MadCap:popupBody>buy one - get one</MadCap:popupBody></MadCap:popup> promotions, this is the description that appears in the shopping cart.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">CouponImage</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> Directory path to an image for the promotion code. If Aptos has wired your site to show a custom promotions page, this is the image that appears. It is a relative path from the root of the site, for example, images/promos/image1.png.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">CouponLink</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p> A link to a page containing more information about this promotion code. If the promotion code is displayed on a page, and a deep link to another page is needed, specify it here. This is relative from the root of the site as well.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">RepeatCustomer</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> Trueor False; if <b>true</b>, this Promotion Code is based on previous purchases and NOT the current cart—the user must be logged in. If blank, it defaults to false.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">RepeatTimePeriod</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p> If <b>RepeatCustomer</b> is <b>true</b>,the number of months from purchase this promotion is valid. If blank, defaults to <b>12</b></p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">OnePerCustomer</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> True or False; indicates whether this promotion code is only able to be used one time per customer. If blank, it defaults to <b>false</b>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">FreeShippingAddOn</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p> True or False; when <b>true</b>, free shipping is added on to the existing promotion. If blank, it defaults to <b>false</b>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">FreeShippingMinCartAmount</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> The minimum dollar amount in the cart needed before free shipping is applied to the promotion. If blank, defaults to <b>0</b>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">tierGroups</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p> Comma separated list of customer groups if promotion is to be restricted by customer group, otherwise leave blank.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">excludeTierGroups</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> True or False; required only if affiliate is specified. If it is blank, it is treated as <b>false</b>. If <b>true</b>, this applies the promotion to all customer groups EXCEPT those in the customer group list. If blank, defaults to <b>false</b>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">includeTierGroups</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p> True or False; required only if affiliate is specified. If it is blank, it is treated as <b>false</b>. If <b>true</b>, this applies the promotion to all customer groups in the customer group list. If blank, defaults to false.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">flashAmount</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> An Integer representing the number of times this promotion can be used before it is disabled. If <b>0</b>, it will never auto-disable</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">triggerOnBirthday</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p> True or False; if <b>true</b>, this coupon is valid only on the customer's birthday. If blank, defaults to <b>false</b>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ApplyToHighestPricedItemOnly</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> True or False; if <b>true</b>, applies promotion only to highest priced cart line item total (quantity * price). If blank, defaults to <b>false</b>. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">ApplytoHighestCartLineOnly</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p> True or False; if <b>true</b>, applies promotion only to highest priced cart line item (price only). If blank, defaults to <b>false</b>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">PromoGroup</td>
+                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                        <p> A unique name for the promo group associated with this Promotion. If the promo group doesn't currently exist, it will be created with no limitations.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To import promotions</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Promotions</b>.</li>
+                </ol>
+                <ol MadCap:continue="true">
+                    <li>Click <b>Browse</b>, find the Excel spreadsheet you want to import, and click <b>Open</b>.</li>
+                    <li>Click the <b>Import</b> button <img src="../Resources/Images/ImportButton.png" style="width: 19px;height: 17px;" />.<p>Promotions are automatically uploaded to the server.</p></li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

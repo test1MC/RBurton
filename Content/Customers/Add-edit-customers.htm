@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Adding and editing customers</title>
+        <meta name="description" content="Add, edit and manage customer details in the Add/Edit section. You can also place an order for the customer from this section, from the Order History, Saved Cart, or Wishlist areas." />
+    </head>
+    <body>
+        <h1>Adding and editing customers<MadCap:concept term="Customers" /></h1>
+        <p>Add, edit and manage customer details in the <b>Add/Edit</b> section. You can also place an order for the customer from this section, from the <b>Order History</b>, <b>Saved Cart</b>, or <b>Wishlist</b> areas.</p>
+        <p>
+            <img src="Images/SearchCustomersMain.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <p>The first thing you'll need to do is locate the customer whose details you want to view or modify. To create a new customer record, simply enter information for that customer in a new blank record.</p>
+        <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;">Be sure to <b>Save</b> changes you make frequently to avoid losing your work.</div>
+        <h2>To search for existing customers</h2>
+        <ol>
+            <li>In <b>CRM</b>, select <b>Customers</b> &gt; <b>Add/Edit</b>.</li>
+            <li>
+                <p>If necessary, click the black <b>Search for existing customers</b> banner to expand the search screen.</p>
+                <p>
+                    <img src="Images/CustomerSearchScreen.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+            </li>
+            <li>To search for a customer record by order number, enter it in the <b>By Order Number</b> field. You can also search for an external order number here; this is the unique number assigned to an order when the order is created outside the <MadCap:popup><MadCap:popupHead>OMS</MadCap:popupHead><MadCap:popupBody>order management system</MadCap:popupBody></MadCap:popup>.</li>
+            <li>To search by criteria other than <b>Order Number</b>, enter values in one or more fields you wish to filter on in the search table.</li>
+            <li>To add additional search filters, click the <b>Add Search Condition</b> button. This adds a drop-down menu to the field column from which you can select a new field.</li>
+            <li>Click the <b>Search</b> button. </li>
+            <li>
+                <p>Select the customer you're looking for from the list of search results, and click the <b>Select Customer</b> button at the bottom of this screen. The rest of the <b>Add / Edit</b> screen is populated with information stored for this customer.</p>
+            </li>
+        </ol>
+        <h3>Updating or adding customer information</h3>
+        <div class="warning" MadCap:autonum="&lt;b&gt;Warning: &lt;/b&gt;">EOM does not allow you to delete a customer account. Instead, edit the account and change the email address so the customer will no longer be able to log in. Then, you can update the customer information to mask the original user. You'd never want to delete an account entirely as it can be tied directly to orders. This could negatively affect your order management, and leave you unable to credit orders if the need ever arose.</div>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>1. Update account information</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">You can customize the small section that appears just before the <b>Account Information</b> section by editing the <b>CRM Edit Customer</b> master page located at <b>Content</b> &gt; <b>Pages</b> &gt; <b>Masters</b> &gt; <b>Page Sections</b>. See <a href="../Content-and-products/Manage-master-pages.htm">Managing master pages</a> for more information.</div>
+                <p>Update information as needed; screen items marked with a red asterisk are required:</p>
+                <table class="TableStyle-PatternedRows" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Field, list or button</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">E-mail</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Customer's email address. Must be entered before an account record can be created. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Date of Birth</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Click to reveal a drop-down calendar. You can also enter the date manually in the format MM/DD/YYYY. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Password</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>The call center agent can choose to enter a password in this field which will be masked on entry for security purposes. Note that when a customer account is first created, an email will be sent to the entered email address, prompting the customer to change their password.
+</p>
+                                <p>Clicking the <b>Generate</b> link generates a unique and random eight character password. When this link is clicked, the call center agent will be asked if they would like to send the customer a welcome email allowing them to login to their account.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Confirm Password (required)</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	Re-enter the password in order to verify that it is correct.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Tier Group</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p> 
+If a customer is assigned to a tier group, this field populates automatically. You  can add a customer to a tier group by selecting it from the drop-down menu.
+
+</p>
+                                <p>When there are more than 250 tier groups to choose from, follow these guidelines to find and select the one you're looking for:</p>
+                                <ul>
+                                    <li>When adding or modifying a customer and assigning a Tier Group, click the "..." button to display the tier group selection window.</li>
+                                    <li>Search for or select a displayed tier group and click the Continue button.  If you are removing a tier group for a particular customer, click the <b>Delete</b> button. You can only choose one tier group at a time.</li>
+                                    <li>After you've made your selection, the selection window closes and loads the selected values into the <b>Product Add/Edit</b> screen.
+ </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Tier Group Expiration</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If the tier group is configured with an expiration date, it is displayed here. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Aptos Consumer ID</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> A unique ID assigned to all new customers. The ID is used internally to identify a customer record in the database. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Tier Group Description</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> If a tier group is selected, the tier description that the customer belongs to is displayed under the Consumer ID.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">External Consumer ID</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> If a customer record will be imported from or to an external 3rd party system, this is the ID that the 3rd party system uses to identify the customer record. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">CRM Customer ID</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Read-only field assigned if the customer is linked in the CRM Aptos system AND, your site uses the integration to Aptos CRM. The field is populated via a Toronado "Orders Out" job. This field contains the unique CRM customer number from the Aptos CRM system. </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Loyalty Discount</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p> Can be used to provide the database with a discount value that can then be used in conjunction with tier groups and promotions. 
+</p>
+                                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;"> How this field functions depends on the wiring of your site. If not wired, the field is not used.
+ </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Member Area (Edit Subscriptions)</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> 
+When the Edit Subscriptions button (pencil icon) is clicked, a new window opens on that customer's <b>Subscriptions</b> page.
+ </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Member Area (View Member Area)</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> 
+The View Member Area button (circled "i" icon) shows you customer settings on the front end of your site. When clicked, a new window opens in that customer's <b>Member Area</b>.
+ </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">Registered</td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows"> This check box is used when converting an unregistered customer to a registered customer. This may occur if the customer did not previously have an account record in the database, or when they placed an order through the guest checkout (account record created for order processing, but not technically "registered"). Once a customer has a confirmed registration, this check box remains checked, and becomes read-only.  </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>2. Update billing information</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>In the billing information section, you can manually update the customer's billing name, address, and phone number. Required fields are denoted by a red asterisk.</p>
+                <p>
+                    <img src="Images/AddCustomerBillingAddress.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 330px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>3. Update shipping information</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>In the shipping information section, you can see every address associated with the selected customer. You can edit address information from the list by clicking on the pencil icon, delete the address. You can add a new shipping address by clicking the <b>Add</b>  icon <b>+</b>. To delete an address, click the trash icon to the right of that address line.</p>
+                <p>
+                    <img src="Images/AddCustomershipping.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 330px;" />
+                </p>
+                <p>When adding or editing addresses, required fields are denoted by a red asterisk.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>4. Update payment information</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Payment information saved for the customer is displayed in a list here. To add a new payment method, click on the plus icon to open a modal window. Here you can:</p>
+                <ul>
+                    <li>include a name for the payment type,</li>
+                    <li>select the credit card type (American Express, Discover, MasterCard, and Visa),</li>
+                    <li>enter the card number,</li>
+                    <li>select the expiration date,</li>
+                    <li>enter the cardholder's name.</li>
+                </ul>
+                <p>Note that this is only for credit card payment types. Other forms of payment are handled elsewhere.</p>
+                <p>To delete a credit card from the list, click the trash can icon to the far right of the card's details.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>5. Display order history and manage previous orders</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Order history section displays all orders purchased by the customer. You can manage the order just as you would from <b>Commerce</b> &gt; <b>Orders</b> &gt; <b>Manage Existing</b>. See <a href="../Commerce/Manage-existing orders.htm">Managing existing orders</a> for more information.</p>
+                <p>
+                    <img src="Images/AddCustomerViewHistory.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 330px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>6. Manage saved cart items</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If a customer has saved a shopping cart and wants to order what they saved, you can place an order in the saved cart section. You can also add products to a new order by clicking the <b>Add</b>  icon <b>+</b>. This takes you to the <b>Retail Order</b> screen, pre-populated with the customer's details.</p>
+                <p>
+                    <img src="Images/AddCustomerCart.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 330px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>7. Manage wishlist</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The wishlist section displays any products that a customer has added to their wishlist. From here, you can delete an item, modify the quantity of items desired, or the quantities received.</p>
+                <p>
+                    <img src="Images/AddCustomerWishlist.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 330px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>8. Manage customer notes</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Any internal notes added to the customer account are displayed in a list here. You can add a new note by clicking on the plus icon</p>
+                <p>
+                    <img src="Images/AddCustomerManageNotes.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 330px;" />.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>9. Manage customer profile</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Click the <b>View</b> icon <img src="../Resources/Images/Info button.png" /> to see and edit account questions saved for this customer.</p>
+                <p>
+                    <img src="Images/AddCustomerViewProfile.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 330px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>10. Manage opt-in preferences</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Use the <b>Opt-in Preferences</b> area to allow to opt-in to special promotional media, such as promotional emails, SMS special offers, and product catalogs. You can also enter general account notes in the space provided. In addition to sending a customer promotional emails, you can also select a other email types to send to a customer such as:</p>
+                <ul>
+                    <li>Account Questions Body</li>
+                    <li>Create Account Welcome Message</li>
+                    <li>Create Short Account Welcome Message</li>
+                    <li>Email Loyalty Program Rewards Notes</li>
+                    <li>Member Forgot Password Email</li>
+                    <li>Tier Group Trigger Product Welcome Message</li>
+                    <li>Tier Group Welcome Message</li>
+                </ul>
+                <p>
+                    <img src="Images/AddCustomerOptIn.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 330px;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To place a new order</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>You can add a new retail order or new wholesale order by selecting the appropriate button at the bottom of the screen. Clicking the button takes you to the <b>Retail Order</b> or <b>Wholesale entry</b> area pre-populated with the customer's details.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

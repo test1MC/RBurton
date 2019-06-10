@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc>
+  <TocEntry
+    Title="Marketing"
+    ReplaceMergeNode="true"
+    StartSection="false"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue"
+    ComputeToc="false">
+    <TocEntry
+      Title="Marketing workflows"
+      ReplaceMergeNode="false" />
+  </TocEntry>
+</CatapultToc>

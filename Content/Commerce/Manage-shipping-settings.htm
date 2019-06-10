@@ -1,0 +1,1620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Managing shipping settings</title>
+        <meta name="description" content="In the shipping settings section, you define how your site calculates shipping, set free shipping thresholds (if relevant), designate which shipping options to offer your customers, and enter your carrier settings. Use the Shipping Settings area to determine how you will ship your products, and how you will charge your customers for shipping." />
+    </head>
+    <body>
+        <h1>Managing shipping settings<MadCap:concept term="Commerce" /></h1>
+        <p>Use the <b>Shipping Settings</b> section to define how your site calculates shipping, set free shipping thresholds (if relevant), designate which shipping options to offer your customers, and enter your carrier settings. Use the <b>Shipping Settings</b> area to determine how you will ship your products, and how you will charge your customers for shipping.</p>
+        <p>Before configuring these settings, be certain you have the appropriate accounts set up with the shipping carriers you want to use on your site.</p>
+        <div class="noteAlt">There are certain website settings that will affect shipping settings. By default, subscriptions receive free shipping. Enable Charge Shipping on Subscriptions at Users &gt; Website Settings &gt; Payments &gt; Subscription Settings if you want to charge customers for the cost of shipping their subscription order.</div>
+        <p>There are also free shipping promotion settings at <b>Users</b> &gt; <b>Website Settings</b> <b>&gt; Site Layout</b> &gt; <b>Shopping Cart Settings</b>.</p>
+        <p>To learn about obtaining accounts and configuring various shippers with your site, refer to the following knowledge base articles.</p>
+        <ul>
+            <li>FedEx - Refer to FedEx Web Services Integration knowledge base article #1717. View the <a href="https://www.fedex.com/content/dam/fedex/us-united-states/services/CountriesServed_IF_IP_IE.pdf">FedEx International Express Countries Served</a> via US export and US import. For example, FedEx does not ship to: Greece, Kosovo, Latvia, Mexico, Spain, Thailand, or Turkey.</li>
+            <li>USPS - Refer to USPS and Endicia Shipping Accounts knowledge base article #2165</li>
+            <li>UPS - Refer to Setting up UPS knowledge base article #1951. <a href="https://www.ups.com/ee/en/shipping/international/services/standard.page">UPS Standard</a> falls under the category of international shipping.</li>
+            <li>UPS Mail Innovations® - Refer to Setting up UPS Mail Innovations® knowledge base article #2065.</li>
+        </ul>
+        <h3>Managing shipping types</h3>
+        <p>In the <b>Shipping Type</b> area, you can control the type of shipping used by your site. Your site will only use only one of the six shipping types explained below. Only the Calculated and/or flat rates (multiple carriers) type will return rates from multiple shipping providers. The other five shipping settings are each limited to only one shipping carrier.</p>
+        <p>
+            <img src="images/ShippingSettingsType1.png" />
+        </p>
+        <p>Configure shipping providers in <b>Express Shipping Carrier Settings</b>. You only need to set up one type:</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 177px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 725px;" />
+            <thead>
+                <tr class="TableStyle-PatternedRows-Head-Header1">
+                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Shipping type</th>
+                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Calculated rates (one carrier)</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">All order shipping cost rates displayed to customers are calculated via rates returned from the one shipping carrier selected, for example, FedEx, UPS, and so on. The rates calculated are based on the credentials entered under <b>Express Shipping Rates</b>, <b>Tracking and Label Processing Settings</b>. If no credentials are entered, the default Aptos credentials are passed on to retrieve rates.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">10% of shopping card (one carrier)</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Ground order shipping cost is 10% of the customer’s shopping cart sub-total. Returns rates from only one shipping carrier.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Calculated and/or flat rates (multiple carriers)</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">This shipping type is very flexible as it allows for multiple carriers, range groups, calculated shipping rates, and provides rates based off weight or cart total. You can set up all shipping rates and allow for rate markups or markdowns. You can also set up shipping regions to help fine-tune your shipping costs.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Calculated and/or flat rates (one carrier)</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Ground order shipping cost is based on a range set up on this page. Returns rates from only one shipping carrier.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Free Ground Shipping (one carrier)</td>
+                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">For orders shipped via ground, the shipping cost is always free. Returns rates from only one shipping carrier.</td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">Product-specific rates (one carrier)</td>
+                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">Ground order shipping cost is the sum of the shipping cost of the items in customer’s shopping cart. Returns rates from only one shipping carrier. Product-specific shipping rates are configured at the Domestic Fixed Rate and Int'l Fixed Rate fields in <a href="../Content-and-products/Add-edit-products.htm#Shipping_Details">Content &gt; Products &gt; Add/Edit &gt; [Find Product] &gt; Details &gt; Shipping &gt; Shipping Details</a>.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>About shipping types</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Calculated rates (one carrier)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>With the Calculated rates (one carrier) setting, all order shipping cost rates displayed to customers are calculated via rates returned from the shipping carrier selected, for example, FedEx, UPS, and so on. Make certain your company address is set up in <b>Users</b> &gt; <b>Website Settings</b> &gt; <b>General</b>. <MadCap:variable name="DC.EOM short" /> uses this address to calculate as the ship from address, so if a valid company address is not in the system, the calculated shipping rates will not populate.</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Custom options</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ul>
+                            <li>Free Shipping if cart total over: (Optional) By setting a value in this field greater than $0.00, you are indicating that ground shipping will be free for any order over this amount. Note that if a product is marked as receiving free shipping at the product level (Content &gt; Products &gt; Add/Edit) the system reads this as the product ships for free under all circumstances regardless of the shopping cart value. If conditional shipping is set at the product level and this setting is enabled, and a shopping cart value is set that is beneath this setting, then all products marked conditional would ship ground free once the threshold is met. If this setting is enabled and set to a certain amount, additional items in the shopping cart that are not set to receive free shipping would ship ground free once this threshold is met.</li>
+                            <li>Free Shipping also applies to freight. (Optional) By enabling this setting, the freight cart value is included in the rate calculation, when applicable. Also, the free shipping will be applied to the freight rate.</li>
+                        </ul>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>10% of shopping cart (one carrier)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>10% of shopping cart (one carrier) sets the ground order shipping cost at 10% of the customer’s shopping cart sub-total.</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Custom options</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ul>
+                            <li>Free Shipping if cart total over:(Optional) By setting a value in this field greater than $0.00, you are indicating that ground shipping will be free for any order over this amount. Note that if a product is marked as receiving free shipping at the product level (<b>Content</b> &gt; <b>Products</b> &gt; <b>Add/Edit</b>) the system reads this as the product ships for free under all circumstances regardless of the shopping cart value. If conditional shipping is set at the product level and this setting is enabled, and a shopping cart value is set that is beneath this setting, then all products marked conditional would ship ground free once the threshold is met. If this setting is enabled and set to a certain amount, additional items in the shopping cart that are not set to receive free shipping would ship ground free once this threshold is met.</li>
+                            <li>Free Shipping also applies to freight. (Optional) By enabling this setting, the freight cart value is included in the rate calculation, when applicable. Also, the free shipping will be applied to the freight rate.</li>
+                            <li>Lowest Shipping Cost: By setting a value in this field you are indicating that this will be the lowest shipping cost a customer will see. For example, if set to $5.00, if the customer buys a $1.00 item, the shipping cost will be $5.00, not $0.10.</li>
+                        </ul>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Calculated and/or flat rates (multiple carriers)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Calculated and/or flat rates (multiple carriers) setting helps you provide the best shipping rates to your customers and helps to ensure that the rates you provide can cover your costs. This shipping setting allows for multiple carriers and calculated shipping and provides rates based off weight or cart total. It also gives you the ability to have an additional pricing markup for each subsequent product added to the cart. This allows for more flexibility when providing shipping rates to your customers. You can also select shipping regions to be used for each price tier. Shipping regions are configured on the <a href="Configure-regional-shipping-tiers.htm">Commerce &gt; Shipping &gt; Regions</a> page.</p>
+                <p>If more than one rate for a given shipping service can be returned for a customer, the platform will return the cheapest rate for that shipping service.</p>
+                <p>For example, if you have configured the following for UPS Ground:</p>
+                <ul>
+                    <li>Cart subtotal between $0.01 and $25 = shipping rate of $5</li>
+                    <li>Cart subtotal between $25 and $50 = shipping rate of $8</li>
+                </ul>
+                <p>If the customer's cart subtotal is exactly $25, which means both of the shipping rates above could be applied, the system returns the cheaper rate, which is $5.</p>
+                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">If you are using FedEx SmartPost on your site, you must add a tier for SmartPost rates to be returned based on your business needs and for all other options. In addition there are other shipping settings that need to be set up.</div>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Custom options</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ul>
+                            <li><b>Free Shipping if cart total over</b>: (Optional) By setting a value in this field greater than $0.00, you are indicating that ground shipping will be free for any order over this amount. If a product is marked as receiving free shipping at the product level (<b>Content</b> &gt; <b>Products</b> &gt; <b>Add/Edit</b>) the system reads this as the product ships for free under all circumstances regardless of the shopping cart value.</li>
+                            <li>If conditional shipping is set at the product level and this setting is enabled, and a shopping cart value is set that is beneath this setting, then all products marked conditional would ship ground free once the threshold is met. If this setting is enabled and set to a certain amount, additional items in the shopping cart that are not set to receive free shipping would ship free, via ground, once this threshold is met.</li>
+                            <li><b>Free Shipping also applies to freight</b>. (Optional) If enabled, the freight cart value is included in the rate calculation, when applicable. Also, the free shipping will be applied to the freight rate.</li>
+                        </ul>
+                        <p>If there are shipping carriers already set up, this area will display the <b>Shipping Carrier</b>, <b>Shipping Service</b> (method), the <b>Display Name</b> chosen when the shipping service (method) was added. You can expand this area to see all the details for each shipping method.</p>
+                        <p>It is easy to see all of the settings at once. When you add a new tier to the shipping method or delete a price tier, the tiers will be updated to prevent loss of data. Be sure to save changes before collapsing items. The current selections will not be stored unless they have been saved.</p>
+                        <p>
+                            <img src="images/ServicesAndRates.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 440px;" />
+                        </p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Add Shipping Services</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>To add more shipping services (methods), click (+) Add Shipping Service to open the Add Shipping Service pop-up window. Make these selections here.</p>
+                        <ul>
+                            <li><b>Display Name</b>: Enter your customized Display Name</li>
+                            <li><b>Carrier</b>: Select the carrier from the drop-down menu</li>
+                            <li><b>Type</b>: Choose the shipping method from the drop-down menu.</li>
+                        </ul>
+                        <p>This service uses calculated rates. If selected, this will create a default range as calculated. If not selected, the pricing range will need to be edited later.</p>
+                        <p>When finished, save your changes.</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Add Pricing Ranges</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>Click <b>Add Range</b> to manage each pricing range's settings. These settings are described in the table below.</p>
+                        <table style="width: 100%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 156px;" />
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Column title</th>
+                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Options</th>
+                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Functionality</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" rowspan="2">Range Type	</td>
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Cart Subtotal $</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">You can set multiple ranges with cart subtotal ranges for each shipping carrier and corresponding shipping rate. For example, you could set a $5 rate for orders up to $20, an $8 rate for orders up to $35, a $10 rate for orders up to $50, and then offer free shipping for orders over $50.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Cart Weight lb/kg</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Set cart weight for multiple ranges with cart weight ranges for each shipping carrier and corresponding shipping rate. For example, you could set a $5 rate for order up to 10 lbs., a $10 rate for orders up to 20 lbs., and so on.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">From</td>
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">&#160;</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">The value for the first range must have a value of 0.00. For each additional range you create, set the start of the range value in this field. For example, if you set up the first range as .00 to 50.00, the next range could be defined as 50.01 to 100.00, and the next could be set as 100.01 to 150.00, and so on.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">To</td>
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">&#160;</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Configure the end of the pricing range for each range in this field. Make sure that each range begins where the last range left off.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Rate </td>
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Type	</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Flat	Select if you want to set the pricing range at a flat rate. The flat rate type can use either the <b>Cart Subtotal</b> or <b>Cart Weight</b> chosen from the <b>Range Type</b> menu.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Amount</td>
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Used only for <b>Flat Rate Shipping Type</b></td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Select if the Flat Rate Type value entered is a flat dollar amount or a flat percentage rate.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Rate Type</td>
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Calculated</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Select if you want the pricing range to use calculated rates. Calculated rate type must use only the <b>Cart Weight</b> chosen from the <b>Range Type</b> menu.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p>% Adj. (+/-)</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p>Used only for <b>Calculated Rate Shipping Type</b></p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>Enter a positive or negative number to apply a mark up or mark down to the calculated rate. For example, if the calculated rate is $10.00:</p>
+                                        <ul>
+                                            <li>A percent markup value of "50.00" will result in a $15.00 shipping rate. ($10 + $5 (50%) = $15).</li>
+                                            <li>A percent value of "-50.00" will result in a $5.00 shipping rate. ($10 - $5 (50%) = $5).</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p>$ Markup per Add'l Product</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p class="FieldName">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>The adjustment markup will take the count of products in the cart that receive free shipping and provide a set markup for each one over the first product up to the <b>Max Charge</b> amount.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p>Min Charge</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p>Used with <b>Calculated Rate Shipping Type</b></p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>If you want to charge a minimum price for all shipping, set the value here. For example, if the shipping cost is $8, and you have $10 set here, your customer will be charged $10 for shipping.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p>Max Charge</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                        <p>Used with <b>Flat Rate Shipping Type</b></p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p>You can configure an optional maximum shipping rate charge. This field can be used in conjunction with the Flat Rate Type in the case where you have configured a product shipping add-on amount. For example, if you set a maximum value here of $80, and the shipping rate returns at $95, your customer will only be charged $80 for shipping.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p>Shipping Region</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                        <p>Drop-down menu.</p>
+                                    </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                        <p>If applicable, select the shipping region to be used for this pricing range. Shipping regions, which only work for Calculated and/or flat rates (multiple carriers), only need to be configured when you want to have different shipping rates per region. Shipping regions are configured on the <a href="Configure-regional-shipping-tiers.htm">Commerce &gt; Shipping &gt; Regions page</a>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Tier</td>
+                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Edit (pencil) icon.</td>
+                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                        <p>Use this setting to set up different pricing ranges per customer so that customers belonging to specific tiers can get special shipping rates. Clicking on the icon will open a pop-up window.
+</p>
+                                        <p><b>Tier Group</b> -  If Tier Group is selected for a pricing range within a shipping method, then this pricing range will only apply to these Tier Groups (for example, it will serve as a filter similar to Regions functionality). 
+</p>
+                                        <p><b>Tier Status</b> -  If Tier Status is selected for a pricing range within a shipping method, then this pricing range will only apply to the Tier Groups in this Tier Status.</p>
+                                        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">The affiliate tier overrides the customer tier.</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Make certain that when setting up shipping regions to various countries, you select the appropriate shipping method and the countries can receive the shipping method you have configured. For example, if you set up a country to receive shipping via economy rates, there will be an error if the shipper does not allow economy shipping to that country. View the <a href="http://images.fedex.com/us/services/pdf/CountriesServed_IF_IP_IE.pdf">FedEx International Express Countries Served</a> via US export and US import.<br /><br />Do not use UPS Standard for regions. See this <a href="http://www.ups.com/content/ee/en/shipping/time/service/inter/standard.html">UPS Standard Shipping</a> article for more information.<br /></div>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Import/Export Services and Rates</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>For this shipping type, calculated and/or flat rates (multiple carriers), you can import shipping tiers so you do not have to create them one at a time through the UI. You can also export shipping tiers that have already been set up in the system.</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Calculated and/or flat rates (one carrier)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Ground order shipping cost is based on a pricing ranges set up in this area.</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Custom Options</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ul>
+                            <li><b>Return the configured flat rates for non-continental US and International orders</b>: (Optional) Select to return the configured flat rates for non-continental US and international orders using the 'Free Shipping Override' services from a single carrier. If not selected, calculated rates for the remaining active services (where the 'Free Shipping Override' checkbox is unchecked) will be returned.</li>
+                            <li><b>Return the configured flat rates for non-continental US orders</b>: Select this option if you want to enable this setting.</li>
+                        </ul>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Add Pricing Ranges</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>You can set a markup for shipping, or add another range and manage the price range points that trigger a shipping cost. When you click the <b>Add Range</b> link, it defaults to a fixed rate with a shipping cost of "0" and the high and low values at "0". Each shipping option can have multiple ranges. For example, if you set up the first range as $.01 to $50.00, the next range could be defined as $50.01 to $100.00, and the next could be set as $100.01 to $150.00, and so on.</p>
+                        <ul>
+                            <li><b>Low Cart Amount</b> - The value entered in this field for the first range must have a value of at least 0.01. For each additional pricing range you create, set the low cart amount value in this field.</li>
+                            <li><b>High Cart Amount</b> - Configure the high cart amount for this range in this field. Make sure that each range begins where the last range left off.</li>
+                            <li><b>Shipping Cost</b> - Enter the shipping cost for each pricing range.</li>
+                        </ul>
+                        <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Use care when setting up pricing ranges. For example, If you set up one range as $.01 to $50.00 and the next range as $51.00 to $100.00, if a customer submits an order that costs between $50 and $51, the customer would not be charged shipping.</div>
+                        <p>Add as many pricing ranges as needed for your business needs. Save your changes before continuing.</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>System Wide Free Ground Shipping</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>For orders shipped via ground, the shipping cost is always free. There are no custom options needed for system-wide free shipping.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Product-specific rates (one carrier)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Ground order shipping cost is the sum of the shipping cost of the items in customer’s shopping cart. There are no custom options needed for fixed priced shipping. You can set the <b>Domestic Fixed Rate</b> and <b>International Fixed Rate</b> at <a href="../Content-and-products/Add-edit-products.htm#Shipping_Details">Content &gt; Products &gt; Add/Edit &gt; [Product] &gt; Details &gt; Shipping</a>.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Shipping settings—setting up shipping options</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The <b>Shipping Settings</b> area is where you control the shipping settings for your site. When you have set up the shipping types explained above, you manage all other aspects of shipping settings here.</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>Shipping settings</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1" colspan="2">&#160; Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Display all active Express Shipping Carrier services</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">
+                                <p>Enable this setting if you wish to display all express services for the selected carrier (instead of only the Free Shipping Override services) for these shipping types:
+</p>
+                                <ul>
+                                    <li>Calculated rates (one carrier)</li>
+                                    <li>10% of shopping cart (one carrier)</li>
+                                    <li>Calculated and/or flat rates (one carrier)</li>
+                                    <li>Free Ground Shipping (one carrier)</li>
+                                    <li>Product-specific rates (one carrier)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Enable Pick, Pack &amp; Ship (QuickShip) for Label Processing</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">Select this to use Pick, Pack &amp; Ship for label processing.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Capture Payment on Pick, Pack &amp; Ship (QuickShip)/Ship Order by Default</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">Enable if you want to capture payment on Pick, Pack &amp; Ship/Ship Order by default. If selected, when the first item of an order is shipped, the funds for any digital goods in the order will also be captured.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Convert product-level overwrite calculated and/or flat rates to an add-on</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">Select to convert product-level overwrite calculated and/or flat rates to an add-on.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Default Shipping Documents to Generate with Pick, Pack &amp; Ship</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">
+                                <p>Select your site's default shipping document that will be generated with Pick, Pack &amp; Ship. These are:</p>
+                                <ul>
+                                    <li>Packing List and Shipping Label</li>
+                                    <li>Packing List Only</li>
+                                    <li>Shipping Label Only</li>
+                                    <li>Shipping Label and Return Label</li>
+                                    <li>Packing List, Shipping Label, and Return Label</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Packing List Barcode</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">
+                                <p>	Select the radio button to choose from either a standard or custom barcode.</p>
+                                <ul>
+                                    <li>Standard - generates the default barcode.</li>
+                                    <li>Custom - Select, and then enter your custom packing list barcode in the field below.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Use sandbox for calculated rates</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">Used for implementation and testing purposes. If selected, shipping rates will be calculated against the carrier's Sandbox System. When enabled, both label and rate processing will submitted to the carrier’s test servers.  This prevents charging accounts for testing generation of labels.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Items Ship in the same box</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">
+                                <p>When selected, rate and label generation will assume that all items in the order will be shipping in the same box, rather than separate boxes.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Accessories ship for free</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">
+                                <p>If selected, if a product has been marked as having free shipping and there are accessory products in the shopping cart, the accessory products will be shipped for free as well.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Supplier Based Shipping Calculations</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">
+                                <p>If selected, any shipping calculation done in the system will be performed off the product's supplier's address, where applicable.</p>
+                                <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;">This may affect performance of the shipping calculator. Multiple rate requests may need to occur for each order, as items in the cart may ship from different locations.</div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Use Zip Code based on inventory</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">
+                                <p>If selected, any shipping calculation done in the system will be performed off the product's supplier's address and supplier's inventory or ability to fulfill the items in an order. Requires <b>Advanced Supplier Rules</b> to be set up for functionality to work properly.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Use Cost For Declared Value</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">
+                                <p>Used when submitting orders for shipping to set the value that the package is worth for insurance and customs.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Calculate APO/FPO with USPS from selections when rates not returned</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">
+                                <p>This is used when calculating rates, since UPS and FedEx cannot return rates for APO/FPO and you don't want to provide USPS to all customers. Set up USPS for APO/AFO and it should be its own region and assigned to use USPS.</p>
+                                <p>UPS Ground Shipping does not return for APO/FPO addresses. These don't ship via UPS while others only ship through UPS international options. <a href="http://www.ups.com/content/ee/en/shipping/time/service/inter/standard.html">UPS Standard</a> falls under the category of international shipping.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Check product and sub-category specific shipping restrictions</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">
+                                <p>Enable if you want to restrict the shipping type when specific products are in the cart. Used when calculating rates, since not all products can be shipped through each shipping method set up at the system level.</p>
+                                <p>To set shipping restrictions, go to the <b>Content</b> &gt; <b>Sub-Categories</b> &gt; <b>Add/Edit</b> and select the Sub-Category you want to edit. In the Sub-Category details, click the <b>Add/Edit</b> link under Shipping Restrictions which opens a pop-up window. Select the shipping methods you do not want used for the Sub-Category. For example, if a particular product cannot be delivered via expedited delivery, to ensure customers do not select expedited shipping when one of these products is in the cart, this shipping type will not be offered as an option. An example of this product type is perfume, which cannot be shipped via air delivery.</p>
+                                <div class="noteAlt">If your site is not going to use these restrictions, do not select this option as there is additional processing performed when validating the overrides. This can result in a slower return on shipping rates.</div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Supplier % To Apply</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">
+                                <p>When <b>Supplier Based Shipping Calculations</b> is enabled and multiple suppliers are involved, this percentage value will be applied to the combined supplier shipping cost.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Shipping Markup in %</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">
+                                <p>Percentage dollar amount to be applied on top of the total express shipment cost.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Freight Markup in %</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">
+                                <p>Percentage dollar amount to be applied on top of the total shipment freight cost.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Inter'l Customs Amount if Zero</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">
+                                <p>Used when generating International shipping labels. You may opt to use this value when creating international shipping labels with an order value of $0.00. Otherwise, it will use the price of the combined producs. When the value of an order is $0.00, the customs cannot be zero.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Carriage Value Override</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">
+                                <p>Used to override the shipping package carriage value when generating labels. (If left at $0, the application will use the shipping value of the order).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Enable Conditional Free Shipping</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">
+                                <p>Can be used for all shipping types with the exception of Calculated and/or flat rates (multiple carriers). If selected, and the <b>Shopping Cart Value</b> (below) sub-total is above the specified value, then any shipping costs for products identified with conditional free shipping will be $0.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Shopping Cart Value</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">
+                                <p>Shopping cart sub-total threshold value after which conditional free shipping is triggered.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Express Shipping Rate Text</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">
+                                <p>Text displayed to the customer in Shopping Cart and Checkout pages. You can edit this text if desired. For example, instead of "Express Shipping Rate," you may want the display name to read "Standard Shipping."</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Freight Shipping Rate Text</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">
+                                <p>The freight shipping rate displayed to the customer in Shopping Cart and Checkout pages. You can edit this field if desired. For example, instead of "Freight Shipping Rate," you may want the display name to read "Freight Shipping."</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Local pickup</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">
+                                <p>If local pick up is configured on your site, edit the text that appears to customers for the local pickup shipping option. Local pickup allows your customers to select to pick up items they ordered online in one of your stores, if applicable. Local pickup will only be offered as a shipping option if there is at least one supplier associated with all the products in a customer's cart.</p>
+                                <p>On your site, when products are in a customer's cart, they can enter a ZIP code and click the <b>Select a Location</b> link to determine if their order is available for local pickup. If so, a map is displayed. If the customer selects a location for pickup it will be shown on the map and the radio button associated with a local pickup will be selected, indicating the exact pickup location. After an order is placed, and the payment method is not declined, and the order is not placed into pending review, the order status will be Local Pickup.</p>
+                                <p>To use this functionality, the supplier must be set up for local pickup and must be active. Suppliers are set up at <b>Users</b> &gt; <b>Administration</b> &gt; <b>Add Supplier</b>. Enable local pickup and enter specific terms of pickup for the location which will appear on the order confirmation page and order confirmation email. This functionality only works when customers are checking out through PayPal or the platform checkout. You can determine what states/provinces can receive the local pickup. Go to <b>Commerce</b> &gt; <b>International</b> &gt; <b>States/Provinces</b> and select <b>Deactivate Local pickup</b> for the states/provinces where you do not want to allow local pickup.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>FedEx label Billing Type</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">
+                                <p>Select <b>Sender</b> or <b>Recipient</b> from the menu.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Label Duties and Taxes Paid by</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">
+                                <p class="FieldName" style="text-align: left;">Select <b>Sender</b> or <b>Recipient</b> from the menu.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Rate Calculation</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">
+                                <p>	Only valid for calculating rates for FedEx and UPS.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>FedEx SmartPost Round Shipments Under 1 lb up to 1 lb</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">
+                                <p>If you use FedEx SmartPost, 1 lb. is the minimum weight that FedEx allows for SmartPost rates. If this option is selected and the FedEx Hub ID has a value entered in the FedEx Express Shipping Rates, Tracking and Label Processing Settings below, and if the weight of the cart is less than 1 lb., the weight will be rounded up to 1 lb.​</p>
+                                <p>If you are using FedEx SmartPost on your site, you will need to add a pricing range for SmartPost rates to be returned based on your business needs and for all other options.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Do Not Make Live Calls to Shipping Carriers</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">
+                                <p>If your site is configured to use "Calculated and/or flat rates (multiple carriers)" and each rate is a "flat rate" (as opposed to calculated) and assigned to a geographic region, you can enable this setting to bypass the call to shipping carriers.</p>
+                                <p>This can improve the performance of the checkout page; however, it means that the availability of the configured shipping services will not be verified.</p>
+                                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">To enable this feature, the shipping region must be selected for each and every pricing range and the rate type must be flat. Only then will the setting be selectable and the platform won't call the shipping carriers to retrieve shipping services/rates.</div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows" rowspan="5">
+                                <p>Perishable Goods</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>My Company Ships Perishable Goods</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Enables the perishable goods delivery date calendar to appear at checkout. While this can be used for all checkouts, this feature is especially designed for use when your company ships perishable goods. This will enable your customers to select a ship date from all available delivery dates. Each shipping date will also display the least expensive shipping rate available for that day. Once the customer makes their selections, the calendar collapses and the shipping service, shipping amount, and estimated delivery date are updated. When selected, the 'Select Shipping Service' link will also be displayed on the Edit Order screen in the site manager.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Ship Same Day Cutoff Time</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>You can set a cutoff time for same day shipments. Click on the clock to open the time picker. Note that the time is Central Time.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Shipping Dates - Manage</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>EOM allows you to set which days you are packaging and shipping products. This enables you to provide more accurate estimated delivery dates. Click the <b>Manage</b> link to open the <b>Manage Shipping Dates</b> pop-up window. Export the Excel file to your desktop. Configure the shipping dates in the file and then import the Excel file containing the shipping dates back into the site manager.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Time in Transit - Restrict Shipping Services</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Select the maximum allowable time in transit you will allow for your products. Click the <b>Restrict Shipping Services</b> link to open the Time in Transit Shipping Restrictions window.</p>
+                                <ul>
+                                    <li><b>Do Not Display if Time in Transit Exceeds Limit</b> - Select any checkbox to disallow certain shipping services from displaying on your site if the transit time exceeds your set limit.</li>
+                                    <li><b>Time in Transit</b> - The number of days in transit are set from the drop-down menus in each row.</li>
+                                </ul>
+                                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">The Time in Transit is used in conjunction with an uploadable ZIP code table in which you can set a time in transit value by zip code. Contact your Client Manager for assistance with setting up this import.</div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Shipping Service Delivery Day Restrictions - Manage</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>EOM can block certain delivery days per each shipping service. This can enhance your customer's experience by providing more accurate estimated delivery dates. Click the <b>Manage</b> link to open the <b>Delivery Day Shipping Restrictions</b> pop-up window. Select the days for each service when there will be no delivery. While inside this window, click the <b>Manage Delivery Blackout Date</b> link to open another window.</p>
+                                <p>First, export the Excel file to your desktop. Configure the blackout dates in the file and then import the Excel file containing the restricted dates back into the site manager. The blackout dates will be displayed to your customers in the shipping calendar at checkout. This can work in conjunction with the <b>Shipping Dates</b> setting (above).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" rowspan="3">
+                                <p>Box Options</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Default Box Size (inches/centimeters)</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Used for determining shipping rates. Carrier rate API requires a box size to be passed through in order to retrieve rates. When using metric weight measurement for your site, it is required that you use centimeters, not inches.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Default Box Weight</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>The default box weight is the weight of the shipping box. When using metric weight measurement for your site, use kgs and grams.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Dimensional Add-On (inches/centimeters)</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>This setting overrides the default box size and default box weight settings (above).</p>
+                                <p>If one box in the order, it uses the box dimensions entered at the product level.</p>
+                                <p>If more than one box in the order, it adds the settings configured here to the width, height, and length.</p>
+                                <p>For each box added to the order, the system adds the values set here to the total shipping box size for the order.</p>
+                                <p>For example, if you add 1" to the width, height and length, 1" is added to the dimensions of each box that is added to the order. These dimensions are then used to calculate shipping. This setting can only be used with select carriers. When using metric weight measurement for your site, it is required that you use centimeters, not inches.</p>
+                                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">This feature is only used when this website setting is enabled. Users &gt; Website Settings &gt; Site Layout &gt; Website Settings &gt; Use new shipping logic with box size.</div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows" rowspan="2">
+                                <p>Invoice Options</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Commercial Invoice</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>If selected, when an international shipping label is created, a commercial invoice will also be generated.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p>Commercial Invoice Signature</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Signature text that will appear at the bottom of the commercial invoice, when generated.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Express shipping carrier settings</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Select the Express Shipping Carrier Settings for which rates will be calculated.  Available carriers can be selected from the menu.</p>
+                <p>
+                    <img src="images/x-press.jpg" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+                <h3>To add more custom express carriers to the drop-down menu</h3>
+                <ol>
+                    <li>Click the <b>Add Custom Carrier</b> link. Carriers can be added as needed. Clicking on this link will open a new modal window.</li>
+                    <li>Click the <b>Add Carrier</b> icon on the bottom of the window, which creates a new field for you to enter the new carrier information. Select the <b>Active</b> carriers. Only carriers marked <b>Active</b> will be displayed in the drop-down menu.</li>
+                    <li>  When finished, <b>Save</b> your changes.</li>
+                </ol>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>Add custom carrier settings</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 13px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ID</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Automatic ID generated when a new carrier is created</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Active	</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+Select to control which carriers will be made available as a shipping method</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Carrier Name</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	
+Display name of the carrier that will show on purchase orders, reciepts, and labels</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Carrier Code</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	
+Code that maps shipping method between supplier and carrier databases</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Max Package Weight</td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">	
+Maximum allowable weight per package</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">Exiting this window will repopulate the carrier type drop down box with the new carrier added. From here, all information about the carrier, including adding additional shipping services, can be managed the same way as with the previously set up carriers.</div>
+                <table style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>Express shipping carrier settings</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Express Name</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Based off the selection chosen from the drop-down menu, a set of Express Shipping methods will be displayed in this area. The corresponding express names are displayed based upon the carrier selected.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Display Name</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	The text displayed to the customer in Shopping Cart and Checkout pages. You may edit this field if desired. For example, instead of "Priority Mail," you may want the display name to read "USPS Priority (2-4 Days)."</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Active	</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Select the relevant services that you are offering to your customers. If using FedEx SmartPost, make sure SmartPost is <b>Active</b>.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Free Shipping Override</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>If you offer free shipping as part of a promotion code, or if you configure a product with the free shipping flag, select the shipping method that should be displayed with a $0 charge at checkout. Typically, one selects a Ground Shipping method to be the <b>Free Shipping Override</b> method.
+</p>
+                                <p>For each shipping method you want to use free shipping, ensure the Active check box is selected and enable/disable <b>Free Shipping Override</b> according to the conditions outlined below:
+</p>
+                                <p><b>Free Shipping Override</b> (<i>Disabled</i>)</p>
+                                <ul>
+                                    <li>
+                                        <p>Leave the Free Shipping Override checkbox unmarked to return calculated rates for the selected services</p>
+                                    </li>
+                                </ul>
+                                <p>Free Shipping Override(Enabled)</p>
+                                <ul>
+                                    <li>
+                                        <p><b>10% of shopping cart (one carrier)</b> - Select <b>Active</b> and <b>Free Shipping Override</b> to return 10% of cart subtotal for the selected services.</p>
+                                        <p>Select <b>Active</b> and leave <b>Free Shipping Override</b> unselected to return calculated rates for the selected services.</p>
+                                    </li>
+                                    <li>
+                                        <p><b>Product specific rates (one carrier)</b> - Select <b>Active</b> and <b>Free Shipping Override</b> to return the sum of product-specific rates for the selected services.</p>
+                                        <p>Select <b>Active</b> and leave <b>Free Shipping Override</b> unselected to return calculated rates for the selected services.</p>
+                                    </li>
+                                    <li>
+                                        <p><b>Free Ground Shipping (one carrier)</b> - Select <b>Active</b> and <b>Free Shipping Override</b> to return free Ground Shipping for the selected services.</p>
+                                        <p>Select <b>Active</b> and leave <b>Free Shipping Override</b> unselected to return calculated rates for the selected services.</p>
+                                    </li>
+                                    <li>
+                                        <p><b>Calculated and/or flat rates (one carrier)</b> - Select <b>Active</b> and <b>Free Shipping Override</b> to return flat rates for the selected services.</p>
+                                        <p>Select <b>Active</b> and leave <b>Free Shipping Override</b> unselected to return calculated rates for the selected services.</p>
+                                    </li>
+                                </ul>
+                                <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;">By default, subscriptions receive free shipping. You can enable Charge Shipping in Subscriptions in <b>Users</b> &gt; <b>Website Settings</b> &gt; <b>Payments</b> &gt; <b>Subscription Settings</b> to charge customers for the cost of shipping their subscription order.</div>
+                                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">There are also free shipping promotion settings at <b>Users</b> &gt; <b>Website Settings</b> &gt; <b>Site Layout</b> &gt; <b>Shopping Cart Settings.</b></div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Use for eBay Shipping</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Select the relevant shipping methods you are offering on your eBay auctions.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">eBay Sort</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	Configure the order in which the shipping options will display on eBay.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Markup %</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	If relevant, you can define a percentage mark-up value for a specific shipping method. When not "0", this will override the 'Shipping Markup %' value.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">Ship Code</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	Used for mapping with your fulfillment partner with the API or a custom integration. If you are unsure of the value for this setting, speak with your Client Manager before making any changes.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">RMA</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	The default shipping method that will be used for any RMA shipping labels requested by customers. Select only one method.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">PO Box</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	Select to enable the shipping method from returning for PO Boxes.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">PO Box Only</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Select to configure shipping options that are only available if the address is a PO Box.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">Expedited</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	This flag is only used when the OMS system is integrated with the Aptos Store (POS) application. It is used to calculate/report on how many orders are considered 'expedited' or a priority to fulfill due to its shipping carrier method. (for example, same day delivery, priority, and so on).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Maximum Weight (per box)</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Many shipping carriers have a maximum weight for shipping via an express service. Enter the relevant maximum weight in this field.</p>
+                                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">All carriers' express weight limit is 150 lbs. with the exception of USPS express which has a weight limit of 70 lbs. If an order’s weight reaches the amount set here, the order will be broken up into multiple boxes.</div>
+                                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">FedEx automatically restricts shipments over $100.00 in value in FedEx Envelopes and Packs. If this applies to an order, you will see an error message, and you'll need to select an alternative shipping method for these orders.</div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">Combined Weight Threshold-&gt; Ship by Standard Freight</td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">Total order weight after which, when reached, the order will be shipped via standard freight.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Pitney Bowes International Shipping settings</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>EOM is integrated with Pitney Bowes to provide real time international shipping options and quotes for your customers. Some of the benefits of using Pitney Bowes International Shipping Solutions include:  price transparency, customs clearance, and management of export compliance and regulations, including export license control. You’ll be able to track shipments from the dock to the customer's front door and benefit from Pitney Bowes’ global returns process. To learn more about Configuring Pitney Bowes International Shipping, refer to knowledge base article #1864.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Express Shipping Rates, Tracking and Label Processing settings</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>To use dynamic shipping rates, labels, and tracking creation via UPS, FedEx, USPS or DHL, the proper settings must be entered here. Before configuring these settings, be certain you have the appropriate accounts set up with the shipping carriers you want to use on your site. To learn about obtaining accounts and configuring various shippers with your site, refer to the following knowledge base articles.</p>
+                <ul>
+                    <li><b>FedEx</b> - Refer to FedEx Web Services Integration knowledge base article #1717. Also see the <a href="http://images.fedex.com/us/services/pdf/CountriesServed_IF_IP_IE.pdf">FedEx International Express Countries Served</a> via US export and US import document. FedEx currently has only has 3 countries that can receive Priority (Central Africa Republic, Guinea-Bissau and Sierra Leone). All other countries are under the economy region. In addition, FedEx does not ship to: Greece, Kosovo, Latvia, Mexico, Spain, Thailand, and Turkey.</li>
+                    <li><b>USPS</b> - Refer to USPS and Endicia Shipping Accounts knowledge base article #2165.</li>
+                    <li><b>UPS</b> - Refer to Setting up UPS knowledge base article #1951.</li>
+                    <li><b>UPS Mail Innovations®</b> - Refer to Setting up UPS Mail Innovations® knowledge base article #2065.</li>
+                </ul>
+                <div class="note" MadCap:autonum="&lt;b&gt;Note: &lt;/b&gt;">These settings are optional for rates, but they are required for labels and tracking.</div>
+                <table style="width: 100%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>Express Shipping Rates, Tracking and Label Processing settings</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 146px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1" colspan="2">Option</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" colspan="2">Default Generate Labels on the Ship Order tab:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Automatically selects the Generate Shipping Labels and Tracking check box on the Ship Order tab of order details modal.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows" colspan="2">Check Adult Signature on Ship Order tab:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Automatically selects the adult signature check box on the ship order tab of the order details modal.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" colspan="2">Generate Thermal Shipping Labels on Ship Order tab:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Enable this setting to automatically select the Thermal Printer checkbox within the Generate Shipping Labels and Tracking panel on the Ship Order tab of order details modal.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows" colspan="2">Domestic Label to Use:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	Choose the domestic label to use from the drop-down menu.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" colspan="2">International Label to Use:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Choose the international label to use from the drop-down menu.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows" colspan="2">Download Supplier Shipping Template</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>To map carrier data to the appropriate EOM data field so that supplier (store) level shipping credentials are stored by carrier, click this link to download the Excel template.</p>
+                                <p>The template lists generic columns (Ship From Location Name, Carrier Name, Credential 1, Credential 2, and so on. through to Credential 6) where carrier data must be placed in order to properly map to the EOM database fields.
+</p>
+                                <p>The mapping and the fields required varies from one carrier to another so an instruction link (Using the Supplier Shipping Template). To see what what carrier data is expected in each generic column for each carrier, and an indication of which EOM UI field maps to which EOM database field to serve as a reference point, hover over the blue-and-white info icon next to this link.
+</p>
+                                <p>Using the mapping instructions, you can then load the carrier data to the appropriate generic field of the file in preparation of the import into EOM.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="3"><span class="Highlight">Mail Innovations® - Before selecting this option, make certain that all applicable Mail Innovations® shipping settings are set up and your USPS, and either UPS or FedEx, account information is in place. For details, refer to Setting up UPS Mail Innovations® knowledge base article #2065.</span>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows" rowspan="3">
+                                <p>Mail Innovations:</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Use Mail Innovations for Domestic Ground Label Generation:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>If enabled, if USPS Parcel Post, UPS Ground Shipping, or FedEx Ground Shipping options are selected by your customer, the system will automatically send the product through Mail Innovations® based on the packaging and weight requirements.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Acct #:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>Enter your Mail Innovations® account number in this field.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Cost Center:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Enter any relevant information you choose. You may want to add your company name here or choose a specific cost center for accounting purposes.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="3">
+                                <p><span class="Highlight">UPS - Enter your site's UPS credentials here. Refer to Setting up UPS knowledge base article #1951. Make certain to choose the UPS shipping options you want to activate, provide the free shipping override, use for eBay Shipping, and so on.</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows" rowspan="5">
+                                <p>UPS:</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">Access Key:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	Your company's UPS access key.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Acct #:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Your company's UPS account number.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">User ID:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	Your company's UPS user ID.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Password:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Your company's UPS password.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">Call UPS for AVS</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	If this setting is enabled, address verification will be provided by UPS rather than Avalara address verification (AVS) if both are enabled. This can help to control your costs by eliminating Avalara charges for address verification. The Avalara for AVS only setting is at <b>Users</b> &gt; <b>Website Settings</b> &gt; <b>Payments</b> &gt; <b>Sales Tax Settings</b>.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="3"><span class="Highlight">FedEx - Enter your site's FedEx credentials. If you want to use FedEx SmartPost, you must first set up your account on FedEx.com. If using SmartPost, make certain the SmartPost shipping is checkmarked Active when using FedEx as your primary carrier. Enable the FedEx SmartPost Round Shipments Under 1 lb up to 1 lb setting at Commerce &gt; Shipping &gt; Settings &gt; Shipping Settings and enter a value in the FedEx Hub ID setting below. Once SmartPost is enabled, live shipping rates will be returned to your customers.</span>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows" rowspan="8">
+                                <p>FedEx:</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">Acct #:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	To generate FedEx shipping labels, you must complete all four credentials in the FedEx settings. Enter your company's FedEx account number. Refer to FedEx Web Services Integration knowledge base article #1717.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Meter #:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Your company's FedEx meter number.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">Auth Key:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	Your company's FedEx authorization key.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Password:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Your company's FedEx password.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p>Hub ID:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Enter your FedEx SmartPost Hub Network ID. If you are unsure of your SmartPost Hub ID, it can be found at <a href="http://www.fedex.com/us/smart-post/network.html">http://www.fedex.com/us/smart-post/network.html</a>. If the FedEx SmartPost Round Shipments Under 1 lb up to 1 lb setting is enabled at <b>Commerce</b> &gt; <b>Shipping</b> &gt; <b>Settings</b> &gt; <b>Shipping Settings</b>, and the FedEx Hub ID has a value entered, and if the weight of the cart is less than 1 lb., the weight will be rounded up to 1 lb.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Enable FedEx Notification Services</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Select to enable FedEx notification services.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">Select FedEx notification services by default on checkout</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	Enables FedEx notification services to be the default at checkout.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Generate 4x6 Shipping Label</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Select this option to print 4x6 labels if your label printer requires it.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="3">
+                                <p><span class="Highlight">USPS - Enter your site's USPS credentials. Refer to USPS and Endicia Shipping Accounts knowledge base article #2165.</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>USPS:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">User ID:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Your company's USPS user ID.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">Password:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	Your company's USPS password.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Endicia Account:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Your company's Endicia account number.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">Endicia Password:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	Your company's Endicia account password.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Endicia PassPhrase:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Your company's Endicia PassPhrase.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">Manage Endicia Acct:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	Opens the Manage Endicia Account window. Your site's administrator can manage your site's Endicia account here.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Override Endicia for RMA:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Select to indicate when Endicia credentials are present; do NOT use Endicia for Member Area RMA shipping requests.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="3">
+                                <p><span class="Highlight">DHL - Enter your company's DHL credentials in this area.</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" rowspan="5">
+                                <p>DHL:</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Ship Key:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Your company's DHL ship key.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Int'l Ship Key:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	Your company's DHL international ship key.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Acct #:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Your company's DHL account number.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">User ID:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	Your company's DHL user ID.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Password:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Your company's DHL password.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="3">
+                                <p><span class="Highlight">Canada Post - Enter your company's Canada Post credentials in this area.</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" rowspan="4">
+                                <p>Canada Post:</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Acct #:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Your company's Canada Post Merchant Number.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">User ID:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	Your company's Canada Post User ID.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Password:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Your company's Canada Post password.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">
+                                <p class="FieldName">Contract ID:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">
+                                <p>	Your company's Canada Post Contract ID.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Freight Shipping Carrier settings</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Like Express Shipping, Standard Freight shipment details are submitted to freight carriers and rates are returned according to their individual rate tables.</p>
+                <p>Available carriers are: Con-way, Estes, FedEx, My Yellow, and Roadway. Based on the selection of the Freight Shipping Carrier, a set of Freight Shipping services will be displayed on the page. The freight shipping carrier settings are explained in the table below.</p>
+                <p>
+                    <img src="images/ShipSet8.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 440px;" />
+                </p>
+                <table style="width: 100%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>Freight Shipping Carrier settings</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 240px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                            <th colspan="2" class="TableStyle-PatternedRows-HeadD-Regular-Header1">&#160; Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" rowspan="5">Freight Shipping Carrier</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">&#160; Custom Freight (See <b>Custom Freight Category</b> to see how to set up Custom Freight categories.)  Each product that will ship by Custom freight will be associated with a particular category in the Product Add/Edit module.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">
+                                <p>Based on the selection of Freight Shipping Carrier, with the exception of Custom Freight (above), a set of freight shipping services will be displayed in a grid below.</p>
+                                <ul>
+                                    <li>Con-Way</li>
+                                    <li>Estes</li>
+                                    <li>FedEx</li>
+                                    <li>My Yellow</li>
+                                    <li>Roadway</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Freight Name:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Aptos platform internal value and cannot be changed.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Display Name:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	Textual display of the shipping service displayed to the customer in Shopping Cart and Checkout pages. You may edit this field if desired. For example, instead of Standard Freight, you may wish the Display Name to read “Special Shipping."</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Active:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Select the boxes to activate the relevant services that you are offering to your customers.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Shopping Cart Free Freight Shipping Amount	(Optional)</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">Set a weight value in this field greater than 0.00 (lbs), to indicate that freight shipping will be free for any order with a combined weight over this amount.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Custom freight Display Text:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">(Optional) When custom freight is chosen, this text will be displayed throughout the system to indicate custom freight was chosen or is available.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">Override Custom Freight Display Text with Custom Freight Name:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">
+                                <p>Select to override Custom Freight Display Text (above) with a custom freight name.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Default Freight Class:	(Optional)</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">
+                                <p>Choose the default value from the menu. Each product that ships by freight is associated with a particular freight class in the Product Add/Edit module.  If for some reason, a product has not yet been associated with a class, EOM will use this default value when determining rates.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">Calculate Freight on limited shipments:	(Optional)</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">
+                                <p> If multiple products are shipping from the same location they will be calculated by adding the weights and taking the number for the largest freight class.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Calculate Tiered Freight on products after grouping:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2">
+                                <p>When calculating shipping rates for Custom Freight when Tiered Freight is available, you can configure shipping to add the weight of all the products in the same group and calculate freight based on the sum of the weights. Enabling this overrides the system calculating each product separately then adding the sum of the dollar values for the shipping cost.</p>
+                                <div class="example" MadCap:autonum="&lt;b&gt;Example: &lt;/b&gt;">There may be a tier set up to cost $17.50 for 0-20 pounds, $35.00 for 21-40 pounds and $52.50 for 41-60 pounds. If you have two products in this tier (Product A and Product B) both products may weigh 10 pounds. If this option is not selected and a customer orders 3 of Product A and 1 of Product B, the customer is charged $52.50 for shipping since Product A falls under 21-40 pounds and Product B falls under 0-20 pounds.<br /><br />If the option is enabled and a customer orders 3 of Product A and 1 of Product B, they are charged $35 for shipping since they have 4 products in the tier at a weight of 10 pounds each.</div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows" rowspan="7">
+                                <p>Freight Accessories:</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                                <p class="FieldName">&#160;</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2">
+                                <p>Each freight carrier has some add-on services that they offer or require based upon a number of factors, including the setup of the client warehouse/distribution center. These add-ons are listed in a grid on the page.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Code:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Aptos platform internal value; cannot be changed.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">Description:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>Editable description field and can be viewed by customer when relevant.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Active:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Select the boxes next to the relevant services add-on.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">
+                                <p class="FieldName">Active Cart:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">
+                                <p>	For add-ons that are applicable to the customer purchasing the product, if marked as active, they will be displayed during checkout.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p class="FieldName">Override w/ Fixed Fee:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	Select if the add-on is available, but you don't want to pass the add-on to the freight carrier for determination of cost. Allows you to charge a flat fixed fee for that add-on.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">
+                                <p class="FieldName">Override Fixed Fee:</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">
+                                <p>	Enter a fixed fee you want to charge for the particular add-on.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Freight Shipping Rates settings</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>To use dynamic shipping rates via Estes, Yellow, Roadway, and so on, these settings must be entered.</p>
+                <h2>
+                    <img src="images/FreightShippingRates.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </h2>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>Freight Shipping Rates settings</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 209px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 121px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1" colspan="2">&#160; Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" rowspan="3">
+                                <p rowspan="3">Estes</p>
+                                <p rowspan="3">FedEx</p>
+                                <p rowspan="3">Roadway</p>
+                                <p rowspan="3">MyYellow</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Acct #:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	
+Your site's account number for any or all of these shipping carriers.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">User ID:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	Your site's User ID for any or all of these shipping carriers.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Password:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Your site's Password for any or all of these shipping carriers.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows" rowspan="5">Conway</td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Acct #:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	Your site's Conway account number.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">User ID:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	Your site's Conway User ID.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Password:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	Your site's Conway password.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Rate:</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	(Optional) The value entered here can help you get a more accurate shipping rate from Conway. Work with Conway to determine the best value for your business requirements. For more information on these Site Manager settings, contact your Client Manager.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">Ship Code:</td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">	(Optional) Enter the Conway Ship Code value here. Work with Conway to determine the best ship code for your business. For more information on these Site Manager settings, contact your Client Manager.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Optional Insurance settings</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>To use shipping insurance, these settings must be entered.</p>
+                <p>
+                    <img src="images/insurance.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>Optional Insurance settings</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 272px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 277px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1" colspan="3">&#160; Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" rowspan="4">Optional shipping insurance at checkout:</td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Disabled:</td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Fixed Rate: Default value is "0"</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Percentage: Default value is "0"</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Fixed Rate:</td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Fixed Rate: If <b>Fixed Rate</b> radio button is selected, set this value to a fixed rate dollar amount.</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">		Percentage: Set value to "0"</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Percentage:</td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">	Fixed Rate: Set value to "0"</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Percentage: If Percentage radio button is selected, set this value to a percentage rate</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Tiered:</td>
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">	Fixed Rate: Set value to "0"</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Percentage: Set value to "0"</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Tiered Rates:</td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows" colspan="3">
+                                <p>You can set a markup for an insurance tier, or add another tier and manage the insurance range points that trigger a tier. When you click <b>Add Another Pricing Tier</b>, it defaults to a fixed rate tier with an insurance cost amount of "0" and the high and low values at "0". Insurance rates can have multiple tiers.</p>
+                                <div class="example" MadCap:autonum="&lt;b&gt;Example: &lt;/b&gt;">If you set up the first tier as $.01 to $50.00, the next tier could be defined as $50.01 to $100.00, and the next could be set as $100.01 to $150.00, and so on.</div>
+                                <ul>
+                                    <li><b>Low Cart Amount</b> - The value entered in this field for the first tier must have a value of at least 0.01. For each additional insurance tier you create, set the low cart amount value in this field.</li>
+                                    <li><b>High Cart Amount</b> - Configure the high cart amount for this insurance tier here. Make sure that each tier begins where the last tier left off.</li>
+                                    <li><b>Insurance Cost</b> - Enter the insurance cost for each pricing tier.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>In Store Shipping settings</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>In store shipping and checkout has some automated features that can be enabled here.</p>
+                <p>
+                    <img src="images/InStoreShippingSettings.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                </p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>In Store Shipping settings</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 193px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Option</th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">In Store enabled at Checkout</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p>	
+If in-store pickup is enabled, this can show as an option at checkout. If the customer selects a store, an email including the order details is sent to the store. The email contains two or three links depending upon whether you allow cash payments on in-store checkout.</p>
+                                <p><b>Ready for Pickup</b> - Store personnel clicks this link to mark the order as ready for pickup at the store.</p>
+                                <p><b>Customer Has Picked Up Order and Paid in Store</b> - If this link is clicked, payment is captured and the order status will be updated to a complete status.</p>
+                                <p><b>Customer has Picked Up Order and Paid Online</b> - If this link is clicked, the order is captured and the order status will be updated to a complete status.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Allow cash payment on in-store checkout</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">	
+If you want cash to be used as a payment option when an order is picked up in a store, choose this selection. If the customer selects cash payment, the <b>Customer Has Picked Up Order and Paid Online</b> link will not appear on the email to the store.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">In-Store Maximum Distance Radius</td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	
+Select this option if you want to limit the distance from the customer to the store for in-store pickup. Set the distance radius in miles from stores.</td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkRows">Allow Ship to Store at Checkout</td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkRows">	
+This setting will allow a store to show up as an option for in-store pickup even when the store does not have all items in the order in stock.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

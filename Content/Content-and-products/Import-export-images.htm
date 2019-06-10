@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Importing and exporting  images</title>
+        <meta name="description" content="This import allows you to assign additional assignments to products as well as product options." />
+    </head>
+    <body>
+        <h1>Importing and export images<MadCap:concept term="CP" /></h1>
+        <p>This import allows you to assign additional assignments to products as well as product options.</p>
+        <p>
+            <img src="images/ImportExportImagesMain.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <div class="tip" MadCap:autonum="&lt;b&gt;Tip: &lt;/b&gt;"> When updating by spreadsheet, you should always export first to ensure you are using the most recent spreadsheet version. This will also guide you on the proper format for each column and row as well as which fields are required.</div>
+        <p>Note that the fields of the exported image spreadsheet will differ depending on whether you are exporting an image spreadsheet for products or an image spreadsheet for products options.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To export an image spreadsheet</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Images</b>.</li>
+                    <li>In the <b>Export Images</b> area of the screen, select either <b>Products</b> or <b>Products Options</b> from the list menu.</li>
+                    <li>
+                        <p>Click the <b>Export to Excel</b> button <img src="../Resources/Images/ExportToExcelButton.png" style="width: 23px;height: 23px;" />. </p>
+                        <p>A link to the spreadsheet appears  in the <b>Current Exports</b> list.</p>
+                        <p>
+                            <img src="images/ImportExportImages2.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Click the spreadsheet link to download and open the file containing image information.  Make modifications as needed, and save it to your computer. Fields contained in the spreadsheet are:</p>
+                        <table class="TableStyle-PatternedRows" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" cellspacing="0">
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Field</th>
+                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows" colspan="2" style="text-align: center;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #ffffff;"><span class="Highlight">Products</span>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">product_id</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">Tthe ID automatically assigned to the product in the Aptos database when the product was created. Used for lookup purposes and cannot be modified at any time. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">DisplayName</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">  The name of the product as displayed on your site. Used for lookup purposes and cannot be modified via the image import. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">PartNumber</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The manufacturer’s part #, internal stock #, style # or any other uniquely identifying # for this product. Used for lookup purposes and cannot be modified via the image import. If you are using SKUs  to manage your internal stock, this is the number that will be used to tie the option-combination to the product. This is the same as the value entered into the Value (SKU) field of the <b>Content</b> &gt; <b>Products</b> &gt; <b>Options</b> page. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ImageName</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The name of the image file that has been uploaded to the Item Images folder on the FTP server. Be sure to include the image type extension, for example: image.jpg.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">ImageCaption</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Depending on how your site is wired, this value may be used to populate the image alt text. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ImageOrder</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Controls the order in which the alternate images are displayed. Images are displayed from lowest to highest numbers (that is,  0, 1, 2, 3…). </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Delete</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">True or False. To delete the image, enter <b>True</b> in this column. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">main</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                        <p> True or False .</p>
+                                        <ul>
+                                            <li>To make this the product's main image, enter <b>True</b> in this column.</li>
+                                            <li>To make this an alternate image for the product, enter <b>False</b> in this column.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows" colspan="2" style="text-align: center;"><span class="Highlight">Products Options</span>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">product_option_id</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The ID automatically assigned to the option in the Aptos database when the option was created. Used for lookup purposes and cannot be modified at any time.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">PartNumber</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> The manufacturer’s part #, internal stock #, style # or any other uniquely identifying # for this option. This is used for lookup purposes and cannot be modified via the image import. If you are using SKUs to manage your internal stock, this is the number that will be used to tie the option-combination to the product. This is the same as the value entered into the Value (SKU) field of the <b>Content</b> &gt; <b>Products</b> &gt; <b>Options</b> page.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ImageName</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"> The name of the image file that has been uploaded to the Item Images folder on the FTP server. Be sure to include the image type extension, for example: image.jpg.</td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">ImageCaption</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows"> Depending on how your site is wired, this value may be used to populate the image alt text. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ImageOrder </td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Controls the order in which the alternate images are displayed. Images are displayed from lowest to highest numbers (that is,  0, 1, 2, 3…). </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-DarkRows">
+                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkRows">Delete</td>
+                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkRows">True or False. To delete the image, enter <b>True</b> in this column. </td>
+                                </tr>
+                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">main</td>
+                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                        <p> True or False .</p>
+                                        <ul>
+                                            <li>To make this the product's main image, enter <b>True</b> in this column.</li>
+                                            <li>To make this an alternate image for the product, enter <b>False</b> in this column.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To import images</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This import allows you to assign additional images to products or product options. It also allows to you configure the caption and display order of those images.</p>
+                <ol>
+                    <li>In <b>Content</b>, select <b>Import/Export</b> &gt; <b>Images</b>.</li>
+                </ol>
+                <ol MadCap:continue="true">
+                    <li>In the <b>Import Images</b> area of the screen, select whether you're uploading <b>Products</b> or <b>Products Options</b> images from the list menu.</li>
+                    <li>Click <b>Browse</b> and navigate to the Excel file containing the image data you want to upload.</li>
+                    <li>
+                        <p>Click the <b>Import</b> button <img src="../Resources/Images/ImportButton.png" /> to upload the file information into the site manager.</p>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

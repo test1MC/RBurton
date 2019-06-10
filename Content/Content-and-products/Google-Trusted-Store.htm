@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Setting up a Google Trusted Store job</title>
+    </head>
+    <body>
+        <h1>Setting up a Google Trusted Store job<MadCap:concept term="CP" /></h1>
+        <p>Before you schedule a Google Trusted Store job, you must have a Google Trusted Store account. To learn how to acquire one, read Google Trusted Stores knowledge base article #2553.</p>
+        <h2>To create a job from a template</h2>
+        <ol>
+            <li>Click the <b>Create Job from Template</b> button located at the bottom of the page. A pop-up window opens.</li>
+            <li>From the form located in the pop-up window, select <b>Generic Google Trusted Store</b> and then <b>Save</b>. This creates an inactive job based on this template.</li>
+            <li>Close the pop-up window and edit the newly created job.</li>
+            <li>Create two copies of the Generic Google Trusted Store job, one for shipped orders and another for canceled orders, as shown below.<img src="images/GoogleTrustedStoreJob1.jpg" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" /><ol><li><p>For Shipping Feed:&#160;Set the&#160;&lt;CustomField1&gt;&lt;/CustomField1&gt; field to&#160;SHIPORDERS.</p></li><li><p>For Cancellation Feed:&#160;Set the &lt;CustomField1&gt;&lt;/CustomField1&gt; field to&#160;CANCELORDERS.</p></li><li><p>Set the &lt;CustomField3&gt; to the corresponding Google Trusted Store feed name that you created.</p><p><img src="images/GoogleTrustedStoreJob2.jpg" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" /></p></li><li><p>Link your FTP to the steps.</p></li><li><p>Make certain&#160;that each job has a second step for the Google FTP and that the File Name and File Type are named the same as your shipping and&#160;cancellation feeds.</p></li><li><p>The Archive Path must point to the&#160;site's \Tasks\Archive\&lt;YOUR SITE&gt;\Google Trusted Store\outgoing\ folder.</p></li><li><p>The Local Path mustpoint to the&#160;site's \Tasks&lt;YOUR SITE&gt;\Google Trusted Store\ folder.</p></li></ol></li>
+            <li>Set the job and the job steps to Active.</li>
+        </ol>
+        <p>Refer to the&#160;<a href="../Resources/PDFs/Google _ Google Trusted Stores.pdf" target="_blank">Google Trusted Stores&#160;Guide</a> to learn how to display the Google Trusted Store Badge on your site.</p>
+    </body>
+</html>

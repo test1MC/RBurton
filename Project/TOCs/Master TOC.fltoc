@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="Home"
+    Link="/Content/Home.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  <TocEntry
+    Title="About EOM"
+    Link="/Content/About-Digital-Commerce/About-Digital-Commerce.htm"
+    ReplaceMergeNode="true">
+    <TocEntry
+      Title="Using the EOM interface"
+      Link="/Content/About-Digital-Commerce/Using-the DC-interface.htm" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/About-Digital-Commerce/About-dashboard.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="About the Users tab"
+      Link="/Content/About-Digital-Commerce/About-users-tab.htm" />
+    <TocEntry
+      Title="About the Content tab"
+      Link="/Content/About-Digital-Commerce/About-content-tab.htm" />
+    <TocEntry
+      Title="About the Commerce tab"
+      Link="/Content/About-Digital-Commerce/About-commerce-tab.htm" />
+    <TocEntry
+      Title="About the CRM tab"
+      Link="/Content/About-Digital-Commerce/About-crm-tab.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/About-Digital-Commerce/About-analytics-tab.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/About-Digital-Commerce/Site-manager-faq.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+  <TocEntry
+    Title="Administration"
+    Link="/Project/TOCs/Admin.fltoc"
+    ReplaceMergeNode="true" />
+  <TocEntry
+    Title="Content and products"
+    Link="/Project/TOCs/Content products.fltoc"
+    ReplaceMergeNode="true" />
+  <TocEntry
+    Title="Commerce"
+    Link="/Project/TOCs/Commerce.fltoc"
+    ReplaceMergeNode="true" />
+  <TocEntry
+    Title="Customers"
+    Link="/Project/TOCs/Customers.fltoc"
+    ReplaceMergeNode="true"></TocEntry>
+  <TocEntry
+    Title="Analytics"
+    Link="/Project/TOCs/Analytics.fltoc"
+    ReplaceMergeNode="true" />
+</CatapultToc>

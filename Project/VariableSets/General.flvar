@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Comment=""
+    Name="CompanyName"
+    EvaluatedDefinition="Aptos">Aptos</Variable>
+  <Variable
+    Comment=""
+    Name="PhoneNumber"
+    EvaluatedDefinition="Direct: +1-866-493-7037">Direct: +1-866-493-7037</Variable>
+  <Variable
+    Name="StreetAddress"
+    Comment=""
+    Definition="Some text"
+    OriginalName="StreetAddress"
+    EvaluatedDefinition="945 East Paces Ferry Road, Suite 2500">945 East Paces Ferry Road, Suite 2500</Variable>
+  <Variable
+    Name="ProductName"
+    Comment=""
+    OriginalName="ProductName"
+    EvaluatedDefinition="Aptos Retail Management">Aptos Retail Management</Variable>
+  <Variable
+    Name="Fax"
+    Comment=""
+    OriginalName="Fax"
+    EvaluatedDefinition=""></Variable>
+  <Variable
+    Name="CityStateZip"
+    Comment=""
+    Definition="Some text"
+    EvaluatedDefinition="Atlanta, GA 30326">Atlanta, GA 30326</Variable>
+  <Variable
+    Name="VersionNumber"
+    OriginalName="VersionNumberDot"
+    EvaluatedDefinition="5.0">5.0</Variable>
+  <Variable
+    Name="Year"
+    Comment=""
+    Type="DateTime"
+    LastUpdated="2015-12-31T09:28:31.1216229-08:00"
+    EvaluatedDefinition="yyyy">yyyy</Variable>
+  <Variable
+    Name="Website"
+    Comment=""
+    EvaluatedDefinition="www.aptos.com">www.aptos.com</Variable>
+</CatapultVariableSet>

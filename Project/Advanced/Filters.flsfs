@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultSearchFilterSet>
+  <SearchFilter
+    Name="Release Notes"
+    Comment=""
+    Order="7"
+    Concepts="Release Notes" />
+  <SearchFilter
+    Name="Administration"
+    Comment=""
+    Order="0"
+    Concepts="Admin" />
+  <SearchFilter
+    Name="Videos"
+    Comment=""
+    Order="9"
+    Concepts="video" />
+  <SearchFilter
+    Name="Content and products"
+    Comment=""
+    Order="3"
+    Concepts="CP" />
+  <SearchFilter
+    Name="Marketing"
+    Comment=""
+    Order="6"
+    Concepts="Market" />
+  <SearchFilter
+    Name="Customers"
+    Comment=""
+    Order="4"
+    Concepts="Customers" />
+  <SearchFilter
+    Name="Commerce"
+    Comment=""
+    Order="2"
+    Concepts="Commerce" />
+  <SearchFilter
+    Name="Analytics"
+    Comment=""
+    Order="1"
+    Concepts="analy" />
+  <SearchFilter
+    Name="Suppliers"
+    Comment=""
+    Order="8"
+    Concepts="Supply" />
+  <SearchFilter
+    Name="Getting started"
+    Comment=""
+    Order="5"
+    Concepts="start" />
+</CatapultSearchFilterSet>

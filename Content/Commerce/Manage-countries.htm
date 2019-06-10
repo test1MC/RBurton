@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Managing countries</title>
+        <meta name="description" content="Customers can access your ecommerce site from anywhere in the world. If you accept international orders, EOM gives you the flexibility to define in which countries you will do business." />
+    </head>
+    <body>
+        <h1>Manage countries<MadCap:concept term="Commerce" /></h1>
+        <p>Settings on this page give you control over what areas of the world in which you want to do business. You can add a country markup, determine where you ship and bill to, disallow PayPal and collect taxes if needed.</p>
+        <p>
+            <img src="images/1countriesNew.png" style="mc-thumbnail: hover;mc-thumbnail-max-width: 550px;" />
+        </p>
+        <p>Options you can enable and disable are:</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Disallow Shipping and Disallow Billing</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>You can allow shipping to countries where you may not normally sell your products. For example, a customer in the US can order and pay for an item that will ship to a country that you don't allow payment from. This can help you to increase your customer base.​ Mark the countries for which you want to disallow shipping, if applicable. Mark the countries for which you want to disallow billing, if applicable.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Disallow PayPal</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>You can select countries where shipping is not allowed through PayPal. By default, shipping is allowed to all countries when a customer selects PayPal as a payment method.</p>
+                <p>If disallowed, when a customer in a country where shipping is disallowed, they will not be able to complete the checkout process. To determine the customer's country, they must go through the PayPal interface. When they are returned, <MadCap:variable name="DC.EOM short" />compares the customer's country against the disallowed list. If the country is not allowed:</p>
+                <ul>
+                    <li>the last page is set to <b>Paypal Disallowed Country</b> so you can determine how many customers are abandoning their orders here.</li>
+                    <li>the customer is redirected to an error page explaining that the merchant does not currently support shipping to their country.</li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Taxable</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Select if you collect sales taxes for an enabled country.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h3>To limit/expand the countries in which you wish to ship orders</h3>
+        <ol>
+            <li>In <b>Commerce</b>, select <b>International</b> &gt; <b>Countries</b>.<ol><li>To deactivate all countries, select the check box at the top of each column beside the option name..</li><li>To activate all countries, de-select the check box at the top of each column beside the option name..</li><li><p>To select a limited number of countries to deactivate, select the check box next to the various options for the countries you wish to exclude.</p></li></ol></li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <p><span class="note">Note:</span> If you choose to deactivate ALL countries, remember to enable the USA, or customers will not be able to check out.</p>
+    </body>
+</html>
